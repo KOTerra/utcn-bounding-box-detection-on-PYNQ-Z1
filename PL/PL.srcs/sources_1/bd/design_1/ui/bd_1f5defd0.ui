@@ -1,13 +1,19 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.0",
-   "Default View_TopLeft":"-346,-320",
+   "Default View_ScaleFactor":"0.901111",
+   "Default View_TopLeft":"-38,-769",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.7.1 2023-07-26 3bc4126617 VDI=43 GEI=38 GUI=JA:21.0
 #  -string -flagsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 1 -x 200 -y -100 -defaultsOSRD
-levelinfo -pg 1 0 200 400
-pagesize -pg 1 -db -bbox -sgen 0 -200 400 200
+preplace inst processing_system7_0 -pg 1 -lvl 3 -x 790 -y -330 -defaultsOSRD
+preplace inst axi_vdma_0 -pg 1 -lvl 2 -x 420 -y -350 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 2 -x 420 -y -620 -defaultsOSRD
+preplace inst axi_mcdma_0 -pg 1 -lvl 1 -x 80 -y -370 -defaultsOSRD
+preplace inst axi_cdma_0 -pg 1 -lvl 1 -x 80 -y -630 -defaultsOSRD
+preplace inst axi_bram_ctrl_0 -pg 1 -lvl 4 -x 1220 -y -410 -defaultsOSRD
+preplace inst axi_bram_ctrl_1 -pg 1 -lvl 4 -x 1220 -y -220 -defaultsOSRD
+levelinfo -pg 1 -90 80 420 790 1220 1590 1730
+pagesize -pg 1 -db -bbox -sgen -90 -1010 1730 510
 "
 }
-
+0
