@@ -5,7 +5,7 @@
     "cell_name": "axi_bram_ctrl_0",
     "component_reference": "xilinx.com:ip:axi_bram_ctrl:4.1",
     "ip_revision": "10",
-    "gen_directory": "../../../../../../PL.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_0",
+    "gen_directory": "../../../../../../PL.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_0_1",
     "parameters": {
       "component_parameters": {
         "DATA_WIDTH": [ { "value": "32", "resolve_type": "user", "format": "long", "usage": "all" } ],
@@ -61,7 +61,7 @@
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
         "IPREVISION": [ { "value": "10" } ],
         "MANAGED": [ { "value": "TRUE" } ],
-        "OUTPUTDIR": [ { "value": "../../../../../../PL.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_0" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../PL.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_0_1" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../ipshared" } ],
         "SWVERSION": [ { "value": "2024.1" } ],

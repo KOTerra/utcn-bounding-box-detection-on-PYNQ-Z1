@@ -5,11 +5,11 @@
     "cell_name": "ps7_0_axi_periph",
     "component_reference": "xilinx.com:ip:axi_interconnect:2.1",
     "ip_revision": "32",
-    "gen_directory": "../../../../../../PL.gen/sources_1/bd/design_1/ip/design_1_ps7_0_axi_periph_0",
+    "gen_directory": "../../../../../../PL.gen/sources_1/bd/design_1/ip/design_1_ps7_0_axi_periph_0_1",
     "parameters": {
       "component_parameters": {
         "NUM_SI": [ { "value": "1", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "NUM_MI": [ { "value": "6", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "NUM_MI": [ { "value": "7", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "STRATEGY": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "ENABLE_ADVANCED_OPTIONS": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "ENABLE_PROTOCOL_CHECKERS": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
@@ -342,7 +342,7 @@
         "IPCONTEXT": [ { "value": "IP_Integrator_AppCore" } ],
         "IPREVISION": [ { "value": "32" } ],
         "MANAGED": [ { "value": "TRUE" } ],
-        "OUTPUTDIR": [ { "value": "../../../../../../PL.gen/sources_1/bd/design_1/ip/design_1_ps7_0_axi_periph_0" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../PL.gen/sources_1/bd/design_1/ip/design_1_ps7_0_axi_periph_0_1" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../ipshared" } ],
         "SWVERSION": [ { "value": "2024.1" } ],
