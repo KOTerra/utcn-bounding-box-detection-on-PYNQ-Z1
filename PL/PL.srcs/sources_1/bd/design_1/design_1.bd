@@ -6398,17 +6398,13 @@
       "processing_system7_0_FCLK_CLK0": {
         "ports": [
           "processing_system7_0/FCLK_CLK0",
-          "ccl_slice_core_0/aclkrst_clk",
           "processing_system7_0/M_AXI_GP0_ACLK",
           "ps7_0_axi_periph/S00_ACLK",
           "rst_ps7_0_100M/slowest_sync_clk",
           "ps7_0_axi_periph/M00_ACLK",
           "ps7_0_axi_periph/ACLK",
-          "ccl_slice_core_1/aclkrst_clk",
           "ps7_0_axi_periph/M01_ACLK",
-          "ccl_slice_core_2/aclkrst_clk",
           "ps7_0_axi_periph/M02_ACLK",
-          "ccl_slice_core_3/aclkrst_clk",
           "ps7_0_axi_periph/M03_ACLK",
           "axi_dma_0/s_axi_lite_aclk",
           "ps7_0_axi_periph/M04_ACLK",
@@ -6431,7 +6427,11 @@
           "axi_interconnect_0/S00_ACLK",
           "axi_interconnect_0/S01_ACLK",
           "axi_interconnect_0/S02_ACLK",
-          "axi_interconnect_0/S03_ACLK"
+          "axi_interconnect_0/S03_ACLK",
+          "ccl_slice_core_0/aclkrst_clk",
+          "ccl_slice_core_1/aclkrst_clk",
+          "ccl_slice_core_2/aclkrst_clk",
+          "ccl_slice_core_3/aclkrst_clk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -6462,16 +6462,16 @@
           "ps7_0_axi_periph/M05_ARESETN",
           "ps7_0_axi_periph/M06_ARESETN",
           "axi_bram_ctrl_0/s_axi_aresetn",
-          "ccl_slice_core_1/aclkrst_n",
-          "ccl_slice_core_2/aclkrst_n",
-          "ccl_slice_core_3/aclkrst_n",
-          "ccl_slice_core_0/aclkrst_n",
           "axi_interconnect_0/ARESETN",
           "axi_interconnect_0/M00_ARESETN",
           "axi_interconnect_0/S00_ARESETN",
           "axi_interconnect_0/S01_ARESETN",
           "axi_interconnect_0/S02_ARESETN",
-          "axi_interconnect_0/S03_ARESETN"
+          "axi_interconnect_0/S03_ARESETN",
+          "ccl_slice_core_0/aclkrst_n",
+          "ccl_slice_core_1/aclkrst_n",
+          "ccl_slice_core_2/aclkrst_n",
+          "ccl_slice_core_3/aclkrst_n"
         ]
       }
     },

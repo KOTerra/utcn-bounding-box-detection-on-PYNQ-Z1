@@ -1,0 +1,422 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Sat Nov 15 16:26:58 2025
+# Process ID: 19568
+# Current directory: D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.runs/design_1_axis_switch_0_2_synth_1
+# Command line: vivado.exe -log design_1_axis_switch_0_2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axis_switch_0_2.tcl
+# Log file: D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.runs/design_1_axis_switch_0_2_synth_1/design_1_axis_switch_0_2.vds
+# Journal file: D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.runs/design_1_axis_switch_0_2_synth_1\vivado.jou
+# Running On        :POWERSLAVE
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :26100
+# Processor Detail  :AMD Ryzen 5 3600 6-Core Processor              
+# CPU Frequency     :3593 MHz
+# CPU Physical cores:6
+# CPU Logical cores :12
+# Host memory       :34305 MB
+# Swap memory       :2147 MB
+# Total Virtual     :36452 MB
+# Available Virtual :19216 MB
+#-----------------------------------------------------------
+source design_1_axis_switch_0_2.tcl -notrace
+create_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 555.816 ; gain = 243.375
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axis_switch_0_2
+Command: synth_design -top design_1_axis_switch_0_2 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Device 21-9227] Part: xc7z020clg400-1 does not have CEAM library.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 12344
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 1445.289 ; gain = 446.566
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_axis_switch_0_2' [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ip/design_1_axis_switch_0_2/synth/design_1_axis_switch_0_2.v:53]
+INFO: [Synth 8-6157] synthesizing module 'axis_switch_v1_1_31_axis_switch' [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ipshared/e0e4/hdl/axis_switch_v1_1_vl_rfs.v:3078]
+INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_1_util_axis2vector' [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ipshared/434f/hdl/axis_infrastructure_v1_1_vl_rfs.v:805]
+INFO: [Synth 8-6155] done synthesizing module 'axis_infrastructure_v1_1_1_util_axis2vector' (0#1) [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ipshared/434f/hdl/axis_infrastructure_v1_1_vl_rfs.v:805]
+INFO: [Synth 8-6157] synthesizing module 'axis_switch_v1_1_31_axisc_decoder' [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ipshared/e0e4/hdl/axis_switch_v1_1_vl_rfs.v:475]
+INFO: [Synth 8-6157] synthesizing module 'axis_register_slice_v1_1_31_axisc_register_slice' [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ipshared/ca8d/hdl/axis_register_slice_v1_1_vl_rfs.v:1929]
+INFO: [Synth 8-6155] done synthesizing module 'axis_register_slice_v1_1_31_axisc_register_slice' (0#1) [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ipshared/ca8d/hdl/axis_register_slice_v1_1_vl_rfs.v:1929]
+WARNING: [Synth 8-7071] port 'ACLK2X' of module 'axis_register_slice_v1_1_31_axisc_register_slice' is unconnected for instance 'inst_decoder_pipeline' [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ipshared/e0e4/hdl/axis_switch_v1_1_vl_rfs.v:724]
+WARNING: [Synth 8-7023] instance 'inst_decoder_pipeline' of module 'axis_register_slice_v1_1_31_axisc_register_slice' has 10 connections declared, but only 9 given [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ipshared/e0e4/hdl/axis_switch_v1_1_vl_rfs.v:724]
+INFO: [Synth 8-6155] done synthesizing module 'axis_switch_v1_1_31_axisc_decoder' (0#1) [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ipshared/e0e4/hdl/axis_switch_v1_1_vl_rfs.v:475]
+INFO: [Synth 8-6157] synthesizing module 'axis_switch_v1_1_31_axisc_transfer_mux' [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ipshared/e0e4/hdl/axis_switch_v1_1_vl_rfs.v:814]
+INFO: [Synth 8-6155] done synthesizing module 'axis_switch_v1_1_31_axisc_transfer_mux' (0#1) [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ipshared/e0e4/hdl/axis_switch_v1_1_vl_rfs.v:814]
+INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_1_util_vector2axis' [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ipshared/434f/hdl/axis_infrastructure_v1_1_vl_rfs.v:986]
+INFO: [Synth 8-6155] done synthesizing module 'axis_infrastructure_v1_1_1_util_vector2axis' (0#1) [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ipshared/434f/hdl/axis_infrastructure_v1_1_vl_rfs.v:986]
+INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_1_clock_synchronizer' [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ipshared/434f/hdl/axis_infrastructure_v1_1_vl_rfs.v:1166]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single' [X:/xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single' (0#1) [X:/xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+INFO: [Synth 8-6155] done synthesizing module 'axis_infrastructure_v1_1_1_clock_synchronizer' (0#1) [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ipshared/434f/hdl/axis_infrastructure_v1_1_vl_rfs.v:1166]
+INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_1_cdc_handshake' [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ipshared/434f/hdl/axis_infrastructure_v1_1_vl_rfs.v:1259]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_handshake' [X:/xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:468]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_handshake' (0#1) [X:/xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:468]
+INFO: [Synth 8-6155] done synthesizing module 'axis_infrastructure_v1_1_1_cdc_handshake' (0#1) [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ipshared/434f/hdl/axis_infrastructure_v1_1_vl_rfs.v:1259]
+INFO: [Synth 8-6157] synthesizing module 'axis_switch_v1_1_31_static_router' [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ipshared/e0e4/hdl/axis_switch_v1_1_vl_rfs.v:2777]
+INFO: [Synth 8-6157] synthesizing module 'axis_switch_v1_1_31_axi_ctrl_top' [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ipshared/e0e4/hdl/axis_switch_v1_1_vl_rfs.v:2070]
+INFO: [Synth 8-6157] synthesizing module 'axis_switch_v1_1_31_axi_ctrl_read' [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ipshared/e0e4/hdl/axis_switch_v1_1_vl_rfs.v:1738]
+INFO: [Synth 8-6155] done synthesizing module 'axis_switch_v1_1_31_axi_ctrl_read' (0#1) [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ipshared/e0e4/hdl/axis_switch_v1_1_vl_rfs.v:1738]
+INFO: [Synth 8-6157] synthesizing module 'axis_switch_v1_1_31_axi_ctrl_write' [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ipshared/e0e4/hdl/axis_switch_v1_1_vl_rfs.v:1913]
+INFO: [Synth 8-6155] done synthesizing module 'axis_switch_v1_1_31_axi_ctrl_write' (0#1) [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ipshared/e0e4/hdl/axis_switch_v1_1_vl_rfs.v:1913]
+INFO: [Synth 8-6157] synthesizing module 'axis_switch_v1_1_31_reg_bank_16x32' [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ipshared/e0e4/hdl/axis_switch_v1_1_vl_rfs.v:2961]
+INFO: [Synth 8-6155] done synthesizing module 'axis_switch_v1_1_31_reg_bank_16x32' (0#1) [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ipshared/e0e4/hdl/axis_switch_v1_1_vl_rfs.v:2961]
+INFO: [Synth 8-6157] synthesizing module 'axis_switch_v1_1_31_reg_bank_16x32__parameterized0' [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ipshared/e0e4/hdl/axis_switch_v1_1_vl_rfs.v:2961]
+INFO: [Synth 8-6155] done synthesizing module 'axis_switch_v1_1_31_reg_bank_16x32__parameterized0' (0#1) [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ipshared/e0e4/hdl/axis_switch_v1_1_vl_rfs.v:2961]
+INFO: [Synth 8-6155] done synthesizing module 'axis_switch_v1_1_31_axi_ctrl_top' (0#1) [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ipshared/e0e4/hdl/axis_switch_v1_1_vl_rfs.v:2070]
+INFO: [Synth 8-6157] synthesizing module 'axis_switch_v1_1_31_static_router_config' [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ipshared/e0e4/hdl/axis_switch_v1_1_vl_rfs.v:2569]
+INFO: [Synth 8-6157] synthesizing module 'axis_switch_v1_1_31_static_router_config_dp' [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ipshared/e0e4/hdl/axis_switch_v1_1_vl_rfs.v:2338]
+INFO: [Synth 8-6155] done synthesizing module 'axis_switch_v1_1_31_static_router_config_dp' (0#1) [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ipshared/e0e4/hdl/axis_switch_v1_1_vl_rfs.v:2338]
+INFO: [Synth 8-6155] done synthesizing module 'axis_switch_v1_1_31_static_router_config' (0#1) [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ipshared/e0e4/hdl/axis_switch_v1_1_vl_rfs.v:2569]
+INFO: [Synth 8-6155] done synthesizing module 'axis_switch_v1_1_31_static_router' (0#1) [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ipshared/e0e4/hdl/axis_switch_v1_1_vl_rfs.v:2777]
+INFO: [Synth 8-6155] done synthesizing module 'axis_switch_v1_1_31_axis_switch' (0#1) [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ipshared/e0e4/hdl/axis_switch_v1_1_vl_rfs.v:3078]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_switch_0_2' (0#1) [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ip/design_1_axis_switch_0_2/synth/design_1_axis_switch_0_2.v:53]
+WARNING: [Synth 8-7129] Port reg_mi_mux[511] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[510] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[509] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[508] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[507] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[506] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[505] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[504] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[503] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[502] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[501] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[500] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[499] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[498] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[497] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[496] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[495] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[494] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[493] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[492] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[491] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[490] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[489] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[488] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[487] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[486] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[485] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[484] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[483] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[482] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[481] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[480] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[479] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[478] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[477] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[476] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[475] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[474] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[473] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[472] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[471] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[470] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[469] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[468] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[467] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[466] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[465] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[464] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[463] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[462] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[461] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[460] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[459] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[458] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[457] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[456] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[455] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[454] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[453] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[452] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[451] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[450] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[449] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[448] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[447] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[446] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[445] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[444] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[443] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[442] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[441] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[440] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[439] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[438] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[437] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[436] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[435] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[434] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[433] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[432] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[431] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[430] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[429] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[428] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[427] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[426] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[425] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[424] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[423] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[422] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[421] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[420] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[419] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[418] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[417] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[416] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[415] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[414] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[413] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_mi_mux[412] in module axis_switch_v1_1_31_static_router_config_dp is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 1568.848 ; gain = 570.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 1568.848 ; gain = 570.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 1568.848 ; gain = 570.125
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.061 . Memory (MB): peak = 1568.848 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ip/design_1_axis_switch_0_2/design_1_axis_switch_0_2_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ip/design_1_axis_switch_0_2/design_1_axis_switch_0_2_ooc.xdc] for cell 'inst'
+Parsing XDC File [D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.runs/design_1_axis_switch_0_2_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.runs/design_1_axis_switch_0_2_synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [X:/xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_axis_switch_0_2_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_axis_switch_0_2_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [X:/xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_axis_switch_0_2_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_axis_switch_0_2_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 4 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1677.648 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.192 . Memory (MB): peak = 1678.598 ; gain = 0.949
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:39 . Memory (MB): peak = 1678.598 ; gain = 679.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:39 . Memory (MB): peak = 1678.598 ; gain = 679.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.runs/design_1_axis_switch_0_2_synth_1/dont_touch.xdc, line 9).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\gen_static_router.gen_synch.inst_cdc_handshake /inst_xpm_cdc_handshake. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\gen_static_router.gen_synch.inst_rst_synch /inst_xpm_cdc_single. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\gen_static_router.gen_synch.inst_cdc_handshake /inst_xpm_cdc_handshake/xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\gen_static_router.gen_synch.inst_cdc_handshake /inst_xpm_cdc_handshake/xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:39 . Memory (MB): peak = 1678.598 ; gain = 679.875
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axis_switch_v1_1_31_axi_ctrl_read'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'state_reg' through user attribute
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axis_switch_v1_1_31_static_router_config'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 SM_IDLE |                              001 |                               00
+                 SM_READ |                              010 |                               01
+                 SM_RESP |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'axis_switch_v1_1_31_axi_ctrl_read'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 SM_IDLE |                            00001 |                              000
+                SM_START |                            00010 |                              001
+                 SM_WAIT |                            00100 |                              010
+               SM_COMMIT |                            01000 |                              011
+             SM_COMPLETE |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'axis_switch_v1_1_31_static_router_config'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:40 . Memory (MB): peak = 1678.598 ; gain = 679.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    4 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 6     
+	               25 Bit    Registers := 4     
+	               16 Bit    Registers := 1     
+	                7 Bit    Registers := 2     
+	                4 Bit    Registers := 12    
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 31    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 2     
+	   5 Input    5 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 4     
+	   2 Input    4 Bit        Muxes := 1     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
+	   6 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 6     
+	   5 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:44 . Memory (MB): peak = 1678.598 ; gain = 679.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:00:55 . Memory (MB): peak = 1678.598 ; gain = 679.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:55 . Memory (MB): peak = 1678.598 ; gain = 679.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:39 ; elapsed = 00:00:55 . Memory (MB): peak = 1678.598 ; gain = 679.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:47 ; elapsed = 00:01:04 . Memory (MB): peak = 1678.598 ; gain = 679.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:47 ; elapsed = 00:01:04 . Memory (MB): peak = 1678.598 ; gain = 679.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:47 ; elapsed = 00:01:04 . Memory (MB): peak = 1678.598 ; gain = 679.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:47 ; elapsed = 00:01:04 . Memory (MB): peak = 1678.598 ; gain = 679.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:01:04 . Memory (MB): peak = 1678.598 ; gain = 679.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:47 ; elapsed = 00:01:05 . Memory (MB): peak = 1678.598 ; gain = 679.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |LUT1  |     9|
+|2     |LUT2  |    44|
+|3     |LUT3  |    70|
+|4     |LUT4  |    27|
+|5     |LUT5  |    38|
+|6     |LUT6  |    60|
+|7     |MUXF7 |    26|
+|8     |MUXF8 |    13|
+|9     |FDRE  |   292|
+|10    |FDSE  |     4|
++------+------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:47 ; elapsed = 00:01:05 . Memory (MB): peak = 1678.598 ; gain = 679.875
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 50 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:00:55 . Memory (MB): peak = 1678.598 ; gain = 570.125
+Synthesis Optimization Complete : Time (s): cpu = 00:00:48 ; elapsed = 00:01:05 . Memory (MB): peak = 1678.598 ; gain = 679.875
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1678.598 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 39 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1678.598 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: a109c9f2
+INFO: [Common 17-83] Releasing license: Synthesis
+64 Infos, 103 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:56 ; elapsed = 00:01:18 . Memory (MB): peak = 1678.598 ; gain = 1105.543
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1678.598 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.runs/design_1_axis_switch_0_2_synth_1/design_1_axis_switch_0_2.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_axis_switch_0_2, cache-ID = 82dec57d7cfe2ebe
+INFO: [Coretcl 2-1174] Renamed 15 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1678.598 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.runs/design_1_axis_switch_0_2_synth_1/design_1_axis_switch_0_2.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file design_1_axis_switch_0_2_utilization_synth.rpt -pb design_1_axis_switch_0_2_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Nov 15 16:28:52 2025...
