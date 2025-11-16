@@ -1,5 +1,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 entity top is
   port (
@@ -70,41 +71,54 @@ architecture rtl of top is
   ---------------------------------------------------------------------------
   component blk_mem_gen_0 is
     port (
+      -- Port A
       clka  : in  std_logic;
       ena   : in  std_logic;
-      wea   : in  std_logic;
-      addra : in  std_logic_vector(15 downto 0);  -- 16-bit
+      wea   : in  std_logic_vector(0 downto 0);
+      addra : in  std_logic_vector(15 downto 0);
       dina  : in  std_logic_vector(31 downto 0);
-      douta : out std_logic_vector(31 downto 0)
+      douta : out std_logic_vector(31 downto 0);
+      -- Port B (unused, tie off)
+      clkb  : in  std_logic;
+      enb   : in  std_logic;
+      web   : in  std_logic_vector(0 downto 0);
+      addrb : in  std_logic_vector(15 downto 0);
+      dinb  : in  std_logic_vector(31 downto 0);
+      doutb : out std_logic_vector(31 downto 0)
     );
   end component;
 
   ---------------------------------------------------------------------------
   -- Internal signals
   ---------------------------------------------------------------------------
-  signal bram_addr     : std_logic_vector(12 downto 0);
-  signal bram_addr_ext : std_logic_vector(15 downto 0);
+  signal bram_addr_13  : std_logic_vector(12 downto 0);
+  signal bram_addr_16  : std_logic_vector(15 downto 0);
   signal bram_clk      : std_logic;
   signal bram_din      : std_logic_vector(31 downto 0);
   signal bram_dout     : std_logic_vector(31 downto 0);
   signal bram_en       : std_logic;
   signal bram_rst      : std_logic;
   signal bram_we       : std_logic_vector(3 downto 0);
+  signal bram_wea_1    : std_logic_vector(0 downto 0);
 
 begin
 
   ---------------------------------------------------------------------------
-  -- Address extension (legal VHDL)
+  -- Address extension (no multi-driver)
   ---------------------------------------------------------------------------
-  bram_addr_ext <= (others => '0');
-  bram_addr_ext(12 downto 0) <= bram_addr;
+  bram_addr_16 <= "000" & bram_addr_13;  -- upper bits tied low
+
+  ---------------------------------------------------------------------------
+  -- Reduce write-enable width to 1 bit
+  ---------------------------------------------------------------------------
+  bram_wea_1(0) <= bram_we(0);
 
   ---------------------------------------------------------------------------
   -- Instantiate block design wrapper
   ---------------------------------------------------------------------------
   u_bd : design_1_wrapper
     port map (
-      BRAM_PORTA_0_addr => bram_addr,
+      BRAM_PORTA_0_addr => bram_addr_13,
       BRAM_PORTA_0_clk  => bram_clk,
       BRAM_PORTA_0_din  => bram_din,
       BRAM_PORTA_0_dout => bram_dout,
@@ -135,16 +149,25 @@ begin
     );
 
   ---------------------------------------------------------------------------
-  -- Instantiate Block Memory Generator
+  -- Instantiate Block Memory Generator (Port B tied off)
   ---------------------------------------------------------------------------
   u_bram : blk_mem_gen_0
     port map (
+      -- Port A (used by AXI BRAM Ctrl)
       clka  => bram_clk,
       ena   => bram_en,
-      wea   => bram_we(0),
-      addra => bram_addr_ext,   -- now a static signal
+      wea   => bram_wea_1,
+      addra => bram_addr_16,
       dina  => bram_din,
-      douta => bram_dout
+      douta => bram_dout,
+
+      -- Port B (unused, tie off)
+      clkb  => bram_clk,
+      enb   => '0',
+      web   => (others => '0'),
+      addrb => (others => '0'),
+      dinb  => (others => '0'),
+      doutb => open
     );
 
 end rtl;
