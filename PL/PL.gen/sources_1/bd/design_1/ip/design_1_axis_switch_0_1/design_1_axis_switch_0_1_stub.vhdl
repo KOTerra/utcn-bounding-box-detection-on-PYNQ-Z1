@@ -2,7 +2,7 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
--- Date        : Sat Nov 15 16:28:53 2025
+-- Date        : Sun Nov 16 12:36:03 2025
 -- Host        : POWERSLAVE running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ip/design_1_axis_switch_0_1/design_1_axis_switch_0_1_stub.vhdl
@@ -22,11 +22,11 @@ entity design_1_axis_switch_0_1 is
     s_axis_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axis_tkeep : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s_axis_tlast : in STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axis_tvalid : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m_axis_tready : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    m_axis_tdata : out STD_LOGIC_VECTOR ( 127 downto 0 );
-    m_axis_tkeep : out STD_LOGIC_VECTOR ( 15 downto 0 );
-    m_axis_tlast : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axis_tvalid : out STD_LOGIC_VECTOR ( 4 downto 0 );
+    m_axis_tready : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    m_axis_tdata : out STD_LOGIC_VECTOR ( 159 downto 0 );
+    m_axis_tkeep : out STD_LOGIC_VECTOR ( 19 downto 0 );
+    m_axis_tlast : out STD_LOGIC_VECTOR ( 4 downto 0 );
     s_axi_ctrl_aclk : in STD_LOGIC;
     s_axi_ctrl_aresetn : in STD_LOGIC;
     s_axi_ctrl_awvalid : in STD_LOGIC;
@@ -53,7 +53,7 @@ architecture stub of design_1_axis_switch_0_1 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "aclk,aresetn,s_axis_tvalid[0:0],s_axis_tready[0:0],s_axis_tdata[31:0],s_axis_tkeep[3:0],s_axis_tlast[0:0],m_axis_tvalid[3:0],m_axis_tready[3:0],m_axis_tdata[127:0],m_axis_tkeep[15:0],m_axis_tlast[3:0],s_axi_ctrl_aclk,s_axi_ctrl_aresetn,s_axi_ctrl_awvalid,s_axi_ctrl_awready,s_axi_ctrl_awaddr[6:0],s_axi_ctrl_wvalid,s_axi_ctrl_wready,s_axi_ctrl_wdata[31:0],s_axi_ctrl_bvalid,s_axi_ctrl_bready,s_axi_ctrl_bresp[1:0],s_axi_ctrl_arvalid,s_axi_ctrl_arready,s_axi_ctrl_araddr[6:0],s_axi_ctrl_rvalid,s_axi_ctrl_rready,s_axi_ctrl_rdata[31:0],s_axi_ctrl_rresp[1:0]";
+attribute black_box_pad_pin of stub : architecture is "aclk,aresetn,s_axis_tvalid[0:0],s_axis_tready[0:0],s_axis_tdata[31:0],s_axis_tkeep[3:0],s_axis_tlast[0:0],m_axis_tvalid[4:0],m_axis_tready[4:0],m_axis_tdata[159:0],m_axis_tkeep[19:0],m_axis_tlast[4:0],s_axi_ctrl_aclk,s_axi_ctrl_aresetn,s_axi_ctrl_awvalid,s_axi_ctrl_awready,s_axi_ctrl_awaddr[6:0],s_axi_ctrl_wvalid,s_axi_ctrl_wready,s_axi_ctrl_wdata[31:0],s_axi_ctrl_bvalid,s_axi_ctrl_bready,s_axi_ctrl_bresp[1:0],s_axi_ctrl_arvalid,s_axi_ctrl_arready,s_axi_ctrl_araddr[6:0],s_axi_ctrl_rvalid,s_axi_ctrl_rready,s_axi_ctrl_rdata[31:0],s_axi_ctrl_rresp[1:0]";
 attribute X_CORE_INFO : string;
 attribute X_CORE_INFO of stub : architecture is "axis_switch_v1_1_31_axis_switch,Vivado 2024.1";
 begin

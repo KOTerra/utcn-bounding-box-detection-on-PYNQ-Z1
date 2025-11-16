@@ -2,7 +2,7 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-// Date        : Sat Nov 15 16:28:52 2025
+// Date        : Sun Nov 16 12:35:58 2025
 // Host        : POWERSLAVE running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ip/design_1_axis_switch_0_2/design_1_axis_switch_0_2_sim_netlist.v
@@ -48,11 +48,11 @@ module design_1_axis_switch_0_2
     s_axi_ctrl_rresp);
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLKIF CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLKIF, ASSOCIATED_BUSIF M00_AXIS:M01_AXIS:M02_AXIS:M03_AXIS:M04_AXIS:M05_AXIS:M06_AXIS:M07_AXIS:M08_AXIS:M09_AXIS:M10_AXIS:M11_AXIS:M12_AXIS:M13_AXIS:M14_AXIS:M15_AXIS:S00_AXIS:S01_AXIS:S02_AXIS:S03_AXIS:S04_AXIS:S05_AXIS:S06_AXIS:S07_AXIS:S08_AXIS:S09_AXIS:S10_AXIS:S11_AXIS:S12_AXIS:S13_AXIS:S14_AXIS:S15_AXIS, ASSOCIATED_RESET aresetn, ASSOCIATED_CLKEN aclken, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) input aclk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RSTIF RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RSTIF, POLARITY ACTIVE_LOW, INSERT_VIP 0, TYPE INTERCONNECT" *) input aresetn;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S00_AXIS TVALID [0:0] [0:0], xilinx.com:interface:axis:1.0 S01_AXIS TVALID [0:0] [1:1], xilinx.com:interface:axis:1.0 S02_AXIS TVALID [0:0] [2:2], xilinx.com:interface:axis:1.0 S03_AXIS TVALID [0:0] [3:3]" *) input [3:0]s_axis_tvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S00_AXIS TREADY [0:0] [0:0], xilinx.com:interface:axis:1.0 S01_AXIS TREADY [0:0] [1:1], xilinx.com:interface:axis:1.0 S02_AXIS TREADY [0:0] [2:2], xilinx.com:interface:axis:1.0 S03_AXIS TREADY [0:0] [3:3]" *) output [3:0]s_axis_tready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S00_AXIS TDATA [31:0] [31:0], xilinx.com:interface:axis:1.0 S01_AXIS TDATA [31:0] [63:32], xilinx.com:interface:axis:1.0 S02_AXIS TDATA [31:0] [95:64], xilinx.com:interface:axis:1.0 S03_AXIS TDATA [31:0] [127:96]" *) input [127:0]s_axis_tdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S00_AXIS TLAST [0:0] [0:0], xilinx.com:interface:axis:1.0 S01_AXIS TLAST [0:0] [1:1], xilinx.com:interface:axis:1.0 S02_AXIS TLAST [0:0] [2:2], xilinx.com:interface:axis:1.0 S03_AXIS TLAST [0:0] [3:3]" *) input [3:0]s_axis_tlast;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S00_AXIS TDEST [1:0] [1:0], xilinx.com:interface:axis:1.0 S01_AXIS TDEST [1:0] [3:2], xilinx.com:interface:axis:1.0 S02_AXIS TDEST [1:0] [5:4], xilinx.com:interface:axis:1.0 S03_AXIS TDEST [1:0] [7:6]" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXIS, TDATA_NUM_BYTES 4, TDEST_WIDTH 2, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef, INSERT_VIP 0, XIL_INTERFACENAME S01_AXIS, TDATA_NUM_BYTES 4, TDEST_WIDTH 2, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef, INSERT_VIP 0, XIL_INTERFACENAME S02_AXIS, TDATA_NUM_BYTES 4, TDEST_WIDTH 2, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef, INSERT_VIP 0, XIL_INTERFACENAME S03_AXIS, TDATA_NUM_BYTES 4, TDEST_WIDTH 2, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef, INSERT_VIP 0" *) input [7:0]s_axis_tdest;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S00_AXIS TVALID [0:0] [0:0], xilinx.com:interface:axis:1.0 S01_AXIS TVALID [0:0] [1:1], xilinx.com:interface:axis:1.0 S02_AXIS TVALID [0:0] [2:2], xilinx.com:interface:axis:1.0 S03_AXIS TVALID [0:0] [3:3], xilinx.com:interface:axis:1.0 S04_AXIS TVALID [0:0] [4:4]" *) input [4:0]s_axis_tvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S00_AXIS TREADY [0:0] [0:0], xilinx.com:interface:axis:1.0 S01_AXIS TREADY [0:0] [1:1], xilinx.com:interface:axis:1.0 S02_AXIS TREADY [0:0] [2:2], xilinx.com:interface:axis:1.0 S03_AXIS TREADY [0:0] [3:3], xilinx.com:interface:axis:1.0 S04_AXIS TREADY [0:0] [4:4]" *) output [4:0]s_axis_tready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S00_AXIS TDATA [31:0] [31:0], xilinx.com:interface:axis:1.0 S01_AXIS TDATA [31:0] [63:32], xilinx.com:interface:axis:1.0 S02_AXIS TDATA [31:0] [95:64], xilinx.com:interface:axis:1.0 S03_AXIS TDATA [31:0] [127:96], xilinx.com:interface:axis:1.0 S04_AXIS TDATA [31:0] [159:128]" *) input [159:0]s_axis_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S00_AXIS TLAST [0:0] [0:0], xilinx.com:interface:axis:1.0 S01_AXIS TLAST [0:0] [1:1], xilinx.com:interface:axis:1.0 S02_AXIS TLAST [0:0] [2:2], xilinx.com:interface:axis:1.0 S03_AXIS TLAST [0:0] [3:3], xilinx.com:interface:axis:1.0 S04_AXIS TLAST [0:0] [4:4]" *) input [4:0]s_axis_tlast;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S00_AXIS TDEST [1:0] [1:0], xilinx.com:interface:axis:1.0 S01_AXIS TDEST [1:0] [3:2], xilinx.com:interface:axis:1.0 S02_AXIS TDEST [1:0] [5:4], xilinx.com:interface:axis:1.0 S03_AXIS TDEST [1:0] [7:6], xilinx.com:interface:axis:1.0 S04_AXIS TDEST [1:0] [9:8]" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXIS, TDATA_NUM_BYTES 4, TDEST_WIDTH 2, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef, INSERT_VIP 0, XIL_INTERFACENAME S01_AXIS, TDATA_NUM_BYTES 4, TDEST_WIDTH 2, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef, INSERT_VIP 0, XIL_INTERFACENAME S02_AXIS, TDATA_NUM_BYTES 4, TDEST_WIDTH 2, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef, INSERT_VIP 0, XIL_INTERFACENAME S03_AXIS, TDATA_NUM_BYTES 4, TDEST_WIDTH 2, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef, INSERT_VIP 0, XIL_INTERFACENAME S04_AXIS, TDATA_NUM_BYTES 4, TDEST_WIDTH 2, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef, INSERT_VIP 0" *) input [9:0]s_axis_tdest;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M00_AXIS TVALID" *) output [0:0]m_axis_tvalid;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M00_AXIS TREADY" *) input [0:0]m_axis_tready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M00_AXIS TDATA" *) output [31:0]m_axis_tdata;
@@ -100,24 +100,24 @@ module design_1_axis_switch_0_2
   wire [31:0]s_axi_ctrl_wdata;
   wire s_axi_ctrl_wready;
   wire s_axi_ctrl_wvalid;
-  wire [127:0]s_axis_tdata;
-  wire [7:0]s_axis_tdest;
-  wire [3:0]s_axis_tlast;
-  wire [3:0]s_axis_tready;
-  wire [3:0]s_axis_tvalid;
-  wire [7:0]NLW_inst_arb_dest_UNCONNECTED;
+  wire [159:0]s_axis_tdata;
+  wire [9:0]s_axis_tdest;
+  wire [4:0]s_axis_tlast;
+  wire [4:0]s_axis_tready;
+  wire [4:0]s_axis_tvalid;
+  wire [9:0]NLW_inst_arb_dest_UNCONNECTED;
   wire [0:0]NLW_inst_arb_done_UNCONNECTED;
-  wire [3:0]NLW_inst_arb_id_UNCONNECTED;
-  wire [3:0]NLW_inst_arb_last_UNCONNECTED;
-  wire [3:0]NLW_inst_arb_req_UNCONNECTED;
-  wire [3:0]NLW_inst_arb_user_UNCONNECTED;
+  wire [4:0]NLW_inst_arb_id_UNCONNECTED;
+  wire [4:0]NLW_inst_arb_last_UNCONNECTED;
+  wire [4:0]NLW_inst_arb_req_UNCONNECTED;
+  wire [4:0]NLW_inst_arb_user_UNCONNECTED;
   wire [0:0]NLW_inst_m_axis_tid_UNCONNECTED;
   wire [3:0]NLW_inst_m_axis_tkeep_UNCONNECTED;
   wire [3:0]NLW_inst_m_axis_tstrb_UNCONNECTED;
   wire [0:0]NLW_inst_m_axis_tuser_UNCONNECTED;
   wire [1:0]NLW_inst_s_axi_ctrl_bresp_UNCONNECTED;
   wire [1:0]NLW_inst_s_axi_ctrl_rresp_UNCONNECTED;
-  wire [3:0]NLW_inst_s_decode_err_UNCONNECTED;
+  wire [4:0]NLW_inst_s_decode_err_UNCONNECTED;
 
   assign s_axi_ctrl_bresp[1] = \<const0> ;
   assign s_axi_ctrl_bresp[0] = \<const0> ;
@@ -138,12 +138,12 @@ module design_1_axis_switch_0_2
   (* C_DECODER_REG = "0" *) 
   (* C_FAMILY = "zynq" *) 
   (* C_INCLUDE_ARBITER = "1" *) 
-  (* C_LOG_SI_SLOTS = "2" *) 
+  (* C_LOG_SI_SLOTS = "3" *) 
   (* C_M_AXIS_BASETDEST_ARRAY = "2'b00" *) 
-  (* C_M_AXIS_CONNECTIVITY_ARRAY = "4'b1111" *) 
+  (* C_M_AXIS_CONNECTIVITY_ARRAY = "5'b11111" *) 
   (* C_M_AXIS_HIGHTDEST_ARRAY = "2'b00" *) 
   (* C_NUM_MI_SLOTS = "1" *) 
-  (* C_NUM_SI_SLOTS = "4" *) 
+  (* C_NUM_SI_SLOTS = "5" *) 
   (* C_OUTPUT_REG = "0" *) 
   (* C_ROUTING_MODE = "1" *) 
   (* C_S_AXI_CTRL_ADDR_WIDTH = "7" *) 
@@ -168,23 +168,23 @@ module design_1_axis_switch_0_2
   (* G_TASK_SEVERITY_ERR = "2" *) 
   (* G_TASK_SEVERITY_INFO = "0" *) 
   (* G_TASK_SEVERITY_WARNING = "1" *) 
-  (* LP_CTRL_REG_WIDTH = "25" *) 
+  (* LP_CTRL_REG_WIDTH = "30" *) 
   (* LP_MERGEDOWN_MUX = "0" *) 
   (* LP_NUM_SYNCHRONIZER_STAGES = "4" *) 
-  (* P_DECODER_CONNECTIVITY_ARRAY = "4'b1111" *) 
+  (* P_DECODER_CONNECTIVITY_ARRAY = "5'b11111" *) 
   (* P_SINGLE_SLAVE_CONNECTIVITY_ARRAY = "1'b0" *) 
   (* P_TPAYLOAD_WIDTH = "35" *) 
   design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch inst
        (.aclk(aclk),
         .aclken(1'b1),
-        .arb_dest(NLW_inst_arb_dest_UNCONNECTED[7:0]),
+        .arb_dest(NLW_inst_arb_dest_UNCONNECTED[9:0]),
         .arb_done(NLW_inst_arb_done_UNCONNECTED[0]),
-        .arb_gnt({1'b0,1'b0,1'b0,1'b0}),
-        .arb_id(NLW_inst_arb_id_UNCONNECTED[3:0]),
-        .arb_last(NLW_inst_arb_last_UNCONNECTED[3:0]),
-        .arb_req(NLW_inst_arb_req_UNCONNECTED[3:0]),
-        .arb_sel({1'b0,1'b0}),
-        .arb_user(NLW_inst_arb_user_UNCONNECTED[3:0]),
+        .arb_gnt({1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .arb_id(NLW_inst_arb_id_UNCONNECTED[4:0]),
+        .arb_last(NLW_inst_arb_last_UNCONNECTED[4:0]),
+        .arb_req(NLW_inst_arb_req_UNCONNECTED[4:0]),
+        .arb_sel({1'b0,1'b0,1'b0}),
+        .arb_user(NLW_inst_arb_user_UNCONNECTED[4:0]),
         .aresetn(1'b0),
         .m_axis_tdata(m_axis_tdata),
         .m_axis_tdest(m_axis_tdest),
@@ -215,15 +215,15 @@ module design_1_axis_switch_0_2
         .s_axi_ctrl_wvalid(s_axi_ctrl_wvalid),
         .s_axis_tdata(s_axis_tdata),
         .s_axis_tdest(s_axis_tdest),
-        .s_axis_tid({1'b0,1'b0,1'b0,1'b0}),
-        .s_axis_tkeep({1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
+        .s_axis_tid({1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .s_axis_tkeep({1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
         .s_axis_tlast(s_axis_tlast),
         .s_axis_tready(s_axis_tready),
-        .s_axis_tstrb({1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
-        .s_axis_tuser({1'b0,1'b0,1'b0,1'b0}),
+        .s_axis_tstrb({1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
+        .s_axis_tuser({1'b0,1'b0,1'b0,1'b0,1'b0}),
         .s_axis_tvalid(s_axis_tvalid),
-        .s_decode_err(NLW_inst_s_decode_err_UNCONNECTED[3:0]),
-        .s_req_suppress({1'b0,1'b0,1'b0,1'b0}));
+        .s_decode_err(NLW_inst_s_decode_err_UNCONNECTED[4:0]),
+        .s_req_suppress({1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
 (* ORIG_REF_NAME = "axis_infrastructure_v1_1_1_cdc_handshake" *) 
@@ -238,25 +238,25 @@ module design_1_axis_switch_0_2_axis_infrastructure_v1_1_1_cdc_handshake
     aclk,
     \FSM_onehot_state_reg[4] );
   output src_rcv;
-  output [8:0]D;
+  output [9:0]D;
   output [0:0]E;
   output [0:0]\syncstages_ff_reg[3] ;
   input s_axi_ctrl_aclk;
-  input [24:0]Q;
+  input [29:0]Q;
   input src_send;
   input aclk;
   input [0:0]\FSM_onehot_state_reg[4] ;
 
-  wire [8:0]D;
+  wire [9:0]D;
   wire [0:0]E;
   wire [0:0]\FSM_onehot_state_reg[4] ;
-  wire [24:0]Q;
+  wire [29:0]Q;
   wire aclk;
   wire s_axi_ctrl_aclk;
   wire src_rcv;
   wire src_send;
   wire [0:0]\syncstages_ff_reg[3] ;
-  wire [20:5]NLW_inst_xpm_cdc_handshake_dest_out_UNCONNECTED;
+  wire [24:5]NLW_inst_xpm_cdc_handshake_dest_out_UNCONNECTED;
 
   LUT2 #(
     .INIT(4'h8)) 
@@ -270,13 +270,13 @@ module design_1_axis_switch_0_2_axis_infrastructure_v1_1_1_cdc_handshake
   (* SIM_ASSERT_CHK = "0" *) 
   (* SRC_SYNC_FF = "4" *) 
   (* VERSION = "0" *) 
-  (* WIDTH = "25" *) 
+  (* WIDTH = "30" *) 
   (* XPM_CDC = "HANDSHAKE" *) 
   (* XPM_MODULE = "TRUE" *) 
   design_1_axis_switch_0_2_xpm_cdc_handshake inst_xpm_cdc_handshake
        (.dest_ack(1'b0),
         .dest_clk(aclk),
-        .dest_out({D[8:5],NLW_inst_xpm_cdc_handshake_dest_out_UNCONNECTED[20:5],D[4:0]}),
+        .dest_out({D[9:5],NLW_inst_xpm_cdc_handshake_dest_out_UNCONNECTED[24:5],D[4:0]}),
         .dest_req(E),
         .src_clk(s_axi_ctrl_aclk),
         .src_in(Q),
@@ -858,11 +858,11 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axi_ctrl_top
   wire [3:0]Q;
   wire [0:0]SR;
   wire [31:0]data_r;
-  wire [31:31]\gen_reg[0].reg_data_reg ;
+  wire [31:0]\gen_reg[0].reg_data_reg ;
   wire [0:0]\gen_reg[0].reg_data_reg[0] ;
   wire [0:0]\gen_reg[0].reg_data_reg[1] ;
   wire \gen_reg[0].reg_data_reg_31_sn_1 ;
-  wire [31:0]\gen_reg[0].reg_data_reg__0 ;
+  wire [31:31]\gen_reg[0].reg_data_reg__0 ;
   wire inst_axi_ctrl_read_n_0;
   wire inst_axi_ctrl_write_n_2;
   wire inst_axi_ctrl_write_n_3;
@@ -938,8 +938,8 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axi_ctrl_top
         .\data_reg[29]_0 (inst_reg_bank_1_n_7),
         .\data_reg[2]_0 (inst_reg_bank_1_n_34),
         .\data_reg[30]_0 (inst_reg_bank_1_n_6),
-        .\data_reg[31]_0 (\gen_reg[0].reg_data_reg ),
-        .\data_reg[31]_1 (\gen_reg[0].reg_data_reg__0 [31]),
+        .\data_reg[31]_0 (\gen_reg[0].reg_data_reg__0 ),
+        .\data_reg[31]_1 (\gen_reg[0].reg_data_reg [31]),
         .\data_reg[3]_0 (inst_reg_bank_1_n_33),
         .\data_reg[4]_0 (inst_reg_bank_1_n_32),
         .\data_reg[5]_0 (inst_reg_bank_1_n_31),
@@ -971,16 +971,16 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axi_ctrl_top
   design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32 inst_reg_bank_0
        (.D(rb0_wdata),
         .E(inst_axi_ctrl_write_n_2),
-        .Q({\gen_reg[0].reg_data_reg__0 [31:2],\gen_reg[0].reg_data_reg[1] ,\gen_reg[0].reg_data_reg__0 [0]}),
+        .Q({\gen_reg[0].reg_data_reg [31:2],\gen_reg[0].reg_data_reg[1] ,\gen_reg[0].reg_data_reg [0]}),
         .SR(SR),
         .s_axi_ctrl_aclk(s_axi_ctrl_aclk));
   design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterized0 inst_reg_bank_1
        (.D(data_r),
         .E(inst_axi_ctrl_write_n_3),
-        .Q({\gen_reg[0].reg_data_reg ,Q}),
+        .Q({\gen_reg[0].reg_data_reg__0 ,Q}),
         .SR(SR),
         .\data_reg[30] (inst_axi_ctrl_read_n_0),
-        .\data_reg[30]_0 ({\gen_reg[0].reg_data_reg__0 [30:2],\gen_reg[0].reg_data_reg[1] ,\gen_reg[0].reg_data_reg__0 [0]}),
+        .\data_reg[30]_0 ({\gen_reg[0].reg_data_reg [30:2],\gen_reg[0].reg_data_reg[1] ,\gen_reg[0].reg_data_reg [0]}),
         .\gen_reg[0].reg_data_reg[0]_0 (inst_reg_bank_1_n_36),
         .\gen_reg[0].reg_data_reg[10]_0 (inst_reg_bank_1_n_26),
         .\gen_reg[0].reg_data_reg[11]_0 (inst_reg_bank_1_n_25),
@@ -1675,9 +1675,9 @@ endmodule
 (* C_ARB_ON_TLAST = "0" *) (* C_AXIS_SIGNAL_SET = "83" *) (* C_AXIS_TDATA_WIDTH = "32" *) 
 (* C_AXIS_TDEST_WIDTH = "2" *) (* C_AXIS_TID_WIDTH = "1" *) (* C_AXIS_TUSER_WIDTH = "1" *) 
 (* C_COMMON_CLOCK = "0" *) (* C_DECODER_REG = "0" *) (* C_FAMILY = "zynq" *) 
-(* C_INCLUDE_ARBITER = "1" *) (* C_LOG_SI_SLOTS = "2" *) (* C_M_AXIS_BASETDEST_ARRAY = "2'b00" *) 
-(* C_M_AXIS_CONNECTIVITY_ARRAY = "4'b1111" *) (* C_M_AXIS_HIGHTDEST_ARRAY = "2'b00" *) (* C_NUM_MI_SLOTS = "1" *) 
-(* C_NUM_SI_SLOTS = "4" *) (* C_OUTPUT_REG = "0" *) (* C_ROUTING_MODE = "1" *) 
+(* C_INCLUDE_ARBITER = "1" *) (* C_LOG_SI_SLOTS = "3" *) (* C_M_AXIS_BASETDEST_ARRAY = "2'b00" *) 
+(* C_M_AXIS_CONNECTIVITY_ARRAY = "5'b11111" *) (* C_M_AXIS_HIGHTDEST_ARRAY = "2'b00" *) (* C_NUM_MI_SLOTS = "1" *) 
+(* C_NUM_SI_SLOTS = "5" *) (* C_OUTPUT_REG = "0" *) (* C_ROUTING_MODE = "1" *) 
 (* C_S_AXI_CTRL_ADDR_WIDTH = "7" *) (* C_S_AXI_CTRL_DATA_WIDTH = "32" *) (* DowngradeIPIdentifiedWarnings = "yes" *) 
 (* G_INDX_SS_TDATA = "1" *) (* G_INDX_SS_TDEST = "6" *) (* G_INDX_SS_TID = "5" *) 
 (* G_INDX_SS_TKEEP = "3" *) (* G_INDX_SS_TLAST = "4" *) (* G_INDX_SS_TREADY = "0" *) 
@@ -1685,8 +1685,8 @@ endmodule
 (* G_MASK_SS_TDEST = "64" *) (* G_MASK_SS_TID = "32" *) (* G_MASK_SS_TKEEP = "8" *) 
 (* G_MASK_SS_TLAST = "16" *) (* G_MASK_SS_TREADY = "1" *) (* G_MASK_SS_TSTRB = "4" *) 
 (* G_MASK_SS_TUSER = "128" *) (* G_TASK_SEVERITY_ERR = "2" *) (* G_TASK_SEVERITY_INFO = "0" *) 
-(* G_TASK_SEVERITY_WARNING = "1" *) (* LP_CTRL_REG_WIDTH = "25" *) (* LP_MERGEDOWN_MUX = "0" *) 
-(* LP_NUM_SYNCHRONIZER_STAGES = "4" *) (* ORIG_REF_NAME = "axis_switch_v1_1_31_axis_switch" *) (* P_DECODER_CONNECTIVITY_ARRAY = "4'b1111" *) 
+(* G_TASK_SEVERITY_WARNING = "1" *) (* LP_CTRL_REG_WIDTH = "30" *) (* LP_MERGEDOWN_MUX = "0" *) 
+(* LP_NUM_SYNCHRONIZER_STAGES = "4" *) (* ORIG_REF_NAME = "axis_switch_v1_1_31_axis_switch" *) (* P_DECODER_CONNECTIVITY_ARRAY = "5'b11111" *) 
 (* P_SINGLE_SLAVE_CONNECTIVITY_ARRAY = "1'b0" *) (* P_TPAYLOAD_WIDTH = "35" *) 
 module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
    (aclk,
@@ -1741,15 +1741,15 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
   input aclk;
   input aresetn;
   input aclken;
-  input [3:0]s_axis_tvalid;
-  output [3:0]s_axis_tready;
-  input [127:0]s_axis_tdata;
-  input [15:0]s_axis_tstrb;
-  input [15:0]s_axis_tkeep;
-  input [3:0]s_axis_tlast;
-  input [3:0]s_axis_tid;
-  input [7:0]s_axis_tdest;
-  input [3:0]s_axis_tuser;
+  input [4:0]s_axis_tvalid;
+  output [4:0]s_axis_tready;
+  input [159:0]s_axis_tdata;
+  input [19:0]s_axis_tstrb;
+  input [19:0]s_axis_tkeep;
+  input [4:0]s_axis_tlast;
+  input [4:0]s_axis_tid;
+  input [9:0]s_axis_tdest;
+  input [4:0]s_axis_tuser;
   output [0:0]m_axis_tvalid;
   input [0:0]m_axis_tready;
   output [31:0]m_axis_tdata;
@@ -1759,15 +1759,15 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
   output [0:0]m_axis_tid;
   output [1:0]m_axis_tdest;
   output [0:0]m_axis_tuser;
-  output [3:0]arb_req;
+  output [4:0]arb_req;
   output [0:0]arb_done;
-  input [3:0]arb_gnt;
-  input [1:0]arb_sel;
-  output [3:0]arb_last;
-  output [3:0]arb_id;
-  output [7:0]arb_dest;
-  output [3:0]arb_user;
-  input [3:0]s_req_suppress;
+  input [4:0]arb_gnt;
+  input [2:0]arb_sel;
+  output [4:0]arb_last;
+  output [4:0]arb_id;
+  output [9:0]arb_dest;
+  output [4:0]arb_user;
+  input [4:0]s_req_suppress;
   input s_axi_ctrl_aclk;
   input s_axi_ctrl_aresetn;
   input s_axi_ctrl_awvalid;
@@ -1786,108 +1786,86 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
   input s_axi_ctrl_rready;
   output [31:0]s_axi_ctrl_rdata;
   output [1:0]s_axi_ctrl_rresp;
-  output [3:0]s_decode_err;
+  output [4:0]s_decode_err;
 
   wire \<const0> ;
   wire aclk;
   wire \gen_static_router.ctrl_ack ;
-  wire [24:0]\gen_static_router.ctrl_reg ;
+  wire [29:0]\gen_static_router.ctrl_reg ;
   wire \gen_static_router.ctrl_req ;
   wire \gen_static_router.ctrl_soft_reset ;
-  wire [24:0]\gen_static_router.gen_synch.cdc_handshake_data_out ;
+  wire [29:0]\gen_static_router.gen_synch.cdc_handshake_data_out ;
   wire \gen_static_router.gen_synch.cdc_handshake_data_valid ;
   wire \gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ;
   wire \gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ;
   wire \gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ;
   wire \gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[3] ;
-  wire \gen_static_router.gen_synch.inst_cdc_handshake_n_11 ;
+  wire \gen_static_router.gen_synch.inst_cdc_handshake_n_12 ;
   wire \gen_static_router.inst_static_router_n_2 ;
   wire \gen_static_router.s_axi_ctrl_areset ;
   wire \gen_static_router.s_axi_ctrl_areset_i_1_n_0 ;
   wire [31:0]m_axis_tdata;
   wire \m_axis_tdata[0]_INST_0_i_1_n_0 ;
+  wire \m_axis_tdata[0]_INST_0_i_2_n_0 ;
+  wire \m_axis_tdata[0]_INST_0_i_3_n_0 ;
   wire \m_axis_tdata[10]_INST_0_i_1_n_0 ;
   wire \m_axis_tdata[10]_INST_0_i_2_n_0 ;
   wire \m_axis_tdata[10]_INST_0_i_3_n_0 ;
+  wire \m_axis_tdata[10]_INST_0_i_4_n_0 ;
   wire \m_axis_tdata[11]_INST_0_i_1_n_0 ;
   wire \m_axis_tdata[11]_INST_0_i_2_n_0 ;
   wire \m_axis_tdata[11]_INST_0_i_3_n_0 ;
   wire \m_axis_tdata[11]_INST_0_i_4_n_0 ;
-  wire \m_axis_tdata[11]_INST_0_i_5_n_0 ;
-  wire \m_axis_tdata[11]_INST_0_i_6_n_0 ;
   wire \m_axis_tdata[12]_INST_0_i_1_n_0 ;
   wire \m_axis_tdata[12]_INST_0_i_2_n_0 ;
   wire \m_axis_tdata[12]_INST_0_i_3_n_0 ;
   wire \m_axis_tdata[12]_INST_0_i_4_n_0 ;
-  wire \m_axis_tdata[12]_INST_0_i_5_n_0 ;
-  wire \m_axis_tdata[12]_INST_0_i_6_n_0 ;
   wire \m_axis_tdata[13]_INST_0_i_1_n_0 ;
   wire \m_axis_tdata[13]_INST_0_i_2_n_0 ;
   wire \m_axis_tdata[13]_INST_0_i_3_n_0 ;
   wire \m_axis_tdata[13]_INST_0_i_4_n_0 ;
-  wire \m_axis_tdata[13]_INST_0_i_5_n_0 ;
-  wire \m_axis_tdata[13]_INST_0_i_6_n_0 ;
   wire \m_axis_tdata[14]_INST_0_i_1_n_0 ;
   wire \m_axis_tdata[14]_INST_0_i_2_n_0 ;
   wire \m_axis_tdata[14]_INST_0_i_3_n_0 ;
   wire \m_axis_tdata[14]_INST_0_i_4_n_0 ;
-  wire \m_axis_tdata[14]_INST_0_i_5_n_0 ;
-  wire \m_axis_tdata[14]_INST_0_i_6_n_0 ;
   wire \m_axis_tdata[15]_INST_0_i_1_n_0 ;
   wire \m_axis_tdata[15]_INST_0_i_2_n_0 ;
   wire \m_axis_tdata[15]_INST_0_i_3_n_0 ;
   wire \m_axis_tdata[15]_INST_0_i_4_n_0 ;
-  wire \m_axis_tdata[15]_INST_0_i_5_n_0 ;
-  wire \m_axis_tdata[15]_INST_0_i_6_n_0 ;
   wire \m_axis_tdata[16]_INST_0_i_1_n_0 ;
   wire \m_axis_tdata[16]_INST_0_i_2_n_0 ;
   wire \m_axis_tdata[16]_INST_0_i_3_n_0 ;
   wire \m_axis_tdata[16]_INST_0_i_4_n_0 ;
-  wire \m_axis_tdata[16]_INST_0_i_5_n_0 ;
-  wire \m_axis_tdata[16]_INST_0_i_6_n_0 ;
   wire \m_axis_tdata[17]_INST_0_i_1_n_0 ;
   wire \m_axis_tdata[17]_INST_0_i_2_n_0 ;
   wire \m_axis_tdata[17]_INST_0_i_3_n_0 ;
   wire \m_axis_tdata[17]_INST_0_i_4_n_0 ;
-  wire \m_axis_tdata[17]_INST_0_i_5_n_0 ;
-  wire \m_axis_tdata[17]_INST_0_i_6_n_0 ;
   wire \m_axis_tdata[18]_INST_0_i_1_n_0 ;
   wire \m_axis_tdata[18]_INST_0_i_2_n_0 ;
   wire \m_axis_tdata[18]_INST_0_i_3_n_0 ;
   wire \m_axis_tdata[18]_INST_0_i_4_n_0 ;
-  wire \m_axis_tdata[18]_INST_0_i_5_n_0 ;
-  wire \m_axis_tdata[18]_INST_0_i_6_n_0 ;
   wire \m_axis_tdata[19]_INST_0_i_1_n_0 ;
   wire \m_axis_tdata[19]_INST_0_i_2_n_0 ;
   wire \m_axis_tdata[19]_INST_0_i_3_n_0 ;
   wire \m_axis_tdata[19]_INST_0_i_4_n_0 ;
-  wire \m_axis_tdata[19]_INST_0_i_5_n_0 ;
-  wire \m_axis_tdata[19]_INST_0_i_6_n_0 ;
   wire \m_axis_tdata[1]_INST_0_i_1_n_0 ;
+  wire \m_axis_tdata[1]_INST_0_i_2_n_0 ;
   wire \m_axis_tdata[20]_INST_0_i_1_n_0 ;
   wire \m_axis_tdata[20]_INST_0_i_2_n_0 ;
   wire \m_axis_tdata[20]_INST_0_i_3_n_0 ;
   wire \m_axis_tdata[20]_INST_0_i_4_n_0 ;
-  wire \m_axis_tdata[20]_INST_0_i_5_n_0 ;
-  wire \m_axis_tdata[20]_INST_0_i_6_n_0 ;
   wire \m_axis_tdata[21]_INST_0_i_1_n_0 ;
   wire \m_axis_tdata[21]_INST_0_i_2_n_0 ;
   wire \m_axis_tdata[21]_INST_0_i_3_n_0 ;
   wire \m_axis_tdata[21]_INST_0_i_4_n_0 ;
-  wire \m_axis_tdata[21]_INST_0_i_5_n_0 ;
-  wire \m_axis_tdata[21]_INST_0_i_6_n_0 ;
   wire \m_axis_tdata[22]_INST_0_i_1_n_0 ;
   wire \m_axis_tdata[22]_INST_0_i_2_n_0 ;
   wire \m_axis_tdata[22]_INST_0_i_3_n_0 ;
   wire \m_axis_tdata[22]_INST_0_i_4_n_0 ;
-  wire \m_axis_tdata[22]_INST_0_i_5_n_0 ;
-  wire \m_axis_tdata[22]_INST_0_i_6_n_0 ;
   wire \m_axis_tdata[23]_INST_0_i_1_n_0 ;
   wire \m_axis_tdata[23]_INST_0_i_2_n_0 ;
   wire \m_axis_tdata[23]_INST_0_i_3_n_0 ;
   wire \m_axis_tdata[23]_INST_0_i_4_n_0 ;
-  wire \m_axis_tdata[23]_INST_0_i_5_n_0 ;
-  wire \m_axis_tdata[23]_INST_0_i_6_n_0 ;
   wire \m_axis_tdata[24]_INST_0_i_1_n_0 ;
   wire \m_axis_tdata[24]_INST_0_i_2_n_0 ;
   wire \m_axis_tdata[24]_INST_0_i_3_n_0 ;
@@ -1913,6 +1891,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
   wire \m_axis_tdata[29]_INST_0_i_3_n_0 ;
   wire \m_axis_tdata[29]_INST_0_i_4_n_0 ;
   wire \m_axis_tdata[2]_INST_0_i_1_n_0 ;
+  wire \m_axis_tdata[2]_INST_0_i_2_n_0 ;
   wire \m_axis_tdata[30]_INST_0_i_1_n_0 ;
   wire \m_axis_tdata[30]_INST_0_i_2_n_0 ;
   wire \m_axis_tdata[30]_INST_0_i_3_n_0 ;
@@ -1922,16 +1901,23 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
   wire \m_axis_tdata[31]_INST_0_i_3_n_0 ;
   wire \m_axis_tdata[31]_INST_0_i_4_n_0 ;
   wire \m_axis_tdata[3]_INST_0_i_1_n_0 ;
+  wire \m_axis_tdata[3]_INST_0_i_2_n_0 ;
   wire \m_axis_tdata[4]_INST_0_i_1_n_0 ;
+  wire \m_axis_tdata[4]_INST_0_i_2_n_0 ;
   wire \m_axis_tdata[5]_INST_0_i_1_n_0 ;
+  wire \m_axis_tdata[5]_INST_0_i_2_n_0 ;
   wire \m_axis_tdata[6]_INST_0_i_1_n_0 ;
+  wire \m_axis_tdata[6]_INST_0_i_2_n_0 ;
   wire \m_axis_tdata[7]_INST_0_i_1_n_0 ;
+  wire \m_axis_tdata[7]_INST_0_i_2_n_0 ;
   wire \m_axis_tdata[8]_INST_0_i_1_n_0 ;
   wire \m_axis_tdata[8]_INST_0_i_2_n_0 ;
   wire \m_axis_tdata[8]_INST_0_i_3_n_0 ;
+  wire \m_axis_tdata[8]_INST_0_i_4_n_0 ;
   wire \m_axis_tdata[9]_INST_0_i_1_n_0 ;
   wire \m_axis_tdata[9]_INST_0_i_2_n_0 ;
   wire \m_axis_tdata[9]_INST_0_i_3_n_0 ;
+  wire \m_axis_tdata[9]_INST_0_i_4_n_0 ;
   wire [1:0]m_axis_tdest;
   wire \m_axis_tdest[0]_INST_0_i_1_n_0 ;
   wire \m_axis_tdest[0]_INST_0_i_2_n_0 ;
@@ -1959,14 +1945,16 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
   wire s_axi_ctrl_rvalid;
   wire [31:0]s_axi_ctrl_wdata;
   wire s_axi_ctrl_wvalid;
-  wire [127:0]s_axis_tdata;
-  wire [7:0]s_axis_tdest;
-  wire [3:0]s_axis_tlast;
-  wire [3:0]s_axis_tready;
-  wire \s_axis_tready[3]_INST_0_i_1_n_0 ;
-  wire [3:0]s_axis_tvalid;
-  wire [3:0]si_enable;
+  wire [159:0]s_axis_tdata;
+  wire [9:0]s_axis_tdest;
+  wire [4:0]s_axis_tlast;
+  wire [4:0]s_axis_tready;
+  wire \s_axis_tready[4]_INST_0_i_1_n_0 ;
+  wire [4:0]s_axis_tvalid;
+  wire [4:0]si_enable;
 
+  assign arb_dest[9] = \<const0> ;
+  assign arb_dest[8] = \<const0> ;
   assign arb_dest[7] = \<const0> ;
   assign arb_dest[6] = \<const0> ;
   assign arb_dest[5] = \<const0> ;
@@ -1976,18 +1964,22 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
   assign arb_dest[1] = \<const0> ;
   assign arb_dest[0] = \<const0> ;
   assign arb_done[0] = \<const0> ;
+  assign arb_id[4] = \<const0> ;
   assign arb_id[3] = \<const0> ;
   assign arb_id[2] = \<const0> ;
   assign arb_id[1] = \<const0> ;
   assign arb_id[0] = \<const0> ;
+  assign arb_last[4] = \<const0> ;
   assign arb_last[3] = \<const0> ;
   assign arb_last[2] = \<const0> ;
   assign arb_last[1] = \<const0> ;
   assign arb_last[0] = \<const0> ;
+  assign arb_req[4] = \<const0> ;
   assign arb_req[3] = \<const0> ;
   assign arb_req[2] = \<const0> ;
   assign arb_req[1] = \<const0> ;
   assign arb_req[0] = \<const0> ;
+  assign arb_user[4] = \<const0> ;
   assign arb_user[3] = \<const0> ;
   assign arb_user[2] = \<const0> ;
   assign arb_user[1] = \<const0> ;
@@ -2007,6 +1999,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
   assign s_axi_ctrl_rresp[1] = \<const0> ;
   assign s_axi_ctrl_rresp[0] = \<const0> ;
   assign s_axi_ctrl_wready = s_axi_ctrl_awready;
+  assign s_decode_err[4] = \<const0> ;
   assign s_decode_err[3] = \<const0> ;
   assign s_decode_err[2] = \<const0> ;
   assign s_decode_err[1] = \<const0> ;
@@ -2031,35 +2024,43 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
-    \gen_static_router.gen_synch.ctrl_reg_synch_reg[21] 
+    \gen_static_router.gen_synch.ctrl_reg_synch_reg[25] 
        (.C(aclk),
         .CE(\gen_static_router.gen_synch.cdc_handshake_data_valid ),
-        .D(\gen_static_router.gen_synch.cdc_handshake_data_out [21]),
+        .D(\gen_static_router.gen_synch.cdc_handshake_data_out [25]),
         .Q(si_enable[0]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
-    \gen_static_router.gen_synch.ctrl_reg_synch_reg[22] 
+    \gen_static_router.gen_synch.ctrl_reg_synch_reg[26] 
        (.C(aclk),
         .CE(\gen_static_router.gen_synch.cdc_handshake_data_valid ),
-        .D(\gen_static_router.gen_synch.cdc_handshake_data_out [22]),
+        .D(\gen_static_router.gen_synch.cdc_handshake_data_out [26]),
         .Q(si_enable[1]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
-    \gen_static_router.gen_synch.ctrl_reg_synch_reg[23] 
+    \gen_static_router.gen_synch.ctrl_reg_synch_reg[27] 
        (.C(aclk),
         .CE(\gen_static_router.gen_synch.cdc_handshake_data_valid ),
-        .D(\gen_static_router.gen_synch.cdc_handshake_data_out [23]),
+        .D(\gen_static_router.gen_synch.cdc_handshake_data_out [27]),
         .Q(si_enable[2]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
-    \gen_static_router.gen_synch.ctrl_reg_synch_reg[24] 
+    \gen_static_router.gen_synch.ctrl_reg_synch_reg[28] 
        (.C(aclk),
         .CE(\gen_static_router.gen_synch.cdc_handshake_data_valid ),
-        .D(\gen_static_router.gen_synch.cdc_handshake_data_out [24]),
+        .D(\gen_static_router.gen_synch.cdc_handshake_data_out [28]),
         .Q(si_enable[3]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_static_router.gen_synch.ctrl_reg_synch_reg[29] 
+       (.C(aclk),
+        .CE(\gen_static_router.gen_synch.cdc_handshake_data_valid ),
+        .D(\gen_static_router.gen_synch.cdc_handshake_data_out [29]),
+        .Q(si_enable[4]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -2086,7 +2087,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .Q(mi_enable),
         .R(1'b0));
   design_1_axis_switch_0_2_axis_infrastructure_v1_1_1_cdc_handshake \gen_static_router.gen_synch.inst_cdc_handshake 
-       (.D({\gen_static_router.gen_synch.cdc_handshake_data_out [24:21],\gen_static_router.gen_synch.cdc_handshake_data_out [4:0]}),
+       (.D({\gen_static_router.gen_synch.cdc_handshake_data_out [29:25],\gen_static_router.gen_synch.cdc_handshake_data_out [4:0]}),
         .E(\gen_static_router.gen_synch.cdc_handshake_data_valid ),
         .\FSM_onehot_state_reg[4] (\gen_static_router.inst_static_router_n_2 ),
         .Q(\gen_static_router.ctrl_reg ),
@@ -2094,15 +2095,15 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .s_axi_ctrl_aclk(s_axi_ctrl_aclk),
         .src_rcv(\gen_static_router.ctrl_ack ),
         .src_send(\gen_static_router.ctrl_req ),
-        .\syncstages_ff_reg[3] (\gen_static_router.gen_synch.inst_cdc_handshake_n_11 ));
+        .\syncstages_ff_reg[3] (\gen_static_router.gen_synch.inst_cdc_handshake_n_12 ));
   design_1_axis_switch_0_2_axis_infrastructure_v1_1_1_clock_synchronizer \gen_static_router.gen_synch.inst_rst_synch 
        (.aclk(aclk),
         .src_in(\gen_static_router.ctrl_soft_reset ));
   design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router \gen_static_router.inst_static_router 
-       (.D(\gen_static_router.gen_synch.inst_cdc_handshake_n_11 ),
+       (.D(\gen_static_router.gen_synch.inst_cdc_handshake_n_12 ),
         .Q(\gen_static_router.inst_static_router_n_2 ),
         .SR(\gen_static_router.s_axi_ctrl_areset ),
-        .\ctrl_reg_r_reg[24] (\gen_static_router.ctrl_reg ),
+        .\ctrl_reg_r_reg[29] (\gen_static_router.ctrl_reg ),
         .out0({s_axi_ctrl_rvalid,s_axi_ctrl_arready}),
         .s_axi_ctrl_aclk(s_axi_ctrl_aclk),
         .s_axi_ctrl_araddr(s_axi_ctrl_araddr[6:2]),
@@ -2129,40 +2130,57 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .D(\gen_static_router.s_axi_ctrl_areset_i_1_n_0 ),
         .Q(\gen_static_router.s_axi_ctrl_areset ),
         .R(1'b0));
-  LUT4 #(
-    .INIT(16'h00B8)) 
-    \m_axis_tdata[0]_INST_0 
-       (.I0(\m_axis_tdata[24]_INST_0_i_4_n_0 ),
-        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[3] ),
-        .I2(\m_axis_tdata[0]_INST_0_i_1_n_0 ),
+  MUXF7 \m_axis_tdata[0]_INST_0 
+       (.I0(\m_axis_tdata[0]_INST_0_i_1_n_0 ),
+        .I1(\m_axis_tdata[0]_INST_0_i_2_n_0 ),
+        .O(m_axis_tdata[0]),
+        .S(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[3] ));
+  LUT5 #(
+    .INIT(32'h04FF0400)) 
+    \m_axis_tdata[0]_INST_0_i_1 
+       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I1(s_axis_tdata[128]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
         .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
-        .O(m_axis_tdata[0]));
+        .I4(\m_axis_tdata[0]_INST_0_i_3_n_0 ),
+        .O(\m_axis_tdata[0]_INST_0_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h04FF0400)) 
+    \m_axis_tdata[0]_INST_0_i_2 
+       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I1(s_axis_tdata[152]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
+        .I4(\m_axis_tdata[24]_INST_0_i_3_n_0 ),
+        .O(\m_axis_tdata[0]_INST_0_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \m_axis_tdata[0]_INST_0_i_1 
+    \m_axis_tdata[0]_INST_0_i_3 
        (.I0(s_axis_tdata[96]),
         .I1(s_axis_tdata[64]),
         .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
         .I3(s_axis_tdata[32]),
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I5(s_axis_tdata[0]),
-        .O(\m_axis_tdata[0]_INST_0_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hA0A0CFC0)) 
+        .O(\m_axis_tdata[0]_INST_0_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[10]_INST_0 
        (.I0(\m_axis_tdata[10]_INST_0_i_1_n_0 ),
         .I1(\m_axis_tdata[10]_INST_0_i_2_n_0 ),
         .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[3] ),
         .I3(\m_axis_tdata[10]_INST_0_i_3_n_0 ),
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
+        .I5(\m_axis_tdata[10]_INST_0_i_4_n_0 ),
         .O(m_axis_tdata[10]));
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
-  LUT3 #(
-    .INIT(8'h80)) 
+  (* SOFT_HLUTNM = "soft_lutpair45" *) 
+  LUT4 #(
+    .INIT(16'h8830)) 
     \m_axis_tdata[10]_INST_0_i_1 
-       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I1(s_axis_tdata[23]),
-        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+       (.I0(s_axis_tdata[23]),
+        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I2(s_axis_tdest[9]),
+        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .O(\m_axis_tdata[10]_INST_0_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -2174,31 +2192,48 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I5(s_axis_tdest[1]),
         .O(\m_axis_tdata[10]_INST_0_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair51" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \m_axis_tdata[10]_INST_0_i_3 
+       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I1(s_axis_tdata[138]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .O(\m_axis_tdata[10]_INST_0_i_3_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \m_axis_tdata[10]_INST_0_i_3 
+    \m_axis_tdata[10]_INST_0_i_4 
        (.I0(s_axis_tdata[106]),
         .I1(s_axis_tdata[74]),
         .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
         .I3(s_axis_tdata[42]),
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I5(s_axis_tdata[10]),
-        .O(\m_axis_tdata[10]_INST_0_i_3_n_0 ));
-  MUXF8 \m_axis_tdata[11]_INST_0 
+        .O(\m_axis_tdata[10]_INST_0_i_4_n_0 ));
+  MUXF7 \m_axis_tdata[11]_INST_0 
        (.I0(\m_axis_tdata[11]_INST_0_i_1_n_0 ),
         .I1(\m_axis_tdata[11]_INST_0_i_2_n_0 ),
         .O(m_axis_tdata[11]),
         .S(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[3] ));
-  MUXF7 \m_axis_tdata[11]_INST_0_i_1 
-       (.I0(\m_axis_tdata[11]_INST_0_i_3_n_0 ),
-        .I1(\m_axis_tdata[11]_INST_0_i_4_n_0 ),
-        .O(\m_axis_tdata[11]_INST_0_i_1_n_0 ),
-        .S(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ));
-  MUXF7 \m_axis_tdata[11]_INST_0_i_2 
-       (.I0(\m_axis_tdata[11]_INST_0_i_5_n_0 ),
-        .I1(\m_axis_tdata[11]_INST_0_i_6_n_0 ),
-        .O(\m_axis_tdata[11]_INST_0_i_2_n_0 ),
-        .S(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ));
+  LUT6 #(
+    .INIT(64'h8830FFFF88300000)) 
+    \m_axis_tdata[11]_INST_0_i_1 
+       (.I0(s_axis_tdata[0]),
+        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I2(s_axis_tdata[139]),
+        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
+        .I5(\m_axis_tdata[11]_INST_0_i_3_n_0 ),
+        .O(\m_axis_tdata[11]_INST_0_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h80FF8000)) 
+    \m_axis_tdata[11]_INST_0_i_2 
+       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I1(s_axis_tdata[24]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
+        .I4(\m_axis_tdata[11]_INST_0_i_4_n_0 ),
+        .O(\m_axis_tdata[11]_INST_0_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[11]_INST_0_i_3 
@@ -2209,44 +2244,40 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I5(s_axis_tdata[11]),
         .O(\m_axis_tdata[11]_INST_0_i_3_n_0 ));
-  LUT3 #(
-    .INIT(8'h80)) 
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[11]_INST_0_i_4 
-       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I1(s_axis_tdata[0]),
-        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+       (.I0(s_axis_tdata[128]),
+        .I1(s_axis_tdata[96]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I3(s_axis_tdata[64]),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I5(s_axis_tdata[32]),
         .O(\m_axis_tdata[11]_INST_0_i_4_n_0 ));
-  LUT5 #(
-    .INIT(32'h30BB3088)) 
-    \m_axis_tdata[11]_INST_0_i_5 
-       (.I0(s_axis_tdata[96]),
-        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I2(s_axis_tdata[64]),
-        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
-        .I4(s_axis_tdata[32]),
-        .O(\m_axis_tdata[11]_INST_0_i_5_n_0 ));
-  LUT3 #(
-    .INIT(8'h80)) 
-    \m_axis_tdata[11]_INST_0_i_6 
-       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I1(s_axis_tdata[24]),
-        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
-        .O(\m_axis_tdata[11]_INST_0_i_6_n_0 ));
-  MUXF8 \m_axis_tdata[12]_INST_0 
+  MUXF7 \m_axis_tdata[12]_INST_0 
        (.I0(\m_axis_tdata[12]_INST_0_i_1_n_0 ),
         .I1(\m_axis_tdata[12]_INST_0_i_2_n_0 ),
         .O(m_axis_tdata[12]),
         .S(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[3] ));
-  MUXF7 \m_axis_tdata[12]_INST_0_i_1 
-       (.I0(\m_axis_tdata[12]_INST_0_i_3_n_0 ),
-        .I1(\m_axis_tdata[12]_INST_0_i_4_n_0 ),
-        .O(\m_axis_tdata[12]_INST_0_i_1_n_0 ),
-        .S(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ));
-  MUXF7 \m_axis_tdata[12]_INST_0_i_2 
-       (.I0(\m_axis_tdata[12]_INST_0_i_5_n_0 ),
-        .I1(\m_axis_tdata[12]_INST_0_i_6_n_0 ),
-        .O(\m_axis_tdata[12]_INST_0_i_2_n_0 ),
-        .S(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ));
+  LUT6 #(
+    .INIT(64'h8830FFFF88300000)) 
+    \m_axis_tdata[12]_INST_0_i_1 
+       (.I0(s_axis_tdata[1]),
+        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I2(s_axis_tdata[140]),
+        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
+        .I5(\m_axis_tdata[12]_INST_0_i_3_n_0 ),
+        .O(\m_axis_tdata[12]_INST_0_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h80FF8000)) 
+    \m_axis_tdata[12]_INST_0_i_2 
+       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I1(s_axis_tdata[25]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
+        .I4(\m_axis_tdata[12]_INST_0_i_4_n_0 ),
+        .O(\m_axis_tdata[12]_INST_0_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[12]_INST_0_i_3 
@@ -2257,44 +2288,40 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I5(s_axis_tdata[12]),
         .O(\m_axis_tdata[12]_INST_0_i_3_n_0 ));
-  LUT3 #(
-    .INIT(8'h80)) 
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[12]_INST_0_i_4 
-       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I1(s_axis_tdata[1]),
-        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+       (.I0(s_axis_tdata[129]),
+        .I1(s_axis_tdata[97]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I3(s_axis_tdata[65]),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I5(s_axis_tdata[33]),
         .O(\m_axis_tdata[12]_INST_0_i_4_n_0 ));
-  LUT5 #(
-    .INIT(32'h30BB3088)) 
-    \m_axis_tdata[12]_INST_0_i_5 
-       (.I0(s_axis_tdata[97]),
-        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I2(s_axis_tdata[65]),
-        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
-        .I4(s_axis_tdata[33]),
-        .O(\m_axis_tdata[12]_INST_0_i_5_n_0 ));
-  LUT3 #(
-    .INIT(8'h80)) 
-    \m_axis_tdata[12]_INST_0_i_6 
-       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I1(s_axis_tdata[25]),
-        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
-        .O(\m_axis_tdata[12]_INST_0_i_6_n_0 ));
-  MUXF8 \m_axis_tdata[13]_INST_0 
+  MUXF7 \m_axis_tdata[13]_INST_0 
        (.I0(\m_axis_tdata[13]_INST_0_i_1_n_0 ),
         .I1(\m_axis_tdata[13]_INST_0_i_2_n_0 ),
         .O(m_axis_tdata[13]),
         .S(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[3] ));
-  MUXF7 \m_axis_tdata[13]_INST_0_i_1 
-       (.I0(\m_axis_tdata[13]_INST_0_i_3_n_0 ),
-        .I1(\m_axis_tdata[13]_INST_0_i_4_n_0 ),
-        .O(\m_axis_tdata[13]_INST_0_i_1_n_0 ),
-        .S(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ));
-  MUXF7 \m_axis_tdata[13]_INST_0_i_2 
-       (.I0(\m_axis_tdata[13]_INST_0_i_5_n_0 ),
-        .I1(\m_axis_tdata[13]_INST_0_i_6_n_0 ),
-        .O(\m_axis_tdata[13]_INST_0_i_2_n_0 ),
-        .S(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ));
+  LUT6 #(
+    .INIT(64'h8830FFFF88300000)) 
+    \m_axis_tdata[13]_INST_0_i_1 
+       (.I0(s_axis_tdata[2]),
+        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I2(s_axis_tdata[141]),
+        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
+        .I5(\m_axis_tdata[13]_INST_0_i_3_n_0 ),
+        .O(\m_axis_tdata[13]_INST_0_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h80FF8000)) 
+    \m_axis_tdata[13]_INST_0_i_2 
+       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I1(s_axis_tdata[26]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
+        .I4(\m_axis_tdata[13]_INST_0_i_4_n_0 ),
+        .O(\m_axis_tdata[13]_INST_0_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[13]_INST_0_i_3 
@@ -2305,44 +2332,40 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I5(s_axis_tdata[13]),
         .O(\m_axis_tdata[13]_INST_0_i_3_n_0 ));
-  LUT3 #(
-    .INIT(8'h80)) 
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[13]_INST_0_i_4 
-       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I1(s_axis_tdata[2]),
-        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+       (.I0(s_axis_tdata[130]),
+        .I1(s_axis_tdata[98]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I3(s_axis_tdata[66]),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I5(s_axis_tdata[34]),
         .O(\m_axis_tdata[13]_INST_0_i_4_n_0 ));
-  LUT5 #(
-    .INIT(32'h30BB3088)) 
-    \m_axis_tdata[13]_INST_0_i_5 
-       (.I0(s_axis_tdata[98]),
-        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I2(s_axis_tdata[66]),
-        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
-        .I4(s_axis_tdata[34]),
-        .O(\m_axis_tdata[13]_INST_0_i_5_n_0 ));
-  LUT3 #(
-    .INIT(8'h80)) 
-    \m_axis_tdata[13]_INST_0_i_6 
-       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I1(s_axis_tdata[26]),
-        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
-        .O(\m_axis_tdata[13]_INST_0_i_6_n_0 ));
-  MUXF8 \m_axis_tdata[14]_INST_0 
+  MUXF7 \m_axis_tdata[14]_INST_0 
        (.I0(\m_axis_tdata[14]_INST_0_i_1_n_0 ),
         .I1(\m_axis_tdata[14]_INST_0_i_2_n_0 ),
         .O(m_axis_tdata[14]),
         .S(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[3] ));
-  MUXF7 \m_axis_tdata[14]_INST_0_i_1 
-       (.I0(\m_axis_tdata[14]_INST_0_i_3_n_0 ),
-        .I1(\m_axis_tdata[14]_INST_0_i_4_n_0 ),
-        .O(\m_axis_tdata[14]_INST_0_i_1_n_0 ),
-        .S(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ));
-  MUXF7 \m_axis_tdata[14]_INST_0_i_2 
-       (.I0(\m_axis_tdata[14]_INST_0_i_5_n_0 ),
-        .I1(\m_axis_tdata[14]_INST_0_i_6_n_0 ),
-        .O(\m_axis_tdata[14]_INST_0_i_2_n_0 ),
-        .S(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ));
+  LUT6 #(
+    .INIT(64'h8830FFFF88300000)) 
+    \m_axis_tdata[14]_INST_0_i_1 
+       (.I0(s_axis_tdata[3]),
+        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I2(s_axis_tdata[142]),
+        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
+        .I5(\m_axis_tdata[14]_INST_0_i_3_n_0 ),
+        .O(\m_axis_tdata[14]_INST_0_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h80FF8000)) 
+    \m_axis_tdata[14]_INST_0_i_2 
+       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I1(s_axis_tdata[27]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
+        .I4(\m_axis_tdata[14]_INST_0_i_4_n_0 ),
+        .O(\m_axis_tdata[14]_INST_0_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[14]_INST_0_i_3 
@@ -2353,44 +2376,40 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I5(s_axis_tdata[14]),
         .O(\m_axis_tdata[14]_INST_0_i_3_n_0 ));
-  LUT3 #(
-    .INIT(8'h80)) 
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[14]_INST_0_i_4 
-       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I1(s_axis_tdata[3]),
-        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+       (.I0(s_axis_tdata[131]),
+        .I1(s_axis_tdata[99]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I3(s_axis_tdata[67]),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I5(s_axis_tdata[35]),
         .O(\m_axis_tdata[14]_INST_0_i_4_n_0 ));
-  LUT5 #(
-    .INIT(32'h30BB3088)) 
-    \m_axis_tdata[14]_INST_0_i_5 
-       (.I0(s_axis_tdata[99]),
-        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I2(s_axis_tdata[67]),
-        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
-        .I4(s_axis_tdata[35]),
-        .O(\m_axis_tdata[14]_INST_0_i_5_n_0 ));
-  LUT3 #(
-    .INIT(8'h80)) 
-    \m_axis_tdata[14]_INST_0_i_6 
-       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I1(s_axis_tdata[27]),
-        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
-        .O(\m_axis_tdata[14]_INST_0_i_6_n_0 ));
-  MUXF8 \m_axis_tdata[15]_INST_0 
+  MUXF7 \m_axis_tdata[15]_INST_0 
        (.I0(\m_axis_tdata[15]_INST_0_i_1_n_0 ),
         .I1(\m_axis_tdata[15]_INST_0_i_2_n_0 ),
         .O(m_axis_tdata[15]),
         .S(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[3] ));
-  MUXF7 \m_axis_tdata[15]_INST_0_i_1 
-       (.I0(\m_axis_tdata[15]_INST_0_i_3_n_0 ),
-        .I1(\m_axis_tdata[15]_INST_0_i_4_n_0 ),
-        .O(\m_axis_tdata[15]_INST_0_i_1_n_0 ),
-        .S(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ));
-  MUXF7 \m_axis_tdata[15]_INST_0_i_2 
-       (.I0(\m_axis_tdata[15]_INST_0_i_5_n_0 ),
-        .I1(\m_axis_tdata[15]_INST_0_i_6_n_0 ),
-        .O(\m_axis_tdata[15]_INST_0_i_2_n_0 ),
-        .S(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ));
+  LUT6 #(
+    .INIT(64'h8830FFFF88300000)) 
+    \m_axis_tdata[15]_INST_0_i_1 
+       (.I0(s_axis_tdata[4]),
+        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I2(s_axis_tdata[143]),
+        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
+        .I5(\m_axis_tdata[15]_INST_0_i_3_n_0 ),
+        .O(\m_axis_tdata[15]_INST_0_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h80FF8000)) 
+    \m_axis_tdata[15]_INST_0_i_2 
+       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I1(s_axis_tdata[28]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
+        .I4(\m_axis_tdata[15]_INST_0_i_4_n_0 ),
+        .O(\m_axis_tdata[15]_INST_0_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[15]_INST_0_i_3 
@@ -2401,44 +2420,40 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I5(s_axis_tdata[15]),
         .O(\m_axis_tdata[15]_INST_0_i_3_n_0 ));
-  LUT3 #(
-    .INIT(8'h80)) 
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[15]_INST_0_i_4 
-       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I1(s_axis_tdata[4]),
-        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+       (.I0(s_axis_tdata[132]),
+        .I1(s_axis_tdata[100]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I3(s_axis_tdata[68]),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I5(s_axis_tdata[36]),
         .O(\m_axis_tdata[15]_INST_0_i_4_n_0 ));
-  LUT5 #(
-    .INIT(32'h30BB3088)) 
-    \m_axis_tdata[15]_INST_0_i_5 
-       (.I0(s_axis_tdata[100]),
-        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I2(s_axis_tdata[68]),
-        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
-        .I4(s_axis_tdata[36]),
-        .O(\m_axis_tdata[15]_INST_0_i_5_n_0 ));
-  LUT3 #(
-    .INIT(8'h80)) 
-    \m_axis_tdata[15]_INST_0_i_6 
-       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I1(s_axis_tdata[28]),
-        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
-        .O(\m_axis_tdata[15]_INST_0_i_6_n_0 ));
-  MUXF8 \m_axis_tdata[16]_INST_0 
+  MUXF7 \m_axis_tdata[16]_INST_0 
        (.I0(\m_axis_tdata[16]_INST_0_i_1_n_0 ),
         .I1(\m_axis_tdata[16]_INST_0_i_2_n_0 ),
         .O(m_axis_tdata[16]),
         .S(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[3] ));
-  MUXF7 \m_axis_tdata[16]_INST_0_i_1 
-       (.I0(\m_axis_tdata[16]_INST_0_i_3_n_0 ),
-        .I1(\m_axis_tdata[16]_INST_0_i_4_n_0 ),
-        .O(\m_axis_tdata[16]_INST_0_i_1_n_0 ),
-        .S(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ));
-  MUXF7 \m_axis_tdata[16]_INST_0_i_2 
-       (.I0(\m_axis_tdata[16]_INST_0_i_5_n_0 ),
-        .I1(\m_axis_tdata[16]_INST_0_i_6_n_0 ),
-        .O(\m_axis_tdata[16]_INST_0_i_2_n_0 ),
-        .S(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ));
+  LUT6 #(
+    .INIT(64'h8830FFFF88300000)) 
+    \m_axis_tdata[16]_INST_0_i_1 
+       (.I0(s_axis_tdata[5]),
+        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I2(s_axis_tdata[144]),
+        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
+        .I5(\m_axis_tdata[16]_INST_0_i_3_n_0 ),
+        .O(\m_axis_tdata[16]_INST_0_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h80FF8000)) 
+    \m_axis_tdata[16]_INST_0_i_2 
+       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I1(s_axis_tdata[29]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
+        .I4(\m_axis_tdata[16]_INST_0_i_4_n_0 ),
+        .O(\m_axis_tdata[16]_INST_0_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[16]_INST_0_i_3 
@@ -2449,44 +2464,40 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I5(s_axis_tdata[16]),
         .O(\m_axis_tdata[16]_INST_0_i_3_n_0 ));
-  LUT3 #(
-    .INIT(8'h80)) 
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[16]_INST_0_i_4 
-       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I1(s_axis_tdata[5]),
-        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+       (.I0(s_axis_tdata[133]),
+        .I1(s_axis_tdata[101]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I3(s_axis_tdata[69]),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I5(s_axis_tdata[37]),
         .O(\m_axis_tdata[16]_INST_0_i_4_n_0 ));
-  LUT5 #(
-    .INIT(32'h30BB3088)) 
-    \m_axis_tdata[16]_INST_0_i_5 
-       (.I0(s_axis_tdata[101]),
-        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I2(s_axis_tdata[69]),
-        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
-        .I4(s_axis_tdata[37]),
-        .O(\m_axis_tdata[16]_INST_0_i_5_n_0 ));
-  LUT3 #(
-    .INIT(8'h80)) 
-    \m_axis_tdata[16]_INST_0_i_6 
-       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I1(s_axis_tdata[29]),
-        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
-        .O(\m_axis_tdata[16]_INST_0_i_6_n_0 ));
-  MUXF8 \m_axis_tdata[17]_INST_0 
+  MUXF7 \m_axis_tdata[17]_INST_0 
        (.I0(\m_axis_tdata[17]_INST_0_i_1_n_0 ),
         .I1(\m_axis_tdata[17]_INST_0_i_2_n_0 ),
         .O(m_axis_tdata[17]),
         .S(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[3] ));
-  MUXF7 \m_axis_tdata[17]_INST_0_i_1 
-       (.I0(\m_axis_tdata[17]_INST_0_i_3_n_0 ),
-        .I1(\m_axis_tdata[17]_INST_0_i_4_n_0 ),
-        .O(\m_axis_tdata[17]_INST_0_i_1_n_0 ),
-        .S(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ));
-  MUXF7 \m_axis_tdata[17]_INST_0_i_2 
-       (.I0(\m_axis_tdata[17]_INST_0_i_5_n_0 ),
-        .I1(\m_axis_tdata[17]_INST_0_i_6_n_0 ),
-        .O(\m_axis_tdata[17]_INST_0_i_2_n_0 ),
-        .S(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ));
+  LUT6 #(
+    .INIT(64'h8830FFFF88300000)) 
+    \m_axis_tdata[17]_INST_0_i_1 
+       (.I0(s_axis_tdata[6]),
+        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I2(s_axis_tdata[145]),
+        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
+        .I5(\m_axis_tdata[17]_INST_0_i_3_n_0 ),
+        .O(\m_axis_tdata[17]_INST_0_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h80FF8000)) 
+    \m_axis_tdata[17]_INST_0_i_2 
+       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I1(s_axis_tdata[30]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
+        .I4(\m_axis_tdata[17]_INST_0_i_4_n_0 ),
+        .O(\m_axis_tdata[17]_INST_0_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[17]_INST_0_i_3 
@@ -2497,44 +2508,40 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I5(s_axis_tdata[17]),
         .O(\m_axis_tdata[17]_INST_0_i_3_n_0 ));
-  LUT3 #(
-    .INIT(8'h80)) 
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[17]_INST_0_i_4 
-       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I1(s_axis_tdata[6]),
-        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+       (.I0(s_axis_tdata[134]),
+        .I1(s_axis_tdata[102]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I3(s_axis_tdata[70]),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I5(s_axis_tdata[38]),
         .O(\m_axis_tdata[17]_INST_0_i_4_n_0 ));
-  LUT5 #(
-    .INIT(32'h30BB3088)) 
-    \m_axis_tdata[17]_INST_0_i_5 
-       (.I0(s_axis_tdata[102]),
-        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I2(s_axis_tdata[70]),
-        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
-        .I4(s_axis_tdata[38]),
-        .O(\m_axis_tdata[17]_INST_0_i_5_n_0 ));
-  LUT3 #(
-    .INIT(8'h80)) 
-    \m_axis_tdata[17]_INST_0_i_6 
-       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I1(s_axis_tdata[30]),
-        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
-        .O(\m_axis_tdata[17]_INST_0_i_6_n_0 ));
-  MUXF8 \m_axis_tdata[18]_INST_0 
+  MUXF7 \m_axis_tdata[18]_INST_0 
        (.I0(\m_axis_tdata[18]_INST_0_i_1_n_0 ),
         .I1(\m_axis_tdata[18]_INST_0_i_2_n_0 ),
         .O(m_axis_tdata[18]),
         .S(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[3] ));
-  MUXF7 \m_axis_tdata[18]_INST_0_i_1 
-       (.I0(\m_axis_tdata[18]_INST_0_i_3_n_0 ),
-        .I1(\m_axis_tdata[18]_INST_0_i_4_n_0 ),
-        .O(\m_axis_tdata[18]_INST_0_i_1_n_0 ),
-        .S(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ));
-  MUXF7 \m_axis_tdata[18]_INST_0_i_2 
-       (.I0(\m_axis_tdata[18]_INST_0_i_5_n_0 ),
-        .I1(\m_axis_tdata[18]_INST_0_i_6_n_0 ),
-        .O(\m_axis_tdata[18]_INST_0_i_2_n_0 ),
-        .S(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ));
+  LUT6 #(
+    .INIT(64'h8830FFFF88300000)) 
+    \m_axis_tdata[18]_INST_0_i_1 
+       (.I0(s_axis_tdata[7]),
+        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I2(s_axis_tdata[146]),
+        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
+        .I5(\m_axis_tdata[18]_INST_0_i_3_n_0 ),
+        .O(\m_axis_tdata[18]_INST_0_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h80FF8000)) 
+    \m_axis_tdata[18]_INST_0_i_2 
+       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I1(s_axis_tdata[31]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
+        .I4(\m_axis_tdata[18]_INST_0_i_4_n_0 ),
+        .O(\m_axis_tdata[18]_INST_0_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[18]_INST_0_i_3 
@@ -2545,44 +2552,40 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I5(s_axis_tdata[18]),
         .O(\m_axis_tdata[18]_INST_0_i_3_n_0 ));
-  LUT3 #(
-    .INIT(8'h80)) 
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[18]_INST_0_i_4 
-       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I1(s_axis_tdata[7]),
-        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+       (.I0(s_axis_tdata[135]),
+        .I1(s_axis_tdata[103]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I3(s_axis_tdata[71]),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I5(s_axis_tdata[39]),
         .O(\m_axis_tdata[18]_INST_0_i_4_n_0 ));
-  LUT5 #(
-    .INIT(32'h30BB3088)) 
-    \m_axis_tdata[18]_INST_0_i_5 
-       (.I0(s_axis_tdata[103]),
-        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I2(s_axis_tdata[71]),
-        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
-        .I4(s_axis_tdata[39]),
-        .O(\m_axis_tdata[18]_INST_0_i_5_n_0 ));
-  LUT3 #(
-    .INIT(8'h80)) 
-    \m_axis_tdata[18]_INST_0_i_6 
-       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I1(s_axis_tdata[31]),
-        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
-        .O(\m_axis_tdata[18]_INST_0_i_6_n_0 ));
-  MUXF8 \m_axis_tdata[19]_INST_0 
+  MUXF7 \m_axis_tdata[19]_INST_0 
        (.I0(\m_axis_tdata[19]_INST_0_i_1_n_0 ),
         .I1(\m_axis_tdata[19]_INST_0_i_2_n_0 ),
         .O(m_axis_tdata[19]),
         .S(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[3] ));
-  MUXF7 \m_axis_tdata[19]_INST_0_i_1 
-       (.I0(\m_axis_tdata[19]_INST_0_i_3_n_0 ),
-        .I1(\m_axis_tdata[19]_INST_0_i_4_n_0 ),
-        .O(\m_axis_tdata[19]_INST_0_i_1_n_0 ),
-        .S(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ));
-  MUXF7 \m_axis_tdata[19]_INST_0_i_2 
-       (.I0(\m_axis_tdata[19]_INST_0_i_5_n_0 ),
-        .I1(\m_axis_tdata[19]_INST_0_i_6_n_0 ),
-        .O(\m_axis_tdata[19]_INST_0_i_2_n_0 ),
-        .S(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ));
+  LUT6 #(
+    .INIT(64'h8830FFFF88300000)) 
+    \m_axis_tdata[19]_INST_0_i_1 
+       (.I0(s_axis_tdata[8]),
+        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I2(s_axis_tdata[147]),
+        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
+        .I5(\m_axis_tdata[19]_INST_0_i_3_n_0 ),
+        .O(\m_axis_tdata[19]_INST_0_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h80FF8000)) 
+    \m_axis_tdata[19]_INST_0_i_2 
+       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I1(s_axis_tlast[0]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
+        .I4(\m_axis_tdata[19]_INST_0_i_4_n_0 ),
+        .O(\m_axis_tdata[19]_INST_0_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[19]_INST_0_i_3 
@@ -2593,63 +2596,68 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I5(s_axis_tdata[19]),
         .O(\m_axis_tdata[19]_INST_0_i_3_n_0 ));
-  LUT3 #(
-    .INIT(8'h80)) 
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[19]_INST_0_i_4 
-       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I1(s_axis_tdata[8]),
-        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+       (.I0(s_axis_tdata[136]),
+        .I1(s_axis_tdata[104]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I3(s_axis_tdata[72]),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I5(s_axis_tdata[40]),
         .O(\m_axis_tdata[19]_INST_0_i_4_n_0 ));
-  LUT5 #(
-    .INIT(32'h30BB3088)) 
-    \m_axis_tdata[19]_INST_0_i_5 
-       (.I0(s_axis_tdata[104]),
-        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I2(s_axis_tdata[72]),
-        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
-        .I4(s_axis_tdata[40]),
-        .O(\m_axis_tdata[19]_INST_0_i_5_n_0 ));
-  LUT3 #(
-    .INIT(8'h80)) 
-    \m_axis_tdata[19]_INST_0_i_6 
-       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I1(s_axis_tlast[0]),
-        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
-        .O(\m_axis_tdata[19]_INST_0_i_6_n_0 ));
-  LUT5 #(
-    .INIT(32'hA0A0CFC0)) 
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[1]_INST_0 
        (.I0(\m_axis_tdata[25]_INST_0_i_3_n_0 ),
         .I1(\m_axis_tdata[25]_INST_0_i_4_n_0 ),
         .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[3] ),
         .I3(\m_axis_tdata[1]_INST_0_i_1_n_0 ),
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
+        .I5(\m_axis_tdata[1]_INST_0_i_2_n_0 ),
         .O(m_axis_tdata[1]));
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \m_axis_tdata[1]_INST_0_i_1 
+       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I1(s_axis_tdata[129]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .O(\m_axis_tdata[1]_INST_0_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \m_axis_tdata[1]_INST_0_i_1 
+    \m_axis_tdata[1]_INST_0_i_2 
        (.I0(s_axis_tdata[97]),
         .I1(s_axis_tdata[65]),
         .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
         .I3(s_axis_tdata[33]),
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I5(s_axis_tdata[1]),
-        .O(\m_axis_tdata[1]_INST_0_i_1_n_0 ));
-  MUXF8 \m_axis_tdata[20]_INST_0 
+        .O(\m_axis_tdata[1]_INST_0_i_2_n_0 ));
+  MUXF7 \m_axis_tdata[20]_INST_0 
        (.I0(\m_axis_tdata[20]_INST_0_i_1_n_0 ),
         .I1(\m_axis_tdata[20]_INST_0_i_2_n_0 ),
         .O(m_axis_tdata[20]),
         .S(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[3] ));
-  MUXF7 \m_axis_tdata[20]_INST_0_i_1 
-       (.I0(\m_axis_tdata[20]_INST_0_i_3_n_0 ),
-        .I1(\m_axis_tdata[20]_INST_0_i_4_n_0 ),
-        .O(\m_axis_tdata[20]_INST_0_i_1_n_0 ),
-        .S(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ));
-  MUXF7 \m_axis_tdata[20]_INST_0_i_2 
-       (.I0(\m_axis_tdata[20]_INST_0_i_5_n_0 ),
-        .I1(\m_axis_tdata[20]_INST_0_i_6_n_0 ),
-        .O(\m_axis_tdata[20]_INST_0_i_2_n_0 ),
-        .S(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ));
+  LUT6 #(
+    .INIT(64'h8830FFFF88300000)) 
+    \m_axis_tdata[20]_INST_0_i_1 
+       (.I0(s_axis_tdata[9]),
+        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I2(s_axis_tdata[148]),
+        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
+        .I5(\m_axis_tdata[20]_INST_0_i_3_n_0 ),
+        .O(\m_axis_tdata[20]_INST_0_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h80FF8000)) 
+    \m_axis_tdata[20]_INST_0_i_2 
+       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I1(s_axis_tdest[0]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
+        .I4(\m_axis_tdata[20]_INST_0_i_4_n_0 ),
+        .O(\m_axis_tdata[20]_INST_0_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[20]_INST_0_i_3 
@@ -2660,44 +2668,40 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I5(s_axis_tdata[20]),
         .O(\m_axis_tdata[20]_INST_0_i_3_n_0 ));
-  LUT3 #(
-    .INIT(8'h80)) 
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[20]_INST_0_i_4 
-       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I1(s_axis_tdata[9]),
-        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+       (.I0(s_axis_tdata[137]),
+        .I1(s_axis_tdata[105]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I3(s_axis_tdata[73]),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I5(s_axis_tdata[41]),
         .O(\m_axis_tdata[20]_INST_0_i_4_n_0 ));
-  LUT5 #(
-    .INIT(32'h30BB3088)) 
-    \m_axis_tdata[20]_INST_0_i_5 
-       (.I0(s_axis_tdata[105]),
-        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I2(s_axis_tdata[73]),
-        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
-        .I4(s_axis_tdata[41]),
-        .O(\m_axis_tdata[20]_INST_0_i_5_n_0 ));
-  LUT3 #(
-    .INIT(8'h80)) 
-    \m_axis_tdata[20]_INST_0_i_6 
-       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I1(s_axis_tdest[0]),
-        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
-        .O(\m_axis_tdata[20]_INST_0_i_6_n_0 ));
-  MUXF8 \m_axis_tdata[21]_INST_0 
+  MUXF7 \m_axis_tdata[21]_INST_0 
        (.I0(\m_axis_tdata[21]_INST_0_i_1_n_0 ),
         .I1(\m_axis_tdata[21]_INST_0_i_2_n_0 ),
         .O(m_axis_tdata[21]),
         .S(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[3] ));
-  MUXF7 \m_axis_tdata[21]_INST_0_i_1 
-       (.I0(\m_axis_tdata[21]_INST_0_i_3_n_0 ),
-        .I1(\m_axis_tdata[21]_INST_0_i_4_n_0 ),
-        .O(\m_axis_tdata[21]_INST_0_i_1_n_0 ),
-        .S(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ));
-  MUXF7 \m_axis_tdata[21]_INST_0_i_2 
-       (.I0(\m_axis_tdata[21]_INST_0_i_5_n_0 ),
-        .I1(\m_axis_tdata[21]_INST_0_i_6_n_0 ),
-        .O(\m_axis_tdata[21]_INST_0_i_2_n_0 ),
-        .S(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ));
+  LUT6 #(
+    .INIT(64'h8830FFFF88300000)) 
+    \m_axis_tdata[21]_INST_0_i_1 
+       (.I0(s_axis_tdata[10]),
+        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I2(s_axis_tdata[149]),
+        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
+        .I5(\m_axis_tdata[21]_INST_0_i_3_n_0 ),
+        .O(\m_axis_tdata[21]_INST_0_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h80FF8000)) 
+    \m_axis_tdata[21]_INST_0_i_2 
+       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I1(s_axis_tdest[1]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
+        .I4(\m_axis_tdata[21]_INST_0_i_4_n_0 ),
+        .O(\m_axis_tdata[21]_INST_0_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[21]_INST_0_i_3 
@@ -2708,44 +2712,41 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I5(s_axis_tdata[21]),
         .O(\m_axis_tdata[21]_INST_0_i_3_n_0 ));
-  LUT3 #(
-    .INIT(8'h80)) 
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[21]_INST_0_i_4 
-       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I1(s_axis_tdata[10]),
-        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+       (.I0(s_axis_tdata[138]),
+        .I1(s_axis_tdata[106]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I3(s_axis_tdata[74]),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I5(s_axis_tdata[42]),
         .O(\m_axis_tdata[21]_INST_0_i_4_n_0 ));
-  LUT5 #(
-    .INIT(32'h30BB3088)) 
-    \m_axis_tdata[21]_INST_0_i_5 
-       (.I0(s_axis_tdata[106]),
-        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I2(s_axis_tdata[74]),
-        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
-        .I4(s_axis_tdata[42]),
-        .O(\m_axis_tdata[21]_INST_0_i_5_n_0 ));
-  LUT3 #(
-    .INIT(8'h80)) 
-    \m_axis_tdata[21]_INST_0_i_6 
-       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I1(s_axis_tdest[1]),
-        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
-        .O(\m_axis_tdata[21]_INST_0_i_6_n_0 ));
-  MUXF8 \m_axis_tdata[22]_INST_0 
+  MUXF7 \m_axis_tdata[22]_INST_0 
        (.I0(\m_axis_tdata[22]_INST_0_i_1_n_0 ),
         .I1(\m_axis_tdata[22]_INST_0_i_2_n_0 ),
         .O(m_axis_tdata[22]),
         .S(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[3] ));
-  MUXF7 \m_axis_tdata[22]_INST_0_i_1 
-       (.I0(\m_axis_tdata[22]_INST_0_i_3_n_0 ),
-        .I1(\m_axis_tdata[22]_INST_0_i_4_n_0 ),
-        .O(\m_axis_tdata[22]_INST_0_i_1_n_0 ),
-        .S(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ));
-  MUXF7 \m_axis_tdata[22]_INST_0_i_2 
-       (.I0(\m_axis_tdata[22]_INST_0_i_5_n_0 ),
-        .I1(\m_axis_tdata[22]_INST_0_i_6_n_0 ),
-        .O(\m_axis_tdata[22]_INST_0_i_2_n_0 ),
-        .S(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ));
+  LUT6 #(
+    .INIT(64'h8830FFFF88300000)) 
+    \m_axis_tdata[22]_INST_0_i_1 
+       (.I0(s_axis_tdata[11]),
+        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I2(s_axis_tdata[150]),
+        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
+        .I5(\m_axis_tdata[22]_INST_0_i_3_n_0 ),
+        .O(\m_axis_tdata[22]_INST_0_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hA808FFFFA8080000)) 
+    \m_axis_tdata[22]_INST_0_i_2 
+       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I1(s_axis_tdata[0]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I3(s_axis_tdata[32]),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
+        .I5(\m_axis_tdata[22]_INST_0_i_4_n_0 ),
+        .O(\m_axis_tdata[22]_INST_0_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[22]_INST_0_i_3 
@@ -2756,45 +2757,41 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I5(s_axis_tdata[22]),
         .O(\m_axis_tdata[22]_INST_0_i_3_n_0 ));
-  LUT3 #(
-    .INIT(8'h80)) 
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[22]_INST_0_i_4 
-       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I1(s_axis_tdata[11]),
-        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+       (.I0(s_axis_tdata[139]),
+        .I1(s_axis_tdata[107]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I3(s_axis_tdata[75]),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I5(s_axis_tdata[43]),
         .O(\m_axis_tdata[22]_INST_0_i_4_n_0 ));
-  LUT5 #(
-    .INIT(32'h30BB3088)) 
-    \m_axis_tdata[22]_INST_0_i_5 
-       (.I0(s_axis_tdata[107]),
-        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I2(s_axis_tdata[75]),
-        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
-        .I4(s_axis_tdata[43]),
-        .O(\m_axis_tdata[22]_INST_0_i_5_n_0 ));
-  LUT4 #(
-    .INIT(16'hA808)) 
-    \m_axis_tdata[22]_INST_0_i_6 
-       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I1(s_axis_tdata[0]),
-        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
-        .I3(s_axis_tdata[32]),
-        .O(\m_axis_tdata[22]_INST_0_i_6_n_0 ));
-  MUXF8 \m_axis_tdata[23]_INST_0 
+  MUXF7 \m_axis_tdata[23]_INST_0 
        (.I0(\m_axis_tdata[23]_INST_0_i_1_n_0 ),
         .I1(\m_axis_tdata[23]_INST_0_i_2_n_0 ),
         .O(m_axis_tdata[23]),
         .S(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[3] ));
-  MUXF7 \m_axis_tdata[23]_INST_0_i_1 
-       (.I0(\m_axis_tdata[23]_INST_0_i_3_n_0 ),
-        .I1(\m_axis_tdata[23]_INST_0_i_4_n_0 ),
-        .O(\m_axis_tdata[23]_INST_0_i_1_n_0 ),
-        .S(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ));
-  MUXF7 \m_axis_tdata[23]_INST_0_i_2 
-       (.I0(\m_axis_tdata[23]_INST_0_i_5_n_0 ),
-        .I1(\m_axis_tdata[23]_INST_0_i_6_n_0 ),
-        .O(\m_axis_tdata[23]_INST_0_i_2_n_0 ),
-        .S(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ));
+  LUT6 #(
+    .INIT(64'h8830FFFF88300000)) 
+    \m_axis_tdata[23]_INST_0_i_1 
+       (.I0(s_axis_tdata[12]),
+        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I2(s_axis_tdata[151]),
+        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
+        .I5(\m_axis_tdata[23]_INST_0_i_3_n_0 ),
+        .O(\m_axis_tdata[23]_INST_0_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hA808FFFFA8080000)) 
+    \m_axis_tdata[23]_INST_0_i_2 
+       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I1(s_axis_tdata[1]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I3(s_axis_tdata[33]),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
+        .I5(\m_axis_tdata[23]_INST_0_i_4_n_0 ),
+        .O(\m_axis_tdata[23]_INST_0_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[23]_INST_0_i_3 
@@ -2805,75 +2802,60 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I5(s_axis_tdata[23]),
         .O(\m_axis_tdata[23]_INST_0_i_3_n_0 ));
-  LUT3 #(
-    .INIT(8'h80)) 
-    \m_axis_tdata[23]_INST_0_i_4 
-       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I1(s_axis_tdata[12]),
-        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
-        .O(\m_axis_tdata[23]_INST_0_i_4_n_0 ));
-  LUT5 #(
-    .INIT(32'h30BB3088)) 
-    \m_axis_tdata[23]_INST_0_i_5 
-       (.I0(s_axis_tdata[108]),
-        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I2(s_axis_tdata[76]),
-        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
-        .I4(s_axis_tdata[44]),
-        .O(\m_axis_tdata[23]_INST_0_i_5_n_0 ));
-  LUT4 #(
-    .INIT(16'hA808)) 
-    \m_axis_tdata[23]_INST_0_i_6 
-       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I1(s_axis_tdata[1]),
-        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
-        .I3(s_axis_tdata[33]),
-        .O(\m_axis_tdata[23]_INST_0_i_6_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \m_axis_tdata[24]_INST_0 
+    \m_axis_tdata[23]_INST_0_i_4 
+       (.I0(s_axis_tdata[140]),
+        .I1(s_axis_tdata[108]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I3(s_axis_tdata[76]),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I5(s_axis_tdata[44]),
+        .O(\m_axis_tdata[23]_INST_0_i_4_n_0 ));
+  MUXF7 \m_axis_tdata[24]_INST_0 
        (.I0(\m_axis_tdata[24]_INST_0_i_1_n_0 ),
         .I1(\m_axis_tdata[24]_INST_0_i_2_n_0 ),
-        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[3] ),
-        .I3(\m_axis_tdata[24]_INST_0_i_3_n_0 ),
-        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
-        .I5(\m_axis_tdata[24]_INST_0_i_4_n_0 ),
-        .O(m_axis_tdata[24]));
-  (* SOFT_HLUTNM = "soft_lutpair42" *) 
-  LUT4 #(
-    .INIT(16'hA808)) 
+        .O(m_axis_tdata[24]),
+        .S(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[3] ));
+  LUT6 #(
+    .INIT(64'h8830FFFF88300000)) 
     \m_axis_tdata[24]_INST_0_i_1 
+       (.I0(s_axis_tdata[13]),
+        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I2(s_axis_tdata[152]),
+        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
+        .I5(\m_axis_tdata[24]_INST_0_i_3_n_0 ),
+        .O(\m_axis_tdata[24]_INST_0_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hA808FFFFA8080000)) 
+    \m_axis_tdata[24]_INST_0_i_2 
        (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
         .I1(s_axis_tdata[2]),
         .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I3(s_axis_tdata[34]),
-        .O(\m_axis_tdata[24]_INST_0_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h30BB3088)) 
-    \m_axis_tdata[24]_INST_0_i_2 
-       (.I0(s_axis_tdata[109]),
-        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I2(s_axis_tdata[77]),
-        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
-        .I4(s_axis_tdata[45]),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
+        .I5(\m_axis_tdata[24]_INST_0_i_4_n_0 ),
         .O(\m_axis_tdata[24]_INST_0_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair46" *) 
-  LUT3 #(
-    .INIT(8'h80)) 
-    \m_axis_tdata[24]_INST_0_i_3 
-       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I1(s_axis_tdata[13]),
-        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
-        .O(\m_axis_tdata[24]_INST_0_i_3_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \m_axis_tdata[24]_INST_0_i_4 
+    \m_axis_tdata[24]_INST_0_i_3 
        (.I0(s_axis_tdata[120]),
         .I1(s_axis_tdata[88]),
         .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
         .I3(s_axis_tdata[56]),
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I5(s_axis_tdata[24]),
+        .O(\m_axis_tdata[24]_INST_0_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \m_axis_tdata[24]_INST_0_i_4 
+       (.I0(s_axis_tdata[141]),
+        .I1(s_axis_tdata[109]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I3(s_axis_tdata[77]),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I5(s_axis_tdata[45]),
         .O(\m_axis_tdata[24]_INST_0_i_4_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -2885,7 +2867,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
         .I5(\m_axis_tdata[25]_INST_0_i_4_n_0 ),
         .O(m_axis_tdata[25]));
-  (* SOFT_HLUTNM = "soft_lutpair43" *) 
+  (* SOFT_HLUTNM = "soft_lutpair49" *) 
   LUT4 #(
     .INIT(16'hA808)) 
     \m_axis_tdata[25]_INST_0_i_1 
@@ -2894,22 +2876,24 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I3(s_axis_tdata[35]),
         .O(\m_axis_tdata[25]_INST_0_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h30BB3088)) 
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[25]_INST_0_i_2 
-       (.I0(s_axis_tdata[110]),
-        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I2(s_axis_tdata[78]),
-        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
-        .I4(s_axis_tdata[46]),
+       (.I0(s_axis_tdata[142]),
+        .I1(s_axis_tdata[110]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I3(s_axis_tdata[78]),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I5(s_axis_tdata[46]),
         .O(\m_axis_tdata[25]_INST_0_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair45" *) 
-  LUT3 #(
-    .INIT(8'h80)) 
+  (* SOFT_HLUTNM = "soft_lutpair48" *) 
+  LUT4 #(
+    .INIT(16'h8830)) 
     \m_axis_tdata[25]_INST_0_i_3 
-       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I1(s_axis_tdata[14]),
-        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+       (.I0(s_axis_tdata[14]),
+        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I2(s_axis_tdata[153]),
+        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .O(\m_axis_tdata[25]_INST_0_i_3_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -2931,7 +2915,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
         .I5(\m_axis_tdata[26]_INST_0_i_4_n_0 ),
         .O(m_axis_tdata[26]));
-  (* SOFT_HLUTNM = "soft_lutpair44" *) 
+  (* SOFT_HLUTNM = "soft_lutpair51" *) 
   LUT4 #(
     .INIT(16'hA808)) 
     \m_axis_tdata[26]_INST_0_i_1 
@@ -2940,22 +2924,24 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I3(s_axis_tdata[36]),
         .O(\m_axis_tdata[26]_INST_0_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h30BB3088)) 
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[26]_INST_0_i_2 
-       (.I0(s_axis_tdata[111]),
-        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I2(s_axis_tdata[79]),
-        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
-        .I4(s_axis_tdata[47]),
+       (.I0(s_axis_tdata[143]),
+        .I1(s_axis_tdata[111]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I3(s_axis_tdata[79]),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I5(s_axis_tdata[47]),
         .O(\m_axis_tdata[26]_INST_0_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair44" *) 
-  LUT3 #(
-    .INIT(8'h80)) 
+  (* SOFT_HLUTNM = "soft_lutpair50" *) 
+  LUT4 #(
+    .INIT(16'h8830)) 
     \m_axis_tdata[26]_INST_0_i_3 
-       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I1(s_axis_tdata[15]),
-        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+       (.I0(s_axis_tdata[15]),
+        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I2(s_axis_tdata[154]),
+        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .O(\m_axis_tdata[26]_INST_0_i_3_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -2977,7 +2963,6 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
         .I5(\m_axis_tdata[27]_INST_0_i_4_n_0 ),
         .O(m_axis_tdata[27]));
-  (* SOFT_HLUTNM = "soft_lutpair45" *) 
   LUT4 #(
     .INIT(16'hA808)) 
     \m_axis_tdata[27]_INST_0_i_1 
@@ -2986,22 +2971,23 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I3(s_axis_tdata[37]),
         .O(\m_axis_tdata[27]_INST_0_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h30BB3088)) 
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[27]_INST_0_i_2 
-       (.I0(s_axis_tdata[112]),
-        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I2(s_axis_tdata[80]),
-        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
-        .I4(s_axis_tdata[48]),
+       (.I0(s_axis_tdata[144]),
+        .I1(s_axis_tdata[112]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I3(s_axis_tdata[80]),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I5(s_axis_tdata[48]),
         .O(\m_axis_tdata[27]_INST_0_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair43" *) 
-  LUT3 #(
-    .INIT(8'h80)) 
+  LUT4 #(
+    .INIT(16'h8830)) 
     \m_axis_tdata[27]_INST_0_i_3 
-       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I1(s_axis_tdata[16]),
-        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+       (.I0(s_axis_tdata[16]),
+        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I2(s_axis_tdata[155]),
+        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .O(\m_axis_tdata[27]_INST_0_i_3_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -3023,7 +3009,6 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
         .I5(\m_axis_tdata[28]_INST_0_i_4_n_0 ),
         .O(m_axis_tdata[28]));
-  (* SOFT_HLUTNM = "soft_lutpair46" *) 
   LUT4 #(
     .INIT(16'hA808)) 
     \m_axis_tdata[28]_INST_0_i_1 
@@ -3032,22 +3017,23 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I3(s_axis_tdata[38]),
         .O(\m_axis_tdata[28]_INST_0_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h30BB3088)) 
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[28]_INST_0_i_2 
-       (.I0(s_axis_tdata[113]),
-        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I2(s_axis_tdata[81]),
-        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
-        .I4(s_axis_tdata[49]),
+       (.I0(s_axis_tdata[145]),
+        .I1(s_axis_tdata[113]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I3(s_axis_tdata[81]),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I5(s_axis_tdata[49]),
         .O(\m_axis_tdata[28]_INST_0_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair42" *) 
-  LUT3 #(
-    .INIT(8'h80)) 
+  LUT4 #(
+    .INIT(16'h8830)) 
     \m_axis_tdata[28]_INST_0_i_3 
-       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I1(s_axis_tdata[17]),
-        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+       (.I0(s_axis_tdata[17]),
+        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I2(s_axis_tdata[156]),
+        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .O(\m_axis_tdata[28]_INST_0_i_3_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -3069,7 +3055,6 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
         .I5(\m_axis_tdata[29]_INST_0_i_4_n_0 ),
         .O(m_axis_tdata[29]));
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
   LUT4 #(
     .INIT(16'hA808)) 
     \m_axis_tdata[29]_INST_0_i_1 
@@ -3078,22 +3063,23 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I3(s_axis_tdata[39]),
         .O(\m_axis_tdata[29]_INST_0_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h30BB3088)) 
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[29]_INST_0_i_2 
-       (.I0(s_axis_tdata[114]),
-        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I2(s_axis_tdata[82]),
-        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
-        .I4(s_axis_tdata[50]),
+       (.I0(s_axis_tdata[146]),
+        .I1(s_axis_tdata[114]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I3(s_axis_tdata[82]),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I5(s_axis_tdata[50]),
         .O(\m_axis_tdata[29]_INST_0_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
-  LUT3 #(
-    .INIT(8'h80)) 
+  LUT4 #(
+    .INIT(16'h8830)) 
     \m_axis_tdata[29]_INST_0_i_3 
-       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I1(s_axis_tdata[18]),
-        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+       (.I0(s_axis_tdata[18]),
+        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I2(s_axis_tdata[157]),
+        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .O(\m_axis_tdata[29]_INST_0_i_3_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -3105,25 +3091,34 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I5(s_axis_tdata[29]),
         .O(\m_axis_tdata[29]_INST_0_i_4_n_0 ));
-  LUT5 #(
-    .INIT(32'hA0A0CFC0)) 
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[2]_INST_0 
        (.I0(\m_axis_tdata[26]_INST_0_i_3_n_0 ),
         .I1(\m_axis_tdata[26]_INST_0_i_4_n_0 ),
         .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[3] ),
         .I3(\m_axis_tdata[2]_INST_0_i_1_n_0 ),
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
+        .I5(\m_axis_tdata[2]_INST_0_i_2_n_0 ),
         .O(m_axis_tdata[2]));
+  (* SOFT_HLUTNM = "soft_lutpair43" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \m_axis_tdata[2]_INST_0_i_1 
+       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I1(s_axis_tdata[130]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .O(\m_axis_tdata[2]_INST_0_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \m_axis_tdata[2]_INST_0_i_1 
+    \m_axis_tdata[2]_INST_0_i_2 
        (.I0(s_axis_tdata[98]),
         .I1(s_axis_tdata[66]),
         .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
         .I3(s_axis_tdata[34]),
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I5(s_axis_tdata[2]),
-        .O(\m_axis_tdata[2]_INST_0_i_1_n_0 ));
+        .O(\m_axis_tdata[2]_INST_0_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[30]_INST_0 
@@ -3134,7 +3129,6 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
         .I5(\m_axis_tdata[30]_INST_0_i_4_n_0 ),
         .O(m_axis_tdata[30]));
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
   LUT4 #(
     .INIT(16'hA808)) 
     \m_axis_tdata[30]_INST_0_i_1 
@@ -3143,22 +3137,23 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I3(s_axis_tdata[40]),
         .O(\m_axis_tdata[30]_INST_0_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h30BB3088)) 
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[30]_INST_0_i_2 
-       (.I0(s_axis_tdata[115]),
-        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I2(s_axis_tdata[83]),
-        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
-        .I4(s_axis_tdata[51]),
+       (.I0(s_axis_tdata[147]),
+        .I1(s_axis_tdata[115]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I3(s_axis_tdata[83]),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I5(s_axis_tdata[51]),
         .O(\m_axis_tdata[30]_INST_0_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
-  LUT3 #(
-    .INIT(8'h80)) 
+  LUT4 #(
+    .INIT(16'h8830)) 
     \m_axis_tdata[30]_INST_0_i_3 
-       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I1(s_axis_tdata[19]),
-        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+       (.I0(s_axis_tdata[19]),
+        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I2(s_axis_tdata[158]),
+        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .O(\m_axis_tdata[30]_INST_0_i_3_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -3180,7 +3175,6 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
         .I5(\m_axis_tdata[31]_INST_0_i_4_n_0 ),
         .O(m_axis_tdata[31]));
-  (* SOFT_HLUTNM = "soft_lutpair49" *) 
   LUT4 #(
     .INIT(16'hA808)) 
     \m_axis_tdata[31]_INST_0_i_1 
@@ -3189,22 +3183,23 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I3(s_axis_tdata[41]),
         .O(\m_axis_tdata[31]_INST_0_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h30BB3088)) 
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[31]_INST_0_i_2 
-       (.I0(s_axis_tdata[116]),
-        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I2(s_axis_tdata[84]),
-        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
-        .I4(s_axis_tdata[52]),
+       (.I0(s_axis_tdata[148]),
+        .I1(s_axis_tdata[116]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I3(s_axis_tdata[84]),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I5(s_axis_tdata[52]),
         .O(\m_axis_tdata[31]_INST_0_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
-  LUT3 #(
-    .INIT(8'h80)) 
+  LUT4 #(
+    .INIT(16'h8830)) 
     \m_axis_tdata[31]_INST_0_i_3 
-       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I1(s_axis_tdata[20]),
-        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+       (.I0(s_axis_tdata[20]),
+        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I2(s_axis_tdata[159]),
+        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .O(\m_axis_tdata[31]_INST_0_i_3_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -3216,117 +3211,164 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I5(s_axis_tdata[31]),
         .O(\m_axis_tdata[31]_INST_0_i_4_n_0 ));
-  LUT5 #(
-    .INIT(32'hA0A0CFC0)) 
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[3]_INST_0 
        (.I0(\m_axis_tdata[27]_INST_0_i_3_n_0 ),
         .I1(\m_axis_tdata[27]_INST_0_i_4_n_0 ),
         .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[3] ),
         .I3(\m_axis_tdata[3]_INST_0_i_1_n_0 ),
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
+        .I5(\m_axis_tdata[3]_INST_0_i_2_n_0 ),
         .O(m_axis_tdata[3]));
+  (* SOFT_HLUTNM = "soft_lutpair44" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \m_axis_tdata[3]_INST_0_i_1 
+       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I1(s_axis_tdata[131]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .O(\m_axis_tdata[3]_INST_0_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \m_axis_tdata[3]_INST_0_i_1 
+    \m_axis_tdata[3]_INST_0_i_2 
        (.I0(s_axis_tdata[99]),
         .I1(s_axis_tdata[67]),
         .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
         .I3(s_axis_tdata[35]),
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I5(s_axis_tdata[3]),
-        .O(\m_axis_tdata[3]_INST_0_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hA0A0CFC0)) 
+        .O(\m_axis_tdata[3]_INST_0_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[4]_INST_0 
        (.I0(\m_axis_tdata[28]_INST_0_i_3_n_0 ),
         .I1(\m_axis_tdata[28]_INST_0_i_4_n_0 ),
         .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[3] ),
         .I3(\m_axis_tdata[4]_INST_0_i_1_n_0 ),
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
+        .I5(\m_axis_tdata[4]_INST_0_i_2_n_0 ),
         .O(m_axis_tdata[4]));
+  (* SOFT_HLUTNM = "soft_lutpair45" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \m_axis_tdata[4]_INST_0_i_1 
+       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I1(s_axis_tdata[132]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .O(\m_axis_tdata[4]_INST_0_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \m_axis_tdata[4]_INST_0_i_1 
+    \m_axis_tdata[4]_INST_0_i_2 
        (.I0(s_axis_tdata[100]),
         .I1(s_axis_tdata[68]),
         .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
         .I3(s_axis_tdata[36]),
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I5(s_axis_tdata[4]),
-        .O(\m_axis_tdata[4]_INST_0_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hA0A0CFC0)) 
+        .O(\m_axis_tdata[4]_INST_0_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[5]_INST_0 
        (.I0(\m_axis_tdata[29]_INST_0_i_3_n_0 ),
         .I1(\m_axis_tdata[29]_INST_0_i_4_n_0 ),
         .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[3] ),
         .I3(\m_axis_tdata[5]_INST_0_i_1_n_0 ),
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
+        .I5(\m_axis_tdata[5]_INST_0_i_2_n_0 ),
         .O(m_axis_tdata[5]));
+  (* SOFT_HLUTNM = "soft_lutpair46" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \m_axis_tdata[5]_INST_0_i_1 
+       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I1(s_axis_tdata[133]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .O(\m_axis_tdata[5]_INST_0_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \m_axis_tdata[5]_INST_0_i_1 
+    \m_axis_tdata[5]_INST_0_i_2 
        (.I0(s_axis_tdata[101]),
         .I1(s_axis_tdata[69]),
         .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
         .I3(s_axis_tdata[37]),
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I5(s_axis_tdata[5]),
-        .O(\m_axis_tdata[5]_INST_0_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hA0A0CFC0)) 
+        .O(\m_axis_tdata[5]_INST_0_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[6]_INST_0 
        (.I0(\m_axis_tdata[30]_INST_0_i_3_n_0 ),
         .I1(\m_axis_tdata[30]_INST_0_i_4_n_0 ),
         .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[3] ),
         .I3(\m_axis_tdata[6]_INST_0_i_1_n_0 ),
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
+        .I5(\m_axis_tdata[6]_INST_0_i_2_n_0 ),
         .O(m_axis_tdata[6]));
+  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \m_axis_tdata[6]_INST_0_i_1 
+       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I1(s_axis_tdata[134]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .O(\m_axis_tdata[6]_INST_0_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \m_axis_tdata[6]_INST_0_i_1 
+    \m_axis_tdata[6]_INST_0_i_2 
        (.I0(s_axis_tdata[102]),
         .I1(s_axis_tdata[70]),
         .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
         .I3(s_axis_tdata[38]),
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I5(s_axis_tdata[6]),
-        .O(\m_axis_tdata[6]_INST_0_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hA0A0CFC0)) 
+        .O(\m_axis_tdata[6]_INST_0_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[7]_INST_0 
        (.I0(\m_axis_tdata[31]_INST_0_i_3_n_0 ),
         .I1(\m_axis_tdata[31]_INST_0_i_4_n_0 ),
         .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[3] ),
         .I3(\m_axis_tdata[7]_INST_0_i_1_n_0 ),
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
+        .I5(\m_axis_tdata[7]_INST_0_i_2_n_0 ),
         .O(m_axis_tdata[7]));
+  (* SOFT_HLUTNM = "soft_lutpair48" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \m_axis_tdata[7]_INST_0_i_1 
+       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I1(s_axis_tdata[135]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .O(\m_axis_tdata[7]_INST_0_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \m_axis_tdata[7]_INST_0_i_1 
+    \m_axis_tdata[7]_INST_0_i_2 
        (.I0(s_axis_tdata[103]),
         .I1(s_axis_tdata[71]),
         .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
         .I3(s_axis_tdata[39]),
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I5(s_axis_tdata[7]),
-        .O(\m_axis_tdata[7]_INST_0_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hA0A0CFC0)) 
+        .O(\m_axis_tdata[7]_INST_0_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[8]_INST_0 
        (.I0(\m_axis_tdata[8]_INST_0_i_1_n_0 ),
         .I1(\m_axis_tdata[8]_INST_0_i_2_n_0 ),
         .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[3] ),
         .I3(\m_axis_tdata[8]_INST_0_i_3_n_0 ),
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
+        .I5(\m_axis_tdata[8]_INST_0_i_4_n_0 ),
         .O(m_axis_tdata[8]));
-  (* SOFT_HLUTNM = "soft_lutpair49" *) 
-  LUT3 #(
-    .INIT(8'h80)) 
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+  LUT4 #(
+    .INIT(16'h8830)) 
     \m_axis_tdata[8]_INST_0_i_1 
-       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I1(s_axis_tdata[21]),
-        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+       (.I0(s_axis_tdata[21]),
+        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I2(s_axis_tlast[4]),
+        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .O(\m_axis_tdata[8]_INST_0_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -3338,32 +3380,42 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I5(s_axis_tlast[0]),
         .O(\m_axis_tdata[8]_INST_0_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair49" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \m_axis_tdata[8]_INST_0_i_3 
+       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I1(s_axis_tdata[136]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .O(\m_axis_tdata[8]_INST_0_i_3_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \m_axis_tdata[8]_INST_0_i_3 
+    \m_axis_tdata[8]_INST_0_i_4 
        (.I0(s_axis_tdata[104]),
         .I1(s_axis_tdata[72]),
         .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
         .I3(s_axis_tdata[40]),
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I5(s_axis_tdata[8]),
-        .O(\m_axis_tdata[8]_INST_0_i_3_n_0 ));
-  LUT5 #(
-    .INIT(32'hA0A0CFC0)) 
+        .O(\m_axis_tdata[8]_INST_0_i_4_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdata[9]_INST_0 
        (.I0(\m_axis_tdata[9]_INST_0_i_1_n_0 ),
         .I1(\m_axis_tdata[9]_INST_0_i_2_n_0 ),
         .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[3] ),
         .I3(\m_axis_tdata[9]_INST_0_i_3_n_0 ),
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
+        .I5(\m_axis_tdata[9]_INST_0_i_4_n_0 ),
         .O(m_axis_tdata[9]));
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
-  LUT3 #(
-    .INIT(8'h80)) 
+  (* SOFT_HLUTNM = "soft_lutpair43" *) 
+  LUT4 #(
+    .INIT(16'h8830)) 
     \m_axis_tdata[9]_INST_0_i_1 
-       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I1(s_axis_tdata[22]),
-        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+       (.I0(s_axis_tdata[22]),
+        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I2(s_axis_tdest[8]),
+        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .O(\m_axis_tdata[9]_INST_0_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -3375,16 +3427,24 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I5(s_axis_tdest[0]),
         .O(\m_axis_tdata[9]_INST_0_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair50" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \m_axis_tdata[9]_INST_0_i_3 
+       (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I1(s_axis_tdata[137]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .O(\m_axis_tdata[9]_INST_0_i_3_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \m_axis_tdata[9]_INST_0_i_3 
+    \m_axis_tdata[9]_INST_0_i_4 
        (.I0(s_axis_tdata[105]),
         .I1(s_axis_tdata[73]),
         .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
         .I3(s_axis_tdata[41]),
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I5(s_axis_tdata[9]),
-        .O(\m_axis_tdata[9]_INST_0_i_3_n_0 ));
+        .O(\m_axis_tdata[9]_INST_0_i_4_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdest[0]_INST_0 
@@ -3395,7 +3455,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
         .I5(\m_axis_tdata[9]_INST_0_i_2_n_0 ),
         .O(m_axis_tdest[0]));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+  (* SOFT_HLUTNM = "soft_lutpair46" *) 
   LUT4 #(
     .INIT(16'hA808)) 
     \m_axis_tdest[0]_INST_0_i_1 
@@ -3404,14 +3464,15 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I3(s_axis_tdata[43]),
         .O(\m_axis_tdest[0]_INST_0_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h30BB3088)) 
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdest[0]_INST_0_i_2 
-       (.I0(s_axis_tdata[118]),
-        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I2(s_axis_tdata[86]),
-        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
-        .I4(s_axis_tdata[54]),
+       (.I0(s_axis_tdata[150]),
+        .I1(s_axis_tdata[118]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I3(s_axis_tdata[86]),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I5(s_axis_tdata[54]),
         .O(\m_axis_tdest[0]_INST_0_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -3423,7 +3484,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
         .I5(\m_axis_tdata[10]_INST_0_i_2_n_0 ),
         .O(m_axis_tdest[1]));
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+  (* SOFT_HLUTNM = "soft_lutpair47" *) 
   LUT4 #(
     .INIT(16'hA808)) 
     \m_axis_tdest[1]_INST_0_i_1 
@@ -3432,14 +3493,15 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I3(s_axis_tdata[44]),
         .O(\m_axis_tdest[1]_INST_0_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h30BB3088)) 
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tdest[1]_INST_0_i_2 
-       (.I0(s_axis_tdata[119]),
-        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I2(s_axis_tdata[87]),
-        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
-        .I4(s_axis_tdata[55]),
+       (.I0(s_axis_tdata[151]),
+        .I1(s_axis_tdata[119]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I3(s_axis_tdata[87]),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I5(s_axis_tdata[55]),
         .O(\m_axis_tdest[1]_INST_0_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -3451,7 +3513,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
         .I5(\m_axis_tdata[8]_INST_0_i_2_n_0 ),
         .O(m_axis_tlast));
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+  (* SOFT_HLUTNM = "soft_lutpair44" *) 
   LUT4 #(
     .INIT(16'hA808)) 
     \m_axis_tlast[0]_INST_0_i_1 
@@ -3460,21 +3522,24 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
         .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I3(s_axis_tdata[42]),
         .O(\m_axis_tlast[0]_INST_0_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h30BB3088)) 
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \m_axis_tlast[0]_INST_0_i_2 
-       (.I0(s_axis_tdata[117]),
-        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
-        .I2(s_axis_tdata[85]),
-        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
-        .I4(s_axis_tdata[53]),
+       (.I0(s_axis_tdata[149]),
+        .I1(s_axis_tdata[117]),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I3(s_axis_tdata[85]),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I5(s_axis_tdata[53]),
         .O(\m_axis_tlast[0]_INST_0_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair50" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+  LUT4 #(
+    .INIT(16'hE200)) 
     \m_axis_tvalid[0]_INST_0 
        (.I0(\m_axis_tvalid[0]_INST_0_i_1_n_0 ),
-        .I1(mi_enable),
+        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
+        .I2(s_axis_tvalid[4]),
+        .I3(mi_enable),
         .O(m_axis_tvalid));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -3490,7 +3555,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
     .INIT(64'hFFFFFFFE00000000)) 
     \s_axis_tready[0]_INST_0 
        (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
-        .I1(\s_axis_tready[3]_INST_0_i_1_n_0 ),
+        .I1(\s_axis_tready[4]_INST_0_i_1_n_0 ),
         .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[3] ),
@@ -3501,7 +3566,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
     \s_axis_tready[1]_INST_0 
        (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
         .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[3] ),
-        .I2(\s_axis_tready[3]_INST_0_i_1_n_0 ),
+        .I2(\s_axis_tready[4]_INST_0_i_1_n_0 ),
         .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I5(si_enable[1]),
@@ -3512,7 +3577,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
        (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
         .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[3] ),
         .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
-        .I3(\s_axis_tready[3]_INST_0_i_1_n_0 ),
+        .I3(\s_axis_tready[4]_INST_0_i_1_n_0 ),
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
         .I5(si_enable[2]),
         .O(s_axis_tready[2]));
@@ -3521,18 +3586,28 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_axis_switch
     \s_axis_tready[3]_INST_0 
        (.I0(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
         .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[3] ),
-        .I2(\s_axis_tready[3]_INST_0_i_1_n_0 ),
+        .I2(\s_axis_tready[4]_INST_0_i_1_n_0 ),
         .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
         .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
         .I5(si_enable[3]),
         .O(s_axis_tready[3]));
-  (* SOFT_HLUTNM = "soft_lutpair50" *) 
+  LUT6 #(
+    .INIT(64'hFFFEFFFF00000000)) 
+    \s_axis_tready[4]_INST_0 
+       (.I0(\s_axis_tready[4]_INST_0_i_1_n_0 ),
+        .I1(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[3] ),
+        .I2(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[0] ),
+        .I3(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[1] ),
+        .I4(\gen_static_router.gen_synch.ctrl_reg_synch_reg_n_0_[2] ),
+        .I5(si_enable[4]),
+        .O(s_axis_tready[4]));
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
   LUT2 #(
     .INIT(4'hB)) 
-    \s_axis_tready[3]_INST_0_i_1 
+    \s_axis_tready[4]_INST_0_i_1 
        (.I0(m_axis_tready),
         .I1(mi_enable),
-        .O(\s_axis_tready[3]_INST_0_i_1_n_0 ));
+        .O(\s_axis_tready[4]_INST_0_i_1_n_0 ));
 endmodule
 
 (* ORIG_REF_NAME = "axis_switch_v1_1_31_reg_bank_16x32" *) 
@@ -3899,7 +3974,6 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
   wire [0:0]SR;
   wire [0:0]\data_reg[30] ;
   wire [30:0]\data_reg[30]_0 ;
-  wire [30:4]\gen_reg[0].reg_data_reg ;
   wire \gen_reg[0].reg_data_reg[0]_0 ;
   wire \gen_reg[0].reg_data_reg[10]_0 ;
   wire \gen_reg[0].reg_data_reg[11]_0 ;
@@ -3932,6 +4006,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
   wire \gen_reg[0].reg_data_reg[7]_0 ;
   wire \gen_reg[0].reg_data_reg[8]_0 ;
   wire \gen_reg[0].reg_data_reg[9]_0 ;
+  wire [30:4]\gen_reg[0].reg_data_reg__0 ;
   wire s_axi_ctrl_aclk;
 
   LUT3 #(
@@ -3945,7 +4020,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
   LUT3 #(
     .INIT(8'hB8)) 
     \data[10]_i_1 
-       (.I0(\gen_reg[0].reg_data_reg [10]),
+       (.I0(\gen_reg[0].reg_data_reg__0 [10]),
         .I1(\data_reg[30] ),
         .I2(\data_reg[30]_0 [10]),
         .O(\gen_reg[0].reg_data_reg[10]_0 ));
@@ -3953,7 +4028,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
   LUT3 #(
     .INIT(8'hB8)) 
     \data[11]_i_1 
-       (.I0(\gen_reg[0].reg_data_reg [11]),
+       (.I0(\gen_reg[0].reg_data_reg__0 [11]),
         .I1(\data_reg[30] ),
         .I2(\data_reg[30]_0 [11]),
         .O(\gen_reg[0].reg_data_reg[11]_0 ));
@@ -3961,7 +4036,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
   LUT3 #(
     .INIT(8'hB8)) 
     \data[12]_i_1 
-       (.I0(\gen_reg[0].reg_data_reg [12]),
+       (.I0(\gen_reg[0].reg_data_reg__0 [12]),
         .I1(\data_reg[30] ),
         .I2(\data_reg[30]_0 [12]),
         .O(\gen_reg[0].reg_data_reg[12]_0 ));
@@ -3969,7 +4044,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
   LUT3 #(
     .INIT(8'hB8)) 
     \data[13]_i_1 
-       (.I0(\gen_reg[0].reg_data_reg [13]),
+       (.I0(\gen_reg[0].reg_data_reg__0 [13]),
         .I1(\data_reg[30] ),
         .I2(\data_reg[30]_0 [13]),
         .O(\gen_reg[0].reg_data_reg[13]_0 ));
@@ -3977,7 +4052,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
   LUT3 #(
     .INIT(8'hB8)) 
     \data[14]_i_1 
-       (.I0(\gen_reg[0].reg_data_reg [14]),
+       (.I0(\gen_reg[0].reg_data_reg__0 [14]),
         .I1(\data_reg[30] ),
         .I2(\data_reg[30]_0 [14]),
         .O(\gen_reg[0].reg_data_reg[14]_0 ));
@@ -3985,7 +4060,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
   LUT3 #(
     .INIT(8'hB8)) 
     \data[15]_i_1 
-       (.I0(\gen_reg[0].reg_data_reg [15]),
+       (.I0(\gen_reg[0].reg_data_reg__0 [15]),
         .I1(\data_reg[30] ),
         .I2(\data_reg[30]_0 [15]),
         .O(\gen_reg[0].reg_data_reg[15]_0 ));
@@ -3993,7 +4068,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
   LUT3 #(
     .INIT(8'hB8)) 
     \data[16]_i_1 
-       (.I0(\gen_reg[0].reg_data_reg [16]),
+       (.I0(\gen_reg[0].reg_data_reg__0 [16]),
         .I1(\data_reg[30] ),
         .I2(\data_reg[30]_0 [16]),
         .O(\gen_reg[0].reg_data_reg[16]_0 ));
@@ -4001,7 +4076,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
   LUT3 #(
     .INIT(8'hB8)) 
     \data[17]_i_1 
-       (.I0(\gen_reg[0].reg_data_reg [17]),
+       (.I0(\gen_reg[0].reg_data_reg__0 [17]),
         .I1(\data_reg[30] ),
         .I2(\data_reg[30]_0 [17]),
         .O(\gen_reg[0].reg_data_reg[17]_0 ));
@@ -4009,7 +4084,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
   LUT3 #(
     .INIT(8'hB8)) 
     \data[18]_i_1 
-       (.I0(\gen_reg[0].reg_data_reg [18]),
+       (.I0(\gen_reg[0].reg_data_reg__0 [18]),
         .I1(\data_reg[30] ),
         .I2(\data_reg[30]_0 [18]),
         .O(\gen_reg[0].reg_data_reg[18]_0 ));
@@ -4017,7 +4092,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
   LUT3 #(
     .INIT(8'hB8)) 
     \data[19]_i_1 
-       (.I0(\gen_reg[0].reg_data_reg [19]),
+       (.I0(\gen_reg[0].reg_data_reg__0 [19]),
         .I1(\data_reg[30] ),
         .I2(\data_reg[30]_0 [19]),
         .O(\gen_reg[0].reg_data_reg[19]_0 ));
@@ -4033,7 +4108,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
   LUT3 #(
     .INIT(8'hB8)) 
     \data[20]_i_1 
-       (.I0(\gen_reg[0].reg_data_reg [20]),
+       (.I0(\gen_reg[0].reg_data_reg__0 [20]),
         .I1(\data_reg[30] ),
         .I2(\data_reg[30]_0 [20]),
         .O(\gen_reg[0].reg_data_reg[20]_0 ));
@@ -4041,7 +4116,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
   LUT3 #(
     .INIT(8'hB8)) 
     \data[21]_i_1 
-       (.I0(\gen_reg[0].reg_data_reg [21]),
+       (.I0(\gen_reg[0].reg_data_reg__0 [21]),
         .I1(\data_reg[30] ),
         .I2(\data_reg[30]_0 [21]),
         .O(\gen_reg[0].reg_data_reg[21]_0 ));
@@ -4049,7 +4124,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
   LUT3 #(
     .INIT(8'hB8)) 
     \data[22]_i_1 
-       (.I0(\gen_reg[0].reg_data_reg [22]),
+       (.I0(\gen_reg[0].reg_data_reg__0 [22]),
         .I1(\data_reg[30] ),
         .I2(\data_reg[30]_0 [22]),
         .O(\gen_reg[0].reg_data_reg[22]_0 ));
@@ -4057,7 +4132,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
   LUT3 #(
     .INIT(8'hB8)) 
     \data[23]_i_1 
-       (.I0(\gen_reg[0].reg_data_reg [23]),
+       (.I0(\gen_reg[0].reg_data_reg__0 [23]),
         .I1(\data_reg[30] ),
         .I2(\data_reg[30]_0 [23]),
         .O(\gen_reg[0].reg_data_reg[23]_0 ));
@@ -4065,7 +4140,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
   LUT3 #(
     .INIT(8'hB8)) 
     \data[24]_i_1 
-       (.I0(\gen_reg[0].reg_data_reg [24]),
+       (.I0(\gen_reg[0].reg_data_reg__0 [24]),
         .I1(\data_reg[30] ),
         .I2(\data_reg[30]_0 [24]),
         .O(\gen_reg[0].reg_data_reg[24]_0 ));
@@ -4073,7 +4148,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
   LUT3 #(
     .INIT(8'hB8)) 
     \data[25]_i_1 
-       (.I0(\gen_reg[0].reg_data_reg [25]),
+       (.I0(\gen_reg[0].reg_data_reg__0 [25]),
         .I1(\data_reg[30] ),
         .I2(\data_reg[30]_0 [25]),
         .O(\gen_reg[0].reg_data_reg[25]_0 ));
@@ -4081,7 +4156,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
   LUT3 #(
     .INIT(8'hB8)) 
     \data[26]_i_1 
-       (.I0(\gen_reg[0].reg_data_reg [26]),
+       (.I0(\gen_reg[0].reg_data_reg__0 [26]),
         .I1(\data_reg[30] ),
         .I2(\data_reg[30]_0 [26]),
         .O(\gen_reg[0].reg_data_reg[26]_0 ));
@@ -4089,7 +4164,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
   LUT3 #(
     .INIT(8'hB8)) 
     \data[27]_i_1 
-       (.I0(\gen_reg[0].reg_data_reg [27]),
+       (.I0(\gen_reg[0].reg_data_reg__0 [27]),
         .I1(\data_reg[30] ),
         .I2(\data_reg[30]_0 [27]),
         .O(\gen_reg[0].reg_data_reg[27]_0 ));
@@ -4097,7 +4172,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
   LUT3 #(
     .INIT(8'hB8)) 
     \data[28]_i_1 
-       (.I0(\gen_reg[0].reg_data_reg [28]),
+       (.I0(\gen_reg[0].reg_data_reg__0 [28]),
         .I1(\data_reg[30] ),
         .I2(\data_reg[30]_0 [28]),
         .O(\gen_reg[0].reg_data_reg[28]_0 ));
@@ -4105,7 +4180,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
   LUT3 #(
     .INIT(8'hB8)) 
     \data[29]_i_1 
-       (.I0(\gen_reg[0].reg_data_reg [29]),
+       (.I0(\gen_reg[0].reg_data_reg__0 [29]),
         .I1(\data_reg[30] ),
         .I2(\data_reg[30]_0 [29]),
         .O(\gen_reg[0].reg_data_reg[29]_0 ));
@@ -4121,7 +4196,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
   LUT3 #(
     .INIT(8'hB8)) 
     \data[30]_i_2 
-       (.I0(\gen_reg[0].reg_data_reg [30]),
+       (.I0(\gen_reg[0].reg_data_reg__0 [30]),
         .I1(\data_reg[30] ),
         .I2(\data_reg[30]_0 [30]),
         .O(\gen_reg[0].reg_data_reg[30]_0 ));
@@ -4137,7 +4212,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
   LUT3 #(
     .INIT(8'hB8)) 
     \data[4]_i_1 
-       (.I0(\gen_reg[0].reg_data_reg [4]),
+       (.I0(\gen_reg[0].reg_data_reg__0 [4]),
         .I1(\data_reg[30] ),
         .I2(\data_reg[30]_0 [4]),
         .O(\gen_reg[0].reg_data_reg[4]_0 ));
@@ -4145,7 +4220,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
   LUT3 #(
     .INIT(8'hB8)) 
     \data[5]_i_1 
-       (.I0(\gen_reg[0].reg_data_reg [5]),
+       (.I0(\gen_reg[0].reg_data_reg__0 [5]),
         .I1(\data_reg[30] ),
         .I2(\data_reg[30]_0 [5]),
         .O(\gen_reg[0].reg_data_reg[5]_0 ));
@@ -4153,7 +4228,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
   LUT3 #(
     .INIT(8'hB8)) 
     \data[6]_i_1 
-       (.I0(\gen_reg[0].reg_data_reg [6]),
+       (.I0(\gen_reg[0].reg_data_reg__0 [6]),
         .I1(\data_reg[30] ),
         .I2(\data_reg[30]_0 [6]),
         .O(\gen_reg[0].reg_data_reg[6]_0 ));
@@ -4161,7 +4236,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
   LUT3 #(
     .INIT(8'hB8)) 
     \data[7]_i_1 
-       (.I0(\gen_reg[0].reg_data_reg [7]),
+       (.I0(\gen_reg[0].reg_data_reg__0 [7]),
         .I1(\data_reg[30] ),
         .I2(\data_reg[30]_0 [7]),
         .O(\gen_reg[0].reg_data_reg[7]_0 ));
@@ -4169,7 +4244,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
   LUT3 #(
     .INIT(8'hB8)) 
     \data[8]_i_1 
-       (.I0(\gen_reg[0].reg_data_reg [8]),
+       (.I0(\gen_reg[0].reg_data_reg__0 [8]),
         .I1(\data_reg[30] ),
         .I2(\data_reg[30]_0 [8]),
         .O(\gen_reg[0].reg_data_reg[8]_0 ));
@@ -4177,7 +4252,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
   LUT3 #(
     .INIT(8'hB8)) 
     \data[9]_i_1 
-       (.I0(\gen_reg[0].reg_data_reg [9]),
+       (.I0(\gen_reg[0].reg_data_reg__0 [9]),
         .I1(\data_reg[30] ),
         .I2(\data_reg[30]_0 [9]),
         .O(\gen_reg[0].reg_data_reg[9]_0 ));
@@ -4200,7 +4275,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
        (.C(s_axi_ctrl_aclk),
         .CE(E),
         .D(D[10]),
-        .Q(\gen_reg[0].reg_data_reg [10]),
+        .Q(\gen_reg[0].reg_data_reg__0 [10]),
         .R(SR));
   FDRE #(
     .INIT(1'b0)) 
@@ -4208,7 +4283,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
        (.C(s_axi_ctrl_aclk),
         .CE(E),
         .D(D[11]),
-        .Q(\gen_reg[0].reg_data_reg [11]),
+        .Q(\gen_reg[0].reg_data_reg__0 [11]),
         .R(SR));
   FDRE #(
     .INIT(1'b0)) 
@@ -4216,7 +4291,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
        (.C(s_axi_ctrl_aclk),
         .CE(E),
         .D(D[12]),
-        .Q(\gen_reg[0].reg_data_reg [12]),
+        .Q(\gen_reg[0].reg_data_reg__0 [12]),
         .R(SR));
   FDRE #(
     .INIT(1'b0)) 
@@ -4224,7 +4299,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
        (.C(s_axi_ctrl_aclk),
         .CE(E),
         .D(D[13]),
-        .Q(\gen_reg[0].reg_data_reg [13]),
+        .Q(\gen_reg[0].reg_data_reg__0 [13]),
         .R(SR));
   FDRE #(
     .INIT(1'b0)) 
@@ -4232,7 +4307,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
        (.C(s_axi_ctrl_aclk),
         .CE(E),
         .D(D[14]),
-        .Q(\gen_reg[0].reg_data_reg [14]),
+        .Q(\gen_reg[0].reg_data_reg__0 [14]),
         .R(SR));
   FDRE #(
     .INIT(1'b0)) 
@@ -4240,7 +4315,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
        (.C(s_axi_ctrl_aclk),
         .CE(E),
         .D(D[15]),
-        .Q(\gen_reg[0].reg_data_reg [15]),
+        .Q(\gen_reg[0].reg_data_reg__0 [15]),
         .R(SR));
   FDRE #(
     .INIT(1'b0)) 
@@ -4248,7 +4323,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
        (.C(s_axi_ctrl_aclk),
         .CE(E),
         .D(D[16]),
-        .Q(\gen_reg[0].reg_data_reg [16]),
+        .Q(\gen_reg[0].reg_data_reg__0 [16]),
         .R(SR));
   FDRE #(
     .INIT(1'b0)) 
@@ -4256,7 +4331,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
        (.C(s_axi_ctrl_aclk),
         .CE(E),
         .D(D[17]),
-        .Q(\gen_reg[0].reg_data_reg [17]),
+        .Q(\gen_reg[0].reg_data_reg__0 [17]),
         .R(SR));
   FDRE #(
     .INIT(1'b0)) 
@@ -4264,7 +4339,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
        (.C(s_axi_ctrl_aclk),
         .CE(E),
         .D(D[18]),
-        .Q(\gen_reg[0].reg_data_reg [18]),
+        .Q(\gen_reg[0].reg_data_reg__0 [18]),
         .R(SR));
   FDRE #(
     .INIT(1'b0)) 
@@ -4272,7 +4347,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
        (.C(s_axi_ctrl_aclk),
         .CE(E),
         .D(D[19]),
-        .Q(\gen_reg[0].reg_data_reg [19]),
+        .Q(\gen_reg[0].reg_data_reg__0 [19]),
         .R(SR));
   FDRE #(
     .INIT(1'b0)) 
@@ -4288,7 +4363,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
        (.C(s_axi_ctrl_aclk),
         .CE(E),
         .D(D[20]),
-        .Q(\gen_reg[0].reg_data_reg [20]),
+        .Q(\gen_reg[0].reg_data_reg__0 [20]),
         .R(SR));
   FDRE #(
     .INIT(1'b0)) 
@@ -4296,7 +4371,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
        (.C(s_axi_ctrl_aclk),
         .CE(E),
         .D(D[21]),
-        .Q(\gen_reg[0].reg_data_reg [21]),
+        .Q(\gen_reg[0].reg_data_reg__0 [21]),
         .R(SR));
   FDRE #(
     .INIT(1'b0)) 
@@ -4304,7 +4379,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
        (.C(s_axi_ctrl_aclk),
         .CE(E),
         .D(D[22]),
-        .Q(\gen_reg[0].reg_data_reg [22]),
+        .Q(\gen_reg[0].reg_data_reg__0 [22]),
         .R(SR));
   FDRE #(
     .INIT(1'b0)) 
@@ -4312,7 +4387,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
        (.C(s_axi_ctrl_aclk),
         .CE(E),
         .D(D[23]),
-        .Q(\gen_reg[0].reg_data_reg [23]),
+        .Q(\gen_reg[0].reg_data_reg__0 [23]),
         .R(SR));
   FDRE #(
     .INIT(1'b0)) 
@@ -4320,7 +4395,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
        (.C(s_axi_ctrl_aclk),
         .CE(E),
         .D(D[24]),
-        .Q(\gen_reg[0].reg_data_reg [24]),
+        .Q(\gen_reg[0].reg_data_reg__0 [24]),
         .R(SR));
   FDRE #(
     .INIT(1'b0)) 
@@ -4328,7 +4403,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
        (.C(s_axi_ctrl_aclk),
         .CE(E),
         .D(D[25]),
-        .Q(\gen_reg[0].reg_data_reg [25]),
+        .Q(\gen_reg[0].reg_data_reg__0 [25]),
         .R(SR));
   FDRE #(
     .INIT(1'b0)) 
@@ -4336,7 +4411,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
        (.C(s_axi_ctrl_aclk),
         .CE(E),
         .D(D[26]),
-        .Q(\gen_reg[0].reg_data_reg [26]),
+        .Q(\gen_reg[0].reg_data_reg__0 [26]),
         .R(SR));
   FDRE #(
     .INIT(1'b0)) 
@@ -4344,7 +4419,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
        (.C(s_axi_ctrl_aclk),
         .CE(E),
         .D(D[27]),
-        .Q(\gen_reg[0].reg_data_reg [27]),
+        .Q(\gen_reg[0].reg_data_reg__0 [27]),
         .R(SR));
   FDRE #(
     .INIT(1'b0)) 
@@ -4352,7 +4427,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
        (.C(s_axi_ctrl_aclk),
         .CE(E),
         .D(D[28]),
-        .Q(\gen_reg[0].reg_data_reg [28]),
+        .Q(\gen_reg[0].reg_data_reg__0 [28]),
         .R(SR));
   FDRE #(
     .INIT(1'b0)) 
@@ -4360,7 +4435,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
        (.C(s_axi_ctrl_aclk),
         .CE(E),
         .D(D[29]),
-        .Q(\gen_reg[0].reg_data_reg [29]),
+        .Q(\gen_reg[0].reg_data_reg__0 [29]),
         .R(SR));
   FDRE #(
     .INIT(1'b0)) 
@@ -4376,7 +4451,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
        (.C(s_axi_ctrl_aclk),
         .CE(E),
         .D(D[30]),
-        .Q(\gen_reg[0].reg_data_reg [30]),
+        .Q(\gen_reg[0].reg_data_reg__0 [30]),
         .R(SR));
   FDSE #(
     .INIT(1'b1)) 
@@ -4400,7 +4475,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
        (.C(s_axi_ctrl_aclk),
         .CE(E),
         .D(D[4]),
-        .Q(\gen_reg[0].reg_data_reg [4]),
+        .Q(\gen_reg[0].reg_data_reg__0 [4]),
         .R(SR));
   FDRE #(
     .INIT(1'b0)) 
@@ -4408,7 +4483,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
        (.C(s_axi_ctrl_aclk),
         .CE(E),
         .D(D[5]),
-        .Q(\gen_reg[0].reg_data_reg [5]),
+        .Q(\gen_reg[0].reg_data_reg__0 [5]),
         .R(SR));
   FDRE #(
     .INIT(1'b0)) 
@@ -4416,7 +4491,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
        (.C(s_axi_ctrl_aclk),
         .CE(E),
         .D(D[6]),
-        .Q(\gen_reg[0].reg_data_reg [6]),
+        .Q(\gen_reg[0].reg_data_reg__0 [6]),
         .R(SR));
   FDRE #(
     .INIT(1'b0)) 
@@ -4424,7 +4499,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
        (.C(s_axi_ctrl_aclk),
         .CE(E),
         .D(D[7]),
-        .Q(\gen_reg[0].reg_data_reg [7]),
+        .Q(\gen_reg[0].reg_data_reg__0 [7]),
         .R(SR));
   FDRE #(
     .INIT(1'b0)) 
@@ -4432,7 +4507,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
        (.C(s_axi_ctrl_aclk),
         .CE(E),
         .D(D[8]),
-        .Q(\gen_reg[0].reg_data_reg [8]),
+        .Q(\gen_reg[0].reg_data_reg__0 [8]),
         .R(SR));
   FDRE #(
     .INIT(1'b0)) 
@@ -4440,7 +4515,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_reg_bank_16x32__parameterize
        (.C(s_axi_ctrl_aclk),
         .CE(E),
         .D(D[9]),
-        .Q(\gen_reg[0].reg_data_reg [9]),
+        .Q(\gen_reg[0].reg_data_reg__0 [9]),
         .R(SR));
 endmodule
 
@@ -4452,7 +4527,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router
     \state_reg[1] ,
     s_axi_ctrl_rdata,
     out0,
-    \ctrl_reg_r_reg[24] ,
+    \ctrl_reg_r_reg[29] ,
     s_axi_ctrl_aclk,
     SR,
     src_rcv,
@@ -4471,7 +4546,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router
   output [1:0]\state_reg[1] ;
   output [31:0]s_axi_ctrl_rdata;
   output [1:0]out0;
-  output [24:0]\ctrl_reg_r_reg[24] ;
+  output [29:0]\ctrl_reg_r_reg[29] ;
   input s_axi_ctrl_aclk;
   input [0:0]SR;
   input src_rcv;
@@ -4489,8 +4564,8 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router
   wire [0:0]Q;
   wire [0:0]SR;
   wire commit_reset;
-  wire [24:0]\ctrl_reg_r_reg[24] ;
-  wire [3:0]\gen_reg[0].reg_data_reg ;
+  wire [29:0]\ctrl_reg_r_reg[29] ;
+  wire [3:0]\gen_reg[0].reg_data_reg__0 ;
   wire inst_axi_ctrl_top_n_0;
   wire [1:0]out0;
   wire reg_commit;
@@ -4511,7 +4586,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router
 
   design_1_axis_switch_0_2_axis_switch_v1_1_31_axi_ctrl_top inst_axi_ctrl_top
        (.\FSM_onehot_state_reg[2] (out0),
-        .Q(\gen_reg[0].reg_data_reg ),
+        .Q(\gen_reg[0].reg_data_reg__0 ),
         .SR(SR),
         .\gen_reg[0].reg_data_reg[0] (commit_reset),
         .\gen_reg[0].reg_data_reg[1] (reg_commit),
@@ -4532,9 +4607,9 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router
         .\FSM_onehot_state_reg[1]_0 (reg_commit),
         .Q({commit_reset,Q}),
         .SR(SR),
-        .\ctrl_reg_r_reg[24]_0 (\ctrl_reg_r_reg[24] ),
+        .\ctrl_reg_r_reg[29]_0 (\ctrl_reg_r_reg[29] ),
         .\gen_mi_mux_in[0].mi_mux_en_in_reg[0] (inst_axi_ctrl_top_n_0),
-        .\gen_mi_mux_in[0].mi_mux_in_reg[3] (\gen_reg[0].reg_data_reg ),
+        .\gen_mi_mux_in[0].mi_mux_in_reg[3] (\gen_reg[0].reg_data_reg__0 ),
         .s_axi_ctrl_aclk(s_axi_ctrl_aclk),
         .src_in(src_in),
         .src_rcv(src_rcv),
@@ -4546,7 +4621,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config
    (src_send,
     src_in,
     Q,
-    \ctrl_reg_r_reg[24]_0 ,
+    \ctrl_reg_r_reg[29]_0 ,
     s_axi_ctrl_aclk,
     \gen_mi_mux_in[0].mi_mux_en_in_reg[0] ,
     SR,
@@ -4557,7 +4632,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config
   output src_send;
   output src_in;
   output [1:0]Q;
-  output [24:0]\ctrl_reg_r_reg[24]_0 ;
+  output [29:0]\ctrl_reg_r_reg[29]_0 ;
   input s_axi_ctrl_aclk;
   input \gen_mi_mux_in[0].mi_mux_en_in_reg[0] ;
   input [0:0]SR;
@@ -4572,7 +4647,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config
   wire \FSM_onehot_state_reg_n_0_[2] ;
   wire [1:0]Q;
   wire [0:0]SR;
-  wire [24:0]\ctrl_reg_r_reg[24]_0 ;
+  wire [29:0]\ctrl_reg_r_reg[29]_0 ;
   wire ctrl_soft_reset_r0;
   wire ctrl_soft_reset_r_i_1_n_0;
   wire \gen_mi_mux_in[0].mi_mux_en_in_reg[0] ;
@@ -4581,14 +4656,15 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config
   wire [3:0]\gen_si_mux[1].si_mux_r_reg ;
   wire [3:0]\gen_si_mux[2].si_mux_r_reg ;
   wire [3:0]\gen_si_mux[3].si_mux_r_reg ;
-  wire inst_start_router_config_dp_n_25;
-  wire inst_start_router_config_dp_n_26;
-  wire inst_start_router_config_dp_n_27;
-  wire inst_start_router_config_dp_n_28;
+  wire [3:0]\gen_si_mux[4].si_mux_r_reg ;
+  wire inst_start_router_config_dp_n_30;
+  wire inst_start_router_config_dp_n_31;
+  wire inst_start_router_config_dp_n_32;
+  wire inst_start_router_config_dp_n_33;
   wire mi_enable;
   wire [3:0]mi_mux;
   wire s_axi_ctrl_aclk;
-  wire [3:0]si_enable;
+  wire [4:0]si_enable;
   wire src_in;
   wire src_rcv;
   wire src_send;
@@ -4616,7 +4692,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config
     \FSM_onehot_state_reg[1] 
        (.C(s_axi_ctrl_aclk),
         .CE(1'b1),
-        .D(inst_start_router_config_dp_n_27),
+        .D(inst_start_router_config_dp_n_32),
         .Q(start),
         .R(SR));
   (* FSM_ENCODED_STATES = "SM_IDLE:00001,SM_START:00010,SM_WAIT:00100,SM_COMMIT:01000,SM_COMPLETE:10000" *) 
@@ -4625,7 +4701,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config
     \FSM_onehot_state_reg[2] 
        (.C(s_axi_ctrl_aclk),
         .CE(1'b1),
-        .D(inst_start_router_config_dp_n_26),
+        .D(inst_start_router_config_dp_n_31),
         .Q(\FSM_onehot_state_reg_n_0_[2] ),
         .R(SR));
   (* FSM_ENCODED_STATES = "SM_IDLE:00001,SM_START:00010,SM_WAIT:00100,SM_COMMIT:01000,SM_COMPLETE:10000" *) 
@@ -4634,7 +4710,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config
     \FSM_onehot_state_reg[3] 
        (.C(s_axi_ctrl_aclk),
         .CE(1'b1),
-        .D(inst_start_router_config_dp_n_25),
+        .D(inst_start_router_config_dp_n_30),
         .Q(Q[0]),
         .R(SR));
   (* FSM_ENCODED_STATES = "SM_IDLE:00001,SM_START:00010,SM_WAIT:00100,SM_COMMIT:01000,SM_COMPLETE:10000" *) 
@@ -4652,7 +4728,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config
        (.C(s_axi_ctrl_aclk),
         .CE(1'b1),
         .D(mi_mux[0]),
-        .Q(\ctrl_reg_r_reg[24]_0 [0]),
+        .Q(\ctrl_reg_r_reg[29]_0 [0]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -4660,7 +4736,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config
        (.C(s_axi_ctrl_aclk),
         .CE(1'b1),
         .D(\gen_si_mux[1].si_mux_r_reg [1]),
-        .Q(\ctrl_reg_r_reg[24]_0 [10]),
+        .Q(\ctrl_reg_r_reg[29]_0 [10]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -4668,7 +4744,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config
        (.C(s_axi_ctrl_aclk),
         .CE(1'b1),
         .D(\gen_si_mux[1].si_mux_r_reg [2]),
-        .Q(\ctrl_reg_r_reg[24]_0 [11]),
+        .Q(\ctrl_reg_r_reg[29]_0 [11]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -4676,7 +4752,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config
        (.C(s_axi_ctrl_aclk),
         .CE(1'b1),
         .D(\gen_si_mux[1].si_mux_r_reg [3]),
-        .Q(\ctrl_reg_r_reg[24]_0 [12]),
+        .Q(\ctrl_reg_r_reg[29]_0 [12]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -4684,7 +4760,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config
        (.C(s_axi_ctrl_aclk),
         .CE(1'b1),
         .D(\gen_si_mux[2].si_mux_r_reg [0]),
-        .Q(\ctrl_reg_r_reg[24]_0 [13]),
+        .Q(\ctrl_reg_r_reg[29]_0 [13]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -4692,7 +4768,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config
        (.C(s_axi_ctrl_aclk),
         .CE(1'b1),
         .D(\gen_si_mux[2].si_mux_r_reg [1]),
-        .Q(\ctrl_reg_r_reg[24]_0 [14]),
+        .Q(\ctrl_reg_r_reg[29]_0 [14]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -4700,7 +4776,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config
        (.C(s_axi_ctrl_aclk),
         .CE(1'b1),
         .D(\gen_si_mux[2].si_mux_r_reg [2]),
-        .Q(\ctrl_reg_r_reg[24]_0 [15]),
+        .Q(\ctrl_reg_r_reg[29]_0 [15]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -4708,7 +4784,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config
        (.C(s_axi_ctrl_aclk),
         .CE(1'b1),
         .D(\gen_si_mux[2].si_mux_r_reg [3]),
-        .Q(\ctrl_reg_r_reg[24]_0 [16]),
+        .Q(\ctrl_reg_r_reg[29]_0 [16]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -4716,7 +4792,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config
        (.C(s_axi_ctrl_aclk),
         .CE(1'b1),
         .D(\gen_si_mux[3].si_mux_r_reg [0]),
-        .Q(\ctrl_reg_r_reg[24]_0 [17]),
+        .Q(\ctrl_reg_r_reg[29]_0 [17]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -4724,7 +4800,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config
        (.C(s_axi_ctrl_aclk),
         .CE(1'b1),
         .D(\gen_si_mux[3].si_mux_r_reg [1]),
-        .Q(\ctrl_reg_r_reg[24]_0 [18]),
+        .Q(\ctrl_reg_r_reg[29]_0 [18]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -4732,7 +4808,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config
        (.C(s_axi_ctrl_aclk),
         .CE(1'b1),
         .D(\gen_si_mux[3].si_mux_r_reg [2]),
-        .Q(\ctrl_reg_r_reg[24]_0 [19]),
+        .Q(\ctrl_reg_r_reg[29]_0 [19]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -4740,7 +4816,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config
        (.C(s_axi_ctrl_aclk),
         .CE(1'b1),
         .D(mi_mux[1]),
-        .Q(\ctrl_reg_r_reg[24]_0 [1]),
+        .Q(\ctrl_reg_r_reg[29]_0 [1]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -4748,39 +4824,79 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config
        (.C(s_axi_ctrl_aclk),
         .CE(1'b1),
         .D(\gen_si_mux[3].si_mux_r_reg [3]),
-        .Q(\ctrl_reg_r_reg[24]_0 [20]),
+        .Q(\ctrl_reg_r_reg[29]_0 [20]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \ctrl_reg_r_reg[21] 
        (.C(s_axi_ctrl_aclk),
         .CE(1'b1),
-        .D(si_enable[0]),
-        .Q(\ctrl_reg_r_reg[24]_0 [21]),
+        .D(\gen_si_mux[4].si_mux_r_reg [0]),
+        .Q(\ctrl_reg_r_reg[29]_0 [21]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \ctrl_reg_r_reg[22] 
        (.C(s_axi_ctrl_aclk),
         .CE(1'b1),
-        .D(si_enable[1]),
-        .Q(\ctrl_reg_r_reg[24]_0 [22]),
+        .D(\gen_si_mux[4].si_mux_r_reg [1]),
+        .Q(\ctrl_reg_r_reg[29]_0 [22]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \ctrl_reg_r_reg[23] 
        (.C(s_axi_ctrl_aclk),
         .CE(1'b1),
-        .D(si_enable[2]),
-        .Q(\ctrl_reg_r_reg[24]_0 [23]),
+        .D(\gen_si_mux[4].si_mux_r_reg [2]),
+        .Q(\ctrl_reg_r_reg[29]_0 [23]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \ctrl_reg_r_reg[24] 
        (.C(s_axi_ctrl_aclk),
         .CE(1'b1),
+        .D(\gen_si_mux[4].si_mux_r_reg [3]),
+        .Q(\ctrl_reg_r_reg[29]_0 [24]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \ctrl_reg_r_reg[25] 
+       (.C(s_axi_ctrl_aclk),
+        .CE(1'b1),
+        .D(si_enable[0]),
+        .Q(\ctrl_reg_r_reg[29]_0 [25]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \ctrl_reg_r_reg[26] 
+       (.C(s_axi_ctrl_aclk),
+        .CE(1'b1),
+        .D(si_enable[1]),
+        .Q(\ctrl_reg_r_reg[29]_0 [26]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \ctrl_reg_r_reg[27] 
+       (.C(s_axi_ctrl_aclk),
+        .CE(1'b1),
+        .D(si_enable[2]),
+        .Q(\ctrl_reg_r_reg[29]_0 [27]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \ctrl_reg_r_reg[28] 
+       (.C(s_axi_ctrl_aclk),
+        .CE(1'b1),
         .D(si_enable[3]),
-        .Q(\ctrl_reg_r_reg[24]_0 [24]),
+        .Q(\ctrl_reg_r_reg[29]_0 [28]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \ctrl_reg_r_reg[29] 
+       (.C(s_axi_ctrl_aclk),
+        .CE(1'b1),
+        .D(si_enable[4]),
+        .Q(\ctrl_reg_r_reg[29]_0 [29]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -4788,7 +4904,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config
        (.C(s_axi_ctrl_aclk),
         .CE(1'b1),
         .D(mi_mux[2]),
-        .Q(\ctrl_reg_r_reg[24]_0 [2]),
+        .Q(\ctrl_reg_r_reg[29]_0 [2]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -4796,7 +4912,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config
        (.C(s_axi_ctrl_aclk),
         .CE(1'b1),
         .D(mi_mux[3]),
-        .Q(\ctrl_reg_r_reg[24]_0 [3]),
+        .Q(\ctrl_reg_r_reg[29]_0 [3]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -4804,7 +4920,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config
        (.C(s_axi_ctrl_aclk),
         .CE(1'b1),
         .D(mi_enable),
-        .Q(\ctrl_reg_r_reg[24]_0 [4]),
+        .Q(\ctrl_reg_r_reg[29]_0 [4]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -4812,7 +4928,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config
        (.C(s_axi_ctrl_aclk),
         .CE(1'b1),
         .D(\gen_si_mux[0].si_mux_r_reg [0]),
-        .Q(\ctrl_reg_r_reg[24]_0 [5]),
+        .Q(\ctrl_reg_r_reg[29]_0 [5]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -4820,7 +4936,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config
        (.C(s_axi_ctrl_aclk),
         .CE(1'b1),
         .D(\gen_si_mux[0].si_mux_r_reg [1]),
-        .Q(\ctrl_reg_r_reg[24]_0 [6]),
+        .Q(\ctrl_reg_r_reg[29]_0 [6]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -4828,7 +4944,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config
        (.C(s_axi_ctrl_aclk),
         .CE(1'b1),
         .D(\gen_si_mux[0].si_mux_r_reg [2]),
-        .Q(\ctrl_reg_r_reg[24]_0 [7]),
+        .Q(\ctrl_reg_r_reg[29]_0 [7]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -4836,7 +4952,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config
        (.C(s_axi_ctrl_aclk),
         .CE(1'b1),
         .D(\gen_si_mux[0].si_mux_r_reg [3]),
-        .Q(\ctrl_reg_r_reg[24]_0 [8]),
+        .Q(\ctrl_reg_r_reg[29]_0 [8]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -4844,14 +4960,14 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config
        (.C(s_axi_ctrl_aclk),
         .CE(1'b1),
         .D(\gen_si_mux[1].si_mux_r_reg [0]),
-        .Q(\ctrl_reg_r_reg[24]_0 [9]),
+        .Q(\ctrl_reg_r_reg[29]_0 [9]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     ctrl_req_r_reg
        (.C(s_axi_ctrl_aclk),
         .CE(1'b1),
-        .D(inst_start_router_config_dp_n_28),
+        .D(inst_start_router_config_dp_n_33),
         .Q(src_send),
         .R(SR));
   LUT1 #(
@@ -4868,9 +4984,9 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config
         .Q(src_in),
         .R(1'b0));
   design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config_dp inst_start_router_config_dp
-       (.D({\gen_si_mux[3].si_mux_r_reg ,\gen_si_mux[2].si_mux_r_reg ,\gen_si_mux[1].si_mux_r_reg ,\gen_si_mux[0].si_mux_r_reg ,mi_enable,mi_mux}),
+       (.D({\gen_si_mux[4].si_mux_r_reg ,\gen_si_mux[3].si_mux_r_reg ,\gen_si_mux[2].si_mux_r_reg ,\gen_si_mux[1].si_mux_r_reg ,\gen_si_mux[0].si_mux_r_reg ,mi_enable,mi_mux}),
         .\FSM_onehot_state_reg[1] (\FSM_onehot_state_reg[1]_0 ),
-        .\FSM_onehot_state_reg[3] (inst_start_router_config_dp_n_28),
+        .\FSM_onehot_state_reg[3] (inst_start_router_config_dp_n_33),
         .Q({Q[0],\FSM_onehot_state_reg_n_0_[2] ,start,ctrl_soft_reset_r0}),
         .\gen_mi_mux_in[0].mi_mux_en_in_reg[0]_0 (\gen_mi_mux_in[0].mi_mux_en_in_reg[0] ),
         .\gen_mi_mux_in[0].mi_mux_in_reg[3]_0 (\gen_mi_mux_in[0].mi_mux_in_reg[3] ),
@@ -4878,7 +4994,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config
         .si_enable(si_enable),
         .src_rcv(src_rcv),
         .src_send(src_send),
-        .\syncstages_ff_reg[3] ({inst_start_router_config_dp_n_25,inst_start_router_config_dp_n_26,inst_start_router_config_dp_n_27}));
+        .\syncstages_ff_reg[3] ({inst_start_router_config_dp_n_30,inst_start_router_config_dp_n_31,inst_start_router_config_dp_n_32}));
 endmodule
 
 (* ORIG_REF_NAME = "axis_switch_v1_1_31_static_router_config_dp" *) 
@@ -4894,8 +5010,8 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config_dp
     \FSM_onehot_state_reg[1] ,
     src_send,
     \gen_mi_mux_in[0].mi_mux_in_reg[3]_0 );
-  output [3:0]si_enable;
-  output [20:0]D;
+  output [4:0]si_enable;
+  output [24:0]D;
   output [2:0]\syncstages_ff_reg[3] ;
   output \FSM_onehot_state_reg[3] ;
   input [3:0]Q;
@@ -4906,36 +5022,47 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config_dp
   input src_send;
   input [3:0]\gen_mi_mux_in[0].mi_mux_in_reg[3]_0 ;
 
-  wire [20:0]D;
+  wire [24:0]D;
   wire [0:0]\FSM_onehot_state_reg[1] ;
   wire \FSM_onehot_state_reg[3] ;
   wire [3:0]Q;
   wire done;
   wire \gen_mi_enable[0].mi_enable_r[0]_i_1_n_0 ;
-  wire \gen_mi_enable[0].mi_enable_r[0]_i_2_n_0 ;
   wire \gen_mi_enable[0].mi_enable_r[0]_i_3_n_0 ;
+  wire \gen_mi_enable[0].mi_enable_r[0]_i_4_n_0 ;
+  wire \gen_mi_enable[0].mi_enable_r_reg[0]_i_2_n_0 ;
   wire \gen_mi_mux_in[0].mi_mux_en_in_reg[0]_0 ;
   wire [3:0]\gen_mi_mux_in[0].mi_mux_in_reg[3]_0 ;
-  wire \gen_si_enable[0].si_enable_r[0]_i_2_n_0 ;
+  wire \gen_si_enable[0].si_enable_r[0]_i_3_n_0 ;
   wire \gen_si_enable[0].si_enable_r_reg0 ;
+  wire \gen_si_enable[0].si_enable_r_reg[0]_i_2_n_0 ;
   wire \gen_si_enable[1].si_enable_r_reg0 ;
   wire \gen_si_enable[2].si_enable_r[2]_i_2_n_0 ;
   wire \gen_si_enable[2].si_enable_r_reg0 ;
   wire \gen_si_enable[3].si_enable_r_reg0 ;
+  wire \gen_si_enable[4].si_enable_r[4]_i_2_n_0 ;
+  wire \gen_si_enable[4].si_enable_r[4]_i_3_n_0 ;
+  wire \gen_si_enable[4].si_enable_r_reg0 ;
   wire \gen_si_mux[0].si_mux_r[3]_i_1_n_0 ;
   wire \gen_si_mux[1].si_mux_r[7]_i_1_n_0 ;
   wire \gen_si_mux[2].si_mux_r[11]_i_1_n_0 ;
   wire \gen_si_mux[3].si_mux_r[15]_i_1_n_0 ;
+  wire \gen_si_mux[4].si_mux_r[19]_i_1_n_0 ;
   wire \mi_cntr[3]_i_1_n_0 ;
   wire \mi_cntr_reg_n_0_[0] ;
   wire \mi_cntr_reg_n_0_[1] ;
   wire \mi_cntr_reg_n_0_[2] ;
   wire \mi_cntr_reg_n_0_[3] ;
-  wire [0:0]mi_connectivity;
+  wire [4:0]mi_connectivity;
   wire \mi_connectivity[0]_i_1_n_0 ;
+  wire \mi_connectivity[1]_i_1_n_0 ;
+  wire \mi_connectivity[2]_i_1_n_0 ;
+  wire \mi_connectivity[3]_i_1_n_0 ;
+  wire \mi_connectivity[4]_i_1_n_0 ;
   wire mi_enable_r0_n_0;
   wire mi_mux_en_in;
-  wire [2:1]p_0_in;
+  wire [2:0]p_0_in;
+  wire p_0_in10_in;
   wire [4:0]p_0_in_0;
   wire s_axi_ctrl_aclk;
   wire sel;
@@ -4944,7 +5071,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config_dp
   wire \selectee[2]_i_1_n_0 ;
   wire \selectee[3]_i_1_n_0 ;
   wire [3:0]selector;
-  wire [3:0]si_enable;
+  wire [4:0]si_enable;
   wire src_rcv;
   wire src_send;
   wire start_r;
@@ -4956,7 +5083,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config_dp
   wire stg2_reset;
   wire [2:0]\syncstages_ff_reg[3] ;
 
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
   LUT4 #(
     .INIT(16'hF888)) 
     \FSM_onehot_state[1]_i_1 
@@ -4965,7 +5092,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config_dp
         .I2(\FSM_onehot_state_reg[1] ),
         .I3(Q[0]),
         .O(\syncstages_ff_reg[3] [0]));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
   LUT3 #(
     .INIT(8'h0E)) 
     \FSM_onehot_state[2]_i_1 
@@ -4993,34 +5120,32 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config_dp
         .I4(src_send),
         .O(\FSM_onehot_state_reg[3] ));
   LUT6 #(
-    .INIT(64'hFFFFFFFF01000000)) 
+    .INIT(64'hFFFFFFFF10000000)) 
     \gen_mi_enable[0].mi_enable_r[0]_i_1 
        (.I0(p_0_in_0[3]),
-        .I1(\gen_mi_enable[0].mi_enable_r[0]_i_2_n_0 ),
-        .I2(p_0_in_0[2]),
-        .I3(\gen_mi_enable[0].mi_enable_r[0]_i_3_n_0 ),
+        .I1(\gen_mi_enable[0].mi_enable_r_reg[0]_i_2_n_0 ),
+        .I2(\gen_si_enable[0].si_enable_r_reg[0]_i_2_n_0 ),
+        .I3(p_0_in_0[4]),
         .I4(mi_enable_r0_n_0),
         .I5(D[4]),
         .O(\gen_mi_enable[0].mi_enable_r[0]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \gen_mi_enable[0].mi_enable_r[0]_i_2 
+    \gen_mi_enable[0].mi_enable_r[0]_i_3 
        (.I0(si_enable[3]),
         .I1(si_enable[2]),
         .I2(p_0_in_0[1]),
         .I3(si_enable[1]),
         .I4(p_0_in_0[0]),
         .I5(si_enable[0]),
-        .O(\gen_mi_enable[0].mi_enable_r[0]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
-  LUT4 #(
-    .INIT(16'h0400)) 
-    \gen_mi_enable[0].mi_enable_r[0]_i_3 
-       (.I0(p_0_in_0[3]),
-        .I1(mi_connectivity),
-        .I2(p_0_in_0[2]),
-        .I3(p_0_in_0[4]),
         .O(\gen_mi_enable[0].mi_enable_r[0]_i_3_n_0 ));
+  LUT3 #(
+    .INIT(8'hFE)) 
+    \gen_mi_enable[0].mi_enable_r[0]_i_4 
+       (.I0(p_0_in_0[1]),
+        .I1(si_enable[4]),
+        .I2(p_0_in_0[0]),
+        .O(\gen_mi_enable[0].mi_enable_r[0]_i_4_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \gen_mi_enable[0].mi_enable_r_reg[0] 
@@ -5029,6 +5154,11 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config_dp
         .D(\gen_mi_enable[0].mi_enable_r[0]_i_1_n_0 ),
         .Q(D[4]),
         .R(stg2_reset));
+  MUXF7 \gen_mi_enable[0].mi_enable_r_reg[0]_i_2 
+       (.I0(\gen_mi_enable[0].mi_enable_r[0]_i_3_n_0 ),
+        .I1(\gen_mi_enable[0].mi_enable_r[0]_i_4_n_0 ),
+        .O(\gen_mi_enable[0].mi_enable_r_reg[0]_i_2_n_0 ),
+        .S(p_0_in_0[2]));
   FDRE #(
     .INIT(1'b0)) 
     \gen_mi_mux_in[0].mi_mux_en_in_reg[0] 
@@ -5069,24 +5199,24 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config_dp
         .D(\gen_mi_mux_in[0].mi_mux_in_reg[3]_0 [3]),
         .Q(D[3]),
         .R(1'b0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF00000004)) 
+  LUT5 #(
+    .INIT(32'hFFFF0002)) 
     \gen_si_enable[0].si_enable_r[0]_i_1 
-       (.I0(p_0_in_0[2]),
-        .I1(mi_connectivity),
-        .I2(p_0_in_0[3]),
-        .I3(\gen_si_enable[0].si_enable_r[0]_i_2_n_0 ),
-        .I4(p_0_in_0[0]),
-        .I5(si_enable[0]),
+       (.I0(\gen_si_enable[0].si_enable_r_reg[0]_i_2_n_0 ),
+        .I1(p_0_in_0[3]),
+        .I2(\gen_si_enable[0].si_enable_r[0]_i_3_n_0 ),
+        .I3(p_0_in_0[0]),
+        .I4(si_enable[0]),
         .O(\gen_si_enable[0].si_enable_r_reg0 ));
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
   LUT4 #(
-    .INIT(16'hFFEF)) 
-    \gen_si_enable[0].si_enable_r[0]_i_2 
+    .INIT(16'hFEFF)) 
+    \gen_si_enable[0].si_enable_r[0]_i_3 
        (.I0(p_0_in_0[1]),
         .I1(p_0_in_0[2]),
-        .I2(p_0_in_0[4]),
-        .I3(p_0_in_0[3]),
-        .O(\gen_si_enable[0].si_enable_r[0]_i_2_n_0 ));
+        .I2(p_0_in_0[3]),
+        .I3(p_0_in_0[4]),
+        .O(\gen_si_enable[0].si_enable_r[0]_i_3_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \gen_si_enable[0].si_enable_r_reg[0] 
@@ -5095,15 +5225,19 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config_dp
         .D(\gen_si_enable[0].si_enable_r_reg0 ),
         .Q(si_enable[0]),
         .R(stg2_reset));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF00000400)) 
+  MUXF7 \gen_si_enable[0].si_enable_r_reg[0]_i_2 
+       (.I0(\gen_si_enable[4].si_enable_r[4]_i_2_n_0 ),
+        .I1(\gen_si_enable[4].si_enable_r[4]_i_3_n_0 ),
+        .O(\gen_si_enable[0].si_enable_r_reg[0]_i_2_n_0 ),
+        .S(p_0_in_0[2]));
+  LUT5 #(
+    .INIT(32'hFFFF0020)) 
     \gen_si_enable[1].si_enable_r[1]_i_1 
-       (.I0(p_0_in_0[2]),
-        .I1(mi_connectivity),
-        .I2(p_0_in_0[3]),
-        .I3(p_0_in_0[0]),
-        .I4(\gen_si_enable[0].si_enable_r[0]_i_2_n_0 ),
-        .I5(si_enable[1]),
+       (.I0(\gen_si_enable[0].si_enable_r_reg[0]_i_2_n_0 ),
+        .I1(p_0_in_0[3]),
+        .I2(p_0_in_0[0]),
+        .I3(\gen_si_enable[0].si_enable_r[0]_i_3_n_0 ),
+        .I4(si_enable[1]),
         .O(\gen_si_enable[1].si_enable_r_reg0 ));
   FDRE #(
     .INIT(1'b0)) 
@@ -5113,24 +5247,22 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config_dp
         .D(\gen_si_enable[1].si_enable_r_reg0 ),
         .Q(si_enable[1]),
         .R(stg2_reset));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF00000004)) 
+  LUT5 #(
+    .INIT(32'hFFFF0002)) 
     \gen_si_enable[2].si_enable_r[2]_i_1 
-       (.I0(p_0_in_0[2]),
-        .I1(mi_connectivity),
-        .I2(p_0_in_0[3]),
-        .I3(\gen_si_enable[2].si_enable_r[2]_i_2_n_0 ),
-        .I4(p_0_in_0[0]),
-        .I5(si_enable[2]),
+       (.I0(\gen_si_enable[0].si_enable_r_reg[0]_i_2_n_0 ),
+        .I1(p_0_in_0[3]),
+        .I2(\gen_si_enable[2].si_enable_r[2]_i_2_n_0 ),
+        .I3(p_0_in_0[0]),
+        .I4(si_enable[2]),
         .O(\gen_si_enable[2].si_enable_r_reg0 ));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
   LUT4 #(
-    .INIT(16'hFFDF)) 
+    .INIT(16'hFDFF)) 
     \gen_si_enable[2].si_enable_r[2]_i_2 
        (.I0(p_0_in_0[1]),
         .I1(p_0_in_0[2]),
-        .I2(p_0_in_0[4]),
-        .I3(p_0_in_0[3]),
+        .I2(p_0_in_0[3]),
+        .I3(p_0_in_0[4]),
         .O(\gen_si_enable[2].si_enable_r[2]_i_2_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
@@ -5140,15 +5272,14 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config_dp
         .D(\gen_si_enable[2].si_enable_r_reg0 ),
         .Q(si_enable[2]),
         .R(stg2_reset));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF00000400)) 
+  LUT5 #(
+    .INIT(32'hFFFF0020)) 
     \gen_si_enable[3].si_enable_r[3]_i_1 
-       (.I0(p_0_in_0[2]),
-        .I1(mi_connectivity),
-        .I2(p_0_in_0[3]),
-        .I3(p_0_in_0[0]),
-        .I4(\gen_si_enable[2].si_enable_r[2]_i_2_n_0 ),
-        .I5(si_enable[3]),
+       (.I0(\gen_si_enable[0].si_enable_r_reg[0]_i_2_n_0 ),
+        .I1(p_0_in_0[3]),
+        .I2(p_0_in_0[0]),
+        .I3(\gen_si_enable[2].si_enable_r[2]_i_2_n_0 ),
+        .I4(si_enable[3]),
         .O(\gen_si_enable[3].si_enable_r_reg0 ));
   FDRE #(
     .INIT(1'b0)) 
@@ -5157,6 +5288,51 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config_dp
         .CE(1'b1),
         .D(\gen_si_enable[3].si_enable_r_reg0 ),
         .Q(si_enable[3]),
+        .R(stg2_reset));
+  LUT6 #(
+    .INIT(64'hFFFFFFFF00E20000)) 
+    \gen_si_enable[4].si_enable_r[4]_i_1 
+       (.I0(\gen_si_enable[4].si_enable_r[4]_i_2_n_0 ),
+        .I1(p_0_in_0[2]),
+        .I2(\gen_si_enable[4].si_enable_r[4]_i_3_n_0 ),
+        .I3(p_0_in_0[3]),
+        .I4(p_0_in10_in),
+        .I5(si_enable[4]),
+        .O(\gen_si_enable[4].si_enable_r_reg0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \gen_si_enable[4].si_enable_r[4]_i_2 
+       (.I0(mi_connectivity[3]),
+        .I1(mi_connectivity[2]),
+        .I2(p_0_in_0[1]),
+        .I3(mi_connectivity[1]),
+        .I4(p_0_in_0[0]),
+        .I5(mi_connectivity[0]),
+        .O(\gen_si_enable[4].si_enable_r[4]_i_2_n_0 ));
+  LUT3 #(
+    .INIT(8'h04)) 
+    \gen_si_enable[4].si_enable_r[4]_i_3 
+       (.I0(p_0_in_0[0]),
+        .I1(mi_connectivity[4]),
+        .I2(p_0_in_0[1]),
+        .O(\gen_si_enable[4].si_enable_r[4]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  LUT5 #(
+    .INIT(32'h00000040)) 
+    \gen_si_enable[4].si_enable_r[4]_i_4 
+       (.I0(p_0_in_0[1]),
+        .I1(p_0_in_0[2]),
+        .I2(p_0_in_0[4]),
+        .I3(p_0_in_0[3]),
+        .I4(p_0_in_0[0]),
+        .O(p_0_in10_in));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_si_enable[4].si_enable_r_reg[4] 
+       (.C(s_axi_ctrl_aclk),
+        .CE(1'b1),
+        .D(\gen_si_enable[4].si_enable_r_reg0 ),
+        .Q(si_enable[4]),
         .R(stg2_reset));
   LUT1 #(
     .INIT(2'h1)) 
@@ -5306,7 +5482,49 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config_dp
         .D(selector[3]),
         .Q(D[20]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  LUT1 #(
+    .INIT(2'h1)) 
+    \gen_si_mux[4].si_mux_r[19]_i_1 
+       (.I0(si_enable[4]),
+        .O(\gen_si_mux[4].si_mux_r[19]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_si_mux[4].si_mux_r_reg[16] 
+       (.C(s_axi_ctrl_aclk),
+        .CE(\gen_si_mux[4].si_mux_r[19]_i_1_n_0 ),
+        .D(selector[0]),
+        .Q(D[21]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_si_mux[4].si_mux_r_reg[17] 
+       (.C(s_axi_ctrl_aclk),
+        .CE(\gen_si_mux[4].si_mux_r[19]_i_1_n_0 ),
+        .D(selector[1]),
+        .Q(D[22]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_si_mux[4].si_mux_r_reg[18] 
+       (.C(s_axi_ctrl_aclk),
+        .CE(\gen_si_mux[4].si_mux_r[19]_i_1_n_0 ),
+        .D(selector[2]),
+        .Q(D[23]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_si_mux[4].si_mux_r_reg[19] 
+       (.C(s_axi_ctrl_aclk),
+        .CE(\gen_si_mux[4].si_mux_r[19]_i_1_n_0 ),
+        .D(selector[3]),
+        .Q(D[24]),
+        .R(1'b0));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \mi_cntr[0]_i_1 
+       (.I0(\mi_cntr_reg_n_0_[0] ),
+        .O(p_0_in[0]));
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \mi_cntr[1]_i_1 
@@ -5321,7 +5539,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config_dp
         .I2(\mi_cntr_reg_n_0_[3] ),
         .I3(\mi_cntr_reg_n_0_[2] ),
         .O(sel));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \mi_cntr[2]_i_2 
@@ -5342,7 +5560,7 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config_dp
     \mi_cntr_reg[0] 
        (.C(s_axi_ctrl_aclk),
         .CE(sel),
-        .D(\mi_connectivity[0]_i_1_n_0 ),
+        .D(p_0_in[0]),
         .Q(\mi_cntr_reg_n_0_[0] ),
         .R(stg1_reset));
   FDRE #(
@@ -5370,18 +5588,83 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config_dp
         .Q(\mi_cntr_reg_n_0_[3] ),
         .R(stg1_reset));
   (* SOFT_HLUTNM = "soft_lutpair33" *) 
-  LUT1 #(
-    .INIT(2'h1)) 
+  LUT3 #(
+    .INIT(8'hA7)) 
     \mi_connectivity[0]_i_1 
-       (.I0(\mi_cntr_reg_n_0_[0] ),
+       (.I0(\mi_cntr_reg_n_0_[2] ),
+        .I1(\mi_cntr_reg_n_0_[1] ),
+        .I2(\mi_cntr_reg_n_0_[0] ),
         .O(\mi_connectivity[0]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+  LUT2 #(
+    .INIT(4'h9)) 
+    \mi_connectivity[1]_i_1 
+       (.I0(\mi_cntr_reg_n_0_[0] ),
+        .I1(\mi_cntr_reg_n_0_[2] ),
+        .O(\mi_connectivity[1]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  LUT3 #(
+    .INIT(8'h25)) 
+    \mi_connectivity[2]_i_1 
+       (.I0(\mi_cntr_reg_n_0_[2] ),
+        .I1(\mi_cntr_reg_n_0_[1] ),
+        .I2(\mi_cntr_reg_n_0_[0] ),
+        .O(\mi_connectivity[2]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  LUT3 #(
+    .INIT(8'h41)) 
+    \mi_connectivity[3]_i_1 
+       (.I0(\mi_cntr_reg_n_0_[1] ),
+        .I1(\mi_cntr_reg_n_0_[0] ),
+        .I2(\mi_cntr_reg_n_0_[2] ),
+        .O(\mi_connectivity[3]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+  LUT3 #(
+    .INIT(8'h01)) 
+    \mi_connectivity[4]_i_1 
+       (.I0(\mi_cntr_reg_n_0_[1] ),
+        .I1(\mi_cntr_reg_n_0_[0] ),
+        .I2(\mi_cntr_reg_n_0_[2] ),
+        .O(\mi_connectivity[4]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \mi_connectivity_reg[0] 
        (.C(s_axi_ctrl_aclk),
         .CE(1'b1),
         .D(\mi_connectivity[0]_i_1_n_0 ),
-        .Q(mi_connectivity),
+        .Q(mi_connectivity[0]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \mi_connectivity_reg[1] 
+       (.C(s_axi_ctrl_aclk),
+        .CE(1'b1),
+        .D(\mi_connectivity[1]_i_1_n_0 ),
+        .Q(mi_connectivity[1]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \mi_connectivity_reg[2] 
+       (.C(s_axi_ctrl_aclk),
+        .CE(1'b1),
+        .D(\mi_connectivity[2]_i_1_n_0 ),
+        .Q(mi_connectivity[2]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \mi_connectivity_reg[3] 
+       (.C(s_axi_ctrl_aclk),
+        .CE(1'b1),
+        .D(\mi_connectivity[3]_i_1_n_0 ),
+        .Q(mi_connectivity[3]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \mi_connectivity_reg[4] 
+       (.C(s_axi_ctrl_aclk),
+        .CE(1'b1),
+        .D(\mi_connectivity[4]_i_1_n_0 ),
+        .Q(mi_connectivity[4]),
         .R(1'b0));
   LUT4 #(
     .INIT(16'h0001)) 
@@ -5391,28 +5674,28 @@ module design_1_axis_switch_0_2_axis_switch_v1_1_31_static_router_config_dp
         .I2(selector[0]),
         .I3(selector[1]),
         .O(mi_enable_r0_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \selectee[0]_i_1 
        (.I0(D[0]),
         .I1(\mi_cntr_reg_n_0_[0] ),
         .O(\selectee[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \selectee[1]_i_1 
        (.I0(D[1]),
         .I1(\mi_cntr_reg_n_0_[0] ),
         .O(\selectee[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \selectee[2]_i_1 
        (.I0(D[2]),
         .I1(\mi_cntr_reg_n_0_[0] ),
         .O(\selectee[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \selectee[3]_i_1 
@@ -5557,7 +5840,7 @@ endmodule
 
 (* DEST_EXT_HSK = "0" *) (* DEST_SYNC_FF = "4" *) (* INIT_SYNC_FF = "0" *) 
 (* ORIG_REF_NAME = "xpm_cdc_handshake" *) (* SIM_ASSERT_CHK = "0" *) (* SRC_SYNC_FF = "4" *) 
-(* VERSION = "0" *) (* WIDTH = "25" *) (* XPM_MODULE = "TRUE" *) 
+(* VERSION = "0" *) (* WIDTH = "30" *) (* XPM_MODULE = "TRUE" *) 
 (* keep_hierarchy = "true" *) (* xpm_cdc = "HANDSHAKE" *) 
 module design_1_axis_switch_0_2_xpm_cdc_handshake
    (src_clk,
@@ -5569,29 +5852,29 @@ module design_1_axis_switch_0_2_xpm_cdc_handshake
     dest_req,
     dest_ack);
   input src_clk;
-  input [24:0]src_in;
+  input [29:0]src_in;
   input src_send;
   output src_rcv;
   input dest_clk;
-  output [24:0]dest_out;
+  output [29:0]dest_out;
   output dest_req;
   input dest_ack;
 
   wire dest_clk;
   (* DIRECT_ENABLE *) wire dest_hsdata_en;
-  (* RTL_KEEP = "true" *) (* xpm_cdc = "HANDSHAKE" *) wire [24:0]dest_hsdata_ff;
+  (* RTL_KEEP = "true" *) (* xpm_cdc = "HANDSHAKE" *) wire [29:0]dest_hsdata_ff;
   wire dest_req;
   wire dest_req_ff;
   wire dest_req_nxt;
   wire p_0_in;
   wire src_clk;
-  wire [24:0]src_hsdata_ff;
-  wire [24:0]src_in;
+  wire [29:0]src_hsdata_ff;
+  wire [29:0]src_in;
   wire src_rcv;
   wire src_send;
   wire src_sendd_ff;
 
-  assign dest_out[24:0] = dest_hsdata_ff;
+  assign dest_out[29:0] = dest_hsdata_ff;
   (* KEEP = "true" *) 
   (* XPM_CDC = "HANDSHAKE" *) 
   FDRE \dest_hsdata_ff_reg[0] 
@@ -5730,6 +6013,46 @@ module design_1_axis_switch_0_2_xpm_cdc_handshake
         .R(1'b0));
   (* KEEP = "true" *) 
   (* XPM_CDC = "HANDSHAKE" *) 
+  FDRE \dest_hsdata_ff_reg[25] 
+       (.C(dest_clk),
+        .CE(dest_hsdata_en),
+        .D(src_hsdata_ff[25]),
+        .Q(dest_hsdata_ff[25]),
+        .R(1'b0));
+  (* KEEP = "true" *) 
+  (* XPM_CDC = "HANDSHAKE" *) 
+  FDRE \dest_hsdata_ff_reg[26] 
+       (.C(dest_clk),
+        .CE(dest_hsdata_en),
+        .D(src_hsdata_ff[26]),
+        .Q(dest_hsdata_ff[26]),
+        .R(1'b0));
+  (* KEEP = "true" *) 
+  (* XPM_CDC = "HANDSHAKE" *) 
+  FDRE \dest_hsdata_ff_reg[27] 
+       (.C(dest_clk),
+        .CE(dest_hsdata_en),
+        .D(src_hsdata_ff[27]),
+        .Q(dest_hsdata_ff[27]),
+        .R(1'b0));
+  (* KEEP = "true" *) 
+  (* XPM_CDC = "HANDSHAKE" *) 
+  FDRE \dest_hsdata_ff_reg[28] 
+       (.C(dest_clk),
+        .CE(dest_hsdata_en),
+        .D(src_hsdata_ff[28]),
+        .Q(dest_hsdata_ff[28]),
+        .R(1'b0));
+  (* KEEP = "true" *) 
+  (* XPM_CDC = "HANDSHAKE" *) 
+  FDRE \dest_hsdata_ff_reg[29] 
+       (.C(dest_clk),
+        .CE(dest_hsdata_en),
+        .D(src_hsdata_ff[29]),
+        .Q(dest_hsdata_ff[29]),
+        .R(1'b0));
+  (* KEEP = "true" *) 
+  (* XPM_CDC = "HANDSHAKE" *) 
   FDRE \dest_hsdata_ff_reg[2] 
        (.C(dest_clk),
         .CE(dest_hsdata_en),
@@ -5812,7 +6135,7 @@ module design_1_axis_switch_0_2_xpm_cdc_handshake
         .R(1'b0));
   LUT1 #(
     .INIT(2'h1)) 
-    \src_hsdata_ff[24]_i_1 
+    \src_hsdata_ff[29]_i_1 
        (.I0(src_sendd_ff),
         .O(p_0_in));
   FDRE \src_hsdata_ff_reg[0] 
@@ -5916,6 +6239,36 @@ module design_1_axis_switch_0_2_xpm_cdc_handshake
         .CE(p_0_in),
         .D(src_in[24]),
         .Q(src_hsdata_ff[24]),
+        .R(1'b0));
+  FDRE \src_hsdata_ff_reg[25] 
+       (.C(src_clk),
+        .CE(p_0_in),
+        .D(src_in[25]),
+        .Q(src_hsdata_ff[25]),
+        .R(1'b0));
+  FDRE \src_hsdata_ff_reg[26] 
+       (.C(src_clk),
+        .CE(p_0_in),
+        .D(src_in[26]),
+        .Q(src_hsdata_ff[26]),
+        .R(1'b0));
+  FDRE \src_hsdata_ff_reg[27] 
+       (.C(src_clk),
+        .CE(p_0_in),
+        .D(src_in[27]),
+        .Q(src_hsdata_ff[27]),
+        .R(1'b0));
+  FDRE \src_hsdata_ff_reg[28] 
+       (.C(src_clk),
+        .CE(p_0_in),
+        .D(src_in[28]),
+        .Q(src_hsdata_ff[28]),
+        .R(1'b0));
+  FDRE \src_hsdata_ff_reg[29] 
+       (.C(src_clk),
+        .CE(p_0_in),
+        .D(src_in[29]),
+        .Q(src_hsdata_ff[29]),
         .R(1'b0));
   FDRE \src_hsdata_ff_reg[2] 
        (.C(src_clk),

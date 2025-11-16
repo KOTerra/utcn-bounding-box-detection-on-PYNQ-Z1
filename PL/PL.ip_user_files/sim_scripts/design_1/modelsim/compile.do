@@ -7,6 +7,7 @@ vlib modelsim_lib/msim/xil_defaultlib
 vlib modelsim_lib/msim/lib_cdc_v1_0_3
 vlib modelsim_lib/msim/proc_sys_reset_v5_0_15
 vlib modelsim_lib/msim/axi_bram_ctrl_v4_1_10
+vlib modelsim_lib/msim/xlconcat_v2_1_6
 
 vmap xilinx_vip modelsim_lib/msim/xilinx_vip
 vmap xpm modelsim_lib/msim/xpm
@@ -14,6 +15,7 @@ vmap xil_defaultlib modelsim_lib/msim/xil_defaultlib
 vmap lib_cdc_v1_0_3 modelsim_lib/msim/lib_cdc_v1_0_3
 vmap proc_sys_reset_v5_0_15 modelsim_lib/msim/proc_sys_reset_v5_0_15
 vmap axi_bram_ctrl_v4_1_10 modelsim_lib/msim/axi_bram_ctrl_v4_1_10
+vmap xlconcat_v2_1_6 modelsim_lib/msim/xlconcat_v2_1_6
 
 vlog -work xilinx_vip  -incr -mfcu  -sv -L axi_vip_v1_1_17 -L processing_system7_vip_v1_0_19 -L xilinx_vip "+incdir+X:/xilinx/Vivado/2024.1/data/xilinx_vip/include" \
 "X:/xilinx/Vivado/2024.1/data/xilinx_vip/hdl/axi4stream_vip_axi4streampc.sv" \
@@ -40,7 +42,7 @@ vcom -work xil_defaultlib  -93  \
 "../../../bd/design_1/ip/design_1_ccl_slice_core_1_0_1/sim/design_1_ccl_slice_core_1_0.vhd" \
 "../../../bd/design_1/ip/design_1_ccl_slice_core_2_0_1/sim/design_1_ccl_slice_core_2_0.vhd" \
 "../../../bd/design_1/ip/design_1_ccl_slice_core_3_0_1/sim/design_1_ccl_slice_core_3_0.vhd" \
-"../../../bd/design_1/ip/design_1_xbar_0_1/design_1_xbar_0_sim_netlist.vhdl" \
+"d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ip/design_1_xbar_0_1/design_1_xbar_0_sim_netlist.vhdl" \
 
 vcom -work lib_cdc_v1_0_3  -93  \
 "../../../../PL.gen/sources_1/bd/design_1/ipshared/2a4f/hdl/lib_cdc_v1_0_rfs.vhd" \
@@ -58,10 +60,20 @@ vcom -work axi_bram_ctrl_v4_1_10  -93  \
 
 vcom -work xil_defaultlib  -93  \
 "../../../bd/design_1/ip/design_1_axi_bram_ctrl_0_0_1/sim/design_1_axi_bram_ctrl_0_0.vhd" \
-"../../../bd/design_1/ip/design_1_axis_switch_0_1/design_1_axis_switch_0_1_sim_netlist.vhdl" \
-"../../../bd/design_1/ip/design_1_axis_switch_0_2/design_1_axis_switch_0_2_sim_netlist.vhdl" \
-"../../../bd/design_1/ip/design_1_xbar_2_1/design_1_xbar_2_sim_netlist.vhdl" \
+"d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ip/design_1_axis_switch_0_1/design_1_axis_switch_0_1_sim_netlist.vhdl" \
+"d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ip/design_1_axis_switch_0_2/design_1_axis_switch_0_2_sim_netlist.vhdl" \
+"d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ip/design_1_xbar_2_1/design_1_xbar_2_sim_netlist.vhdl" \
+"../../../bd/design_1/ip/design_1_ccl_relabel_core_0_0/sim/design_1_ccl_relabel_core_0_0.vhd" \
+
+vlog -work xlconcat_v2_1_6  -incr -mfcu  "+incdir+../../../../PL.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../PL.gen/sources_1/bd/design_1/ipshared/b28c/hdl" "+incdir+../../../../PL.gen/sources_1/bd/design_1/ipshared/434f/hdl" "+incdir+X:/xilinx/Vivado/2024.1/data/xilinx_vip/include" \
+"../../../../PL.gen/sources_1/bd/design_1/ipshared/6120/hdl/xlconcat_v2_1_vl_rfs.v" \
+
+vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../PL.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../PL.gen/sources_1/bd/design_1/ipshared/b28c/hdl" "+incdir+../../../../PL.gen/sources_1/bd/design_1/ipshared/434f/hdl" "+incdir+X:/xilinx/Vivado/2024.1/data/xilinx_vip/include" \
+"../../../bd/design_1/ip/design_1_xlconcat_0_0_1/sim/design_1_xlconcat_0_0.v" \
+
+vcom -work xil_defaultlib  -93  \
 "../../../bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_sim_netlist.vhdl" \
+"d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ip/design_1_s00_mmu_0/design_1_s00_mmu_0_sim_netlist.vhdl" \
 "../../../bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_sim_netlist.vhdl" \
 "../../../bd/design_1/ip/design_1_auto_pc_2/design_1_auto_pc_2_sim_netlist.vhdl" \
 "../../../bd/design_1/sim/design_1.vhd" \

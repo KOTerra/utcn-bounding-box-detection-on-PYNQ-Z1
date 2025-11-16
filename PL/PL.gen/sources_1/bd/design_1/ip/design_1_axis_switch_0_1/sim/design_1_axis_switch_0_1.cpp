@@ -99,6 +99,12 @@ design_1_axis_switch_0_1::design_1_axis_switch_0_1(const sc_core::sc_module_name
   mp_m_axis_tdata_converter_3 = NULL;
   mp_m_axis_tkeep_converter_3 = NULL;
   mp_m_axis_tlast_converter_3 = NULL;
+  mp_M04_AXIS_transactor = NULL;
+  mp_m_axis_tvalid_converter_4 = NULL;
+  mp_m_axis_tready_converter_4 = NULL;
+  mp_m_axis_tdata_converter_4 = NULL;
+  mp_m_axis_tkeep_converter_4 = NULL;
+  mp_m_axis_tlast_converter_4 = NULL;
   mp_S_AXI_CTRL_transactor = NULL;
 
   // initialize junctures
@@ -107,23 +113,23 @@ design_1_axis_switch_0_1::design_1_axis_switch_0_1(const sc_core::sc_module_name
   mp_m_axis_concat_tlast = NULL;
   mp_m_axis_concat_tvalid = NULL;
   mp_m_axis_split_tready = NULL;
-  mp_m_axis_concat_tvalid = new xsc::xsc_concatenator<4, 4>("m_axis_concat_tvalid");
+  mp_m_axis_concat_tvalid = new xsc::xsc_concatenator<5, 5>("m_axis_concat_tvalid");
   mp_m_axis_concat_tvalid->in_port[0](m_axis_concat_tvalid_out_0);
   mp_m_axis_concat_tvalid->out_port(m_axis_tvalid);
     mp_m_axis_concat_tvalid->offset_port(0, 0);
-  mp_m_axis_split_tready = new xsc::xsc_split<4, 4>("m_axis_split_tready");
+  mp_m_axis_split_tready = new xsc::xsc_split<5, 5>("m_axis_split_tready");
   mp_m_axis_split_tready->in_port(m_axis_tready);
   mp_m_axis_split_tready->out_port[0](m_axis_split_tready_out_0);
     mp_m_axis_split_tready->add_mask(0,1,0);
-  mp_m_axis_concat_tdata = new xsc::xsc_concatenator<128, 4>("m_axis_concat_tdata");
+  mp_m_axis_concat_tdata = new xsc::xsc_concatenator<160, 5>("m_axis_concat_tdata");
   mp_m_axis_concat_tdata->in_port[0](m_axis_concat_tdata_out_0);
   mp_m_axis_concat_tdata->out_port(m_axis_tdata);
     mp_m_axis_concat_tdata->offset_port(0, 0);
-  mp_m_axis_concat_tkeep = new xsc::xsc_concatenator<16, 4>("m_axis_concat_tkeep");
+  mp_m_axis_concat_tkeep = new xsc::xsc_concatenator<20, 5>("m_axis_concat_tkeep");
   mp_m_axis_concat_tkeep->in_port[0](m_axis_concat_tkeep_out_0);
   mp_m_axis_concat_tkeep->out_port(m_axis_tkeep);
     mp_m_axis_concat_tkeep->offset_port(0, 0);
-  mp_m_axis_concat_tlast = new xsc::xsc_concatenator<4, 4>("m_axis_concat_tlast");
+  mp_m_axis_concat_tlast = new xsc::xsc_concatenator<5, 5>("m_axis_concat_tlast");
   mp_m_axis_concat_tlast->in_port[0](m_axis_concat_tlast_out_0);
   mp_m_axis_concat_tlast->out_port(m_axis_tlast);
     mp_m_axis_concat_tlast->offset_port(0, 0);
@@ -160,6 +166,17 @@ design_1_axis_switch_0_1::design_1_axis_switch_0_1(const sc_core::sc_module_name
   mp_m_axis_concat_tkeep->offset_port(3, 12);
   mp_m_axis_concat_tlast->in_port[3](m_axis_concat_tlast_out_3);
   mp_m_axis_concat_tlast->offset_port(3, 3);
+  mp_m_axis_concat_tvalid->in_port[4](m_axis_concat_tvalid_out_4);
+  mp_m_axis_concat_tvalid->offset_port(4, 4);
+  
+  mp_m_axis_split_tready->out_port[4](m_axis_split_tready_out_4);
+    mp_m_axis_split_tready->add_mask(4,5,4);
+  mp_m_axis_concat_tdata->in_port[4](m_axis_concat_tdata_out_4);
+  mp_m_axis_concat_tdata->offset_port(4, 128);
+  mp_m_axis_concat_tkeep->in_port[4](m_axis_concat_tkeep_out_4);
+  mp_m_axis_concat_tkeep->offset_port(4, 16);
+  mp_m_axis_concat_tlast->in_port[4](m_axis_concat_tlast_out_4);
+  mp_m_axis_concat_tlast->offset_port(4, 4);
 
   // initialize socket stubs
 
@@ -244,27 +261,27 @@ void design_1_axis_switch_0_1::before_end_of_elaboration()
     M00_AXIS_transactor_param_props.addLong("TSIDE_BAND_1_WIDTH", "0");
     M00_AXIS_transactor_param_props.addLong("TSIDE_BAND_2_WIDTH", "0");
 
-    mp_M00_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<16,4,4,4,1,1>("M00_AXIS_transactor", M00_AXIS_transactor_param_props);
+    mp_M00_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<20,5,5,5,1,1>("M00_AXIS_transactor", M00_AXIS_transactor_param_props);
 
     // M00_AXIS' transactor ports
 
-    mp_m_axis_tvalid_converter_0 = new xsc::common::scalar2vectorN_converter<4>("m_axis_tvalid_converter_0");
+    mp_m_axis_tvalid_converter_0 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tvalid_converter_0");
     mp_m_axis_tvalid_converter_0->scalar_in(m_m_axis_tvalid_converter_0_signal);
     mp_m_axis_tvalid_converter_0->vector_out(m_axis_concat_tvalid_out_0);
     mp_M00_AXIS_transactor->TVALID(m_m_axis_tvalid_converter_0_signal);
-    mp_m_axis_tready_converter_0 = new xsc::common::vectorN2scalar_converter<4>("m_axis_tready_converter_0");
+    mp_m_axis_tready_converter_0 = new xsc::common::vectorN2scalar_converter<5>("m_axis_tready_converter_0");
     mp_m_axis_tready_converter_0->vector_in(m_axis_split_tready_out_0);
     mp_m_axis_tready_converter_0->scalar_out(m_m_axis_tready_converter_0_signal);
     mp_M00_AXIS_transactor->TREADY(m_m_axis_tready_converter_0_signal);
-    mp_m_axis_tdata_converter_0 = new xsc::common::vector2vector_converter<128,128>("m_axis_tdata_converter_0");
+    mp_m_axis_tdata_converter_0 = new xsc::common::vector2vector_converter<160,160>("m_axis_tdata_converter_0");
     mp_m_axis_tdata_converter_0->vector_in(m_m_axis_tdata_converter_0_signal);
     mp_m_axis_tdata_converter_0->vector_out(m_axis_concat_tdata_out_0);
     mp_M00_AXIS_transactor->TDATA(m_m_axis_tdata_converter_0_signal);
-    mp_m_axis_tkeep_converter_0 = new xsc::common::vector2vector_converter<16,16>("m_axis_tkeep_converter_0");
+    mp_m_axis_tkeep_converter_0 = new xsc::common::vector2vector_converter<20,20>("m_axis_tkeep_converter_0");
     mp_m_axis_tkeep_converter_0->vector_in(m_m_axis_tkeep_converter_0_signal);
     mp_m_axis_tkeep_converter_0->vector_out(m_axis_concat_tkeep_out_0);
     mp_M00_AXIS_transactor->TKEEP(m_m_axis_tkeep_converter_0_signal);
-    mp_m_axis_tlast_converter_0 = new xsc::common::scalar2vectorN_converter<4>("m_axis_tlast_converter_0");
+    mp_m_axis_tlast_converter_0 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tlast_converter_0");
     mp_m_axis_tlast_converter_0->scalar_in(m_m_axis_tlast_converter_0_signal);
     mp_m_axis_tlast_converter_0->vector_out(m_axis_concat_tlast_out_0);
     mp_M00_AXIS_transactor->TLAST(m_m_axis_tlast_converter_0_signal);
@@ -303,27 +320,27 @@ void design_1_axis_switch_0_1::before_end_of_elaboration()
     M01_AXIS_transactor_param_props.addLong("TSIDE_BAND_1_WIDTH", "0");
     M01_AXIS_transactor_param_props.addLong("TSIDE_BAND_2_WIDTH", "0");
 
-    mp_M01_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<16,4,4,4,1,1>("M01_AXIS_transactor", M01_AXIS_transactor_param_props);
+    mp_M01_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<20,5,5,5,1,1>("M01_AXIS_transactor", M01_AXIS_transactor_param_props);
 
     // M01_AXIS' transactor ports
 
-    mp_m_axis_tvalid_converter_1 = new xsc::common::scalar2vectorN_converter<4>("m_axis_tvalid_converter_1");
+    mp_m_axis_tvalid_converter_1 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tvalid_converter_1");
     mp_m_axis_tvalid_converter_1->scalar_in(m_m_axis_tvalid_converter_1_signal);
     mp_m_axis_tvalid_converter_1->vector_out(m_axis_concat_tvalid_out_1);
     mp_M01_AXIS_transactor->TVALID(m_m_axis_tvalid_converter_1_signal);
-    mp_m_axis_tready_converter_1 = new xsc::common::vectorN2scalar_converter<4>("m_axis_tready_converter_1");
+    mp_m_axis_tready_converter_1 = new xsc::common::vectorN2scalar_converter<5>("m_axis_tready_converter_1");
     mp_m_axis_tready_converter_1->vector_in(m_axis_split_tready_out_1);
     mp_m_axis_tready_converter_1->scalar_out(m_m_axis_tready_converter_1_signal);
     mp_M01_AXIS_transactor->TREADY(m_m_axis_tready_converter_1_signal);
-    mp_m_axis_tdata_converter_1 = new xsc::common::vector2vector_converter<128,128>("m_axis_tdata_converter_1");
+    mp_m_axis_tdata_converter_1 = new xsc::common::vector2vector_converter<160,160>("m_axis_tdata_converter_1");
     mp_m_axis_tdata_converter_1->vector_in(m_m_axis_tdata_converter_1_signal);
     mp_m_axis_tdata_converter_1->vector_out(m_axis_concat_tdata_out_1);
     mp_M01_AXIS_transactor->TDATA(m_m_axis_tdata_converter_1_signal);
-    mp_m_axis_tkeep_converter_1 = new xsc::common::vector2vector_converter<16,16>("m_axis_tkeep_converter_1");
+    mp_m_axis_tkeep_converter_1 = new xsc::common::vector2vector_converter<20,20>("m_axis_tkeep_converter_1");
     mp_m_axis_tkeep_converter_1->vector_in(m_m_axis_tkeep_converter_1_signal);
     mp_m_axis_tkeep_converter_1->vector_out(m_axis_concat_tkeep_out_1);
     mp_M01_AXIS_transactor->TKEEP(m_m_axis_tkeep_converter_1_signal);
-    mp_m_axis_tlast_converter_1 = new xsc::common::scalar2vectorN_converter<4>("m_axis_tlast_converter_1");
+    mp_m_axis_tlast_converter_1 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tlast_converter_1");
     mp_m_axis_tlast_converter_1->scalar_in(m_m_axis_tlast_converter_1_signal);
     mp_m_axis_tlast_converter_1->vector_out(m_axis_concat_tlast_out_1);
     mp_M01_AXIS_transactor->TLAST(m_m_axis_tlast_converter_1_signal);
@@ -362,27 +379,27 @@ void design_1_axis_switch_0_1::before_end_of_elaboration()
     M02_AXIS_transactor_param_props.addLong("TSIDE_BAND_1_WIDTH", "0");
     M02_AXIS_transactor_param_props.addLong("TSIDE_BAND_2_WIDTH", "0");
 
-    mp_M02_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<16,4,4,4,1,1>("M02_AXIS_transactor", M02_AXIS_transactor_param_props);
+    mp_M02_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<20,5,5,5,1,1>("M02_AXIS_transactor", M02_AXIS_transactor_param_props);
 
     // M02_AXIS' transactor ports
 
-    mp_m_axis_tvalid_converter_2 = new xsc::common::scalar2vectorN_converter<4>("m_axis_tvalid_converter_2");
+    mp_m_axis_tvalid_converter_2 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tvalid_converter_2");
     mp_m_axis_tvalid_converter_2->scalar_in(m_m_axis_tvalid_converter_2_signal);
     mp_m_axis_tvalid_converter_2->vector_out(m_axis_concat_tvalid_out_2);
     mp_M02_AXIS_transactor->TVALID(m_m_axis_tvalid_converter_2_signal);
-    mp_m_axis_tready_converter_2 = new xsc::common::vectorN2scalar_converter<4>("m_axis_tready_converter_2");
+    mp_m_axis_tready_converter_2 = new xsc::common::vectorN2scalar_converter<5>("m_axis_tready_converter_2");
     mp_m_axis_tready_converter_2->vector_in(m_axis_split_tready_out_2);
     mp_m_axis_tready_converter_2->scalar_out(m_m_axis_tready_converter_2_signal);
     mp_M02_AXIS_transactor->TREADY(m_m_axis_tready_converter_2_signal);
-    mp_m_axis_tdata_converter_2 = new xsc::common::vector2vector_converter<128,128>("m_axis_tdata_converter_2");
+    mp_m_axis_tdata_converter_2 = new xsc::common::vector2vector_converter<160,160>("m_axis_tdata_converter_2");
     mp_m_axis_tdata_converter_2->vector_in(m_m_axis_tdata_converter_2_signal);
     mp_m_axis_tdata_converter_2->vector_out(m_axis_concat_tdata_out_2);
     mp_M02_AXIS_transactor->TDATA(m_m_axis_tdata_converter_2_signal);
-    mp_m_axis_tkeep_converter_2 = new xsc::common::vector2vector_converter<16,16>("m_axis_tkeep_converter_2");
+    mp_m_axis_tkeep_converter_2 = new xsc::common::vector2vector_converter<20,20>("m_axis_tkeep_converter_2");
     mp_m_axis_tkeep_converter_2->vector_in(m_m_axis_tkeep_converter_2_signal);
     mp_m_axis_tkeep_converter_2->vector_out(m_axis_concat_tkeep_out_2);
     mp_M02_AXIS_transactor->TKEEP(m_m_axis_tkeep_converter_2_signal);
-    mp_m_axis_tlast_converter_2 = new xsc::common::scalar2vectorN_converter<4>("m_axis_tlast_converter_2");
+    mp_m_axis_tlast_converter_2 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tlast_converter_2");
     mp_m_axis_tlast_converter_2->scalar_in(m_m_axis_tlast_converter_2_signal);
     mp_m_axis_tlast_converter_2->vector_out(m_axis_concat_tlast_out_2);
     mp_M02_AXIS_transactor->TLAST(m_m_axis_tlast_converter_2_signal);
@@ -421,27 +438,27 @@ void design_1_axis_switch_0_1::before_end_of_elaboration()
     M03_AXIS_transactor_param_props.addLong("TSIDE_BAND_1_WIDTH", "0");
     M03_AXIS_transactor_param_props.addLong("TSIDE_BAND_2_WIDTH", "0");
 
-    mp_M03_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<16,4,4,4,1,1>("M03_AXIS_transactor", M03_AXIS_transactor_param_props);
+    mp_M03_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<20,5,5,5,1,1>("M03_AXIS_transactor", M03_AXIS_transactor_param_props);
 
     // M03_AXIS' transactor ports
 
-    mp_m_axis_tvalid_converter_3 = new xsc::common::scalar2vectorN_converter<4>("m_axis_tvalid_converter_3");
+    mp_m_axis_tvalid_converter_3 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tvalid_converter_3");
     mp_m_axis_tvalid_converter_3->scalar_in(m_m_axis_tvalid_converter_3_signal);
     mp_m_axis_tvalid_converter_3->vector_out(m_axis_concat_tvalid_out_3);
     mp_M03_AXIS_transactor->TVALID(m_m_axis_tvalid_converter_3_signal);
-    mp_m_axis_tready_converter_3 = new xsc::common::vectorN2scalar_converter<4>("m_axis_tready_converter_3");
+    mp_m_axis_tready_converter_3 = new xsc::common::vectorN2scalar_converter<5>("m_axis_tready_converter_3");
     mp_m_axis_tready_converter_3->vector_in(m_axis_split_tready_out_3);
     mp_m_axis_tready_converter_3->scalar_out(m_m_axis_tready_converter_3_signal);
     mp_M03_AXIS_transactor->TREADY(m_m_axis_tready_converter_3_signal);
-    mp_m_axis_tdata_converter_3 = new xsc::common::vector2vector_converter<128,128>("m_axis_tdata_converter_3");
+    mp_m_axis_tdata_converter_3 = new xsc::common::vector2vector_converter<160,160>("m_axis_tdata_converter_3");
     mp_m_axis_tdata_converter_3->vector_in(m_m_axis_tdata_converter_3_signal);
     mp_m_axis_tdata_converter_3->vector_out(m_axis_concat_tdata_out_3);
     mp_M03_AXIS_transactor->TDATA(m_m_axis_tdata_converter_3_signal);
-    mp_m_axis_tkeep_converter_3 = new xsc::common::vector2vector_converter<16,16>("m_axis_tkeep_converter_3");
+    mp_m_axis_tkeep_converter_3 = new xsc::common::vector2vector_converter<20,20>("m_axis_tkeep_converter_3");
     mp_m_axis_tkeep_converter_3->vector_in(m_m_axis_tkeep_converter_3_signal);
     mp_m_axis_tkeep_converter_3->vector_out(m_axis_concat_tkeep_out_3);
     mp_M03_AXIS_transactor->TKEEP(m_m_axis_tkeep_converter_3_signal);
-    mp_m_axis_tlast_converter_3 = new xsc::common::scalar2vectorN_converter<4>("m_axis_tlast_converter_3");
+    mp_m_axis_tlast_converter_3 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tlast_converter_3");
     mp_m_axis_tlast_converter_3->scalar_in(m_m_axis_tlast_converter_3_signal);
     mp_m_axis_tlast_converter_3->vector_out(m_axis_concat_tlast_out_3);
     mp_M03_AXIS_transactor->TLAST(m_m_axis_tlast_converter_3_signal);
@@ -451,6 +468,65 @@ void design_1_axis_switch_0_1::before_end_of_elaboration()
     // M03_AXIS' transactor sockets
 
     mp_impl->M03_AXIS_INITIATOR_SOCKET->bind(*(mp_M03_AXIS_transactor->socket));
+  }
+  else
+  {
+  }
+
+  // configure 'M04_AXIS' transactor
+
+  if (xsc::utils::xsc_sim_manager::getInstanceParameterInt("design_1_axis_switch_0_1", "M04_AXIS_TLM_MODE") != 1)
+  {
+    // Instantiate Socket Stubs
+
+  // 'M04_AXIS' transactor parameters
+    xsc::common_cpp::properties M04_AXIS_transactor_param_props;
+    M04_AXIS_transactor_param_props.addLong("TDATA_NUM_BYTES", "4");
+    M04_AXIS_transactor_param_props.addLong("TDEST_WIDTH", "0");
+    M04_AXIS_transactor_param_props.addLong("TID_WIDTH", "0");
+    M04_AXIS_transactor_param_props.addLong("TUSER_WIDTH", "0");
+    M04_AXIS_transactor_param_props.addLong("HAS_TREADY", "1");
+    M04_AXIS_transactor_param_props.addLong("HAS_TSTRB", "0");
+    M04_AXIS_transactor_param_props.addLong("HAS_TKEEP", "1");
+    M04_AXIS_transactor_param_props.addLong("HAS_TLAST", "1");
+    M04_AXIS_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    M04_AXIS_transactor_param_props.addLong("HAS_RESET", "1");
+    M04_AXIS_transactor_param_props.addFloat("PHASE", "0.0");
+    M04_AXIS_transactor_param_props.addString("CLK_DOMAIN", "design_1_processing_system7_0_0_FCLK_CLK0");
+    M04_AXIS_transactor_param_props.addString("LAYERED_METADATA", "undef");
+    M04_AXIS_transactor_param_props.addLong("TSIDE_BAND_1_WIDTH", "0");
+    M04_AXIS_transactor_param_props.addLong("TSIDE_BAND_2_WIDTH", "0");
+
+    mp_M04_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<20,5,5,5,1,1>("M04_AXIS_transactor", M04_AXIS_transactor_param_props);
+
+    // M04_AXIS' transactor ports
+
+    mp_m_axis_tvalid_converter_4 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tvalid_converter_4");
+    mp_m_axis_tvalid_converter_4->scalar_in(m_m_axis_tvalid_converter_4_signal);
+    mp_m_axis_tvalid_converter_4->vector_out(m_axis_concat_tvalid_out_4);
+    mp_M04_AXIS_transactor->TVALID(m_m_axis_tvalid_converter_4_signal);
+    mp_m_axis_tready_converter_4 = new xsc::common::vectorN2scalar_converter<5>("m_axis_tready_converter_4");
+    mp_m_axis_tready_converter_4->vector_in(m_axis_split_tready_out_4);
+    mp_m_axis_tready_converter_4->scalar_out(m_m_axis_tready_converter_4_signal);
+    mp_M04_AXIS_transactor->TREADY(m_m_axis_tready_converter_4_signal);
+    mp_m_axis_tdata_converter_4 = new xsc::common::vector2vector_converter<160,160>("m_axis_tdata_converter_4");
+    mp_m_axis_tdata_converter_4->vector_in(m_m_axis_tdata_converter_4_signal);
+    mp_m_axis_tdata_converter_4->vector_out(m_axis_concat_tdata_out_4);
+    mp_M04_AXIS_transactor->TDATA(m_m_axis_tdata_converter_4_signal);
+    mp_m_axis_tkeep_converter_4 = new xsc::common::vector2vector_converter<20,20>("m_axis_tkeep_converter_4");
+    mp_m_axis_tkeep_converter_4->vector_in(m_m_axis_tkeep_converter_4_signal);
+    mp_m_axis_tkeep_converter_4->vector_out(m_axis_concat_tkeep_out_4);
+    mp_M04_AXIS_transactor->TKEEP(m_m_axis_tkeep_converter_4_signal);
+    mp_m_axis_tlast_converter_4 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tlast_converter_4");
+    mp_m_axis_tlast_converter_4->scalar_in(m_m_axis_tlast_converter_4_signal);
+    mp_m_axis_tlast_converter_4->vector_out(m_axis_concat_tlast_out_4);
+    mp_M04_AXIS_transactor->TLAST(m_m_axis_tlast_converter_4_signal);
+    mp_M04_AXIS_transactor->CLK(aclk);
+    mp_M04_AXIS_transactor->RST(aresetn);
+
+    // M04_AXIS' transactor sockets
+
+    mp_impl->M04_AXIS_INITIATOR_SOCKET->bind(*(mp_M04_AXIS_transactor->socket));
   }
   else
   {
@@ -573,6 +649,12 @@ design_1_axis_switch_0_1::design_1_axis_switch_0_1(const sc_core::sc_module_name
   mp_m_axis_tdata_converter_3 = NULL;
   mp_m_axis_tkeep_converter_3 = NULL;
   mp_m_axis_tlast_converter_3 = NULL;
+  mp_M04_AXIS_transactor = NULL;
+  mp_m_axis_tvalid_converter_4 = NULL;
+  mp_m_axis_tready_converter_4 = NULL;
+  mp_m_axis_tdata_converter_4 = NULL;
+  mp_m_axis_tkeep_converter_4 = NULL;
+  mp_m_axis_tlast_converter_4 = NULL;
   mp_S_AXI_CTRL_transactor = NULL;
 
   // initialize junctures
@@ -581,23 +663,23 @@ design_1_axis_switch_0_1::design_1_axis_switch_0_1(const sc_core::sc_module_name
   mp_m_axis_concat_tlast = NULL;
   mp_m_axis_concat_tvalid = NULL;
   mp_m_axis_split_tready = NULL;
-  mp_m_axis_concat_tvalid = new xsc::xsc_concatenator<4, 4>("m_axis_concat_tvalid");
+  mp_m_axis_concat_tvalid = new xsc::xsc_concatenator<5, 5>("m_axis_concat_tvalid");
   mp_m_axis_concat_tvalid->in_port[0](m_axis_concat_tvalid_out_0);
   mp_m_axis_concat_tvalid->out_port(m_axis_tvalid);
     mp_m_axis_concat_tvalid->offset_port(0, 0);
-  mp_m_axis_split_tready = new xsc::xsc_split<4, 4>("m_axis_split_tready");
+  mp_m_axis_split_tready = new xsc::xsc_split<5, 5>("m_axis_split_tready");
   mp_m_axis_split_tready->in_port(m_axis_tready);
   mp_m_axis_split_tready->out_port[0](m_axis_split_tready_out_0);
     mp_m_axis_split_tready->add_mask(0,1,0);
-  mp_m_axis_concat_tdata = new xsc::xsc_concatenator<128, 4>("m_axis_concat_tdata");
+  mp_m_axis_concat_tdata = new xsc::xsc_concatenator<160, 5>("m_axis_concat_tdata");
   mp_m_axis_concat_tdata->in_port[0](m_axis_concat_tdata_out_0);
   mp_m_axis_concat_tdata->out_port(m_axis_tdata);
     mp_m_axis_concat_tdata->offset_port(0, 0);
-  mp_m_axis_concat_tkeep = new xsc::xsc_concatenator<16, 4>("m_axis_concat_tkeep");
+  mp_m_axis_concat_tkeep = new xsc::xsc_concatenator<20, 5>("m_axis_concat_tkeep");
   mp_m_axis_concat_tkeep->in_port[0](m_axis_concat_tkeep_out_0);
   mp_m_axis_concat_tkeep->out_port(m_axis_tkeep);
     mp_m_axis_concat_tkeep->offset_port(0, 0);
-  mp_m_axis_concat_tlast = new xsc::xsc_concatenator<4, 4>("m_axis_concat_tlast");
+  mp_m_axis_concat_tlast = new xsc::xsc_concatenator<5, 5>("m_axis_concat_tlast");
   mp_m_axis_concat_tlast->in_port[0](m_axis_concat_tlast_out_0);
   mp_m_axis_concat_tlast->out_port(m_axis_tlast);
     mp_m_axis_concat_tlast->offset_port(0, 0);
@@ -634,6 +716,17 @@ design_1_axis_switch_0_1::design_1_axis_switch_0_1(const sc_core::sc_module_name
   mp_m_axis_concat_tkeep->offset_port(3, 12);
   mp_m_axis_concat_tlast->in_port[3](m_axis_concat_tlast_out_3);
   mp_m_axis_concat_tlast->offset_port(3, 3);
+  mp_m_axis_concat_tvalid->in_port[4](m_axis_concat_tvalid_out_4);
+  mp_m_axis_concat_tvalid->offset_port(4, 4);
+  
+  mp_m_axis_split_tready->out_port[4](m_axis_split_tready_out_4);
+    mp_m_axis_split_tready->add_mask(4,5,4);
+  mp_m_axis_concat_tdata->in_port[4](m_axis_concat_tdata_out_4);
+  mp_m_axis_concat_tdata->offset_port(4, 128);
+  mp_m_axis_concat_tkeep->in_port[4](m_axis_concat_tkeep_out_4);
+  mp_m_axis_concat_tkeep->offset_port(4, 16);
+  mp_m_axis_concat_tlast->in_port[4](m_axis_concat_tlast_out_4);
+  mp_m_axis_concat_tlast->offset_port(4, 4);
 
   // initialize socket stubs
 
@@ -718,27 +811,27 @@ void design_1_axis_switch_0_1::before_end_of_elaboration()
     M00_AXIS_transactor_param_props.addLong("TSIDE_BAND_1_WIDTH", "0");
     M00_AXIS_transactor_param_props.addLong("TSIDE_BAND_2_WIDTH", "0");
 
-    mp_M00_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<16,4,4,4,1,1>("M00_AXIS_transactor", M00_AXIS_transactor_param_props);
+    mp_M00_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<20,5,5,5,1,1>("M00_AXIS_transactor", M00_AXIS_transactor_param_props);
 
     // M00_AXIS' transactor ports
 
-    mp_m_axis_tvalid_converter_0 = new xsc::common::scalar2vectorN_converter<4>("m_axis_tvalid_converter_0");
+    mp_m_axis_tvalid_converter_0 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tvalid_converter_0");
     mp_m_axis_tvalid_converter_0->scalar_in(m_m_axis_tvalid_converter_0_signal);
     mp_m_axis_tvalid_converter_0->vector_out(m_axis_concat_tvalid_out_0);
     mp_M00_AXIS_transactor->TVALID(m_m_axis_tvalid_converter_0_signal);
-    mp_m_axis_tready_converter_0 = new xsc::common::vectorN2scalar_converter<4>("m_axis_tready_converter_0");
+    mp_m_axis_tready_converter_0 = new xsc::common::vectorN2scalar_converter<5>("m_axis_tready_converter_0");
     mp_m_axis_tready_converter_0->vector_in(m_axis_split_tready_out_0);
     mp_m_axis_tready_converter_0->scalar_out(m_m_axis_tready_converter_0_signal);
     mp_M00_AXIS_transactor->TREADY(m_m_axis_tready_converter_0_signal);
-    mp_m_axis_tdata_converter_0 = new xsc::common::vector2vector_converter<128,128>("m_axis_tdata_converter_0");
+    mp_m_axis_tdata_converter_0 = new xsc::common::vector2vector_converter<160,160>("m_axis_tdata_converter_0");
     mp_m_axis_tdata_converter_0->vector_in(m_m_axis_tdata_converter_0_signal);
     mp_m_axis_tdata_converter_0->vector_out(m_axis_concat_tdata_out_0);
     mp_M00_AXIS_transactor->TDATA(m_m_axis_tdata_converter_0_signal);
-    mp_m_axis_tkeep_converter_0 = new xsc::common::vector2vector_converter<16,16>("m_axis_tkeep_converter_0");
+    mp_m_axis_tkeep_converter_0 = new xsc::common::vector2vector_converter<20,20>("m_axis_tkeep_converter_0");
     mp_m_axis_tkeep_converter_0->vector_in(m_m_axis_tkeep_converter_0_signal);
     mp_m_axis_tkeep_converter_0->vector_out(m_axis_concat_tkeep_out_0);
     mp_M00_AXIS_transactor->TKEEP(m_m_axis_tkeep_converter_0_signal);
-    mp_m_axis_tlast_converter_0 = new xsc::common::scalar2vectorN_converter<4>("m_axis_tlast_converter_0");
+    mp_m_axis_tlast_converter_0 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tlast_converter_0");
     mp_m_axis_tlast_converter_0->scalar_in(m_m_axis_tlast_converter_0_signal);
     mp_m_axis_tlast_converter_0->vector_out(m_axis_concat_tlast_out_0);
     mp_M00_AXIS_transactor->TLAST(m_m_axis_tlast_converter_0_signal);
@@ -777,27 +870,27 @@ void design_1_axis_switch_0_1::before_end_of_elaboration()
     M01_AXIS_transactor_param_props.addLong("TSIDE_BAND_1_WIDTH", "0");
     M01_AXIS_transactor_param_props.addLong("TSIDE_BAND_2_WIDTH", "0");
 
-    mp_M01_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<16,4,4,4,1,1>("M01_AXIS_transactor", M01_AXIS_transactor_param_props);
+    mp_M01_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<20,5,5,5,1,1>("M01_AXIS_transactor", M01_AXIS_transactor_param_props);
 
     // M01_AXIS' transactor ports
 
-    mp_m_axis_tvalid_converter_1 = new xsc::common::scalar2vectorN_converter<4>("m_axis_tvalid_converter_1");
+    mp_m_axis_tvalid_converter_1 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tvalid_converter_1");
     mp_m_axis_tvalid_converter_1->scalar_in(m_m_axis_tvalid_converter_1_signal);
     mp_m_axis_tvalid_converter_1->vector_out(m_axis_concat_tvalid_out_1);
     mp_M01_AXIS_transactor->TVALID(m_m_axis_tvalid_converter_1_signal);
-    mp_m_axis_tready_converter_1 = new xsc::common::vectorN2scalar_converter<4>("m_axis_tready_converter_1");
+    mp_m_axis_tready_converter_1 = new xsc::common::vectorN2scalar_converter<5>("m_axis_tready_converter_1");
     mp_m_axis_tready_converter_1->vector_in(m_axis_split_tready_out_1);
     mp_m_axis_tready_converter_1->scalar_out(m_m_axis_tready_converter_1_signal);
     mp_M01_AXIS_transactor->TREADY(m_m_axis_tready_converter_1_signal);
-    mp_m_axis_tdata_converter_1 = new xsc::common::vector2vector_converter<128,128>("m_axis_tdata_converter_1");
+    mp_m_axis_tdata_converter_1 = new xsc::common::vector2vector_converter<160,160>("m_axis_tdata_converter_1");
     mp_m_axis_tdata_converter_1->vector_in(m_m_axis_tdata_converter_1_signal);
     mp_m_axis_tdata_converter_1->vector_out(m_axis_concat_tdata_out_1);
     mp_M01_AXIS_transactor->TDATA(m_m_axis_tdata_converter_1_signal);
-    mp_m_axis_tkeep_converter_1 = new xsc::common::vector2vector_converter<16,16>("m_axis_tkeep_converter_1");
+    mp_m_axis_tkeep_converter_1 = new xsc::common::vector2vector_converter<20,20>("m_axis_tkeep_converter_1");
     mp_m_axis_tkeep_converter_1->vector_in(m_m_axis_tkeep_converter_1_signal);
     mp_m_axis_tkeep_converter_1->vector_out(m_axis_concat_tkeep_out_1);
     mp_M01_AXIS_transactor->TKEEP(m_m_axis_tkeep_converter_1_signal);
-    mp_m_axis_tlast_converter_1 = new xsc::common::scalar2vectorN_converter<4>("m_axis_tlast_converter_1");
+    mp_m_axis_tlast_converter_1 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tlast_converter_1");
     mp_m_axis_tlast_converter_1->scalar_in(m_m_axis_tlast_converter_1_signal);
     mp_m_axis_tlast_converter_1->vector_out(m_axis_concat_tlast_out_1);
     mp_M01_AXIS_transactor->TLAST(m_m_axis_tlast_converter_1_signal);
@@ -836,27 +929,27 @@ void design_1_axis_switch_0_1::before_end_of_elaboration()
     M02_AXIS_transactor_param_props.addLong("TSIDE_BAND_1_WIDTH", "0");
     M02_AXIS_transactor_param_props.addLong("TSIDE_BAND_2_WIDTH", "0");
 
-    mp_M02_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<16,4,4,4,1,1>("M02_AXIS_transactor", M02_AXIS_transactor_param_props);
+    mp_M02_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<20,5,5,5,1,1>("M02_AXIS_transactor", M02_AXIS_transactor_param_props);
 
     // M02_AXIS' transactor ports
 
-    mp_m_axis_tvalid_converter_2 = new xsc::common::scalar2vectorN_converter<4>("m_axis_tvalid_converter_2");
+    mp_m_axis_tvalid_converter_2 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tvalid_converter_2");
     mp_m_axis_tvalid_converter_2->scalar_in(m_m_axis_tvalid_converter_2_signal);
     mp_m_axis_tvalid_converter_2->vector_out(m_axis_concat_tvalid_out_2);
     mp_M02_AXIS_transactor->TVALID(m_m_axis_tvalid_converter_2_signal);
-    mp_m_axis_tready_converter_2 = new xsc::common::vectorN2scalar_converter<4>("m_axis_tready_converter_2");
+    mp_m_axis_tready_converter_2 = new xsc::common::vectorN2scalar_converter<5>("m_axis_tready_converter_2");
     mp_m_axis_tready_converter_2->vector_in(m_axis_split_tready_out_2);
     mp_m_axis_tready_converter_2->scalar_out(m_m_axis_tready_converter_2_signal);
     mp_M02_AXIS_transactor->TREADY(m_m_axis_tready_converter_2_signal);
-    mp_m_axis_tdata_converter_2 = new xsc::common::vector2vector_converter<128,128>("m_axis_tdata_converter_2");
+    mp_m_axis_tdata_converter_2 = new xsc::common::vector2vector_converter<160,160>("m_axis_tdata_converter_2");
     mp_m_axis_tdata_converter_2->vector_in(m_m_axis_tdata_converter_2_signal);
     mp_m_axis_tdata_converter_2->vector_out(m_axis_concat_tdata_out_2);
     mp_M02_AXIS_transactor->TDATA(m_m_axis_tdata_converter_2_signal);
-    mp_m_axis_tkeep_converter_2 = new xsc::common::vector2vector_converter<16,16>("m_axis_tkeep_converter_2");
+    mp_m_axis_tkeep_converter_2 = new xsc::common::vector2vector_converter<20,20>("m_axis_tkeep_converter_2");
     mp_m_axis_tkeep_converter_2->vector_in(m_m_axis_tkeep_converter_2_signal);
     mp_m_axis_tkeep_converter_2->vector_out(m_axis_concat_tkeep_out_2);
     mp_M02_AXIS_transactor->TKEEP(m_m_axis_tkeep_converter_2_signal);
-    mp_m_axis_tlast_converter_2 = new xsc::common::scalar2vectorN_converter<4>("m_axis_tlast_converter_2");
+    mp_m_axis_tlast_converter_2 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tlast_converter_2");
     mp_m_axis_tlast_converter_2->scalar_in(m_m_axis_tlast_converter_2_signal);
     mp_m_axis_tlast_converter_2->vector_out(m_axis_concat_tlast_out_2);
     mp_M02_AXIS_transactor->TLAST(m_m_axis_tlast_converter_2_signal);
@@ -895,27 +988,27 @@ void design_1_axis_switch_0_1::before_end_of_elaboration()
     M03_AXIS_transactor_param_props.addLong("TSIDE_BAND_1_WIDTH", "0");
     M03_AXIS_transactor_param_props.addLong("TSIDE_BAND_2_WIDTH", "0");
 
-    mp_M03_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<16,4,4,4,1,1>("M03_AXIS_transactor", M03_AXIS_transactor_param_props);
+    mp_M03_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<20,5,5,5,1,1>("M03_AXIS_transactor", M03_AXIS_transactor_param_props);
 
     // M03_AXIS' transactor ports
 
-    mp_m_axis_tvalid_converter_3 = new xsc::common::scalar2vectorN_converter<4>("m_axis_tvalid_converter_3");
+    mp_m_axis_tvalid_converter_3 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tvalid_converter_3");
     mp_m_axis_tvalid_converter_3->scalar_in(m_m_axis_tvalid_converter_3_signal);
     mp_m_axis_tvalid_converter_3->vector_out(m_axis_concat_tvalid_out_3);
     mp_M03_AXIS_transactor->TVALID(m_m_axis_tvalid_converter_3_signal);
-    mp_m_axis_tready_converter_3 = new xsc::common::vectorN2scalar_converter<4>("m_axis_tready_converter_3");
+    mp_m_axis_tready_converter_3 = new xsc::common::vectorN2scalar_converter<5>("m_axis_tready_converter_3");
     mp_m_axis_tready_converter_3->vector_in(m_axis_split_tready_out_3);
     mp_m_axis_tready_converter_3->scalar_out(m_m_axis_tready_converter_3_signal);
     mp_M03_AXIS_transactor->TREADY(m_m_axis_tready_converter_3_signal);
-    mp_m_axis_tdata_converter_3 = new xsc::common::vector2vector_converter<128,128>("m_axis_tdata_converter_3");
+    mp_m_axis_tdata_converter_3 = new xsc::common::vector2vector_converter<160,160>("m_axis_tdata_converter_3");
     mp_m_axis_tdata_converter_3->vector_in(m_m_axis_tdata_converter_3_signal);
     mp_m_axis_tdata_converter_3->vector_out(m_axis_concat_tdata_out_3);
     mp_M03_AXIS_transactor->TDATA(m_m_axis_tdata_converter_3_signal);
-    mp_m_axis_tkeep_converter_3 = new xsc::common::vector2vector_converter<16,16>("m_axis_tkeep_converter_3");
+    mp_m_axis_tkeep_converter_3 = new xsc::common::vector2vector_converter<20,20>("m_axis_tkeep_converter_3");
     mp_m_axis_tkeep_converter_3->vector_in(m_m_axis_tkeep_converter_3_signal);
     mp_m_axis_tkeep_converter_3->vector_out(m_axis_concat_tkeep_out_3);
     mp_M03_AXIS_transactor->TKEEP(m_m_axis_tkeep_converter_3_signal);
-    mp_m_axis_tlast_converter_3 = new xsc::common::scalar2vectorN_converter<4>("m_axis_tlast_converter_3");
+    mp_m_axis_tlast_converter_3 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tlast_converter_3");
     mp_m_axis_tlast_converter_3->scalar_in(m_m_axis_tlast_converter_3_signal);
     mp_m_axis_tlast_converter_3->vector_out(m_axis_concat_tlast_out_3);
     mp_M03_AXIS_transactor->TLAST(m_m_axis_tlast_converter_3_signal);
@@ -925,6 +1018,65 @@ void design_1_axis_switch_0_1::before_end_of_elaboration()
     // M03_AXIS' transactor sockets
 
     mp_impl->M03_AXIS_INITIATOR_SOCKET->bind(*(mp_M03_AXIS_transactor->socket));
+  }
+  else
+  {
+  }
+
+  // configure 'M04_AXIS' transactor
+
+  if (xsc::utils::xsc_sim_manager::getInstanceParameterInt("design_1_axis_switch_0_1", "M04_AXIS_TLM_MODE") != 1)
+  {
+    // Instantiate Socket Stubs
+
+  // 'M04_AXIS' transactor parameters
+    xsc::common_cpp::properties M04_AXIS_transactor_param_props;
+    M04_AXIS_transactor_param_props.addLong("TDATA_NUM_BYTES", "4");
+    M04_AXIS_transactor_param_props.addLong("TDEST_WIDTH", "0");
+    M04_AXIS_transactor_param_props.addLong("TID_WIDTH", "0");
+    M04_AXIS_transactor_param_props.addLong("TUSER_WIDTH", "0");
+    M04_AXIS_transactor_param_props.addLong("HAS_TREADY", "1");
+    M04_AXIS_transactor_param_props.addLong("HAS_TSTRB", "0");
+    M04_AXIS_transactor_param_props.addLong("HAS_TKEEP", "1");
+    M04_AXIS_transactor_param_props.addLong("HAS_TLAST", "1");
+    M04_AXIS_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    M04_AXIS_transactor_param_props.addLong("HAS_RESET", "1");
+    M04_AXIS_transactor_param_props.addFloat("PHASE", "0.0");
+    M04_AXIS_transactor_param_props.addString("CLK_DOMAIN", "design_1_processing_system7_0_0_FCLK_CLK0");
+    M04_AXIS_transactor_param_props.addString("LAYERED_METADATA", "undef");
+    M04_AXIS_transactor_param_props.addLong("TSIDE_BAND_1_WIDTH", "0");
+    M04_AXIS_transactor_param_props.addLong("TSIDE_BAND_2_WIDTH", "0");
+
+    mp_M04_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<20,5,5,5,1,1>("M04_AXIS_transactor", M04_AXIS_transactor_param_props);
+
+    // M04_AXIS' transactor ports
+
+    mp_m_axis_tvalid_converter_4 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tvalid_converter_4");
+    mp_m_axis_tvalid_converter_4->scalar_in(m_m_axis_tvalid_converter_4_signal);
+    mp_m_axis_tvalid_converter_4->vector_out(m_axis_concat_tvalid_out_4);
+    mp_M04_AXIS_transactor->TVALID(m_m_axis_tvalid_converter_4_signal);
+    mp_m_axis_tready_converter_4 = new xsc::common::vectorN2scalar_converter<5>("m_axis_tready_converter_4");
+    mp_m_axis_tready_converter_4->vector_in(m_axis_split_tready_out_4);
+    mp_m_axis_tready_converter_4->scalar_out(m_m_axis_tready_converter_4_signal);
+    mp_M04_AXIS_transactor->TREADY(m_m_axis_tready_converter_4_signal);
+    mp_m_axis_tdata_converter_4 = new xsc::common::vector2vector_converter<160,160>("m_axis_tdata_converter_4");
+    mp_m_axis_tdata_converter_4->vector_in(m_m_axis_tdata_converter_4_signal);
+    mp_m_axis_tdata_converter_4->vector_out(m_axis_concat_tdata_out_4);
+    mp_M04_AXIS_transactor->TDATA(m_m_axis_tdata_converter_4_signal);
+    mp_m_axis_tkeep_converter_4 = new xsc::common::vector2vector_converter<20,20>("m_axis_tkeep_converter_4");
+    mp_m_axis_tkeep_converter_4->vector_in(m_m_axis_tkeep_converter_4_signal);
+    mp_m_axis_tkeep_converter_4->vector_out(m_axis_concat_tkeep_out_4);
+    mp_M04_AXIS_transactor->TKEEP(m_m_axis_tkeep_converter_4_signal);
+    mp_m_axis_tlast_converter_4 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tlast_converter_4");
+    mp_m_axis_tlast_converter_4->scalar_in(m_m_axis_tlast_converter_4_signal);
+    mp_m_axis_tlast_converter_4->vector_out(m_axis_concat_tlast_out_4);
+    mp_M04_AXIS_transactor->TLAST(m_m_axis_tlast_converter_4_signal);
+    mp_M04_AXIS_transactor->CLK(aclk);
+    mp_M04_AXIS_transactor->RST(aresetn);
+
+    // M04_AXIS' transactor sockets
+
+    mp_impl->M04_AXIS_INITIATOR_SOCKET->bind(*(mp_M04_AXIS_transactor->socket));
   }
   else
   {
@@ -1047,6 +1199,12 @@ design_1_axis_switch_0_1::design_1_axis_switch_0_1(const sc_core::sc_module_name
   mp_m_axis_tdata_converter_3 = NULL;
   mp_m_axis_tkeep_converter_3 = NULL;
   mp_m_axis_tlast_converter_3 = NULL;
+  mp_M04_AXIS_transactor = NULL;
+  mp_m_axis_tvalid_converter_4 = NULL;
+  mp_m_axis_tready_converter_4 = NULL;
+  mp_m_axis_tdata_converter_4 = NULL;
+  mp_m_axis_tkeep_converter_4 = NULL;
+  mp_m_axis_tlast_converter_4 = NULL;
   mp_S_AXI_CTRL_transactor = NULL;
 
   // initialize junctures
@@ -1055,23 +1213,23 @@ design_1_axis_switch_0_1::design_1_axis_switch_0_1(const sc_core::sc_module_name
   mp_m_axis_concat_tlast = NULL;
   mp_m_axis_concat_tvalid = NULL;
   mp_m_axis_split_tready = NULL;
-  mp_m_axis_concat_tvalid = new xsc::xsc_concatenator<4, 4>("m_axis_concat_tvalid");
+  mp_m_axis_concat_tvalid = new xsc::xsc_concatenator<5, 5>("m_axis_concat_tvalid");
   mp_m_axis_concat_tvalid->in_port[0](m_axis_concat_tvalid_out_0);
   mp_m_axis_concat_tvalid->out_port(m_axis_tvalid);
     mp_m_axis_concat_tvalid->offset_port(0, 0);
-  mp_m_axis_split_tready = new xsc::xsc_split<4, 4>("m_axis_split_tready");
+  mp_m_axis_split_tready = new xsc::xsc_split<5, 5>("m_axis_split_tready");
   mp_m_axis_split_tready->in_port(m_axis_tready);
   mp_m_axis_split_tready->out_port[0](m_axis_split_tready_out_0);
     mp_m_axis_split_tready->add_mask(0,1,0);
-  mp_m_axis_concat_tdata = new xsc::xsc_concatenator<128, 4>("m_axis_concat_tdata");
+  mp_m_axis_concat_tdata = new xsc::xsc_concatenator<160, 5>("m_axis_concat_tdata");
   mp_m_axis_concat_tdata->in_port[0](m_axis_concat_tdata_out_0);
   mp_m_axis_concat_tdata->out_port(m_axis_tdata);
     mp_m_axis_concat_tdata->offset_port(0, 0);
-  mp_m_axis_concat_tkeep = new xsc::xsc_concatenator<16, 4>("m_axis_concat_tkeep");
+  mp_m_axis_concat_tkeep = new xsc::xsc_concatenator<20, 5>("m_axis_concat_tkeep");
   mp_m_axis_concat_tkeep->in_port[0](m_axis_concat_tkeep_out_0);
   mp_m_axis_concat_tkeep->out_port(m_axis_tkeep);
     mp_m_axis_concat_tkeep->offset_port(0, 0);
-  mp_m_axis_concat_tlast = new xsc::xsc_concatenator<4, 4>("m_axis_concat_tlast");
+  mp_m_axis_concat_tlast = new xsc::xsc_concatenator<5, 5>("m_axis_concat_tlast");
   mp_m_axis_concat_tlast->in_port[0](m_axis_concat_tlast_out_0);
   mp_m_axis_concat_tlast->out_port(m_axis_tlast);
     mp_m_axis_concat_tlast->offset_port(0, 0);
@@ -1108,6 +1266,17 @@ design_1_axis_switch_0_1::design_1_axis_switch_0_1(const sc_core::sc_module_name
   mp_m_axis_concat_tkeep->offset_port(3, 12);
   mp_m_axis_concat_tlast->in_port[3](m_axis_concat_tlast_out_3);
   mp_m_axis_concat_tlast->offset_port(3, 3);
+  mp_m_axis_concat_tvalid->in_port[4](m_axis_concat_tvalid_out_4);
+  mp_m_axis_concat_tvalid->offset_port(4, 4);
+  
+  mp_m_axis_split_tready->out_port[4](m_axis_split_tready_out_4);
+    mp_m_axis_split_tready->add_mask(4,5,4);
+  mp_m_axis_concat_tdata->in_port[4](m_axis_concat_tdata_out_4);
+  mp_m_axis_concat_tdata->offset_port(4, 128);
+  mp_m_axis_concat_tkeep->in_port[4](m_axis_concat_tkeep_out_4);
+  mp_m_axis_concat_tkeep->offset_port(4, 16);
+  mp_m_axis_concat_tlast->in_port[4](m_axis_concat_tlast_out_4);
+  mp_m_axis_concat_tlast->offset_port(4, 4);
 
   // initialize socket stubs
 
@@ -1192,27 +1361,27 @@ void design_1_axis_switch_0_1::before_end_of_elaboration()
     M00_AXIS_transactor_param_props.addLong("TSIDE_BAND_1_WIDTH", "0");
     M00_AXIS_transactor_param_props.addLong("TSIDE_BAND_2_WIDTH", "0");
 
-    mp_M00_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<16,4,4,4,1,1>("M00_AXIS_transactor", M00_AXIS_transactor_param_props);
+    mp_M00_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<20,5,5,5,1,1>("M00_AXIS_transactor", M00_AXIS_transactor_param_props);
 
     // M00_AXIS' transactor ports
 
-    mp_m_axis_tvalid_converter_0 = new xsc::common::scalar2vectorN_converter<4>("m_axis_tvalid_converter_0");
+    mp_m_axis_tvalid_converter_0 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tvalid_converter_0");
     mp_m_axis_tvalid_converter_0->scalar_in(m_m_axis_tvalid_converter_0_signal);
     mp_m_axis_tvalid_converter_0->vector_out(m_axis_concat_tvalid_out_0);
     mp_M00_AXIS_transactor->TVALID(m_m_axis_tvalid_converter_0_signal);
-    mp_m_axis_tready_converter_0 = new xsc::common::vectorN2scalar_converter<4>("m_axis_tready_converter_0");
+    mp_m_axis_tready_converter_0 = new xsc::common::vectorN2scalar_converter<5>("m_axis_tready_converter_0");
     mp_m_axis_tready_converter_0->vector_in(m_axis_split_tready_out_0);
     mp_m_axis_tready_converter_0->scalar_out(m_m_axis_tready_converter_0_signal);
     mp_M00_AXIS_transactor->TREADY(m_m_axis_tready_converter_0_signal);
-    mp_m_axis_tdata_converter_0 = new xsc::common::vector2vector_converter<128,128>("m_axis_tdata_converter_0");
+    mp_m_axis_tdata_converter_0 = new xsc::common::vector2vector_converter<160,160>("m_axis_tdata_converter_0");
     mp_m_axis_tdata_converter_0->vector_in(m_m_axis_tdata_converter_0_signal);
     mp_m_axis_tdata_converter_0->vector_out(m_axis_concat_tdata_out_0);
     mp_M00_AXIS_transactor->TDATA(m_m_axis_tdata_converter_0_signal);
-    mp_m_axis_tkeep_converter_0 = new xsc::common::vector2vector_converter<16,16>("m_axis_tkeep_converter_0");
+    mp_m_axis_tkeep_converter_0 = new xsc::common::vector2vector_converter<20,20>("m_axis_tkeep_converter_0");
     mp_m_axis_tkeep_converter_0->vector_in(m_m_axis_tkeep_converter_0_signal);
     mp_m_axis_tkeep_converter_0->vector_out(m_axis_concat_tkeep_out_0);
     mp_M00_AXIS_transactor->TKEEP(m_m_axis_tkeep_converter_0_signal);
-    mp_m_axis_tlast_converter_0 = new xsc::common::scalar2vectorN_converter<4>("m_axis_tlast_converter_0");
+    mp_m_axis_tlast_converter_0 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tlast_converter_0");
     mp_m_axis_tlast_converter_0->scalar_in(m_m_axis_tlast_converter_0_signal);
     mp_m_axis_tlast_converter_0->vector_out(m_axis_concat_tlast_out_0);
     mp_M00_AXIS_transactor->TLAST(m_m_axis_tlast_converter_0_signal);
@@ -1251,27 +1420,27 @@ void design_1_axis_switch_0_1::before_end_of_elaboration()
     M01_AXIS_transactor_param_props.addLong("TSIDE_BAND_1_WIDTH", "0");
     M01_AXIS_transactor_param_props.addLong("TSIDE_BAND_2_WIDTH", "0");
 
-    mp_M01_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<16,4,4,4,1,1>("M01_AXIS_transactor", M01_AXIS_transactor_param_props);
+    mp_M01_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<20,5,5,5,1,1>("M01_AXIS_transactor", M01_AXIS_transactor_param_props);
 
     // M01_AXIS' transactor ports
 
-    mp_m_axis_tvalid_converter_1 = new xsc::common::scalar2vectorN_converter<4>("m_axis_tvalid_converter_1");
+    mp_m_axis_tvalid_converter_1 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tvalid_converter_1");
     mp_m_axis_tvalid_converter_1->scalar_in(m_m_axis_tvalid_converter_1_signal);
     mp_m_axis_tvalid_converter_1->vector_out(m_axis_concat_tvalid_out_1);
     mp_M01_AXIS_transactor->TVALID(m_m_axis_tvalid_converter_1_signal);
-    mp_m_axis_tready_converter_1 = new xsc::common::vectorN2scalar_converter<4>("m_axis_tready_converter_1");
+    mp_m_axis_tready_converter_1 = new xsc::common::vectorN2scalar_converter<5>("m_axis_tready_converter_1");
     mp_m_axis_tready_converter_1->vector_in(m_axis_split_tready_out_1);
     mp_m_axis_tready_converter_1->scalar_out(m_m_axis_tready_converter_1_signal);
     mp_M01_AXIS_transactor->TREADY(m_m_axis_tready_converter_1_signal);
-    mp_m_axis_tdata_converter_1 = new xsc::common::vector2vector_converter<128,128>("m_axis_tdata_converter_1");
+    mp_m_axis_tdata_converter_1 = new xsc::common::vector2vector_converter<160,160>("m_axis_tdata_converter_1");
     mp_m_axis_tdata_converter_1->vector_in(m_m_axis_tdata_converter_1_signal);
     mp_m_axis_tdata_converter_1->vector_out(m_axis_concat_tdata_out_1);
     mp_M01_AXIS_transactor->TDATA(m_m_axis_tdata_converter_1_signal);
-    mp_m_axis_tkeep_converter_1 = new xsc::common::vector2vector_converter<16,16>("m_axis_tkeep_converter_1");
+    mp_m_axis_tkeep_converter_1 = new xsc::common::vector2vector_converter<20,20>("m_axis_tkeep_converter_1");
     mp_m_axis_tkeep_converter_1->vector_in(m_m_axis_tkeep_converter_1_signal);
     mp_m_axis_tkeep_converter_1->vector_out(m_axis_concat_tkeep_out_1);
     mp_M01_AXIS_transactor->TKEEP(m_m_axis_tkeep_converter_1_signal);
-    mp_m_axis_tlast_converter_1 = new xsc::common::scalar2vectorN_converter<4>("m_axis_tlast_converter_1");
+    mp_m_axis_tlast_converter_1 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tlast_converter_1");
     mp_m_axis_tlast_converter_1->scalar_in(m_m_axis_tlast_converter_1_signal);
     mp_m_axis_tlast_converter_1->vector_out(m_axis_concat_tlast_out_1);
     mp_M01_AXIS_transactor->TLAST(m_m_axis_tlast_converter_1_signal);
@@ -1310,27 +1479,27 @@ void design_1_axis_switch_0_1::before_end_of_elaboration()
     M02_AXIS_transactor_param_props.addLong("TSIDE_BAND_1_WIDTH", "0");
     M02_AXIS_transactor_param_props.addLong("TSIDE_BAND_2_WIDTH", "0");
 
-    mp_M02_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<16,4,4,4,1,1>("M02_AXIS_transactor", M02_AXIS_transactor_param_props);
+    mp_M02_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<20,5,5,5,1,1>("M02_AXIS_transactor", M02_AXIS_transactor_param_props);
 
     // M02_AXIS' transactor ports
 
-    mp_m_axis_tvalid_converter_2 = new xsc::common::scalar2vectorN_converter<4>("m_axis_tvalid_converter_2");
+    mp_m_axis_tvalid_converter_2 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tvalid_converter_2");
     mp_m_axis_tvalid_converter_2->scalar_in(m_m_axis_tvalid_converter_2_signal);
     mp_m_axis_tvalid_converter_2->vector_out(m_axis_concat_tvalid_out_2);
     mp_M02_AXIS_transactor->TVALID(m_m_axis_tvalid_converter_2_signal);
-    mp_m_axis_tready_converter_2 = new xsc::common::vectorN2scalar_converter<4>("m_axis_tready_converter_2");
+    mp_m_axis_tready_converter_2 = new xsc::common::vectorN2scalar_converter<5>("m_axis_tready_converter_2");
     mp_m_axis_tready_converter_2->vector_in(m_axis_split_tready_out_2);
     mp_m_axis_tready_converter_2->scalar_out(m_m_axis_tready_converter_2_signal);
     mp_M02_AXIS_transactor->TREADY(m_m_axis_tready_converter_2_signal);
-    mp_m_axis_tdata_converter_2 = new xsc::common::vector2vector_converter<128,128>("m_axis_tdata_converter_2");
+    mp_m_axis_tdata_converter_2 = new xsc::common::vector2vector_converter<160,160>("m_axis_tdata_converter_2");
     mp_m_axis_tdata_converter_2->vector_in(m_m_axis_tdata_converter_2_signal);
     mp_m_axis_tdata_converter_2->vector_out(m_axis_concat_tdata_out_2);
     mp_M02_AXIS_transactor->TDATA(m_m_axis_tdata_converter_2_signal);
-    mp_m_axis_tkeep_converter_2 = new xsc::common::vector2vector_converter<16,16>("m_axis_tkeep_converter_2");
+    mp_m_axis_tkeep_converter_2 = new xsc::common::vector2vector_converter<20,20>("m_axis_tkeep_converter_2");
     mp_m_axis_tkeep_converter_2->vector_in(m_m_axis_tkeep_converter_2_signal);
     mp_m_axis_tkeep_converter_2->vector_out(m_axis_concat_tkeep_out_2);
     mp_M02_AXIS_transactor->TKEEP(m_m_axis_tkeep_converter_2_signal);
-    mp_m_axis_tlast_converter_2 = new xsc::common::scalar2vectorN_converter<4>("m_axis_tlast_converter_2");
+    mp_m_axis_tlast_converter_2 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tlast_converter_2");
     mp_m_axis_tlast_converter_2->scalar_in(m_m_axis_tlast_converter_2_signal);
     mp_m_axis_tlast_converter_2->vector_out(m_axis_concat_tlast_out_2);
     mp_M02_AXIS_transactor->TLAST(m_m_axis_tlast_converter_2_signal);
@@ -1369,27 +1538,27 @@ void design_1_axis_switch_0_1::before_end_of_elaboration()
     M03_AXIS_transactor_param_props.addLong("TSIDE_BAND_1_WIDTH", "0");
     M03_AXIS_transactor_param_props.addLong("TSIDE_BAND_2_WIDTH", "0");
 
-    mp_M03_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<16,4,4,4,1,1>("M03_AXIS_transactor", M03_AXIS_transactor_param_props);
+    mp_M03_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<20,5,5,5,1,1>("M03_AXIS_transactor", M03_AXIS_transactor_param_props);
 
     // M03_AXIS' transactor ports
 
-    mp_m_axis_tvalid_converter_3 = new xsc::common::scalar2vectorN_converter<4>("m_axis_tvalid_converter_3");
+    mp_m_axis_tvalid_converter_3 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tvalid_converter_3");
     mp_m_axis_tvalid_converter_3->scalar_in(m_m_axis_tvalid_converter_3_signal);
     mp_m_axis_tvalid_converter_3->vector_out(m_axis_concat_tvalid_out_3);
     mp_M03_AXIS_transactor->TVALID(m_m_axis_tvalid_converter_3_signal);
-    mp_m_axis_tready_converter_3 = new xsc::common::vectorN2scalar_converter<4>("m_axis_tready_converter_3");
+    mp_m_axis_tready_converter_3 = new xsc::common::vectorN2scalar_converter<5>("m_axis_tready_converter_3");
     mp_m_axis_tready_converter_3->vector_in(m_axis_split_tready_out_3);
     mp_m_axis_tready_converter_3->scalar_out(m_m_axis_tready_converter_3_signal);
     mp_M03_AXIS_transactor->TREADY(m_m_axis_tready_converter_3_signal);
-    mp_m_axis_tdata_converter_3 = new xsc::common::vector2vector_converter<128,128>("m_axis_tdata_converter_3");
+    mp_m_axis_tdata_converter_3 = new xsc::common::vector2vector_converter<160,160>("m_axis_tdata_converter_3");
     mp_m_axis_tdata_converter_3->vector_in(m_m_axis_tdata_converter_3_signal);
     mp_m_axis_tdata_converter_3->vector_out(m_axis_concat_tdata_out_3);
     mp_M03_AXIS_transactor->TDATA(m_m_axis_tdata_converter_3_signal);
-    mp_m_axis_tkeep_converter_3 = new xsc::common::vector2vector_converter<16,16>("m_axis_tkeep_converter_3");
+    mp_m_axis_tkeep_converter_3 = new xsc::common::vector2vector_converter<20,20>("m_axis_tkeep_converter_3");
     mp_m_axis_tkeep_converter_3->vector_in(m_m_axis_tkeep_converter_3_signal);
     mp_m_axis_tkeep_converter_3->vector_out(m_axis_concat_tkeep_out_3);
     mp_M03_AXIS_transactor->TKEEP(m_m_axis_tkeep_converter_3_signal);
-    mp_m_axis_tlast_converter_3 = new xsc::common::scalar2vectorN_converter<4>("m_axis_tlast_converter_3");
+    mp_m_axis_tlast_converter_3 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tlast_converter_3");
     mp_m_axis_tlast_converter_3->scalar_in(m_m_axis_tlast_converter_3_signal);
     mp_m_axis_tlast_converter_3->vector_out(m_axis_concat_tlast_out_3);
     mp_M03_AXIS_transactor->TLAST(m_m_axis_tlast_converter_3_signal);
@@ -1399,6 +1568,65 @@ void design_1_axis_switch_0_1::before_end_of_elaboration()
     // M03_AXIS' transactor sockets
 
     mp_impl->M03_AXIS_INITIATOR_SOCKET->bind(*(mp_M03_AXIS_transactor->socket));
+  }
+  else
+  {
+  }
+
+  // configure 'M04_AXIS' transactor
+
+  if (xsc::utils::xsc_sim_manager::getInstanceParameterInt("design_1_axis_switch_0_1", "M04_AXIS_TLM_MODE") != 1)
+  {
+    // Instantiate Socket Stubs
+
+  // 'M04_AXIS' transactor parameters
+    xsc::common_cpp::properties M04_AXIS_transactor_param_props;
+    M04_AXIS_transactor_param_props.addLong("TDATA_NUM_BYTES", "4");
+    M04_AXIS_transactor_param_props.addLong("TDEST_WIDTH", "0");
+    M04_AXIS_transactor_param_props.addLong("TID_WIDTH", "0");
+    M04_AXIS_transactor_param_props.addLong("TUSER_WIDTH", "0");
+    M04_AXIS_transactor_param_props.addLong("HAS_TREADY", "1");
+    M04_AXIS_transactor_param_props.addLong("HAS_TSTRB", "0");
+    M04_AXIS_transactor_param_props.addLong("HAS_TKEEP", "1");
+    M04_AXIS_transactor_param_props.addLong("HAS_TLAST", "1");
+    M04_AXIS_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    M04_AXIS_transactor_param_props.addLong("HAS_RESET", "1");
+    M04_AXIS_transactor_param_props.addFloat("PHASE", "0.0");
+    M04_AXIS_transactor_param_props.addString("CLK_DOMAIN", "design_1_processing_system7_0_0_FCLK_CLK0");
+    M04_AXIS_transactor_param_props.addString("LAYERED_METADATA", "undef");
+    M04_AXIS_transactor_param_props.addLong("TSIDE_BAND_1_WIDTH", "0");
+    M04_AXIS_transactor_param_props.addLong("TSIDE_BAND_2_WIDTH", "0");
+
+    mp_M04_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<20,5,5,5,1,1>("M04_AXIS_transactor", M04_AXIS_transactor_param_props);
+
+    // M04_AXIS' transactor ports
+
+    mp_m_axis_tvalid_converter_4 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tvalid_converter_4");
+    mp_m_axis_tvalid_converter_4->scalar_in(m_m_axis_tvalid_converter_4_signal);
+    mp_m_axis_tvalid_converter_4->vector_out(m_axis_concat_tvalid_out_4);
+    mp_M04_AXIS_transactor->TVALID(m_m_axis_tvalid_converter_4_signal);
+    mp_m_axis_tready_converter_4 = new xsc::common::vectorN2scalar_converter<5>("m_axis_tready_converter_4");
+    mp_m_axis_tready_converter_4->vector_in(m_axis_split_tready_out_4);
+    mp_m_axis_tready_converter_4->scalar_out(m_m_axis_tready_converter_4_signal);
+    mp_M04_AXIS_transactor->TREADY(m_m_axis_tready_converter_4_signal);
+    mp_m_axis_tdata_converter_4 = new xsc::common::vector2vector_converter<160,160>("m_axis_tdata_converter_4");
+    mp_m_axis_tdata_converter_4->vector_in(m_m_axis_tdata_converter_4_signal);
+    mp_m_axis_tdata_converter_4->vector_out(m_axis_concat_tdata_out_4);
+    mp_M04_AXIS_transactor->TDATA(m_m_axis_tdata_converter_4_signal);
+    mp_m_axis_tkeep_converter_4 = new xsc::common::vector2vector_converter<20,20>("m_axis_tkeep_converter_4");
+    mp_m_axis_tkeep_converter_4->vector_in(m_m_axis_tkeep_converter_4_signal);
+    mp_m_axis_tkeep_converter_4->vector_out(m_axis_concat_tkeep_out_4);
+    mp_M04_AXIS_transactor->TKEEP(m_m_axis_tkeep_converter_4_signal);
+    mp_m_axis_tlast_converter_4 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tlast_converter_4");
+    mp_m_axis_tlast_converter_4->scalar_in(m_m_axis_tlast_converter_4_signal);
+    mp_m_axis_tlast_converter_4->vector_out(m_axis_concat_tlast_out_4);
+    mp_M04_AXIS_transactor->TLAST(m_m_axis_tlast_converter_4_signal);
+    mp_M04_AXIS_transactor->CLK(aclk);
+    mp_M04_AXIS_transactor->RST(aresetn);
+
+    // M04_AXIS' transactor sockets
+
+    mp_impl->M04_AXIS_INITIATOR_SOCKET->bind(*(mp_M04_AXIS_transactor->socket));
   }
   else
   {
@@ -1520,6 +1748,12 @@ design_1_axis_switch_0_1::design_1_axis_switch_0_1(const sc_core::sc_module_name
   mp_m_axis_tdata_converter_3 = NULL;
   mp_m_axis_tkeep_converter_3 = NULL;
   mp_m_axis_tlast_converter_3 = NULL;
+  mp_M04_AXIS_transactor = NULL;
+  mp_m_axis_tvalid_converter_4 = NULL;
+  mp_m_axis_tready_converter_4 = NULL;
+  mp_m_axis_tdata_converter_4 = NULL;
+  mp_m_axis_tkeep_converter_4 = NULL;
+  mp_m_axis_tlast_converter_4 = NULL;
   mp_S_AXI_CTRL_transactor = NULL;
 
   // initialize port junctures
@@ -1584,41 +1818,41 @@ design_1_axis_switch_0_1::design_1_axis_switch_0_1(const sc_core::sc_module_name
     M00_AXIS_transactor_param_props.addLong("TSIDE_BAND_1_WIDTH", "0");
     M00_AXIS_transactor_param_props.addLong("TSIDE_BAND_2_WIDTH", "0");
 
-    mp_M00_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<16,4,4,4,1,1>("M00_AXIS_transactor", M00_AXIS_transactor_param_props);
-  mp_m_axis_tvalid_converter_0 = new xsc::common::scalar2vectorN_converter<4>("m_axis_tvalid_converter_0");
-  mp_m_axis_concat_tvalid = new xsc::xsc_concatenator<4, 4>("m_axis_concat_tvalid");
+    mp_M00_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<20,5,5,5,1,1>("M00_AXIS_transactor", M00_AXIS_transactor_param_props);
+  mp_m_axis_tvalid_converter_0 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tvalid_converter_0");
+  mp_m_axis_concat_tvalid = new xsc::xsc_concatenator<5, 5>("m_axis_concat_tvalid");
   mp_m_axis_concat_tvalid->in_port[0](m_axis_concat_tvalid_out_0);
   mp_m_axis_concat_tvalid->out_port(m_axis_tvalid);
     mp_m_axis_concat_tvalid->offset_port(0, 0);
   mp_m_axis_tvalid_converter_0->scalar_in(m_m_axis_tvalid_converter_0_signal);
   mp_m_axis_tvalid_converter_0->vector_out(m_axis_concat_tvalid_out_0);
   mp_M00_AXIS_transactor->TVALID(m_m_axis_tvalid_converter_0_signal);
-  mp_m_axis_tready_converter_0 = new xsc::common::vectorN2scalar_converter<4>("m_axis_tready_converter_0");
-  mp_m_axis_split_tready = new xsc::xsc_split<4, 4>("m_axis_split_tready");
+  mp_m_axis_tready_converter_0 = new xsc::common::vectorN2scalar_converter<5>("m_axis_tready_converter_0");
+  mp_m_axis_split_tready = new xsc::xsc_split<5, 5>("m_axis_split_tready");
   mp_m_axis_split_tready->in_port(m_axis_tready);
   mp_m_axis_split_tready->out_port[0](m_axis_split_tready_out_0);
     mp_m_axis_split_tready->add_mask(0,1,0);
   mp_m_axis_tready_converter_0->vector_in(m_axis_split_tready_out_0);
   mp_m_axis_tready_converter_0->scalar_out(m_m_axis_tready_converter_0_signal);
   mp_M00_AXIS_transactor->TREADY(m_m_axis_tready_converter_0_signal);
-  mp_m_axis_tdata_converter_0 = new xsc::common::vector2vector_converter<128,128>("m_axis_tdata_converter_0");
-  mp_m_axis_concat_tdata = new xsc::xsc_concatenator<128, 4>("m_axis_concat_tdata");
+  mp_m_axis_tdata_converter_0 = new xsc::common::vector2vector_converter<160,160>("m_axis_tdata_converter_0");
+  mp_m_axis_concat_tdata = new xsc::xsc_concatenator<160, 5>("m_axis_concat_tdata");
   mp_m_axis_concat_tdata->in_port[0](m_axis_concat_tdata_out_0);
   mp_m_axis_concat_tdata->out_port(m_axis_tdata);
     mp_m_axis_concat_tdata->offset_port(0, 0);
   mp_m_axis_tdata_converter_0->vector_in(m_m_axis_tdata_converter_0_signal);
   mp_m_axis_tdata_converter_0->vector_out(m_axis_concat_tdata_out_0);
   mp_M00_AXIS_transactor->TDATA(m_m_axis_tdata_converter_0_signal);
-  mp_m_axis_tkeep_converter_0 = new xsc::common::vector2vector_converter<16,16>("m_axis_tkeep_converter_0");
-  mp_m_axis_concat_tkeep = new xsc::xsc_concatenator<16, 4>("m_axis_concat_tkeep");
+  mp_m_axis_tkeep_converter_0 = new xsc::common::vector2vector_converter<20,20>("m_axis_tkeep_converter_0");
+  mp_m_axis_concat_tkeep = new xsc::xsc_concatenator<20, 5>("m_axis_concat_tkeep");
   mp_m_axis_concat_tkeep->in_port[0](m_axis_concat_tkeep_out_0);
   mp_m_axis_concat_tkeep->out_port(m_axis_tkeep);
     mp_m_axis_concat_tkeep->offset_port(0, 0);
   mp_m_axis_tkeep_converter_0->vector_in(m_m_axis_tkeep_converter_0_signal);
   mp_m_axis_tkeep_converter_0->vector_out(m_axis_concat_tkeep_out_0);
   mp_M00_AXIS_transactor->TKEEP(m_m_axis_tkeep_converter_0_signal);
-  mp_m_axis_tlast_converter_0 = new xsc::common::scalar2vectorN_converter<4>("m_axis_tlast_converter_0");
-  mp_m_axis_concat_tlast = new xsc::xsc_concatenator<4, 4>("m_axis_concat_tlast");
+  mp_m_axis_tlast_converter_0 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tlast_converter_0");
+  mp_m_axis_concat_tlast = new xsc::xsc_concatenator<5, 5>("m_axis_concat_tlast");
   mp_m_axis_concat_tlast->in_port[0](m_axis_concat_tlast_out_0);
   mp_m_axis_concat_tlast->out_port(m_axis_tlast);
     mp_m_axis_concat_tlast->offset_port(0, 0);
@@ -1645,33 +1879,33 @@ design_1_axis_switch_0_1::design_1_axis_switch_0_1(const sc_core::sc_module_name
     M01_AXIS_transactor_param_props.addLong("TSIDE_BAND_1_WIDTH", "0");
     M01_AXIS_transactor_param_props.addLong("TSIDE_BAND_2_WIDTH", "0");
 
-    mp_M01_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<16,4,4,4,1,1>("M01_AXIS_transactor", M01_AXIS_transactor_param_props);
-  mp_m_axis_tvalid_converter_1 = new xsc::common::scalar2vectorN_converter<4>("m_axis_tvalid_converter_1");
+    mp_M01_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<20,5,5,5,1,1>("M01_AXIS_transactor", M01_AXIS_transactor_param_props);
+  mp_m_axis_tvalid_converter_1 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tvalid_converter_1");
   mp_m_axis_concat_tvalid->in_port[1](m_axis_concat_tvalid_out_1);
   mp_m_axis_concat_tvalid->offset_port(1, 1);
   mp_m_axis_tvalid_converter_1->scalar_in(m_m_axis_tvalid_converter_1_signal);
   mp_m_axis_tvalid_converter_1->vector_out(m_axis_concat_tvalid_out_1);
   mp_M01_AXIS_transactor->TVALID(m_m_axis_tvalid_converter_1_signal);
-  mp_m_axis_tready_converter_1 = new xsc::common::vectorN2scalar_converter<4>("m_axis_tready_converter_1");
+  mp_m_axis_tready_converter_1 = new xsc::common::vectorN2scalar_converter<5>("m_axis_tready_converter_1");
   
   mp_m_axis_split_tready->out_port[1](m_axis_split_tready_out_1);
     mp_m_axis_split_tready->add_mask(1,2,1);
   mp_m_axis_tready_converter_1->vector_in(m_axis_split_tready_out_1);
   mp_m_axis_tready_converter_1->scalar_out(m_m_axis_tready_converter_1_signal);
   mp_M01_AXIS_transactor->TREADY(m_m_axis_tready_converter_1_signal);
-  mp_m_axis_tdata_converter_1 = new xsc::common::vector2vector_converter<128,128>("m_axis_tdata_converter_1");
+  mp_m_axis_tdata_converter_1 = new xsc::common::vector2vector_converter<160,160>("m_axis_tdata_converter_1");
   mp_m_axis_concat_tdata->in_port[1](m_axis_concat_tdata_out_1);
   mp_m_axis_concat_tdata->offset_port(1, 32);
   mp_m_axis_tdata_converter_1->vector_in(m_m_axis_tdata_converter_1_signal);
   mp_m_axis_tdata_converter_1->vector_out(m_axis_concat_tdata_out_1);
   mp_M01_AXIS_transactor->TDATA(m_m_axis_tdata_converter_1_signal);
-  mp_m_axis_tkeep_converter_1 = new xsc::common::vector2vector_converter<16,16>("m_axis_tkeep_converter_1");
+  mp_m_axis_tkeep_converter_1 = new xsc::common::vector2vector_converter<20,20>("m_axis_tkeep_converter_1");
   mp_m_axis_concat_tkeep->in_port[1](m_axis_concat_tkeep_out_1);
   mp_m_axis_concat_tkeep->offset_port(1, 4);
   mp_m_axis_tkeep_converter_1->vector_in(m_m_axis_tkeep_converter_1_signal);
   mp_m_axis_tkeep_converter_1->vector_out(m_axis_concat_tkeep_out_1);
   mp_M01_AXIS_transactor->TKEEP(m_m_axis_tkeep_converter_1_signal);
-  mp_m_axis_tlast_converter_1 = new xsc::common::scalar2vectorN_converter<4>("m_axis_tlast_converter_1");
+  mp_m_axis_tlast_converter_1 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tlast_converter_1");
   mp_m_axis_concat_tlast->in_port[1](m_axis_concat_tlast_out_1);
   mp_m_axis_concat_tlast->offset_port(1, 1);
   mp_m_axis_tlast_converter_1->scalar_in(m_m_axis_tlast_converter_1_signal);
@@ -1697,33 +1931,33 @@ design_1_axis_switch_0_1::design_1_axis_switch_0_1(const sc_core::sc_module_name
     M02_AXIS_transactor_param_props.addLong("TSIDE_BAND_1_WIDTH", "0");
     M02_AXIS_transactor_param_props.addLong("TSIDE_BAND_2_WIDTH", "0");
 
-    mp_M02_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<16,4,4,4,1,1>("M02_AXIS_transactor", M02_AXIS_transactor_param_props);
-  mp_m_axis_tvalid_converter_2 = new xsc::common::scalar2vectorN_converter<4>("m_axis_tvalid_converter_2");
+    mp_M02_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<20,5,5,5,1,1>("M02_AXIS_transactor", M02_AXIS_transactor_param_props);
+  mp_m_axis_tvalid_converter_2 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tvalid_converter_2");
   mp_m_axis_concat_tvalid->in_port[2](m_axis_concat_tvalid_out_2);
   mp_m_axis_concat_tvalid->offset_port(2, 2);
   mp_m_axis_tvalid_converter_2->scalar_in(m_m_axis_tvalid_converter_2_signal);
   mp_m_axis_tvalid_converter_2->vector_out(m_axis_concat_tvalid_out_2);
   mp_M02_AXIS_transactor->TVALID(m_m_axis_tvalid_converter_2_signal);
-  mp_m_axis_tready_converter_2 = new xsc::common::vectorN2scalar_converter<4>("m_axis_tready_converter_2");
+  mp_m_axis_tready_converter_2 = new xsc::common::vectorN2scalar_converter<5>("m_axis_tready_converter_2");
   
   mp_m_axis_split_tready->out_port[2](m_axis_split_tready_out_2);
     mp_m_axis_split_tready->add_mask(2,3,2);
   mp_m_axis_tready_converter_2->vector_in(m_axis_split_tready_out_2);
   mp_m_axis_tready_converter_2->scalar_out(m_m_axis_tready_converter_2_signal);
   mp_M02_AXIS_transactor->TREADY(m_m_axis_tready_converter_2_signal);
-  mp_m_axis_tdata_converter_2 = new xsc::common::vector2vector_converter<128,128>("m_axis_tdata_converter_2");
+  mp_m_axis_tdata_converter_2 = new xsc::common::vector2vector_converter<160,160>("m_axis_tdata_converter_2");
   mp_m_axis_concat_tdata->in_port[2](m_axis_concat_tdata_out_2);
   mp_m_axis_concat_tdata->offset_port(2, 64);
   mp_m_axis_tdata_converter_2->vector_in(m_m_axis_tdata_converter_2_signal);
   mp_m_axis_tdata_converter_2->vector_out(m_axis_concat_tdata_out_2);
   mp_M02_AXIS_transactor->TDATA(m_m_axis_tdata_converter_2_signal);
-  mp_m_axis_tkeep_converter_2 = new xsc::common::vector2vector_converter<16,16>("m_axis_tkeep_converter_2");
+  mp_m_axis_tkeep_converter_2 = new xsc::common::vector2vector_converter<20,20>("m_axis_tkeep_converter_2");
   mp_m_axis_concat_tkeep->in_port[2](m_axis_concat_tkeep_out_2);
   mp_m_axis_concat_tkeep->offset_port(2, 8);
   mp_m_axis_tkeep_converter_2->vector_in(m_m_axis_tkeep_converter_2_signal);
   mp_m_axis_tkeep_converter_2->vector_out(m_axis_concat_tkeep_out_2);
   mp_M02_AXIS_transactor->TKEEP(m_m_axis_tkeep_converter_2_signal);
-  mp_m_axis_tlast_converter_2 = new xsc::common::scalar2vectorN_converter<4>("m_axis_tlast_converter_2");
+  mp_m_axis_tlast_converter_2 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tlast_converter_2");
   mp_m_axis_concat_tlast->in_port[2](m_axis_concat_tlast_out_2);
   mp_m_axis_concat_tlast->offset_port(2, 2);
   mp_m_axis_tlast_converter_2->scalar_in(m_m_axis_tlast_converter_2_signal);
@@ -1749,33 +1983,33 @@ design_1_axis_switch_0_1::design_1_axis_switch_0_1(const sc_core::sc_module_name
     M03_AXIS_transactor_param_props.addLong("TSIDE_BAND_1_WIDTH", "0");
     M03_AXIS_transactor_param_props.addLong("TSIDE_BAND_2_WIDTH", "0");
 
-    mp_M03_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<16,4,4,4,1,1>("M03_AXIS_transactor", M03_AXIS_transactor_param_props);
-  mp_m_axis_tvalid_converter_3 = new xsc::common::scalar2vectorN_converter<4>("m_axis_tvalid_converter_3");
+    mp_M03_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<20,5,5,5,1,1>("M03_AXIS_transactor", M03_AXIS_transactor_param_props);
+  mp_m_axis_tvalid_converter_3 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tvalid_converter_3");
   mp_m_axis_concat_tvalid->in_port[3](m_axis_concat_tvalid_out_3);
   mp_m_axis_concat_tvalid->offset_port(3, 3);
   mp_m_axis_tvalid_converter_3->scalar_in(m_m_axis_tvalid_converter_3_signal);
   mp_m_axis_tvalid_converter_3->vector_out(m_axis_concat_tvalid_out_3);
   mp_M03_AXIS_transactor->TVALID(m_m_axis_tvalid_converter_3_signal);
-  mp_m_axis_tready_converter_3 = new xsc::common::vectorN2scalar_converter<4>("m_axis_tready_converter_3");
+  mp_m_axis_tready_converter_3 = new xsc::common::vectorN2scalar_converter<5>("m_axis_tready_converter_3");
   
   mp_m_axis_split_tready->out_port[3](m_axis_split_tready_out_3);
     mp_m_axis_split_tready->add_mask(3,4,3);
   mp_m_axis_tready_converter_3->vector_in(m_axis_split_tready_out_3);
   mp_m_axis_tready_converter_3->scalar_out(m_m_axis_tready_converter_3_signal);
   mp_M03_AXIS_transactor->TREADY(m_m_axis_tready_converter_3_signal);
-  mp_m_axis_tdata_converter_3 = new xsc::common::vector2vector_converter<128,128>("m_axis_tdata_converter_3");
+  mp_m_axis_tdata_converter_3 = new xsc::common::vector2vector_converter<160,160>("m_axis_tdata_converter_3");
   mp_m_axis_concat_tdata->in_port[3](m_axis_concat_tdata_out_3);
   mp_m_axis_concat_tdata->offset_port(3, 96);
   mp_m_axis_tdata_converter_3->vector_in(m_m_axis_tdata_converter_3_signal);
   mp_m_axis_tdata_converter_3->vector_out(m_axis_concat_tdata_out_3);
   mp_M03_AXIS_transactor->TDATA(m_m_axis_tdata_converter_3_signal);
-  mp_m_axis_tkeep_converter_3 = new xsc::common::vector2vector_converter<16,16>("m_axis_tkeep_converter_3");
+  mp_m_axis_tkeep_converter_3 = new xsc::common::vector2vector_converter<20,20>("m_axis_tkeep_converter_3");
   mp_m_axis_concat_tkeep->in_port[3](m_axis_concat_tkeep_out_3);
   mp_m_axis_concat_tkeep->offset_port(3, 12);
   mp_m_axis_tkeep_converter_3->vector_in(m_m_axis_tkeep_converter_3_signal);
   mp_m_axis_tkeep_converter_3->vector_out(m_axis_concat_tkeep_out_3);
   mp_M03_AXIS_transactor->TKEEP(m_m_axis_tkeep_converter_3_signal);
-  mp_m_axis_tlast_converter_3 = new xsc::common::scalar2vectorN_converter<4>("m_axis_tlast_converter_3");
+  mp_m_axis_tlast_converter_3 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tlast_converter_3");
   mp_m_axis_concat_tlast->in_port[3](m_axis_concat_tlast_out_3);
   mp_m_axis_concat_tlast->offset_port(3, 3);
   mp_m_axis_tlast_converter_3->scalar_in(m_m_axis_tlast_converter_3_signal);
@@ -1783,6 +2017,58 @@ design_1_axis_switch_0_1::design_1_axis_switch_0_1(const sc_core::sc_module_name
   mp_M03_AXIS_transactor->TLAST(m_m_axis_tlast_converter_3_signal);
   mp_M03_AXIS_transactor->CLK(aclk);
   mp_M03_AXIS_transactor->RST(aresetn);
+  // configure M04_AXIS_transactor
+    xsc::common_cpp::properties M04_AXIS_transactor_param_props;
+    M04_AXIS_transactor_param_props.addLong("TDATA_NUM_BYTES", "4");
+    M04_AXIS_transactor_param_props.addLong("TDEST_WIDTH", "0");
+    M04_AXIS_transactor_param_props.addLong("TID_WIDTH", "0");
+    M04_AXIS_transactor_param_props.addLong("TUSER_WIDTH", "0");
+    M04_AXIS_transactor_param_props.addLong("HAS_TREADY", "1");
+    M04_AXIS_transactor_param_props.addLong("HAS_TSTRB", "0");
+    M04_AXIS_transactor_param_props.addLong("HAS_TKEEP", "1");
+    M04_AXIS_transactor_param_props.addLong("HAS_TLAST", "1");
+    M04_AXIS_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    M04_AXIS_transactor_param_props.addLong("HAS_RESET", "1");
+    M04_AXIS_transactor_param_props.addFloat("PHASE", "0.0");
+    M04_AXIS_transactor_param_props.addString("CLK_DOMAIN", "design_1_processing_system7_0_0_FCLK_CLK0");
+    M04_AXIS_transactor_param_props.addString("LAYERED_METADATA", "undef");
+    M04_AXIS_transactor_param_props.addLong("TSIDE_BAND_1_WIDTH", "0");
+    M04_AXIS_transactor_param_props.addLong("TSIDE_BAND_2_WIDTH", "0");
+
+    mp_M04_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<20,5,5,5,1,1>("M04_AXIS_transactor", M04_AXIS_transactor_param_props);
+  mp_m_axis_tvalid_converter_4 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tvalid_converter_4");
+  mp_m_axis_concat_tvalid->in_port[4](m_axis_concat_tvalid_out_4);
+  mp_m_axis_concat_tvalid->offset_port(4, 4);
+  mp_m_axis_tvalid_converter_4->scalar_in(m_m_axis_tvalid_converter_4_signal);
+  mp_m_axis_tvalid_converter_4->vector_out(m_axis_concat_tvalid_out_4);
+  mp_M04_AXIS_transactor->TVALID(m_m_axis_tvalid_converter_4_signal);
+  mp_m_axis_tready_converter_4 = new xsc::common::vectorN2scalar_converter<5>("m_axis_tready_converter_4");
+  
+  mp_m_axis_split_tready->out_port[4](m_axis_split_tready_out_4);
+    mp_m_axis_split_tready->add_mask(4,5,4);
+  mp_m_axis_tready_converter_4->vector_in(m_axis_split_tready_out_4);
+  mp_m_axis_tready_converter_4->scalar_out(m_m_axis_tready_converter_4_signal);
+  mp_M04_AXIS_transactor->TREADY(m_m_axis_tready_converter_4_signal);
+  mp_m_axis_tdata_converter_4 = new xsc::common::vector2vector_converter<160,160>("m_axis_tdata_converter_4");
+  mp_m_axis_concat_tdata->in_port[4](m_axis_concat_tdata_out_4);
+  mp_m_axis_concat_tdata->offset_port(4, 128);
+  mp_m_axis_tdata_converter_4->vector_in(m_m_axis_tdata_converter_4_signal);
+  mp_m_axis_tdata_converter_4->vector_out(m_axis_concat_tdata_out_4);
+  mp_M04_AXIS_transactor->TDATA(m_m_axis_tdata_converter_4_signal);
+  mp_m_axis_tkeep_converter_4 = new xsc::common::vector2vector_converter<20,20>("m_axis_tkeep_converter_4");
+  mp_m_axis_concat_tkeep->in_port[4](m_axis_concat_tkeep_out_4);
+  mp_m_axis_concat_tkeep->offset_port(4, 16);
+  mp_m_axis_tkeep_converter_4->vector_in(m_m_axis_tkeep_converter_4_signal);
+  mp_m_axis_tkeep_converter_4->vector_out(m_axis_concat_tkeep_out_4);
+  mp_M04_AXIS_transactor->TKEEP(m_m_axis_tkeep_converter_4_signal);
+  mp_m_axis_tlast_converter_4 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tlast_converter_4");
+  mp_m_axis_concat_tlast->in_port[4](m_axis_concat_tlast_out_4);
+  mp_m_axis_concat_tlast->offset_port(4, 4);
+  mp_m_axis_tlast_converter_4->scalar_in(m_m_axis_tlast_converter_4_signal);
+  mp_m_axis_tlast_converter_4->vector_out(m_axis_concat_tlast_out_4);
+  mp_M04_AXIS_transactor->TLAST(m_m_axis_tlast_converter_4_signal);
+  mp_M04_AXIS_transactor->CLK(aclk);
+  mp_M04_AXIS_transactor->RST(aresetn);
   // configure S_AXI_CTRL_transactor
     xsc::common_cpp::properties S_AXI_CTRL_transactor_param_props;
     S_AXI_CTRL_transactor_param_props.addLong("DATA_WIDTH", "32");
@@ -1844,6 +2130,7 @@ design_1_axis_switch_0_1::design_1_axis_switch_0_1(const sc_core::sc_module_name
   M01_AXIS_transactor_initiator_socket_stub = nullptr;
   M02_AXIS_transactor_initiator_socket_stub = nullptr;
   M03_AXIS_transactor_initiator_socket_stub = nullptr;
+  M04_AXIS_transactor_initiator_socket_stub = nullptr;
   S_AXI_CTRL_transactor_target_wr_socket_stub = nullptr;
   S_AXI_CTRL_transactor_target_rd_socket_stub = nullptr;
 
@@ -1914,6 +2201,19 @@ void design_1_axis_switch_0_1::before_end_of_elaboration()
     M03_AXIS_transactor_initiator_socket_stub = new xtlm::xtlm_axis_initiator_stub("socket",0);
     M03_AXIS_transactor_initiator_socket_stub->bind(*(mp_M03_AXIS_transactor->socket));
     mp_M03_AXIS_transactor->disable_transactor();
+  }
+
+  // configure 'M04_AXIS' transactor
+  if (xsc::utils::xsc_sim_manager::getInstanceParameterInt("design_1_axis_switch_0_1", "M04_AXIS_TLM_MODE") != 1)
+  {
+    mp_impl->M04_AXIS_INITIATOR_SOCKET->bind(*(mp_M04_AXIS_transactor->socket));
+  
+  }
+  else
+  {
+    M04_AXIS_transactor_initiator_socket_stub = new xtlm::xtlm_axis_initiator_stub("socket",0);
+    M04_AXIS_transactor_initiator_socket_stub->bind(*(mp_M04_AXIS_transactor->socket));
+    mp_M04_AXIS_transactor->disable_transactor();
   }
 
   // configure 'S_AXI_CTRL' transactor
@@ -1975,6 +2275,12 @@ design_1_axis_switch_0_1::design_1_axis_switch_0_1(const sc_core::sc_module_name
   mp_m_axis_tdata_converter_3 = NULL;
   mp_m_axis_tkeep_converter_3 = NULL;
   mp_m_axis_tlast_converter_3 = NULL;
+  mp_M04_AXIS_transactor = NULL;
+  mp_m_axis_tvalid_converter_4 = NULL;
+  mp_m_axis_tready_converter_4 = NULL;
+  mp_m_axis_tdata_converter_4 = NULL;
+  mp_m_axis_tkeep_converter_4 = NULL;
+  mp_m_axis_tlast_converter_4 = NULL;
   mp_S_AXI_CTRL_transactor = NULL;
 
   // initialize port junctures
@@ -2039,41 +2345,41 @@ design_1_axis_switch_0_1::design_1_axis_switch_0_1(const sc_core::sc_module_name
     M00_AXIS_transactor_param_props.addLong("TSIDE_BAND_1_WIDTH", "0");
     M00_AXIS_transactor_param_props.addLong("TSIDE_BAND_2_WIDTH", "0");
 
-    mp_M00_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<16,4,4,4,1,1>("M00_AXIS_transactor", M00_AXIS_transactor_param_props);
-  mp_m_axis_tvalid_converter_0 = new xsc::common::scalar2vectorN_converter<4>("m_axis_tvalid_converter_0");
-  mp_m_axis_concat_tvalid = new xsc::xsc_concatenator<4, 4>("m_axis_concat_tvalid");
+    mp_M00_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<20,5,5,5,1,1>("M00_AXIS_transactor", M00_AXIS_transactor_param_props);
+  mp_m_axis_tvalid_converter_0 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tvalid_converter_0");
+  mp_m_axis_concat_tvalid = new xsc::xsc_concatenator<5, 5>("m_axis_concat_tvalid");
   mp_m_axis_concat_tvalid->in_port[0](m_axis_concat_tvalid_out_0);
   mp_m_axis_concat_tvalid->out_port(m_axis_tvalid);
     mp_m_axis_concat_tvalid->offset_port(0, 0);
   mp_m_axis_tvalid_converter_0->scalar_in(m_m_axis_tvalid_converter_0_signal);
   mp_m_axis_tvalid_converter_0->vector_out(m_axis_concat_tvalid_out_0);
   mp_M00_AXIS_transactor->TVALID(m_m_axis_tvalid_converter_0_signal);
-  mp_m_axis_tready_converter_0 = new xsc::common::vectorN2scalar_converter<4>("m_axis_tready_converter_0");
-  mp_m_axis_split_tready = new xsc::xsc_split<4, 4>("m_axis_split_tready");
+  mp_m_axis_tready_converter_0 = new xsc::common::vectorN2scalar_converter<5>("m_axis_tready_converter_0");
+  mp_m_axis_split_tready = new xsc::xsc_split<5, 5>("m_axis_split_tready");
   mp_m_axis_split_tready->in_port(m_axis_tready);
   mp_m_axis_split_tready->out_port[0](m_axis_split_tready_out_0);
     mp_m_axis_split_tready->add_mask(0,1,0);
   mp_m_axis_tready_converter_0->vector_in(m_axis_split_tready_out_0);
   mp_m_axis_tready_converter_0->scalar_out(m_m_axis_tready_converter_0_signal);
   mp_M00_AXIS_transactor->TREADY(m_m_axis_tready_converter_0_signal);
-  mp_m_axis_tdata_converter_0 = new xsc::common::vector2vector_converter<128,128>("m_axis_tdata_converter_0");
-  mp_m_axis_concat_tdata = new xsc::xsc_concatenator<128, 4>("m_axis_concat_tdata");
+  mp_m_axis_tdata_converter_0 = new xsc::common::vector2vector_converter<160,160>("m_axis_tdata_converter_0");
+  mp_m_axis_concat_tdata = new xsc::xsc_concatenator<160, 5>("m_axis_concat_tdata");
   mp_m_axis_concat_tdata->in_port[0](m_axis_concat_tdata_out_0);
   mp_m_axis_concat_tdata->out_port(m_axis_tdata);
     mp_m_axis_concat_tdata->offset_port(0, 0);
   mp_m_axis_tdata_converter_0->vector_in(m_m_axis_tdata_converter_0_signal);
   mp_m_axis_tdata_converter_0->vector_out(m_axis_concat_tdata_out_0);
   mp_M00_AXIS_transactor->TDATA(m_m_axis_tdata_converter_0_signal);
-  mp_m_axis_tkeep_converter_0 = new xsc::common::vector2vector_converter<16,16>("m_axis_tkeep_converter_0");
-  mp_m_axis_concat_tkeep = new xsc::xsc_concatenator<16, 4>("m_axis_concat_tkeep");
+  mp_m_axis_tkeep_converter_0 = new xsc::common::vector2vector_converter<20,20>("m_axis_tkeep_converter_0");
+  mp_m_axis_concat_tkeep = new xsc::xsc_concatenator<20, 5>("m_axis_concat_tkeep");
   mp_m_axis_concat_tkeep->in_port[0](m_axis_concat_tkeep_out_0);
   mp_m_axis_concat_tkeep->out_port(m_axis_tkeep);
     mp_m_axis_concat_tkeep->offset_port(0, 0);
   mp_m_axis_tkeep_converter_0->vector_in(m_m_axis_tkeep_converter_0_signal);
   mp_m_axis_tkeep_converter_0->vector_out(m_axis_concat_tkeep_out_0);
   mp_M00_AXIS_transactor->TKEEP(m_m_axis_tkeep_converter_0_signal);
-  mp_m_axis_tlast_converter_0 = new xsc::common::scalar2vectorN_converter<4>("m_axis_tlast_converter_0");
-  mp_m_axis_concat_tlast = new xsc::xsc_concatenator<4, 4>("m_axis_concat_tlast");
+  mp_m_axis_tlast_converter_0 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tlast_converter_0");
+  mp_m_axis_concat_tlast = new xsc::xsc_concatenator<5, 5>("m_axis_concat_tlast");
   mp_m_axis_concat_tlast->in_port[0](m_axis_concat_tlast_out_0);
   mp_m_axis_concat_tlast->out_port(m_axis_tlast);
     mp_m_axis_concat_tlast->offset_port(0, 0);
@@ -2100,33 +2406,33 @@ design_1_axis_switch_0_1::design_1_axis_switch_0_1(const sc_core::sc_module_name
     M01_AXIS_transactor_param_props.addLong("TSIDE_BAND_1_WIDTH", "0");
     M01_AXIS_transactor_param_props.addLong("TSIDE_BAND_2_WIDTH", "0");
 
-    mp_M01_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<16,4,4,4,1,1>("M01_AXIS_transactor", M01_AXIS_transactor_param_props);
-  mp_m_axis_tvalid_converter_1 = new xsc::common::scalar2vectorN_converter<4>("m_axis_tvalid_converter_1");
+    mp_M01_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<20,5,5,5,1,1>("M01_AXIS_transactor", M01_AXIS_transactor_param_props);
+  mp_m_axis_tvalid_converter_1 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tvalid_converter_1");
   mp_m_axis_concat_tvalid->in_port[1](m_axis_concat_tvalid_out_1);
   mp_m_axis_concat_tvalid->offset_port(1, 1);
   mp_m_axis_tvalid_converter_1->scalar_in(m_m_axis_tvalid_converter_1_signal);
   mp_m_axis_tvalid_converter_1->vector_out(m_axis_concat_tvalid_out_1);
   mp_M01_AXIS_transactor->TVALID(m_m_axis_tvalid_converter_1_signal);
-  mp_m_axis_tready_converter_1 = new xsc::common::vectorN2scalar_converter<4>("m_axis_tready_converter_1");
+  mp_m_axis_tready_converter_1 = new xsc::common::vectorN2scalar_converter<5>("m_axis_tready_converter_1");
   
   mp_m_axis_split_tready->out_port[1](m_axis_split_tready_out_1);
     mp_m_axis_split_tready->add_mask(1,2,1);
   mp_m_axis_tready_converter_1->vector_in(m_axis_split_tready_out_1);
   mp_m_axis_tready_converter_1->scalar_out(m_m_axis_tready_converter_1_signal);
   mp_M01_AXIS_transactor->TREADY(m_m_axis_tready_converter_1_signal);
-  mp_m_axis_tdata_converter_1 = new xsc::common::vector2vector_converter<128,128>("m_axis_tdata_converter_1");
+  mp_m_axis_tdata_converter_1 = new xsc::common::vector2vector_converter<160,160>("m_axis_tdata_converter_1");
   mp_m_axis_concat_tdata->in_port[1](m_axis_concat_tdata_out_1);
   mp_m_axis_concat_tdata->offset_port(1, 32);
   mp_m_axis_tdata_converter_1->vector_in(m_m_axis_tdata_converter_1_signal);
   mp_m_axis_tdata_converter_1->vector_out(m_axis_concat_tdata_out_1);
   mp_M01_AXIS_transactor->TDATA(m_m_axis_tdata_converter_1_signal);
-  mp_m_axis_tkeep_converter_1 = new xsc::common::vector2vector_converter<16,16>("m_axis_tkeep_converter_1");
+  mp_m_axis_tkeep_converter_1 = new xsc::common::vector2vector_converter<20,20>("m_axis_tkeep_converter_1");
   mp_m_axis_concat_tkeep->in_port[1](m_axis_concat_tkeep_out_1);
   mp_m_axis_concat_tkeep->offset_port(1, 4);
   mp_m_axis_tkeep_converter_1->vector_in(m_m_axis_tkeep_converter_1_signal);
   mp_m_axis_tkeep_converter_1->vector_out(m_axis_concat_tkeep_out_1);
   mp_M01_AXIS_transactor->TKEEP(m_m_axis_tkeep_converter_1_signal);
-  mp_m_axis_tlast_converter_1 = new xsc::common::scalar2vectorN_converter<4>("m_axis_tlast_converter_1");
+  mp_m_axis_tlast_converter_1 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tlast_converter_1");
   mp_m_axis_concat_tlast->in_port[1](m_axis_concat_tlast_out_1);
   mp_m_axis_concat_tlast->offset_port(1, 1);
   mp_m_axis_tlast_converter_1->scalar_in(m_m_axis_tlast_converter_1_signal);
@@ -2152,33 +2458,33 @@ design_1_axis_switch_0_1::design_1_axis_switch_0_1(const sc_core::sc_module_name
     M02_AXIS_transactor_param_props.addLong("TSIDE_BAND_1_WIDTH", "0");
     M02_AXIS_transactor_param_props.addLong("TSIDE_BAND_2_WIDTH", "0");
 
-    mp_M02_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<16,4,4,4,1,1>("M02_AXIS_transactor", M02_AXIS_transactor_param_props);
-  mp_m_axis_tvalid_converter_2 = new xsc::common::scalar2vectorN_converter<4>("m_axis_tvalid_converter_2");
+    mp_M02_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<20,5,5,5,1,1>("M02_AXIS_transactor", M02_AXIS_transactor_param_props);
+  mp_m_axis_tvalid_converter_2 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tvalid_converter_2");
   mp_m_axis_concat_tvalid->in_port[2](m_axis_concat_tvalid_out_2);
   mp_m_axis_concat_tvalid->offset_port(2, 2);
   mp_m_axis_tvalid_converter_2->scalar_in(m_m_axis_tvalid_converter_2_signal);
   mp_m_axis_tvalid_converter_2->vector_out(m_axis_concat_tvalid_out_2);
   mp_M02_AXIS_transactor->TVALID(m_m_axis_tvalid_converter_2_signal);
-  mp_m_axis_tready_converter_2 = new xsc::common::vectorN2scalar_converter<4>("m_axis_tready_converter_2");
+  mp_m_axis_tready_converter_2 = new xsc::common::vectorN2scalar_converter<5>("m_axis_tready_converter_2");
   
   mp_m_axis_split_tready->out_port[2](m_axis_split_tready_out_2);
     mp_m_axis_split_tready->add_mask(2,3,2);
   mp_m_axis_tready_converter_2->vector_in(m_axis_split_tready_out_2);
   mp_m_axis_tready_converter_2->scalar_out(m_m_axis_tready_converter_2_signal);
   mp_M02_AXIS_transactor->TREADY(m_m_axis_tready_converter_2_signal);
-  mp_m_axis_tdata_converter_2 = new xsc::common::vector2vector_converter<128,128>("m_axis_tdata_converter_2");
+  mp_m_axis_tdata_converter_2 = new xsc::common::vector2vector_converter<160,160>("m_axis_tdata_converter_2");
   mp_m_axis_concat_tdata->in_port[2](m_axis_concat_tdata_out_2);
   mp_m_axis_concat_tdata->offset_port(2, 64);
   mp_m_axis_tdata_converter_2->vector_in(m_m_axis_tdata_converter_2_signal);
   mp_m_axis_tdata_converter_2->vector_out(m_axis_concat_tdata_out_2);
   mp_M02_AXIS_transactor->TDATA(m_m_axis_tdata_converter_2_signal);
-  mp_m_axis_tkeep_converter_2 = new xsc::common::vector2vector_converter<16,16>("m_axis_tkeep_converter_2");
+  mp_m_axis_tkeep_converter_2 = new xsc::common::vector2vector_converter<20,20>("m_axis_tkeep_converter_2");
   mp_m_axis_concat_tkeep->in_port[2](m_axis_concat_tkeep_out_2);
   mp_m_axis_concat_tkeep->offset_port(2, 8);
   mp_m_axis_tkeep_converter_2->vector_in(m_m_axis_tkeep_converter_2_signal);
   mp_m_axis_tkeep_converter_2->vector_out(m_axis_concat_tkeep_out_2);
   mp_M02_AXIS_transactor->TKEEP(m_m_axis_tkeep_converter_2_signal);
-  mp_m_axis_tlast_converter_2 = new xsc::common::scalar2vectorN_converter<4>("m_axis_tlast_converter_2");
+  mp_m_axis_tlast_converter_2 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tlast_converter_2");
   mp_m_axis_concat_tlast->in_port[2](m_axis_concat_tlast_out_2);
   mp_m_axis_concat_tlast->offset_port(2, 2);
   mp_m_axis_tlast_converter_2->scalar_in(m_m_axis_tlast_converter_2_signal);
@@ -2204,33 +2510,33 @@ design_1_axis_switch_0_1::design_1_axis_switch_0_1(const sc_core::sc_module_name
     M03_AXIS_transactor_param_props.addLong("TSIDE_BAND_1_WIDTH", "0");
     M03_AXIS_transactor_param_props.addLong("TSIDE_BAND_2_WIDTH", "0");
 
-    mp_M03_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<16,4,4,4,1,1>("M03_AXIS_transactor", M03_AXIS_transactor_param_props);
-  mp_m_axis_tvalid_converter_3 = new xsc::common::scalar2vectorN_converter<4>("m_axis_tvalid_converter_3");
+    mp_M03_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<20,5,5,5,1,1>("M03_AXIS_transactor", M03_AXIS_transactor_param_props);
+  mp_m_axis_tvalid_converter_3 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tvalid_converter_3");
   mp_m_axis_concat_tvalid->in_port[3](m_axis_concat_tvalid_out_3);
   mp_m_axis_concat_tvalid->offset_port(3, 3);
   mp_m_axis_tvalid_converter_3->scalar_in(m_m_axis_tvalid_converter_3_signal);
   mp_m_axis_tvalid_converter_3->vector_out(m_axis_concat_tvalid_out_3);
   mp_M03_AXIS_transactor->TVALID(m_m_axis_tvalid_converter_3_signal);
-  mp_m_axis_tready_converter_3 = new xsc::common::vectorN2scalar_converter<4>("m_axis_tready_converter_3");
+  mp_m_axis_tready_converter_3 = new xsc::common::vectorN2scalar_converter<5>("m_axis_tready_converter_3");
   
   mp_m_axis_split_tready->out_port[3](m_axis_split_tready_out_3);
     mp_m_axis_split_tready->add_mask(3,4,3);
   mp_m_axis_tready_converter_3->vector_in(m_axis_split_tready_out_3);
   mp_m_axis_tready_converter_3->scalar_out(m_m_axis_tready_converter_3_signal);
   mp_M03_AXIS_transactor->TREADY(m_m_axis_tready_converter_3_signal);
-  mp_m_axis_tdata_converter_3 = new xsc::common::vector2vector_converter<128,128>("m_axis_tdata_converter_3");
+  mp_m_axis_tdata_converter_3 = new xsc::common::vector2vector_converter<160,160>("m_axis_tdata_converter_3");
   mp_m_axis_concat_tdata->in_port[3](m_axis_concat_tdata_out_3);
   mp_m_axis_concat_tdata->offset_port(3, 96);
   mp_m_axis_tdata_converter_3->vector_in(m_m_axis_tdata_converter_3_signal);
   mp_m_axis_tdata_converter_3->vector_out(m_axis_concat_tdata_out_3);
   mp_M03_AXIS_transactor->TDATA(m_m_axis_tdata_converter_3_signal);
-  mp_m_axis_tkeep_converter_3 = new xsc::common::vector2vector_converter<16,16>("m_axis_tkeep_converter_3");
+  mp_m_axis_tkeep_converter_3 = new xsc::common::vector2vector_converter<20,20>("m_axis_tkeep_converter_3");
   mp_m_axis_concat_tkeep->in_port[3](m_axis_concat_tkeep_out_3);
   mp_m_axis_concat_tkeep->offset_port(3, 12);
   mp_m_axis_tkeep_converter_3->vector_in(m_m_axis_tkeep_converter_3_signal);
   mp_m_axis_tkeep_converter_3->vector_out(m_axis_concat_tkeep_out_3);
   mp_M03_AXIS_transactor->TKEEP(m_m_axis_tkeep_converter_3_signal);
-  mp_m_axis_tlast_converter_3 = new xsc::common::scalar2vectorN_converter<4>("m_axis_tlast_converter_3");
+  mp_m_axis_tlast_converter_3 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tlast_converter_3");
   mp_m_axis_concat_tlast->in_port[3](m_axis_concat_tlast_out_3);
   mp_m_axis_concat_tlast->offset_port(3, 3);
   mp_m_axis_tlast_converter_3->scalar_in(m_m_axis_tlast_converter_3_signal);
@@ -2238,6 +2544,58 @@ design_1_axis_switch_0_1::design_1_axis_switch_0_1(const sc_core::sc_module_name
   mp_M03_AXIS_transactor->TLAST(m_m_axis_tlast_converter_3_signal);
   mp_M03_AXIS_transactor->CLK(aclk);
   mp_M03_AXIS_transactor->RST(aresetn);
+  // configure M04_AXIS_transactor
+    xsc::common_cpp::properties M04_AXIS_transactor_param_props;
+    M04_AXIS_transactor_param_props.addLong("TDATA_NUM_BYTES", "4");
+    M04_AXIS_transactor_param_props.addLong("TDEST_WIDTH", "0");
+    M04_AXIS_transactor_param_props.addLong("TID_WIDTH", "0");
+    M04_AXIS_transactor_param_props.addLong("TUSER_WIDTH", "0");
+    M04_AXIS_transactor_param_props.addLong("HAS_TREADY", "1");
+    M04_AXIS_transactor_param_props.addLong("HAS_TSTRB", "0");
+    M04_AXIS_transactor_param_props.addLong("HAS_TKEEP", "1");
+    M04_AXIS_transactor_param_props.addLong("HAS_TLAST", "1");
+    M04_AXIS_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    M04_AXIS_transactor_param_props.addLong("HAS_RESET", "1");
+    M04_AXIS_transactor_param_props.addFloat("PHASE", "0.0");
+    M04_AXIS_transactor_param_props.addString("CLK_DOMAIN", "design_1_processing_system7_0_0_FCLK_CLK0");
+    M04_AXIS_transactor_param_props.addString("LAYERED_METADATA", "undef");
+    M04_AXIS_transactor_param_props.addLong("TSIDE_BAND_1_WIDTH", "0");
+    M04_AXIS_transactor_param_props.addLong("TSIDE_BAND_2_WIDTH", "0");
+
+    mp_M04_AXIS_transactor = new xtlm::xaxis_xtlm2pin_t<20,5,5,5,1,1>("M04_AXIS_transactor", M04_AXIS_transactor_param_props);
+  mp_m_axis_tvalid_converter_4 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tvalid_converter_4");
+  mp_m_axis_concat_tvalid->in_port[4](m_axis_concat_tvalid_out_4);
+  mp_m_axis_concat_tvalid->offset_port(4, 4);
+  mp_m_axis_tvalid_converter_4->scalar_in(m_m_axis_tvalid_converter_4_signal);
+  mp_m_axis_tvalid_converter_4->vector_out(m_axis_concat_tvalid_out_4);
+  mp_M04_AXIS_transactor->TVALID(m_m_axis_tvalid_converter_4_signal);
+  mp_m_axis_tready_converter_4 = new xsc::common::vectorN2scalar_converter<5>("m_axis_tready_converter_4");
+  
+  mp_m_axis_split_tready->out_port[4](m_axis_split_tready_out_4);
+    mp_m_axis_split_tready->add_mask(4,5,4);
+  mp_m_axis_tready_converter_4->vector_in(m_axis_split_tready_out_4);
+  mp_m_axis_tready_converter_4->scalar_out(m_m_axis_tready_converter_4_signal);
+  mp_M04_AXIS_transactor->TREADY(m_m_axis_tready_converter_4_signal);
+  mp_m_axis_tdata_converter_4 = new xsc::common::vector2vector_converter<160,160>("m_axis_tdata_converter_4");
+  mp_m_axis_concat_tdata->in_port[4](m_axis_concat_tdata_out_4);
+  mp_m_axis_concat_tdata->offset_port(4, 128);
+  mp_m_axis_tdata_converter_4->vector_in(m_m_axis_tdata_converter_4_signal);
+  mp_m_axis_tdata_converter_4->vector_out(m_axis_concat_tdata_out_4);
+  mp_M04_AXIS_transactor->TDATA(m_m_axis_tdata_converter_4_signal);
+  mp_m_axis_tkeep_converter_4 = new xsc::common::vector2vector_converter<20,20>("m_axis_tkeep_converter_4");
+  mp_m_axis_concat_tkeep->in_port[4](m_axis_concat_tkeep_out_4);
+  mp_m_axis_concat_tkeep->offset_port(4, 16);
+  mp_m_axis_tkeep_converter_4->vector_in(m_m_axis_tkeep_converter_4_signal);
+  mp_m_axis_tkeep_converter_4->vector_out(m_axis_concat_tkeep_out_4);
+  mp_M04_AXIS_transactor->TKEEP(m_m_axis_tkeep_converter_4_signal);
+  mp_m_axis_tlast_converter_4 = new xsc::common::scalar2vectorN_converter<5>("m_axis_tlast_converter_4");
+  mp_m_axis_concat_tlast->in_port[4](m_axis_concat_tlast_out_4);
+  mp_m_axis_concat_tlast->offset_port(4, 4);
+  mp_m_axis_tlast_converter_4->scalar_in(m_m_axis_tlast_converter_4_signal);
+  mp_m_axis_tlast_converter_4->vector_out(m_axis_concat_tlast_out_4);
+  mp_M04_AXIS_transactor->TLAST(m_m_axis_tlast_converter_4_signal);
+  mp_M04_AXIS_transactor->CLK(aclk);
+  mp_M04_AXIS_transactor->RST(aresetn);
   // configure S_AXI_CTRL_transactor
     xsc::common_cpp::properties S_AXI_CTRL_transactor_param_props;
     S_AXI_CTRL_transactor_param_props.addLong("DATA_WIDTH", "32");
@@ -2299,6 +2657,7 @@ design_1_axis_switch_0_1::design_1_axis_switch_0_1(const sc_core::sc_module_name
   M01_AXIS_transactor_initiator_socket_stub = nullptr;
   M02_AXIS_transactor_initiator_socket_stub = nullptr;
   M03_AXIS_transactor_initiator_socket_stub = nullptr;
+  M04_AXIS_transactor_initiator_socket_stub = nullptr;
   S_AXI_CTRL_transactor_target_wr_socket_stub = nullptr;
   S_AXI_CTRL_transactor_target_rd_socket_stub = nullptr;
 
@@ -2371,6 +2730,19 @@ void design_1_axis_switch_0_1::before_end_of_elaboration()
     mp_M03_AXIS_transactor->disable_transactor();
   }
 
+  // configure 'M04_AXIS' transactor
+  if (xsc::utils::xsc_sim_manager::getInstanceParameterInt("design_1_axis_switch_0_1", "M04_AXIS_TLM_MODE") != 1)
+  {
+    mp_impl->M04_AXIS_INITIATOR_SOCKET->bind(*(mp_M04_AXIS_transactor->socket));
+  
+  }
+  else
+  {
+    M04_AXIS_transactor_initiator_socket_stub = new xtlm::xtlm_axis_initiator_stub("socket",0);
+    M04_AXIS_transactor_initiator_socket_stub->bind(*(mp_M04_AXIS_transactor->socket));
+    mp_M04_AXIS_transactor->disable_transactor();
+  }
+
   // configure 'S_AXI_CTRL' transactor
   if (xsc::utils::xsc_sim_manager::getInstanceParameterInt("design_1_axis_switch_0_1", "S_AXI_CTRL_TLM_MODE") != 1)
   {
@@ -2427,6 +2799,13 @@ design_1_axis_switch_0_1::~design_1_axis_switch_0_1()
   delete mp_m_axis_tkeep_converter_3;
   delete mp_m_axis_tlast_converter_3;
 
+  delete mp_M04_AXIS_transactor;
+  delete mp_m_axis_tvalid_converter_4;
+  delete mp_m_axis_tready_converter_4;
+  delete mp_m_axis_tdata_converter_4;
+  delete mp_m_axis_tkeep_converter_4;
+  delete mp_m_axis_tlast_converter_4;
+
   delete mp_S_AXI_CTRL_transactor;
 
   delete mp_m_axis_concat_tdata;
@@ -2446,6 +2825,6 @@ XMSC_MODULE_EXPORT(design_1_axis_switch_0_1);
 
 #ifdef RIVIERA
 SC_MODULE_EXPORT(design_1_axis_switch_0_1);
-SC_REGISTER_BV(128);
+SC_REGISTER_BV(160);
 #endif
 

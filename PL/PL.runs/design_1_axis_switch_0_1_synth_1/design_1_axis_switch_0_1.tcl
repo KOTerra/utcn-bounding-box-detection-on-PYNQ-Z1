@@ -56,7 +56,6 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "design_1_axis_switch_0_1_synth_1" START { ROLLUP_AUTO }
-set_msg_config -id {Common 17-41} -limit 10000000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -76,7 +75,7 @@ set_property ip_output_repo d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-b
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.srcs/sources_1/bd/design_1/ip/design_1_axis_switch_0_1/design_1_axis_switch_0_1.xci
+read_ip -quiet D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.srcs/sources_1/bd/design_1/ip/design_1_axis_switch_0_1/design_1_axis_switch_0_1.xci
 set_property used_in_implementation false [get_files -all d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ip/design_1_axis_switch_0_1/design_1_axis_switch_0_1_ooc.xdc]
 
 OPTRACE "Adding files" END { }

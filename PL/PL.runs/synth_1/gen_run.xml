@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1763219406" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/design_1_wrapper.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1763289277" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/design_1_wrapper.dcp">
   <File Type="PA-TCL" Name="top.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_reports.tcl"/>
@@ -12,6 +12,12 @@
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/ccl_slice_core.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ccl_relabel_core.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -76,4 +82,8 @@
   <BlockFileSet Type="BlockSrcs" Name="design_1_ccl_slice_core_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_ccl_slice_core_3_0"/>
   <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_ccl_relabel_core_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_s00_mmu_0"/>
 </GenRun>

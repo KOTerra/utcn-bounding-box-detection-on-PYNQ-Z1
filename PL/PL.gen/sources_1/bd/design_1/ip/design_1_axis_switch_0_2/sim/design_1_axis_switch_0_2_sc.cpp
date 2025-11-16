@@ -61,8 +61,8 @@ design_1_axis_switch_0_2_sc::design_1_axis_switch_0_2_sc(const sc_core::sc_modul
 
   // initialize module
     xsc::common_cpp::properties model_param_props;
-    model_param_props.addLong("C_NUM_SI_SLOTS", "4");
-    model_param_props.addLong("C_LOG_SI_SLOTS", "2");
+    model_param_props.addLong("C_NUM_SI_SLOTS", "5");
+    model_param_props.addLong("C_LOG_SI_SLOTS", "3");
     model_param_props.addLong("C_NUM_MI_SLOTS", "1");
     model_param_props.addLong("C_AXIS_TDATA_WIDTH", "32");
     model_param_props.addLong("C_AXIS_TID_WIDTH", "1");
@@ -81,7 +81,7 @@ design_1_axis_switch_0_2_sc::design_1_axis_switch_0_2_sc(const sc_core::sc_modul
     model_param_props.addLong("C_COMMON_CLOCK", "0");
     model_param_props.addString("C_FAMILY", "zynq");
     model_param_props.addBitString("C_AXIS_SIGNAL_SET", "00000000000000000000000001010011", 32);
-    model_param_props.addBitString("C_M_AXIS_CONNECTIVITY_ARRAY", "1111", 4);
+    model_param_props.addBitString("C_M_AXIS_CONNECTIVITY_ARRAY", "11111", 5);
     model_param_props.addBitString("C_M_AXIS_BASETDEST_ARRAY", "00", 2);
     model_param_props.addBitString("C_M_AXIS_HIGHTDEST_ARRAY", "00", 2);
     model_param_props.addString("COMPONENT_NAME", "design_1_axis_switch_0_2");
@@ -94,6 +94,7 @@ design_1_axis_switch_0_2_sc::design_1_axis_switch_0_2_sc(const sc_core::sc_modul
   S01_AXIS_TARGET_SOCKET = mp_impl->S01_AXIS_TARGET_SOCKET;
   S02_AXIS_TARGET_SOCKET = mp_impl->S02_AXIS_TARGET_SOCKET;
   S03_AXIS_TARGET_SOCKET = mp_impl->S03_AXIS_TARGET_SOCKET;
+  S04_AXIS_TARGET_SOCKET = mp_impl->S04_AXIS_TARGET_SOCKET;
 }
 
 design_1_axis_switch_0_2_sc::~design_1_axis_switch_0_2_sc()

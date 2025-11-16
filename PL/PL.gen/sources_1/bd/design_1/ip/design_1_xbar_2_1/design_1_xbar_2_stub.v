@@ -2,10 +2,10 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-// Date        : Sat Nov 15 16:29:01 2025
+// Date        : Sun Nov 16 12:36:13 2025
 // Host        : POWERSLAVE running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub -rename_top design_1_xbar_2 -prefix
-//               design_1_xbar_2_ design_1_xbar_2_stub.v
+// Command     : write_verilog -force -mode synth_stub
+//               d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ip/design_1_xbar_2_1/design_1_xbar_2_stub.v
 // Design      : design_1_xbar_2
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1
@@ -22,29 +22,29 @@ module design_1_xbar_2(aclk, aresetn, s_axi_awaddr, s_axi_awprot,
   m_axi_awprot, m_axi_awvalid, m_axi_awready, m_axi_wdata, m_axi_wstrb, m_axi_wvalid, 
   m_axi_wready, m_axi_bresp, m_axi_bvalid, m_axi_bready, m_axi_araddr, m_axi_arprot, 
   m_axi_arvalid, m_axi_arready, m_axi_rdata, m_axi_rresp, m_axi_rvalid, m_axi_rready)
-/* synthesis syn_black_box black_box_pad_pin="aresetn,s_axi_awaddr[127:0],s_axi_awprot[11:0],s_axi_awvalid[3:0],s_axi_awready[3:0],s_axi_wdata[127:0],s_axi_wstrb[15:0],s_axi_wvalid[3:0],s_axi_wready[3:0],s_axi_bresp[7:0],s_axi_bvalid[3:0],s_axi_bready[3:0],s_axi_araddr[127:0],s_axi_arprot[11:0],s_axi_arvalid[3:0],s_axi_arready[3:0],s_axi_rdata[127:0],s_axi_rresp[7:0],s_axi_rvalid[3:0],s_axi_rready[3:0],m_axi_awaddr[31:0],m_axi_awprot[2:0],m_axi_awvalid[0:0],m_axi_awready[0:0],m_axi_wdata[31:0],m_axi_wstrb[3:0],m_axi_wvalid[0:0],m_axi_wready[0:0],m_axi_bresp[1:0],m_axi_bvalid[0:0],m_axi_bready[0:0],m_axi_araddr[31:0],m_axi_arprot[2:0],m_axi_arvalid[0:0],m_axi_arready[0:0],m_axi_rdata[31:0],m_axi_rresp[1:0],m_axi_rvalid[0:0],m_axi_rready[0:0]" */
+/* synthesis syn_black_box black_box_pad_pin="aresetn,s_axi_awaddr[159:0],s_axi_awprot[14:0],s_axi_awvalid[4:0],s_axi_awready[4:0],s_axi_wdata[159:0],s_axi_wstrb[19:0],s_axi_wvalid[4:0],s_axi_wready[4:0],s_axi_bresp[9:0],s_axi_bvalid[4:0],s_axi_bready[4:0],s_axi_araddr[159:0],s_axi_arprot[14:0],s_axi_arvalid[4:0],s_axi_arready[4:0],s_axi_rdata[159:0],s_axi_rresp[9:0],s_axi_rvalid[4:0],s_axi_rready[4:0],m_axi_awaddr[31:0],m_axi_awprot[2:0],m_axi_awvalid[0:0],m_axi_awready[0:0],m_axi_wdata[31:0],m_axi_wstrb[3:0],m_axi_wvalid[0:0],m_axi_wready[0:0],m_axi_bresp[1:0],m_axi_bvalid[0:0],m_axi_bready[0:0],m_axi_araddr[31:0],m_axi_arprot[2:0],m_axi_arvalid[0:0],m_axi_arready[0:0],m_axi_rdata[31:0],m_axi_rresp[1:0],m_axi_rvalid[0:0],m_axi_rready[0:0]" */
 /* synthesis syn_force_seq_prim="aclk" */;
   input aclk /* synthesis syn_isclock = 1 */;
   input aresetn;
-  input [127:0]s_axi_awaddr;
-  input [11:0]s_axi_awprot;
-  input [3:0]s_axi_awvalid;
-  output [3:0]s_axi_awready;
-  input [127:0]s_axi_wdata;
-  input [15:0]s_axi_wstrb;
-  input [3:0]s_axi_wvalid;
-  output [3:0]s_axi_wready;
-  output [7:0]s_axi_bresp;
-  output [3:0]s_axi_bvalid;
-  input [3:0]s_axi_bready;
-  input [127:0]s_axi_araddr;
-  input [11:0]s_axi_arprot;
-  input [3:0]s_axi_arvalid;
-  output [3:0]s_axi_arready;
-  output [127:0]s_axi_rdata;
-  output [7:0]s_axi_rresp;
-  output [3:0]s_axi_rvalid;
-  input [3:0]s_axi_rready;
+  input [159:0]s_axi_awaddr;
+  input [14:0]s_axi_awprot;
+  input [4:0]s_axi_awvalid;
+  output [4:0]s_axi_awready;
+  input [159:0]s_axi_wdata;
+  input [19:0]s_axi_wstrb;
+  input [4:0]s_axi_wvalid;
+  output [4:0]s_axi_wready;
+  output [9:0]s_axi_bresp;
+  output [4:0]s_axi_bvalid;
+  input [4:0]s_axi_bready;
+  input [159:0]s_axi_araddr;
+  input [14:0]s_axi_arprot;
+  input [4:0]s_axi_arvalid;
+  output [4:0]s_axi_arready;
+  output [159:0]s_axi_rdata;
+  output [9:0]s_axi_rresp;
+  output [4:0]s_axi_rvalid;
+  input [4:0]s_axi_rready;
   output [31:0]m_axi_awaddr;
   output [2:0]m_axi_awprot;
   output [0:0]m_axi_awvalid;

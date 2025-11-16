@@ -357,10 +357,10 @@
                 "BP": "C_S_AXI_BASEADDR",
                 "HP": "C_S_AXI_HIGHADDR",
                 "MA": "m_axi_lut",
-                "MX": "/ccl_slice_core_0",
+                "MX": "/ccl_relabel_core_0",
                 "MI": "m_axi_lut",
                 "MS": "SEG_axi_bram_ctrl_0_Mem0",
-                "MV": "xilinx.com:module_ref:ccl_slice_core:1.0",
+                "MV": "xilinx.com:module_ref:ccl_relabel_core:1.0",
                 "SX": "/axi_bram_ctrl_0",
                 "SI": "S_AXI",
                 "SS": "Mem0",
@@ -375,7 +375,7 @@
                 "BP": "C_S_AXI_BASEADDR",
                 "HP": "C_S_AXI_HIGHADDR",
                 "MA": "m_axi_lut",
-                "MX": "/ccl_slice_core_1",
+                "MX": "/ccl_slice_core_0",
                 "MI": "m_axi_lut",
                 "MS": "SEG_axi_bram_ctrl_0_Mem0",
                 "MV": "xilinx.com:module_ref:ccl_slice_core:1.0",
@@ -393,7 +393,7 @@
                 "BP": "C_S_AXI_BASEADDR",
                 "HP": "C_S_AXI_HIGHADDR",
                 "MA": "m_axi_lut",
-                "MX": "/ccl_slice_core_2",
+                "MX": "/ccl_slice_core_1",
                 "MI": "m_axi_lut",
                 "MS": "SEG_axi_bram_ctrl_0_Mem0",
                 "MV": "xilinx.com:module_ref:ccl_slice_core:1.0",
@@ -405,6 +405,24 @@
                 "TU": "memory"
             },
             "V15": {
+                "VT": "AC",
+                "BA": "0xC0000000",
+                "HA": "0xC0001FFF",
+                "BP": "C_S_AXI_BASEADDR",
+                "HP": "C_S_AXI_HIGHADDR",
+                "MA": "m_axi_lut",
+                "MX": "/ccl_slice_core_2",
+                "MI": "m_axi_lut",
+                "MS": "SEG_axi_bram_ctrl_0_Mem0",
+                "MV": "xilinx.com:module_ref:ccl_slice_core:1.0",
+                "SX": "/axi_bram_ctrl_0",
+                "SI": "S_AXI",
+                "SS": "Mem0",
+                "SV": "xilinx.com:ip:axi_bram_ctrl:4.1",
+                "TM": "both",
+                "TU": "memory"
+            },
+            "V16": {
                 "VT": "AC",
                 "BA": "0xC0000000",
                 "HA": "0xC0001FFF",
@@ -494,6 +512,11 @@
             },
             {
                 "src": "V15",
+                "trg": "V2",
+                "EH": "2"
+            },
+            {
+                "src": "V16",
                 "trg": "V2",
                 "EH": "2"
             }

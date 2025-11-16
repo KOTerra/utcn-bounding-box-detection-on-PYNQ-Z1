@@ -68,11 +68,11 @@ typedef bit bit_as_bool;
 module design_1_axis_switch_0_2 (
   input bit_as_bool aclk,
   input bit_as_bool aresetn,
-  input bit [3 : 0] s_axis_tvalid,
-  output bit [3 : 0] s_axis_tready,
-  input bit [127 : 0] s_axis_tdata,
-  input bit [3 : 0] s_axis_tlast,
-  input bit [7 : 0] s_axis_tdest,
+  input bit [4 : 0] s_axis_tvalid,
+  output bit [4 : 0] s_axis_tready,
+  input bit [159 : 0] s_axis_tdata,
+  input bit [4 : 0] s_axis_tlast,
+  input bit [9 : 0] s_axis_tdest,
   output bit [0 : 0] m_axis_tvalid,
   input bit [0 : 0] m_axis_tready,
   output bit [31 : 0] m_axis_tdata,
@@ -107,11 +107,11 @@ module design_1_axis_switch_0_2 (aclk,aresetn,s_axis_tvalid,s_axis_tready,s_axis
 *);
   input bit aclk;
   input bit aresetn;
-  input bit [3 : 0] s_axis_tvalid;
-  output wire [3 : 0] s_axis_tready;
-  input bit [127 : 0] s_axis_tdata;
-  input bit [3 : 0] s_axis_tlast;
-  input bit [7 : 0] s_axis_tdest;
+  input bit [4 : 0] s_axis_tvalid;
+  output wire [4 : 0] s_axis_tready;
+  input bit [159 : 0] s_axis_tdata;
+  input bit [4 : 0] s_axis_tlast;
+  input bit [9 : 0] s_axis_tdest;
   output wire [0 : 0] m_axis_tvalid;
   input bit [0 : 0] m_axis_tready;
   output wire [31 : 0] m_axis_tdata;

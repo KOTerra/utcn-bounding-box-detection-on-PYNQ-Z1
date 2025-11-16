@@ -97,7 +97,6 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -125,7 +124,7 @@ OPTRACE "add files" START { }
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
   add_files D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.srcs/sources_1/bd/design_1/design_1.bd
-  read_ip -quiet d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+  read_ip -quiet D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
 OPTRACE "read constraints: implementation" END { }

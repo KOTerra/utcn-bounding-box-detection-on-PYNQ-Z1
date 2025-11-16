@@ -96,7 +96,7 @@ public:
   xtlm::xtlm_axis_initiator_socket *M15_AXIS_INITIATOR_SOCKET;
 
   //Decode Error Output
-  sc_core::sc_out<sc_dt::sc_bv<4> > s_decode_err;
+  sc_core::sc_out<sc_dt::sc_bv<5> > s_decode_err;
   xsc::utils::xsc_stub_port s_req_suppress;
 
   //main clock and reset

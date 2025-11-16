@@ -2,7 +2,7 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-// Date        : Sat Nov 15 16:28:52 2025
+// Date        : Sun Nov 16 12:35:58 2025
 // Host        : POWERSLAVE running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ip/design_1_axis_switch_0_2/design_1_axis_switch_0_2_stub.v
@@ -22,16 +22,16 @@ module design_1_axis_switch_0_2(aclk, aresetn, s_axis_tvalid, s_axis_tready,
   s_axi_ctrl_wdata, s_axi_ctrl_bvalid, s_axi_ctrl_bready, s_axi_ctrl_bresp, 
   s_axi_ctrl_arvalid, s_axi_ctrl_arready, s_axi_ctrl_araddr, s_axi_ctrl_rvalid, 
   s_axi_ctrl_rready, s_axi_ctrl_rdata, s_axi_ctrl_rresp)
-/* synthesis syn_black_box black_box_pad_pin="aresetn,s_axis_tvalid[3:0],s_axis_tready[3:0],s_axis_tdata[127:0],s_axis_tlast[3:0],s_axis_tdest[7:0],m_axis_tvalid[0:0],m_axis_tready[0:0],m_axis_tdata[31:0],m_axis_tlast[0:0],m_axis_tdest[1:0],s_axi_ctrl_aresetn,s_axi_ctrl_awvalid,s_axi_ctrl_awready,s_axi_ctrl_awaddr[6:0],s_axi_ctrl_wvalid,s_axi_ctrl_wready,s_axi_ctrl_wdata[31:0],s_axi_ctrl_bvalid,s_axi_ctrl_bready,s_axi_ctrl_bresp[1:0],s_axi_ctrl_arvalid,s_axi_ctrl_arready,s_axi_ctrl_araddr[6:0],s_axi_ctrl_rvalid,s_axi_ctrl_rready,s_axi_ctrl_rdata[31:0],s_axi_ctrl_rresp[1:0]" */
+/* synthesis syn_black_box black_box_pad_pin="aresetn,s_axis_tvalid[4:0],s_axis_tready[4:0],s_axis_tdata[159:0],s_axis_tlast[4:0],s_axis_tdest[9:0],m_axis_tvalid[0:0],m_axis_tready[0:0],m_axis_tdata[31:0],m_axis_tlast[0:0],m_axis_tdest[1:0],s_axi_ctrl_aresetn,s_axi_ctrl_awvalid,s_axi_ctrl_awready,s_axi_ctrl_awaddr[6:0],s_axi_ctrl_wvalid,s_axi_ctrl_wready,s_axi_ctrl_wdata[31:0],s_axi_ctrl_bvalid,s_axi_ctrl_bready,s_axi_ctrl_bresp[1:0],s_axi_ctrl_arvalid,s_axi_ctrl_arready,s_axi_ctrl_araddr[6:0],s_axi_ctrl_rvalid,s_axi_ctrl_rready,s_axi_ctrl_rdata[31:0],s_axi_ctrl_rresp[1:0]" */
 /* synthesis syn_force_seq_prim="aclk" */
 /* synthesis syn_force_seq_prim="s_axi_ctrl_aclk" */;
   input aclk /* synthesis syn_isclock = 1 */;
   input aresetn;
-  input [3:0]s_axis_tvalid;
-  output [3:0]s_axis_tready;
-  input [127:0]s_axis_tdata;
-  input [3:0]s_axis_tlast;
-  input [7:0]s_axis_tdest;
+  input [4:0]s_axis_tvalid;
+  output [4:0]s_axis_tready;
+  input [159:0]s_axis_tdata;
+  input [4:0]s_axis_tlast;
+  input [9:0]s_axis_tdest;
   output [0:0]m_axis_tvalid;
   input [0:0]m_axis_tready;
   output [31:0]m_axis_tdata;

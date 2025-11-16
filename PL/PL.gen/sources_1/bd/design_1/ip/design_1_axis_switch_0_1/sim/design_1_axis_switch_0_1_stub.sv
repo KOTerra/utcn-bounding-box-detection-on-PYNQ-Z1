@@ -73,11 +73,11 @@ module design_1_axis_switch_0_1 (
   input bit [31 : 0] s_axis_tdata,
   input bit [3 : 0] s_axis_tkeep,
   input bit [0 : 0] s_axis_tlast,
-  output bit [3 : 0] m_axis_tvalid,
-  input bit [3 : 0] m_axis_tready,
-  output bit [127 : 0] m_axis_tdata,
-  output bit [15 : 0] m_axis_tkeep,
-  output bit [3 : 0] m_axis_tlast,
+  output bit [4 : 0] m_axis_tvalid,
+  input bit [4 : 0] m_axis_tready,
+  output bit [159 : 0] m_axis_tdata,
+  output bit [19 : 0] m_axis_tkeep,
+  output bit [4 : 0] m_axis_tlast,
   input bit_as_bool s_axi_ctrl_aclk,
   input bit_as_bool s_axi_ctrl_aresetn,
   input bit_as_bool s_axi_ctrl_awvalid,
@@ -112,11 +112,11 @@ module design_1_axis_switch_0_1 (aclk,aresetn,s_axis_tvalid,s_axis_tready,s_axis
   input bit [31 : 0] s_axis_tdata;
   input bit [3 : 0] s_axis_tkeep;
   input bit [0 : 0] s_axis_tlast;
-  output wire [3 : 0] m_axis_tvalid;
-  input bit [3 : 0] m_axis_tready;
-  output wire [127 : 0] m_axis_tdata;
-  output wire [15 : 0] m_axis_tkeep;
-  output wire [3 : 0] m_axis_tlast;
+  output wire [4 : 0] m_axis_tvalid;
+  input bit [4 : 0] m_axis_tready;
+  output wire [159 : 0] m_axis_tdata;
+  output wire [19 : 0] m_axis_tkeep;
+  output wire [4 : 0] m_axis_tlast;
   input bit s_axi_ctrl_aclk;
   input bit s_axi_ctrl_aresetn;
   input bit s_axi_ctrl_awvalid;

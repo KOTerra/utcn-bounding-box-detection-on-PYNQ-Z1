@@ -63,7 +63,7 @@ design_1_axis_switch_0_1_sc::design_1_axis_switch_0_1_sc(const sc_core::sc_modul
     xsc::common_cpp::properties model_param_props;
     model_param_props.addLong("C_NUM_SI_SLOTS", "1");
     model_param_props.addLong("C_LOG_SI_SLOTS", "1");
-    model_param_props.addLong("C_NUM_MI_SLOTS", "4");
+    model_param_props.addLong("C_NUM_MI_SLOTS", "5");
     model_param_props.addLong("C_AXIS_TDATA_WIDTH", "32");
     model_param_props.addLong("C_AXIS_TID_WIDTH", "1");
     model_param_props.addLong("C_AXIS_TDEST_WIDTH", "1");
@@ -74,16 +74,16 @@ design_1_axis_switch_0_1_sc::design_1_axis_switch_0_1_sc(const sc_core::sc_modul
     model_param_props.addLong("C_INCLUDE_ARBITER", "1");
     model_param_props.addLong("C_ARB_ALGORITHM", "0");
     model_param_props.addLong("C_OUTPUT_REG", "0");
-    model_param_props.addLong("C_DECODER_REG", "0");
+    model_param_props.addLong("C_DECODER_REG", "1");
     model_param_props.addLong("C_ROUTING_MODE", "1");
     model_param_props.addLong("C_S_AXI_CTRL_ADDR_WIDTH", "7");
     model_param_props.addLong("C_S_AXI_CTRL_DATA_WIDTH", "32");
     model_param_props.addLong("C_COMMON_CLOCK", "0");
     model_param_props.addString("C_FAMILY", "zynq");
     model_param_props.addBitString("C_AXIS_SIGNAL_SET", "00000000000000000000000000011011", 32);
-    model_param_props.addBitString("C_M_AXIS_CONNECTIVITY_ARRAY", "1111", 4);
-    model_param_props.addBitString("C_M_AXIS_BASETDEST_ARRAY", "1010", 4);
-    model_param_props.addBitString("C_M_AXIS_HIGHTDEST_ARRAY", "1010", 4);
+    model_param_props.addBitString("C_M_AXIS_CONNECTIVITY_ARRAY", "11111", 5);
+    model_param_props.addBitString("C_M_AXIS_BASETDEST_ARRAY", "01010", 5);
+    model_param_props.addBitString("C_M_AXIS_HIGHTDEST_ARRAY", "01010", 5);
     model_param_props.addString("COMPONENT_NAME", "design_1_axis_switch_0_1");
 
   mp_impl = new design_1_axis_switch_0_1_core("inst", model_param_props);
@@ -94,6 +94,7 @@ design_1_axis_switch_0_1_sc::design_1_axis_switch_0_1_sc(const sc_core::sc_modul
   M01_AXIS_INITIATOR_SOCKET = mp_impl->M01_AXIS_INITIATOR_SOCKET;
   M02_AXIS_INITIATOR_SOCKET = mp_impl->M02_AXIS_INITIATOR_SOCKET;
   M03_AXIS_INITIATOR_SOCKET = mp_impl->M03_AXIS_INITIATOR_SOCKET;
+  M04_AXIS_INITIATOR_SOCKET = mp_impl->M04_AXIS_INITIATOR_SOCKET;
 }
 
 design_1_axis_switch_0_1_sc::~design_1_axis_switch_0_1_sc()

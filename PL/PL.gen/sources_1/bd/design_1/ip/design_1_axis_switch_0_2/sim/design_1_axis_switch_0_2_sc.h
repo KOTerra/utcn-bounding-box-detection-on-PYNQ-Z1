@@ -81,6 +81,7 @@ public:
   xtlm::xtlm_axis_target_socket* S01_AXIS_TARGET_SOCKET;
   xtlm::xtlm_axis_target_socket* S02_AXIS_TARGET_SOCKET;
   xtlm::xtlm_axis_target_socket* S03_AXIS_TARGET_SOCKET;
+  xtlm::xtlm_axis_target_socket* S04_AXIS_TARGET_SOCKET;
 
   // module socket-to-socket TLM interfaces
 
