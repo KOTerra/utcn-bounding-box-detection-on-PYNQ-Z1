@@ -4,10 +4,10 @@ use ieee.numeric_std.all;
 
 entity ccl_slice_core is
     generic (
-        G_AXIS_IN_WIDTH  : integer := 32;
-        G_AXIS_OUT_WIDTH : integer := 32;
-        G_MAX_WIDTH_PIX  : integer := 512;
-        G_MAX_HEIGHT_PIX : integer := 128
+        G_AXIS_IN_WIDTH  : integer := 32;   -- packed binary pixels
+        G_AXIS_OUT_WIDTH : integer := 32;   -- 32-bit label out
+        G_MAX_WIDTH_PIX  : integer := 512;  -- slice width
+        G_MAX_HEIGHT_PIX : integer := 128   -- slice height
     );
     port (
         ---------------------------------------------------------------------
@@ -17,7 +17,17 @@ entity ccl_slice_core is
         aclkrst_n    : in  std_logic;
 
         ---------------------------------------------------------------------
+        -- Slice ID (2-bit) from BD Constant
+        ---------------------------------------------------------------------
+        slice_id_in  : in  std_logic_vector(1 downto 0);
+
+        ---------------------------------------------------------------------
         -- AXI4-Lite slave (control)
+        --  0x00 : CONTROL (bit0 = start)
+        --  0x04 : STATUS  (bit0 = done)
+        --  0x08 : WIDTH   (pixels)
+        --  0x0C : HEIGHT  (rows in this slice)
+        --  0x10 : SLICE_ID (read-only, mirrors slice_id_in)
         ---------------------------------------------------------------------
         s_axi_awaddr  : in  std_logic_vector(31 downto 0);
         s_axi_awvalid : in  std_logic;
@@ -42,7 +52,7 @@ entity ccl_slice_core is
         s_axi_rready  : in  std_logic;
 
         ---------------------------------------------------------------------
-        -- AXIS Slave (pixel input)
+        -- AXIS Slave (binary pixels, packed in bits)
         ---------------------------------------------------------------------
         s_axis_tdata  : in  std_logic_vector(G_AXIS_IN_WIDTH-1 downto 0);
         s_axis_tvalid : in  std_logic;
@@ -50,7 +60,7 @@ entity ccl_slice_core is
         s_axis_tlast  : in  std_logic;
 
         ---------------------------------------------------------------------
-        -- AXIS Master (label output)
+        -- AXIS Master (labels, one 32-bit per pixel)
         ---------------------------------------------------------------------
         m_axis_tdata  : out std_logic_vector(G_AXIS_OUT_WIDTH-1 downto 0);
         m_axis_tvalid : out std_logic;
@@ -63,7 +73,8 @@ entity ccl_slice_core is
         irq_done      : out std_logic;
 
         ---------------------------------------------------------------------
-        -- AXI4 Master (dummy for LUT)
+        -- AXI4 Master (towards shared BRAM LUT via axi_bram_ctrl)
+        -- we only do WRITEs of (hi_label, lo_label) pairs
         ---------------------------------------------------------------------
         m_axi_lut_awaddr  : out std_logic_vector(31 downto 0);
         m_axi_lut_awvalid : out std_logic;
@@ -92,9 +103,9 @@ architecture rtl of ccl_slice_core is
     -------------------------------------------------------------------------
     signal reg_control   : std_logic_vector(31 downto 0) := (others => '0');
     signal reg_status    : std_logic_vector(31 downto 0) := (others => '0');
-    signal reg_width     : std_logic_vector(31 downto 0) := x"00000200";
-    signal reg_height    : std_logic_vector(31 downto 0) := x"00000080";
-    signal reg_slice_id  : std_logic_vector(31 downto 0) := (others => '0');
+    signal reg_width     : std_logic_vector(31 downto 0) := x"00000200"; --512
+    signal reg_height    : std_logic_vector(31 downto 0) := x"00000080"; --128
+    signal reg_slice_id  : std_logic_vector(31 downto 0) := (others => '0'); -- read-only mirror
 
     constant AXIL_ALWAYS_READY : boolean := true;
 
@@ -102,11 +113,12 @@ architecture rtl of ccl_slice_core is
     -- Stream control
     -------------------------------------------------------------------------
     signal s_axis_tready_int : std_logic := '0';
-    signal in_fire   : std_logic;
-    signal out_fire  : std_logic;
+    signal in_fire           : std_logic;
+    signal out_fire          : std_logic;
 
     signal out_valid_reg : std_logic := '0';
-    signal out_data_reg  : std_logic_vector(G_AXIS_OUT_WIDTH-1 downto 0) := (others => '0');
+    signal out_data_reg  : std_logic_vector(G_AXIS_OUT_WIDTH-1 downto 0)
+                         := (others => '0');
     signal out_last_reg  : std_logic := '0';
 
     -------------------------------------------------------------------------
@@ -122,26 +134,38 @@ architecture rtl of ccl_slice_core is
     signal local_label_counter : unsigned(15 downto 0) := (others => '0');
     signal global_label_offset : unsigned(31 downto 0) := (others => '0');
 
-    signal unpack_shift_reg : std_logic_vector(G_AXIS_IN_WIDTH-1 downto 0) := (others => '0');
+    -- unpack 32 bits -> 32 pixels (1 pixel per clock)
+    signal unpack_shift_reg : std_logic_vector(G_AXIS_IN_WIDTH-1 downto 0)
+                            := (others => '0');
     signal unpack_bits_left : integer range 0 to G_AXIS_IN_WIDTH := 0;
 
-    signal pixel_x     : integer range 0 to G_MAX_WIDTH_PIX := 0;
+    -- coordinates
+    signal pixel_x     : integer range 0 to G_MAX_WIDTH_PIX  := 0;
     signal pixel_y     : integer range 0 to G_MAX_HEIGHT_PIX := 0;
 
-begin
+    -- label of left neighbour (previous pixel in the same row)
+    signal last_left_lbl : unsigned(15 downto 0) := (others => '0');
 
-    ----------------------------------------------------------------------------
-    -- Tie-offs for unused AXI master (m_axi_lut)
-    ----------------------------------------------------------------------------
-    m_axi_lut_awaddr  <= (others => '0');
-    m_axi_lut_awvalid <= '0';
-    m_axi_lut_wdata   <= (others => '0');
-    m_axi_lut_wstrb   <= (others => '0');
-    m_axi_lut_wvalid  <= '0';
-    m_axi_lut_bready  <= '1';
-    m_axi_lut_araddr  <= (others => '0');
-    m_axi_lut_arvalid <= '0';
-    m_axi_lut_rready  <= '1';
+    -------------------------------------------------------------------------
+    -- Single line buffer for labels of previous row (implemented as BRAM)
+    -------------------------------------------------------------------------
+    type line_t is array (0 to G_MAX_WIDTH_PIX-1) of std_logic_vector(15 downto 0);
+    signal line_prev : line_t;
+    attribute ram_style : string;
+    attribute ram_style of line_prev : signal is "block";
+
+    -------------------------------------------------------------------------
+    -- LUT write interface bookkeeping
+    -------------------------------------------------------------------------
+    signal lut_awaddr_reg   : std_logic_vector(31 downto 0) := (others => '0');
+    signal lut_wdata_reg    : std_logic_vector(31 downto 0) := (others => '0');
+    signal lut_wstrb_reg    : std_logic_vector(3 downto 0)  := (others => '0');
+    signal lut_awvalid_reg  : std_logic := '0';
+    signal lut_wvalid_reg   : std_logic := '0';
+    signal lut_write_pending: std_logic := '0';
+    signal lut_write_ptr    : unsigned(15 downto 0) := (others => '0');
+
+begin
 
     ----------------------------------------------------------------------------
     -- AXI-Lite simple register handling
@@ -154,60 +178,63 @@ begin
     s_axi_rvalid  <= '1' when AXIL_ALWAYS_READY else '0';
     s_axi_rresp   <= "00";
 
+    -- Single process for control + status (avoids multiple drivers)
     process(aclkrst_clk)
     begin
         if rising_edge(aclkrst_clk) then
             if aclkrst_n = '0' then
-                reg_control  <= (others => '0');
-                reg_width    <= std_logic_vector(to_unsigned(512,32));
-                reg_height   <= std_logic_vector(to_unsigned(128,32));
-                reg_slice_id <= (others => '0');
+                reg_control <= (others => '0');
+                reg_status  <= (others => '0');
+                reg_width   <= x"00000200";
+                reg_height  <= x"00000080";
             else
-                if s_axi_awvalid = '1' and s_axi_wvalid = '1' then
-                    case s_axi_awaddr(7 downto 2) is
-                        when "000000" => reg_control  <= s_axi_wdata;
-                        when "000010" => reg_width    <= s_axi_wdata;
-                        when "000011" => reg_height   <= s_axi_wdata;
-                        when "000100" => reg_slice_id <= s_axi_wdata;
-                        when others   => null;
+                -- SW writes
+                if (s_axi_awvalid = '1') and (s_axi_wvalid = '1') then
+                    case s_axi_awaddr(5 downto 2) is
+                        when "0000" => reg_control <= s_axi_wdata;
+                        when "0001" => reg_status  <= s_axi_wdata; -- SW may clear/set bits
+                        when "0010" => reg_width   <= s_axi_wdata;
+                        when "0011" => reg_height  <= s_axi_wdata;
+                        when others => null;
                     end case;
                 end if;
-            end if;
-        end if;
-    end process;
 
-    with s_axi_araddr(7 downto 2) select
-        s_axi_rdata <= reg_control when "000000",
-                       reg_status  when "000001",
-                       reg_width   when "000010",
-                       reg_height  when "000011",
-                       reg_slice_id when "000100",
-                       x"00000000" when others;
-
-    ----------------------------------------------------------------------------
-    -- Status register: updated in one process only (fixes multiple drivers)
-    ----------------------------------------------------------------------------
-    process(aclkrst_clk)
-    begin
-        if rising_edge(aclkrst_clk) then
-            if aclkrst_n = '0' then
-                reg_status <= (others => '0');
-            else
+                -- HW overrides done flag bit0
                 if proc_state = DONE then
-                    reg_status(0) <= '1';  -- done flag
-                elsif proc_state = IDLE then
-                    if reg_control(0) = '1' then
-                        reg_status(0) <= '0'; -- clear done at start
-                    end if;
+                    reg_status(0) <= '1';
+                elsif (proc_state = IDLE) and (reg_control(0) = '1') then
+                    reg_status(0) <= '0';
                 end if;
             end if;
         end if;
     end process;
+
+    -- read-only mirror of slice_id_in for AXI readback
+    process(aclkrst_clk)
+    begin
+        if rising_edge(aclkrst_clk) then
+            if aclkrst_n = '0' then
+                reg_slice_id <= (others => '0');
+            else
+                reg_slice_id <= (others => '0');
+                reg_slice_id(1 downto 0) <= slice_id_in;
+            end if;
+        end if;
+    end process;
+
+    -- reads
+    with s_axi_araddr(5 downto 2) select
+        s_axi_rdata <= reg_control  when "0000",
+                       reg_status   when "0001",
+                       reg_width    when "0010",
+                       reg_height   when "0011",
+                       reg_slice_id when "0100",
+                       x"00000000"  when others;
 
     irq_done <= reg_status(0);
 
     ----------------------------------------------------------------------------
-    -- Parameters update
+    -- Parameters update / global offset
     ----------------------------------------------------------------------------
     process(aclkrst_clk)
     begin
@@ -217,14 +244,15 @@ begin
                 width_u    <= 512;
                 height_u   <= 128;
             else
-                slice_id_u <= unsigned(reg_slice_id(1 downto 0));
+                slice_id_u <= unsigned(slice_id_in);    -- from port
                 width_u    <= to_integer(unsigned(reg_width));
                 height_u   <= to_integer(unsigned(reg_height));
             end if;
         end if;
     end process;
 
-    global_label_offset <= (resize(unsigned(reg_slice_id(1 downto 0)), 32) sll 16);
+    -- global label offset = slice_id << 16
+    global_label_offset <= resize(slice_id_u, 32) sll 16;
 
     ----------------------------------------------------------------------------
     -- AXIS flow control and unpacking logic
@@ -234,73 +262,195 @@ begin
     in_fire  <= s_axis_tvalid and s_axis_tready_int;
     out_fire <= out_valid_reg and m_axis_tready;
 
-    s_axis_tready_int <= '1' when (proc_state = RUNNING and unpack_bits_left = 0 and out_valid_reg = '0') else '0';
+    -- accept a new packed word only when we have finished all bits
+    s_axis_tready_int <= '1'
+        when (proc_state = RUNNING) and
+             (unpack_bits_left = 0) and
+             (out_valid_reg = '0')
+        else '0';
 
     m_axis_tvalid <= out_valid_reg;
     m_axis_tdata  <= out_data_reg;
     m_axis_tlast  <= out_last_reg;
 
     ----------------------------------------------------------------------------
-    -- Main processing FSM
+    -- AXI Master (LUT) output mapping
+    ----------------------------------------------------------------------------
+    m_axi_lut_awaddr  <= lut_awaddr_reg;
+    m_axi_lut_awvalid <= lut_awvalid_reg;
+    m_axi_lut_wdata   <= lut_wdata_reg;
+    m_axi_lut_wstrb   <= lut_wstrb_reg;
+    m_axi_lut_wvalid  <= lut_wvalid_reg;
+    m_axi_lut_bready  <= '1';           -- always accept responses
+
+    m_axi_lut_araddr  <= (others => '0'); -- no reads
+    m_axi_lut_arvalid <= '0';
+    m_axi_lut_rready  <= '0';
+
+    ----------------------------------------------------------------------------
+    -- Simple write-only AXI master for equivalence pairs
+    ----------------------------------------------------------------------------
+    process(aclkrst_clk)
+    begin
+        if rising_edge(aclkrst_clk) then
+            if aclkrst_n = '0' then
+                lut_awvalid_reg    <= '0';
+                lut_wvalid_reg     <= '0';
+                lut_wstrb_reg      <= (others => '0');
+                lut_awaddr_reg     <= (others => '0');
+                lut_wdata_reg      <= (others => '0');
+                lut_write_pending  <= '0';
+                lut_write_ptr      <= (others => '0');
+            else
+                if lut_write_pending = '1' then
+                    if (m_axi_lut_awready = '1') and (m_axi_lut_wready = '1') then
+                        lut_awvalid_reg    <= '0';
+                        lut_wvalid_reg     <= '0';
+                        lut_write_pending  <= '0';
+                        lut_write_ptr      <= lut_write_ptr + 1;
+                    end if;
+                end if;
+            end if;
+        end if;
+    end process;
+
+    ----------------------------------------------------------------------------
+    -- Main processing FSM with CCL + equivalence logging
     ----------------------------------------------------------------------------
     process(aclkrst_clk)
         variable cur_bit_idx : integer := 0;
         variable pixel_bit   : std_logic := '0';
+        variable lbl_left    : unsigned(15 downto 0);
+        variable lbl_up      : unsigned(15 downto 0);
+        variable lbl_new     : unsigned(15 downto 0);
+        variable hi_lbl      : unsigned(15 downto 0);
+        variable lo_lbl      : unsigned(15 downto 0);
         variable gv_lbl      : unsigned(31 downto 0);
+        variable addr_calc   : unsigned(31 downto 0);
+        variable pair32      : std_logic_vector(31 downto 0);
     begin
         if rising_edge(aclkrst_clk) then
             if aclkrst_n = '0' then
-                proc_state <= IDLE;
+                proc_state          <= IDLE;
                 local_label_counter <= (others => '0');
-                unpack_shift_reg <= (others => '0');
-                unpack_bits_left <= 0;
-                pixel_x <= 0;
-                pixel_y <= 0;
-                out_valid_reg <= '0';
-                out_data_reg <= (others => '0');
-                out_last_reg <= '0';
+                unpack_shift_reg    <= (others => '0');
+                unpack_bits_left    <= 0;
+                pixel_x             <= 0;
+                pixel_y             <= 0;
+                last_left_lbl       <= (others => '0');
+                out_valid_reg       <= '0';
+                out_data_reg        <= (others => '0');
+                out_last_reg        <= '0';
             else
                 case proc_state is
+
+                    ------------------------------------------------------------------
                     when IDLE =>
+                        out_valid_reg    <= '0';
+                        out_last_reg     <= '0';
+                        unpack_bits_left <= 0;
+                        last_left_lbl    <= (others => '0');
+
                         if reg_control(0) = '1' then
-                            proc_state <= RUNNING;
+                            proc_state          <= RUNNING;
                             local_label_counter <= (others => '0');
-                            unpack_bits_left <= 0;
-                            pixel_x <= 0;
-                            pixel_y <= 0;
-                            out_valid_reg <= '0';
-                            out_last_reg <= '0';
+                            pixel_x             <= 0;
+                            pixel_y             <= 0;
+                            last_left_lbl       <= (others => '0');
                         end if;
 
+                    ------------------------------------------------------------------
                     when RUNNING =>
-                        if unpack_bits_left = 0 then
-                            if in_fire = '1' then
-                                unpack_shift_reg <= s_axis_tdata;
-                                unpack_bits_left <= G_AXIS_IN_WIDTH;
-                            end if;
+                        -- load next 32-bit word from AXIS when all bits consumed
+                        if (unpack_bits_left = 0) and (in_fire = '1') then
+                            unpack_shift_reg <= s_axis_tdata;
+                            unpack_bits_left <= G_AXIS_IN_WIDTH;
                         end if;
 
-                        if unpack_bits_left > 0 and out_valid_reg = '0' then
-                            cur_bit_idx := unpack_bits_left - 1;
-                            pixel_bit   := unpack_shift_reg(cur_bit_idx);
+                        -- process 1 pixel per cycle when we have bits and output free
+                        if (unpack_bits_left > 0) and (out_valid_reg = '0') then
+                            cur_bit_idx      := unpack_bits_left - 1;
+                            pixel_bit        := unpack_shift_reg(cur_bit_idx);
                             unpack_bits_left <= unpack_bits_left - 1;
 
-                            if pixel_bit = '1' then
-                                local_label_counter <= local_label_counter + 1;
-                                gv_lbl := global_label_offset + resize(local_label_counter, 32);
-                                out_data_reg <= std_logic_vector(gv_lbl);
+                            -- determine left label
+                            if pixel_x = 0 then
+                                lbl_left := (others => '0');
                             else
-                                out_data_reg <= (others => '0');
+                                lbl_left := last_left_lbl;
                             end if;
 
+                            -- determine up label (from previous row)
+                            if pixel_y = 0 then
+                                lbl_up := (others => '0');
+                            else
+                                lbl_up := unsigned(line_prev(pixel_x));
+                            end if;
+
+                            -- CCL decision
+                            if pixel_bit = '0' then
+                                lbl_new := (others => '0');
+                            else
+                                if (lbl_left = 0) and (lbl_up = 0) then
+                                    -- new label
+                                    local_label_counter <= local_label_counter + 1;
+                                    lbl_new := local_label_counter + 1;
+                                elsif (lbl_left /= 0) and ((lbl_up = 0) or (lbl_left = lbl_up)) then
+                                    -- continue with left
+                                    lbl_new := lbl_left;
+                                elsif (lbl_up /= 0) and (lbl_left = 0) then
+                                    -- continue with up
+                                    lbl_new := lbl_up;
+                                else
+                                    -- both non-zero and different -> equivalence
+                                    if lbl_left > lbl_up then
+                                        hi_lbl := lbl_left;
+                                        lo_lbl := lbl_up;
+                                    else
+                                        hi_lbl := lbl_up;
+                                        lo_lbl := lbl_left;
+                                    end if;
+                                    lbl_new := lo_lbl;
+
+                                    -- schedule LUT write if none pending
+                                    if lut_write_pending = '0' then
+                                        -- address = (slice_id << 16) + lut_write_ptr
+                                        addr_calc := (resize(slice_id_u,32) sll 16) +
+                                                     resize(lut_write_ptr,32);
+                                        lut_awaddr_reg  <= std_logic_vector(addr_calc);
+
+                                        pair32          := std_logic_vector(hi_lbl) &
+                                                           std_logic_vector(lo_lbl);
+                                        lut_wdata_reg   <= pair32;
+                                        lut_wstrb_reg   <= "1111";
+                                        lut_awvalid_reg <= '1';
+                                        lut_wvalid_reg  <= '1';
+                                        lut_write_pending <= '1';
+                                    end if;
+                                end if;
+                            end if;
+
+                            -- write new label into previous-line buffer for next row
+                            line_prev(pixel_x) <= std_logic_vector(lbl_new);
+
+                            -- remember left label for next pixel
+                            last_left_lbl <= lbl_new;
+
+                            -- form global label and push to output
+                            gv_lbl        := global_label_offset + resize(lbl_new, 32);
+                            out_data_reg  <= std_logic_vector(gv_lbl);
                             out_valid_reg <= '1';
 
+                            -- coordinate update
                             if pixel_x = width_u - 1 then
-                                pixel_x <= 0;
+                                pixel_x       <= 0;
+                                last_left_lbl <= (others => '0'); -- new row
+
                                 if pixel_y = height_u - 1 then
-                                    pixel_y <= 0;
+                                    -- last pixel of slice
+                                    pixel_y      <= 0;
                                     out_last_reg <= '1';
-                                    proc_state <= FLUSHING;
+                                    proc_state   <= FLUSHING;
                                 else
                                     pixel_y <= pixel_y + 1;
                                 end if;
@@ -309,6 +459,7 @@ begin
                             end if;
                         end if;
 
+                        -- when downstream takes the label
                         if out_fire = '1' then
                             out_valid_reg <= '0';
                             if out_last_reg = '1' then
@@ -316,11 +467,14 @@ begin
                             end if;
                         end if;
 
+                    ------------------------------------------------------------------
                     when FLUSHING =>
+                        -- wait for last word to be accepted
                         if out_valid_reg = '0' then
                             proc_state <= DONE;
                         end if;
 
+                    ------------------------------------------------------------------
                     when DONE =>
                         if reg_control(0) = '0' then
                             proc_state <= IDLE;
@@ -328,6 +482,7 @@ begin
 
                     when others =>
                         proc_state <= IDLE;
+
                 end case;
             end if;
         end if;

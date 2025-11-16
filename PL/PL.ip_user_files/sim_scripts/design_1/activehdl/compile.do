@@ -11,6 +11,7 @@ vlib activehdl/lib_cdc_v1_0_3
 vlib activehdl/proc_sys_reset_v5_0_15
 vlib activehdl/axi_bram_ctrl_v4_1_10
 vlib activehdl/xlconcat_v2_1_6
+vlib activehdl/xlconstant_v1_1_9
 
 vmap xilinx_vip activehdl/xilinx_vip
 vmap xpm activehdl/xpm
@@ -19,8 +20,9 @@ vmap lib_cdc_v1_0_3 activehdl/lib_cdc_v1_0_3
 vmap proc_sys_reset_v5_0_15 activehdl/proc_sys_reset_v5_0_15
 vmap axi_bram_ctrl_v4_1_10 activehdl/axi_bram_ctrl_v4_1_10
 vmap xlconcat_v2_1_6 activehdl/xlconcat_v2_1_6
+vmap xlconstant_v1_1_9 activehdl/xlconstant_v1_1_9
 
-vlog -work xilinx_vip  -sv2k12 "+incdir+X:/xilinx/Vivado/2024.1/data/xilinx_vip/include" -l xilinx_vip -l xpm -l xil_defaultlib -l lib_cdc_v1_0_3 -l proc_sys_reset_v5_0_15 -l axi_bram_ctrl_v4_1_10 -l xlconcat_v2_1_6 \
+vlog -work xilinx_vip  -sv2k12 "+incdir+X:/xilinx/Vivado/2024.1/data/xilinx_vip/include" -l xilinx_vip -l xpm -l xil_defaultlib -l lib_cdc_v1_0_3 -l proc_sys_reset_v5_0_15 -l axi_bram_ctrl_v4_1_10 -l xlconcat_v2_1_6 -l xlconstant_v1_1_9 \
 "X:/xilinx/Vivado/2024.1/data/xilinx_vip/hdl/axi4stream_vip_axi4streampc.sv" \
 "X:/xilinx/Vivado/2024.1/data/xilinx_vip/hdl/axi_vip_axi4pc.sv" \
 "X:/xilinx/Vivado/2024.1/data/xilinx_vip/hdl/xil_common_vip_pkg.sv" \
@@ -31,7 +33,7 @@ vlog -work xilinx_vip  -sv2k12 "+incdir+X:/xilinx/Vivado/2024.1/data/xilinx_vip/
 "X:/xilinx/Vivado/2024.1/data/xilinx_vip/hdl/clk_vip_if.sv" \
 "X:/xilinx/Vivado/2024.1/data/xilinx_vip/hdl/rst_vip_if.sv" \
 
-vlog -work xpm  -sv2k12 "+incdir+../../../../PL.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../PL.gen/sources_1/bd/design_1/ipshared/b28c/hdl" "+incdir+../../../../PL.gen/sources_1/bd/design_1/ipshared/434f/hdl" "+incdir+X:/xilinx/Vivado/2024.1/data/xilinx_vip/include" -l xilinx_vip -l xpm -l xil_defaultlib -l lib_cdc_v1_0_3 -l proc_sys_reset_v5_0_15 -l axi_bram_ctrl_v4_1_10 -l xlconcat_v2_1_6 \
+vlog -work xpm  -sv2k12 "+incdir+../../../../PL.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../PL.gen/sources_1/bd/design_1/ipshared/b28c/hdl" "+incdir+../../../../PL.gen/sources_1/bd/design_1/ipshared/434f/hdl" "+incdir+X:/xilinx/Vivado/2024.1/data/xilinx_vip/include" -l xilinx_vip -l xpm -l xil_defaultlib -l lib_cdc_v1_0_3 -l proc_sys_reset_v5_0_15 -l axi_bram_ctrl_v4_1_10 -l xlconcat_v2_1_6 -l xlconstant_v1_1_9 \
 "X:/xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
 "X:/xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv" \
 "X:/xilinx/Vivado/2024.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
@@ -45,7 +47,7 @@ vcom -work xil_defaultlib -93  \
 "../../../bd/design_1/ip/design_1_ccl_slice_core_1_0_1/sim/design_1_ccl_slice_core_1_0.vhd" \
 "../../../bd/design_1/ip/design_1_ccl_slice_core_2_0_1/sim/design_1_ccl_slice_core_2_0.vhd" \
 "../../../bd/design_1/ip/design_1_ccl_slice_core_3_0_1/sim/design_1_ccl_slice_core_3_0.vhd" \
-"d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ip/design_1_xbar_0_1/design_1_xbar_0_sim_netlist.vhdl" \
+"../../../bd/design_1/ip/design_1_xbar_0_1/design_1_xbar_0_sim_netlist.vhdl" \
 
 vcom -work lib_cdc_v1_0_3 -93  \
 "../../../../PL.gen/sources_1/bd/design_1/ipshared/2a4f/hdl/lib_cdc_v1_0_rfs.vhd" \
@@ -63,20 +65,29 @@ vcom -work axi_bram_ctrl_v4_1_10 -93  \
 
 vcom -work xil_defaultlib -93  \
 "../../../bd/design_1/ip/design_1_axi_bram_ctrl_0_0_1/sim/design_1_axi_bram_ctrl_0_0.vhd" \
-"d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ip/design_1_axis_switch_0_1/design_1_axis_switch_0_1_sim_netlist.vhdl" \
-"d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ip/design_1_axis_switch_0_2/design_1_axis_switch_0_2_sim_netlist.vhdl" \
-"d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ip/design_1_xbar_2_1/design_1_xbar_2_sim_netlist.vhdl" \
+"../../../bd/design_1/ip/design_1_axis_switch_0_1/design_1_axis_switch_0_1_sim_netlist.vhdl" \
+"../../../bd/design_1/ip/design_1_axis_switch_0_2/design_1_axis_switch_0_2_sim_netlist.vhdl" \
+"../../../bd/design_1/ip/design_1_xbar_2_1/design_1_xbar_2_sim_netlist.vhdl" \
 "../../../bd/design_1/ip/design_1_ccl_relabel_core_0_0/sim/design_1_ccl_relabel_core_0_0.vhd" \
 
-vlog -work xlconcat_v2_1_6  -v2k5 "+incdir+../../../../PL.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../PL.gen/sources_1/bd/design_1/ipshared/b28c/hdl" "+incdir+../../../../PL.gen/sources_1/bd/design_1/ipshared/434f/hdl" "+incdir+X:/xilinx/Vivado/2024.1/data/xilinx_vip/include" -l xilinx_vip -l xpm -l xil_defaultlib -l lib_cdc_v1_0_3 -l proc_sys_reset_v5_0_15 -l axi_bram_ctrl_v4_1_10 -l xlconcat_v2_1_6 \
+vlog -work xlconcat_v2_1_6  -v2k5 "+incdir+../../../../PL.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../PL.gen/sources_1/bd/design_1/ipshared/b28c/hdl" "+incdir+../../../../PL.gen/sources_1/bd/design_1/ipshared/434f/hdl" "+incdir+X:/xilinx/Vivado/2024.1/data/xilinx_vip/include" -l xilinx_vip -l xpm -l xil_defaultlib -l lib_cdc_v1_0_3 -l proc_sys_reset_v5_0_15 -l axi_bram_ctrl_v4_1_10 -l xlconcat_v2_1_6 -l xlconstant_v1_1_9 \
 "../../../../PL.gen/sources_1/bd/design_1/ipshared/6120/hdl/xlconcat_v2_1_vl_rfs.v" \
 
-vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../PL.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../PL.gen/sources_1/bd/design_1/ipshared/b28c/hdl" "+incdir+../../../../PL.gen/sources_1/bd/design_1/ipshared/434f/hdl" "+incdir+X:/xilinx/Vivado/2024.1/data/xilinx_vip/include" -l xilinx_vip -l xpm -l xil_defaultlib -l lib_cdc_v1_0_3 -l proc_sys_reset_v5_0_15 -l axi_bram_ctrl_v4_1_10 -l xlconcat_v2_1_6 \
+vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../PL.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../PL.gen/sources_1/bd/design_1/ipshared/b28c/hdl" "+incdir+../../../../PL.gen/sources_1/bd/design_1/ipshared/434f/hdl" "+incdir+X:/xilinx/Vivado/2024.1/data/xilinx_vip/include" -l xilinx_vip -l xpm -l xil_defaultlib -l lib_cdc_v1_0_3 -l proc_sys_reset_v5_0_15 -l axi_bram_ctrl_v4_1_10 -l xlconcat_v2_1_6 -l xlconstant_v1_1_9 \
 "../../../bd/design_1/ip/design_1_xlconcat_0_0_1/sim/design_1_xlconcat_0_0.v" \
+
+vlog -work xlconstant_v1_1_9  -v2k5 "+incdir+../../../../PL.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../PL.gen/sources_1/bd/design_1/ipshared/b28c/hdl" "+incdir+../../../../PL.gen/sources_1/bd/design_1/ipshared/434f/hdl" "+incdir+X:/xilinx/Vivado/2024.1/data/xilinx_vip/include" -l xilinx_vip -l xpm -l xil_defaultlib -l lib_cdc_v1_0_3 -l proc_sys_reset_v5_0_15 -l axi_bram_ctrl_v4_1_10 -l xlconcat_v2_1_6 -l xlconstant_v1_1_9 \
+"../../../../PL.gen/sources_1/bd/design_1/ipshared/e2d2/hdl/xlconstant_v1_1_vl_rfs.v" \
+
+vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../PL.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../PL.gen/sources_1/bd/design_1/ipshared/b28c/hdl" "+incdir+../../../../PL.gen/sources_1/bd/design_1/ipshared/434f/hdl" "+incdir+X:/xilinx/Vivado/2024.1/data/xilinx_vip/include" -l xilinx_vip -l xpm -l xil_defaultlib -l lib_cdc_v1_0_3 -l proc_sys_reset_v5_0_15 -l axi_bram_ctrl_v4_1_10 -l xlconcat_v2_1_6 -l xlconstant_v1_1_9 \
+"../../../bd/design_1/ip/design_1_xlconstant_0_0/sim/design_1_xlconstant_0_0.v" \
+"../../../bd/design_1/ip/design_1_xlconstant_1_0/sim/design_1_xlconstant_1_0.v" \
+"../../../bd/design_1/ip/design_1_xlconstant_2_0/sim/design_1_xlconstant_2_0.v" \
+"../../../bd/design_1/ip/design_1_xlconstant_3_0/sim/design_1_xlconstant_3_0.v" \
 
 vcom -work xil_defaultlib -93  \
 "../../../bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_sim_netlist.vhdl" \
-"d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/design_1/ip/design_1_s00_mmu_0/design_1_s00_mmu_0_sim_netlist.vhdl" \
+"../../../bd/design_1/ip/design_1_s00_mmu_0/design_1_s00_mmu_0_sim_netlist.vhdl" \
 "../../../bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_sim_netlist.vhdl" \
 "../../../bd/design_1/ip/design_1_auto_pc_2/design_1_auto_pc_2_sim_netlist.vhdl" \
 "../../../bd/design_1/sim/design_1.vhd" \

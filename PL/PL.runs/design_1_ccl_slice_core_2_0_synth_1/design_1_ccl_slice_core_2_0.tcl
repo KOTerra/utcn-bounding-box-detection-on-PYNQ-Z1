@@ -57,7 +57,6 @@ if {$::dispatch::connected} {
 
 OPTRACE "design_1_ccl_slice_core_2_0_synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 3
-set_msg_config -id {Common 17-41} -limit 10000000
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
 set_param ips.modRefOverrideMrefDirPath d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.gen/sources_1/bd/mref
@@ -79,7 +78,7 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.srcs/sources_1/new/ccl_slice_core.vhd
-read_ip -quiet d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.srcs/sources_1/bd/design_1/ip/design_1_ccl_slice_core_2_0/design_1_ccl_slice_core_2_0.xci
+read_ip -quiet D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL/PL.srcs/sources_1/bd/design_1/ip/design_1_ccl_slice_core_2_0/design_1_ccl_slice_core_2_0.xci
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

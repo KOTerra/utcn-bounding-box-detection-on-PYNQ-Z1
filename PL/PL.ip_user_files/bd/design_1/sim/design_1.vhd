@@ -2,7 +2,7 @@
 --Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
---Date        : Sun Nov 16 12:33:44 2025
+--Date        : Sun Nov 16 19:44:25 2025
 --Host        : POWERSLAVE running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -5532,7 +5532,7 @@ entity design_1 is
     FIXED_IO_ps_srstb : inout STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=40,numReposBlks=19,numNonXlnxBlks=0,numHierBlks=21,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=5,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=33,da_bram_cntlr_cnt=2,da_clkrst_cnt=19,da_ps7_cnt=2,synth_mode=Hierarchical}";
+  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=44,numReposBlks=23,numNonXlnxBlks=0,numHierBlks=21,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=5,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=33,da_bram_cntlr_cnt=2,da_clkrst_cnt=19,da_ps7_cnt=2,synth_mode=Hierarchical}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_1 : entity is "design_1.hwdef";
 end design_1;
@@ -5656,6 +5656,7 @@ architecture STRUCTURE of design_1 is
   port (
     aclkrst_clk : in STD_LOGIC;
     aclkrst_n : in STD_LOGIC;
+    slice_id_in : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_awvalid : in STD_LOGIC;
     s_axi_awready : out STD_LOGIC;
@@ -5704,6 +5705,7 @@ architecture STRUCTURE of design_1 is
   port (
     aclkrst_clk : in STD_LOGIC;
     aclkrst_n : in STD_LOGIC;
+    slice_id_in : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_awvalid : in STD_LOGIC;
     s_axi_awready : out STD_LOGIC;
@@ -5752,6 +5754,7 @@ architecture STRUCTURE of design_1 is
   port (
     aclkrst_clk : in STD_LOGIC;
     aclkrst_n : in STD_LOGIC;
+    slice_id_in : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_awvalid : in STD_LOGIC;
     s_axi_awready : out STD_LOGIC;
@@ -5800,6 +5803,7 @@ architecture STRUCTURE of design_1 is
   port (
     aclkrst_clk : in STD_LOGIC;
     aclkrst_n : in STD_LOGIC;
+    slice_id_in : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_awvalid : in STD_LOGIC;
     s_axi_awready : out STD_LOGIC;
@@ -6095,6 +6099,26 @@ architecture STRUCTURE of design_1 is
     dout : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component design_1_xlconcat_0_0;
+  component design_1_xlconstant_0_0 is
+  port (
+    dout : out STD_LOGIC_VECTOR ( 1 downto 0 )
+  );
+  end component design_1_xlconstant_0_0;
+  component design_1_xlconstant_1_0 is
+  port (
+    dout : out STD_LOGIC_VECTOR ( 1 downto 0 )
+  );
+  end component design_1_xlconstant_1_0;
+  component design_1_xlconstant_2_0 is
+  port (
+    dout : out STD_LOGIC_VECTOR ( 1 downto 0 )
+  );
+  end component design_1_xlconstant_2_0;
+  component design_1_xlconstant_3_0 is
+  port (
+    dout : out STD_LOGIC_VECTOR ( 1 downto 0 )
+  );
+  end component design_1_xlconstant_3_0;
   signal axi_bram_ctrl_0_BRAM_PORTA_ADDR : STD_LOGIC_VECTOR ( 12 downto 0 );
   signal axi_bram_ctrl_0_BRAM_PORTA_CLK : STD_LOGIC;
   signal axi_bram_ctrl_0_BRAM_PORTA_DIN : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -6529,6 +6553,10 @@ architecture STRUCTURE of design_1 is
   signal ps7_0_axi_periph_M07_AXI_WVALID : STD_LOGIC;
   signal rst_ps7_0_100M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal xlconcat_0_dout : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal xlconstant_0_dout : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal xlconstant_1_dout : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal xlconstant_2_dout : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal xlconstant_3_dout : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal NLW_axi_dma_0_mm2s_introut_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_dma_0_mm2s_prmry_reset_out_n_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_dma_0_s2mm_introut_UNCONNECTED : STD_LOGIC;
@@ -7093,7 +7121,8 @@ ccl_slice_core_0: component design_1_ccl_slice_core_0_0
       s_axis_tdata(31 downto 0) => axis_switch_in_M00_AXIS_TDATA(31 downto 0),
       s_axis_tlast => axis_switch_in_M00_AXIS_TLAST(0),
       s_axis_tready => axis_switch_in_M00_AXIS_TREADY,
-      s_axis_tvalid => axis_switch_in_M00_AXIS_TVALID(0)
+      s_axis_tvalid => axis_switch_in_M00_AXIS_TVALID(0),
+      slice_id_in(1 downto 0) => xlconstant_0_dout(1 downto 0)
     );
 ccl_slice_core_1: component design_1_ccl_slice_core_1_0
      port map (
@@ -7140,7 +7169,8 @@ ccl_slice_core_1: component design_1_ccl_slice_core_1_0
       s_axis_tdata(31 downto 0) => axis_switch_in_M01_AXIS_TDATA(63 downto 32),
       s_axis_tlast => axis_switch_in_M01_AXIS_TLAST(1),
       s_axis_tready => axis_switch_in_M01_AXIS_TREADY,
-      s_axis_tvalid => axis_switch_in_M01_AXIS_TVALID(1)
+      s_axis_tvalid => axis_switch_in_M01_AXIS_TVALID(1),
+      slice_id_in(1 downto 0) => xlconstant_1_dout(1 downto 0)
     );
 ccl_slice_core_2: component design_1_ccl_slice_core_2_0
      port map (
@@ -7187,7 +7217,8 @@ ccl_slice_core_2: component design_1_ccl_slice_core_2_0
       s_axis_tdata(31 downto 0) => axis_switch_in_M02_AXIS_TDATA(95 downto 64),
       s_axis_tlast => axis_switch_in_M02_AXIS_TLAST(2),
       s_axis_tready => axis_switch_in_M02_AXIS_TREADY,
-      s_axis_tvalid => axis_switch_in_M02_AXIS_TVALID(2)
+      s_axis_tvalid => axis_switch_in_M02_AXIS_TVALID(2),
+      slice_id_in(1 downto 0) => xlconstant_2_dout(1 downto 0)
     );
 ccl_slice_core_3: component design_1_ccl_slice_core_3_0
      port map (
@@ -7234,7 +7265,8 @@ ccl_slice_core_3: component design_1_ccl_slice_core_3_0
       s_axis_tdata(31 downto 0) => axis_switch_in_M03_AXIS_TDATA(127 downto 96),
       s_axis_tlast => axis_switch_in_M03_AXIS_TLAST(3),
       s_axis_tready => axis_switch_in_M03_AXIS_TREADY,
-      s_axis_tvalid => axis_switch_in_M03_AXIS_TVALID(3)
+      s_axis_tvalid => axis_switch_in_M03_AXIS_TVALID(3),
+      slice_id_in(1 downto 0) => xlconstant_3_dout(1 downto 0)
     );
 processing_system7_0: component design_1_processing_system7_0_0
      port map (
@@ -7566,5 +7598,21 @@ xlconcat_0: component design_1_xlconcat_0_0
       In2(0) => ccl_slice_core_2_irq_done,
       In3(0) => ccl_slice_core_3_irq_done,
       dout(3 downto 0) => xlconcat_0_dout(3 downto 0)
+    );
+xlconstant_0: component design_1_xlconstant_0_0
+     port map (
+      dout(1 downto 0) => xlconstant_0_dout(1 downto 0)
+    );
+xlconstant_1: component design_1_xlconstant_1_0
+     port map (
+      dout(1 downto 0) => xlconstant_1_dout(1 downto 0)
+    );
+xlconstant_2: component design_1_xlconstant_2_0
+     port map (
+      dout(1 downto 0) => xlconstant_2_dout(1 downto 0)
+    );
+xlconstant_3: component design_1_xlconstant_3_0
+     port map (
+      dout(1 downto 0) => xlconstant_3_dout(1 downto 0)
     );
 end STRUCTURE;

@@ -57,6 +57,7 @@ ENTITY design_1_ccl_slice_core_2_0 IS
   PORT (
     aclkrst_clk : IN STD_LOGIC;
     aclkrst_n : IN STD_LOGIC;
+    slice_id_in : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
     s_axi_awaddr : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     s_axi_awvalid : IN STD_LOGIC;
     s_axi_awready : OUT STD_LOGIC;
@@ -115,6 +116,7 @@ ARCHITECTURE design_1_ccl_slice_core_2_0_arch OF design_1_ccl_slice_core_2_0 IS
     PORT (
       aclkrst_clk : IN STD_LOGIC;
       aclkrst_n : IN STD_LOGIC;
+      slice_id_in : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
       s_axi_awaddr : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       s_axi_awvalid : IN STD_LOGIC;
       s_axi_awready : OUT STD_LOGIC;
@@ -229,6 +231,7 @@ BEGIN
     PORT MAP (
       aclkrst_clk => aclkrst_clk,
       aclkrst_n => aclkrst_n,
+      slice_id_in => slice_id_in,
       s_axi_awaddr => s_axi_awaddr,
       s_axi_awvalid => s_axi_awvalid,
       s_axi_awready => s_axi_awready,
