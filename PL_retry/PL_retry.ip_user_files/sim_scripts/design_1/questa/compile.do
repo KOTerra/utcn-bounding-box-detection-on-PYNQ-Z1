@@ -310,7 +310,6 @@ vcom -work axi_bram_ctrl_v4_1_10  -93  \
 
 vcom -work xil_defaultlib  -93  \
 "../../../bd/design_1/ip/design_1_axi_bram_ctrl_0_2/sim/design_1_axi_bram_ctrl_0_2.vhd" \
-"../../../bd/design_1/sim/design_1.vhd" \
 
 vlog -work axi_protocol_converter_v2_1_31  -incr -mfcu  "+incdir+../../../../PL_retry.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../PL_retry.gen/sources_1/bd/design_1/ipshared/b28c/hdl" "+incdir+../../../../PL_retry.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../PL_retry.gen/sources_1/bd/design_1/ipshared/c783/hdl/verilog" "+incdir+X:/xilinx/Vivado/2024.1/data/xilinx_vip/include" \
 "../../../../PL_retry.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
@@ -318,6 +317,9 @@ vlog -work axi_protocol_converter_v2_1_31  -incr -mfcu  "+incdir+../../../../PL_
 vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../PL_retry.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../PL_retry.gen/sources_1/bd/design_1/ipshared/b28c/hdl" "+incdir+../../../../PL_retry.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../PL_retry.gen/sources_1/bd/design_1/ipshared/c783/hdl/verilog" "+incdir+X:/xilinx/Vivado/2024.1/data/xilinx_vip/include" \
 "../../../bd/design_1/ip/design_1_auto_pc_0/sim/design_1_auto_pc_0.v" \
 "../../../bd/design_1/ip/design_1_auto_pc_1/sim/design_1_auto_pc_1.v" \
+
+vcom -work xil_defaultlib  -93  \
+"../../../bd/design_1/sim/design_1.vhd" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

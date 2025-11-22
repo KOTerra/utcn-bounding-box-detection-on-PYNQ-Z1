@@ -296,7 +296,7 @@ begin
     m_axi_lut_rready  <= '0';
 
     ----------------------------------------------------------------------------
-    -- Main processing FSM + LUT write logic (single process - no multi-drivers)
+    -- Main processing FSM + LUT write logic
     ----------------------------------------------------------------------------
     process(aclkrst_clk)
         variable cur_bit_idx : integer := 0;

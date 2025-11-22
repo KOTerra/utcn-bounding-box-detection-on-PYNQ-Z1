@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date             : Sat Nov 22 17:07:14 2025
+| Date             : Sat Nov 22 18:55:43 2025
 | Host             : POWERSLAVE running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.514        |
+| Total On-Chip Power (W)  | 1.525        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.376        |
-| Device Static (W)        | 0.138        |
+| Dynamic (W)              | 1.386        |
+| Device Static (W)        | 0.139        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 67.5         |
-| Junction Temperature (C) | 42.5         |
+| Max Ambient (C)          | 67.4         |
+| Junction Temperature (C) | 42.6         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,20 +52,20 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.063 |        3 |       --- |             --- |
-| Slice Logic              |     0.027 |    45036 |       --- |             --- |
-|   LUT as Logic           |     0.023 |    14297 |     53200 |           26.87 |
-|   LUT as Distributed RAM |     0.002 |     1762 |     17400 |           10.13 |
-|   Register               |     0.001 |    20326 |    106400 |           19.10 |
-|   CARRY4                 |     0.001 |      432 |     13300 |            3.25 |
-|   F7/F8 Muxes            |    <0.001 |      455 |     53200 |            0.86 |
-|   LUT as Shift Register  |    <0.001 |      618 |     17400 |            3.55 |
-|   Others                 |     0.000 |     1852 |       --- |             --- |
-| Signals                  |     0.029 |    29449 |       --- |             --- |
-| Block RAM                |    <0.001 |       12 |       140 |            8.57 |
+| Clocks                   |     0.064 |        3 |       --- |             --- |
+| Slice Logic              |     0.030 |    46826 |       --- |             --- |
+|   LUT as Logic           |     0.025 |    15049 |     53200 |           28.29 |
+|   LUT as Distributed RAM |     0.002 |     1890 |     17400 |           10.86 |
+|   Register               |     0.001 |    20914 |    106400 |           19.66 |
+|   CARRY4                 |     0.001 |      462 |     13300 |            3.47 |
+|   F7/F8 Muxes            |    <0.001 |      551 |     53200 |            1.04 |
+|   LUT as Shift Register  |    <0.001 |      624 |     17400 |            3.59 |
+|   Others                 |     0.000 |     1888 |       --- |             --- |
+| Signals                  |     0.034 |    30672 |       --- |             --- |
+| Block RAM                |     0.002 |     17.5 |       140 |           12.50 |
 | PS7                      |     1.256 |        1 |       --- |             --- |
-| Static Power             |     0.138 |          |           |                 |
-| Total                    |     1.514 |          |           |                 |
+| Static Power             |     0.139 |          |           |                 |
+| Total                    |     1.525 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -75,7 +75,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.134 |       0.120 |      0.014 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.144 |       0.130 |      0.014 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.015 |       0.000 |      0.015 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -151,22 +151,26 @@ Table of Contents
 +----------------------------+-----------+
 | Name                       | Power (W) |
 +----------------------------+-----------+
-| top                        |     1.376 |
-|   u_bd                     |     1.376 |
-|     design_1_i             |     1.376 |
-|       axi_dma_0            |     0.006 |
-|       axi_dma_1            |     0.006 |
-|       axi_dma_2            |     0.006 |
-|       axi_dma_3            |     0.006 |
-|       axi_dma_4            |     0.006 |
+| top                        |     1.386 |
+|   u_bd                     |     1.385 |
+|     design_1_i             |     1.385 |
+|       axi_dma_0            |     0.007 |
+|       axi_dma_1            |     0.007 |
+|       axi_dma_2            |     0.007 |
+|       axi_dma_3            |     0.007 |
+|       axi_dma_4            |     0.005 |
 |       axi_dma_5            |     0.007 |
+|       ccl_relabel_core_0   |     0.001 |
 |       ccl_slice_core_0     |     0.003 |
-|       ccl_slice_core_1     |     0.002 |
-|       ccl_slice_core_2     |     0.002 |
-|       ccl_slice_core_3     |     0.003 |
+|       ccl_slice_core_1     |     0.004 |
+|       ccl_slice_core_2     |     0.003 |
+|       ccl_slice_core_3     |     0.004 |
 |       processing_system7_0 |     1.259 |
 |       ps7_0_axi_periph     |     0.006 |
-|       smartconnect_0       |     0.064 |
+|       smartconnect_0       |     0.063 |
+|   u_bram                   |     0.002 |
+|     U0                     |     0.002 |
+|       inst_blk_mem_gen     |     0.002 |
 +----------------------------+-----------+
 
 

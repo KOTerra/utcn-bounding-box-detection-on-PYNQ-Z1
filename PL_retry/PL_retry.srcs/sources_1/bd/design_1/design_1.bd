@@ -7702,11 +7702,11 @@
           "axi_interconnect_0/S02_ACLK",
           "axi_interconnect_0/S03_ACLK",
           "axi_interconnect_0/S04_ACLK",
-          "ccl_relabel_core_0/aclkrst_clk",
           "ccl_slice_core_0/aclkrst_clk",
           "ccl_slice_core_1/aclkrst_clk",
           "ccl_slice_core_2/aclkrst_clk",
-          "ccl_slice_core_3/aclkrst_clk"
+          "ccl_slice_core_3/aclkrst_clk",
+          "ccl_relabel_core_0/aclkrst_clk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -7745,11 +7745,11 @@
           "axi_interconnect_0/S02_ARESETN",
           "axi_interconnect_0/S03_ARESETN",
           "axi_interconnect_0/S04_ARESETN",
-          "ccl_relabel_core_0/aclkrst_n",
           "ccl_slice_core_0/aclkrst_n",
           "ccl_slice_core_1/aclkrst_n",
           "ccl_slice_core_2/aclkrst_n",
-          "ccl_slice_core_3/aclkrst_n"
+          "ccl_slice_core_3/aclkrst_n",
+          "ccl_relabel_core_0/aclkrst_n"
         ]
       },
       "xlconcat_0_dout": {
