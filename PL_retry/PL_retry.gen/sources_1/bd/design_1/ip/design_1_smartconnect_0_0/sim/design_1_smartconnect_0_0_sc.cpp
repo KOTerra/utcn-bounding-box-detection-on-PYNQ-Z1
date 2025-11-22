@@ -88,6 +88,10 @@ design_1_smartconnect_0_0_sc::design_1_smartconnect_0_0_sc(const sc_core::sc_mod
   S08_AXI_tlm_aximm_write_socket = mp_impl->S08_AXI_tlm_aximm_write_socket;
   S09_AXI_tlm_aximm_read_socket = mp_impl->S09_AXI_tlm_aximm_read_socket;
   S09_AXI_tlm_aximm_write_socket = mp_impl->S09_AXI_tlm_aximm_write_socket;
+  S10_AXI_tlm_aximm_read_socket = mp_impl->S10_AXI_tlm_aximm_read_socket;
+  S10_AXI_tlm_aximm_write_socket = mp_impl->S10_AXI_tlm_aximm_write_socket;
+  S11_AXI_tlm_aximm_read_socket = mp_impl->S11_AXI_tlm_aximm_read_socket;
+  S11_AXI_tlm_aximm_write_socket = mp_impl->S11_AXI_tlm_aximm_write_socket;
   M00_AXI_tlm_aximm_read_socket = mp_impl->M00_AXI_tlm_aximm_read_socket;
   M00_AXI_tlm_aximm_write_socket = mp_impl->M00_AXI_tlm_aximm_write_socket;
 }

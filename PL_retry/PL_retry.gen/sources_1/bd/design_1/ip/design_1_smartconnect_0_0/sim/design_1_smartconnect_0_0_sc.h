@@ -96,6 +96,10 @@ public:
   xtlm::xtlm_aximm_target_socket* S08_AXI_tlm_aximm_write_socket;
   xtlm::xtlm_aximm_target_socket* S09_AXI_tlm_aximm_read_socket;
   xtlm::xtlm_aximm_target_socket* S09_AXI_tlm_aximm_write_socket;
+  xtlm::xtlm_aximm_target_socket* S10_AXI_tlm_aximm_read_socket;
+  xtlm::xtlm_aximm_target_socket* S10_AXI_tlm_aximm_write_socket;
+  xtlm::xtlm_aximm_target_socket* S11_AXI_tlm_aximm_read_socket;
+  xtlm::xtlm_aximm_target_socket* S11_AXI_tlm_aximm_write_socket;
   xtlm::xtlm_aximm_initiator_socket* M00_AXI_tlm_aximm_read_socket;
   xtlm::xtlm_aximm_initiator_socket* M00_AXI_tlm_aximm_write_socket;
 

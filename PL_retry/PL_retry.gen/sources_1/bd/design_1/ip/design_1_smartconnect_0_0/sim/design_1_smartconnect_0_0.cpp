@@ -61,7 +61,7 @@
 
 
 #ifdef XILINX_SIMULATOR
-design_1_smartconnect_0_0::design_1_smartconnect_0_0(const sc_core::sc_module_name& nm) : design_1_smartconnect_0_0_sc(nm), aclk("aclk"), aresetn("aresetn"), S00_AXI_araddr("S00_AXI_araddr"), S00_AXI_arlen("S00_AXI_arlen"), S00_AXI_arsize("S00_AXI_arsize"), S00_AXI_arburst("S00_AXI_arburst"), S00_AXI_arlock("S00_AXI_arlock"), S00_AXI_arcache("S00_AXI_arcache"), S00_AXI_arprot("S00_AXI_arprot"), S00_AXI_arqos("S00_AXI_arqos"), S00_AXI_arvalid("S00_AXI_arvalid"), S00_AXI_arready("S00_AXI_arready"), S00_AXI_rdata("S00_AXI_rdata"), S00_AXI_rresp("S00_AXI_rresp"), S00_AXI_rlast("S00_AXI_rlast"), S00_AXI_rvalid("S00_AXI_rvalid"), S00_AXI_rready("S00_AXI_rready"), S01_AXI_awaddr("S01_AXI_awaddr"), S01_AXI_awlen("S01_AXI_awlen"), S01_AXI_awsize("S01_AXI_awsize"), S01_AXI_awburst("S01_AXI_awburst"), S01_AXI_awlock("S01_AXI_awlock"), S01_AXI_awcache("S01_AXI_awcache"), S01_AXI_awprot("S01_AXI_awprot"), S01_AXI_awqos("S01_AXI_awqos"), S01_AXI_awvalid("S01_AXI_awvalid"), S01_AXI_awready("S01_AXI_awready"), S01_AXI_wdata("S01_AXI_wdata"), S01_AXI_wstrb("S01_AXI_wstrb"), S01_AXI_wlast("S01_AXI_wlast"), S01_AXI_wvalid("S01_AXI_wvalid"), S01_AXI_wready("S01_AXI_wready"), S01_AXI_bresp("S01_AXI_bresp"), S01_AXI_bvalid("S01_AXI_bvalid"), S01_AXI_bready("S01_AXI_bready"), S02_AXI_araddr("S02_AXI_araddr"), S02_AXI_arlen("S02_AXI_arlen"), S02_AXI_arsize("S02_AXI_arsize"), S02_AXI_arburst("S02_AXI_arburst"), S02_AXI_arlock("S02_AXI_arlock"), S02_AXI_arcache("S02_AXI_arcache"), S02_AXI_arprot("S02_AXI_arprot"), S02_AXI_arqos("S02_AXI_arqos"), S02_AXI_arvalid("S02_AXI_arvalid"), S02_AXI_arready("S02_AXI_arready"), S02_AXI_rdata("S02_AXI_rdata"), S02_AXI_rresp("S02_AXI_rresp"), S02_AXI_rlast("S02_AXI_rlast"), S02_AXI_rvalid("S02_AXI_rvalid"), S02_AXI_rready("S02_AXI_rready"), S03_AXI_awaddr("S03_AXI_awaddr"), S03_AXI_awlen("S03_AXI_awlen"), S03_AXI_awsize("S03_AXI_awsize"), S03_AXI_awburst("S03_AXI_awburst"), S03_AXI_awlock("S03_AXI_awlock"), S03_AXI_awcache("S03_AXI_awcache"), S03_AXI_awprot("S03_AXI_awprot"), S03_AXI_awqos("S03_AXI_awqos"), S03_AXI_awvalid("S03_AXI_awvalid"), S03_AXI_awready("S03_AXI_awready"), S03_AXI_wdata("S03_AXI_wdata"), S03_AXI_wstrb("S03_AXI_wstrb"), S03_AXI_wlast("S03_AXI_wlast"), S03_AXI_wvalid("S03_AXI_wvalid"), S03_AXI_wready("S03_AXI_wready"), S03_AXI_bresp("S03_AXI_bresp"), S03_AXI_bvalid("S03_AXI_bvalid"), S03_AXI_bready("S03_AXI_bready"), S04_AXI_araddr("S04_AXI_araddr"), S04_AXI_arlen("S04_AXI_arlen"), S04_AXI_arsize("S04_AXI_arsize"), S04_AXI_arburst("S04_AXI_arburst"), S04_AXI_arlock("S04_AXI_arlock"), S04_AXI_arcache("S04_AXI_arcache"), S04_AXI_arprot("S04_AXI_arprot"), S04_AXI_arqos("S04_AXI_arqos"), S04_AXI_arvalid("S04_AXI_arvalid"), S04_AXI_arready("S04_AXI_arready"), S04_AXI_rdata("S04_AXI_rdata"), S04_AXI_rresp("S04_AXI_rresp"), S04_AXI_rlast("S04_AXI_rlast"), S04_AXI_rvalid("S04_AXI_rvalid"), S04_AXI_rready("S04_AXI_rready"), S05_AXI_awaddr("S05_AXI_awaddr"), S05_AXI_awlen("S05_AXI_awlen"), S05_AXI_awsize("S05_AXI_awsize"), S05_AXI_awburst("S05_AXI_awburst"), S05_AXI_awlock("S05_AXI_awlock"), S05_AXI_awcache("S05_AXI_awcache"), S05_AXI_awprot("S05_AXI_awprot"), S05_AXI_awqos("S05_AXI_awqos"), S05_AXI_awvalid("S05_AXI_awvalid"), S05_AXI_awready("S05_AXI_awready"), S05_AXI_wdata("S05_AXI_wdata"), S05_AXI_wstrb("S05_AXI_wstrb"), S05_AXI_wlast("S05_AXI_wlast"), S05_AXI_wvalid("S05_AXI_wvalid"), S05_AXI_wready("S05_AXI_wready"), S05_AXI_bresp("S05_AXI_bresp"), S05_AXI_bvalid("S05_AXI_bvalid"), S05_AXI_bready("S05_AXI_bready"), S06_AXI_araddr("S06_AXI_araddr"), S06_AXI_arlen("S06_AXI_arlen"), S06_AXI_arsize("S06_AXI_arsize"), S06_AXI_arburst("S06_AXI_arburst"), S06_AXI_arlock("S06_AXI_arlock"), S06_AXI_arcache("S06_AXI_arcache"), S06_AXI_arprot("S06_AXI_arprot"), S06_AXI_arqos("S06_AXI_arqos"), S06_AXI_arvalid("S06_AXI_arvalid"), S06_AXI_arready("S06_AXI_arready"), S06_AXI_rdata("S06_AXI_rdata"), S06_AXI_rresp("S06_AXI_rresp"), S06_AXI_rlast("S06_AXI_rlast"), S06_AXI_rvalid("S06_AXI_rvalid"), S06_AXI_rready("S06_AXI_rready"), S07_AXI_awaddr("S07_AXI_awaddr"), S07_AXI_awlen("S07_AXI_awlen"), S07_AXI_awsize("S07_AXI_awsize"), S07_AXI_awburst("S07_AXI_awburst"), S07_AXI_awlock("S07_AXI_awlock"), S07_AXI_awcache("S07_AXI_awcache"), S07_AXI_awprot("S07_AXI_awprot"), S07_AXI_awqos("S07_AXI_awqos"), S07_AXI_awvalid("S07_AXI_awvalid"), S07_AXI_awready("S07_AXI_awready"), S07_AXI_wdata("S07_AXI_wdata"), S07_AXI_wstrb("S07_AXI_wstrb"), S07_AXI_wlast("S07_AXI_wlast"), S07_AXI_wvalid("S07_AXI_wvalid"), S07_AXI_wready("S07_AXI_wready"), S07_AXI_bresp("S07_AXI_bresp"), S07_AXI_bvalid("S07_AXI_bvalid"), S07_AXI_bready("S07_AXI_bready"), S08_AXI_araddr("S08_AXI_araddr"), S08_AXI_arlen("S08_AXI_arlen"), S08_AXI_arsize("S08_AXI_arsize"), S08_AXI_arburst("S08_AXI_arburst"), S08_AXI_arlock("S08_AXI_arlock"), S08_AXI_arcache("S08_AXI_arcache"), S08_AXI_arprot("S08_AXI_arprot"), S08_AXI_arqos("S08_AXI_arqos"), S08_AXI_arvalid("S08_AXI_arvalid"), S08_AXI_arready("S08_AXI_arready"), S08_AXI_rdata("S08_AXI_rdata"), S08_AXI_rresp("S08_AXI_rresp"), S08_AXI_rlast("S08_AXI_rlast"), S08_AXI_rvalid("S08_AXI_rvalid"), S08_AXI_rready("S08_AXI_rready"), S09_AXI_awaddr("S09_AXI_awaddr"), S09_AXI_awlen("S09_AXI_awlen"), S09_AXI_awsize("S09_AXI_awsize"), S09_AXI_awburst("S09_AXI_awburst"), S09_AXI_awlock("S09_AXI_awlock"), S09_AXI_awcache("S09_AXI_awcache"), S09_AXI_awprot("S09_AXI_awprot"), S09_AXI_awqos("S09_AXI_awqos"), S09_AXI_awvalid("S09_AXI_awvalid"), S09_AXI_awready("S09_AXI_awready"), S09_AXI_wdata("S09_AXI_wdata"), S09_AXI_wstrb("S09_AXI_wstrb"), S09_AXI_wlast("S09_AXI_wlast"), S09_AXI_wvalid("S09_AXI_wvalid"), S09_AXI_wready("S09_AXI_wready"), S09_AXI_bresp("S09_AXI_bresp"), S09_AXI_bvalid("S09_AXI_bvalid"), S09_AXI_bready("S09_AXI_bready"), M00_AXI_awaddr("M00_AXI_awaddr"), M00_AXI_awlen("M00_AXI_awlen"), M00_AXI_awsize("M00_AXI_awsize"), M00_AXI_awburst("M00_AXI_awburst"), M00_AXI_awlock("M00_AXI_awlock"), M00_AXI_awcache("M00_AXI_awcache"), M00_AXI_awprot("M00_AXI_awprot"), M00_AXI_awqos("M00_AXI_awqos"), M00_AXI_awvalid("M00_AXI_awvalid"), M00_AXI_awready("M00_AXI_awready"), M00_AXI_wdata("M00_AXI_wdata"), M00_AXI_wstrb("M00_AXI_wstrb"), M00_AXI_wlast("M00_AXI_wlast"), M00_AXI_wvalid("M00_AXI_wvalid"), M00_AXI_wready("M00_AXI_wready"), M00_AXI_bresp("M00_AXI_bresp"), M00_AXI_bvalid("M00_AXI_bvalid"), M00_AXI_bready("M00_AXI_bready"), M00_AXI_araddr("M00_AXI_araddr"), M00_AXI_arlen("M00_AXI_arlen"), M00_AXI_arsize("M00_AXI_arsize"), M00_AXI_arburst("M00_AXI_arburst"), M00_AXI_arlock("M00_AXI_arlock"), M00_AXI_arcache("M00_AXI_arcache"), M00_AXI_arprot("M00_AXI_arprot"), M00_AXI_arqos("M00_AXI_arqos"), M00_AXI_arvalid("M00_AXI_arvalid"), M00_AXI_arready("M00_AXI_arready"), M00_AXI_rdata("M00_AXI_rdata"), M00_AXI_rresp("M00_AXI_rresp"), M00_AXI_rlast("M00_AXI_rlast"), M00_AXI_rvalid("M00_AXI_rvalid"), M00_AXI_rready("M00_AXI_rready"),mp_S00_AXI_wr_socket_stub(nullptr),mp_S01_AXI_rd_socket_stub(nullptr),mp_S02_AXI_wr_socket_stub(nullptr),mp_S03_AXI_rd_socket_stub(nullptr),mp_S04_AXI_wr_socket_stub(nullptr),mp_S05_AXI_rd_socket_stub(nullptr),mp_S06_AXI_wr_socket_stub(nullptr),mp_S07_AXI_rd_socket_stub(nullptr),mp_S08_AXI_wr_socket_stub(nullptr),mp_S09_AXI_rd_socket_stub(nullptr)
+design_1_smartconnect_0_0::design_1_smartconnect_0_0(const sc_core::sc_module_name& nm) : design_1_smartconnect_0_0_sc(nm), aclk("aclk"), aresetn("aresetn"), S00_AXI_araddr("S00_AXI_araddr"), S00_AXI_arlen("S00_AXI_arlen"), S00_AXI_arsize("S00_AXI_arsize"), S00_AXI_arburst("S00_AXI_arburst"), S00_AXI_arlock("S00_AXI_arlock"), S00_AXI_arcache("S00_AXI_arcache"), S00_AXI_arprot("S00_AXI_arprot"), S00_AXI_arqos("S00_AXI_arqos"), S00_AXI_arvalid("S00_AXI_arvalid"), S00_AXI_arready("S00_AXI_arready"), S00_AXI_rdata("S00_AXI_rdata"), S00_AXI_rresp("S00_AXI_rresp"), S00_AXI_rlast("S00_AXI_rlast"), S00_AXI_rvalid("S00_AXI_rvalid"), S00_AXI_rready("S00_AXI_rready"), S01_AXI_awaddr("S01_AXI_awaddr"), S01_AXI_awlen("S01_AXI_awlen"), S01_AXI_awsize("S01_AXI_awsize"), S01_AXI_awburst("S01_AXI_awburst"), S01_AXI_awlock("S01_AXI_awlock"), S01_AXI_awcache("S01_AXI_awcache"), S01_AXI_awprot("S01_AXI_awprot"), S01_AXI_awqos("S01_AXI_awqos"), S01_AXI_awvalid("S01_AXI_awvalid"), S01_AXI_awready("S01_AXI_awready"), S01_AXI_wdata("S01_AXI_wdata"), S01_AXI_wstrb("S01_AXI_wstrb"), S01_AXI_wlast("S01_AXI_wlast"), S01_AXI_wvalid("S01_AXI_wvalid"), S01_AXI_wready("S01_AXI_wready"), S01_AXI_bresp("S01_AXI_bresp"), S01_AXI_bvalid("S01_AXI_bvalid"), S01_AXI_bready("S01_AXI_bready"), S02_AXI_araddr("S02_AXI_araddr"), S02_AXI_arlen("S02_AXI_arlen"), S02_AXI_arsize("S02_AXI_arsize"), S02_AXI_arburst("S02_AXI_arburst"), S02_AXI_arlock("S02_AXI_arlock"), S02_AXI_arcache("S02_AXI_arcache"), S02_AXI_arprot("S02_AXI_arprot"), S02_AXI_arqos("S02_AXI_arqos"), S02_AXI_arvalid("S02_AXI_arvalid"), S02_AXI_arready("S02_AXI_arready"), S02_AXI_rdata("S02_AXI_rdata"), S02_AXI_rresp("S02_AXI_rresp"), S02_AXI_rlast("S02_AXI_rlast"), S02_AXI_rvalid("S02_AXI_rvalid"), S02_AXI_rready("S02_AXI_rready"), S03_AXI_awaddr("S03_AXI_awaddr"), S03_AXI_awlen("S03_AXI_awlen"), S03_AXI_awsize("S03_AXI_awsize"), S03_AXI_awburst("S03_AXI_awburst"), S03_AXI_awlock("S03_AXI_awlock"), S03_AXI_awcache("S03_AXI_awcache"), S03_AXI_awprot("S03_AXI_awprot"), S03_AXI_awqos("S03_AXI_awqos"), S03_AXI_awvalid("S03_AXI_awvalid"), S03_AXI_awready("S03_AXI_awready"), S03_AXI_wdata("S03_AXI_wdata"), S03_AXI_wstrb("S03_AXI_wstrb"), S03_AXI_wlast("S03_AXI_wlast"), S03_AXI_wvalid("S03_AXI_wvalid"), S03_AXI_wready("S03_AXI_wready"), S03_AXI_bresp("S03_AXI_bresp"), S03_AXI_bvalid("S03_AXI_bvalid"), S03_AXI_bready("S03_AXI_bready"), S04_AXI_araddr("S04_AXI_araddr"), S04_AXI_arlen("S04_AXI_arlen"), S04_AXI_arsize("S04_AXI_arsize"), S04_AXI_arburst("S04_AXI_arburst"), S04_AXI_arlock("S04_AXI_arlock"), S04_AXI_arcache("S04_AXI_arcache"), S04_AXI_arprot("S04_AXI_arprot"), S04_AXI_arqos("S04_AXI_arqos"), S04_AXI_arvalid("S04_AXI_arvalid"), S04_AXI_arready("S04_AXI_arready"), S04_AXI_rdata("S04_AXI_rdata"), S04_AXI_rresp("S04_AXI_rresp"), S04_AXI_rlast("S04_AXI_rlast"), S04_AXI_rvalid("S04_AXI_rvalid"), S04_AXI_rready("S04_AXI_rready"), S05_AXI_awaddr("S05_AXI_awaddr"), S05_AXI_awlen("S05_AXI_awlen"), S05_AXI_awsize("S05_AXI_awsize"), S05_AXI_awburst("S05_AXI_awburst"), S05_AXI_awlock("S05_AXI_awlock"), S05_AXI_awcache("S05_AXI_awcache"), S05_AXI_awprot("S05_AXI_awprot"), S05_AXI_awqos("S05_AXI_awqos"), S05_AXI_awvalid("S05_AXI_awvalid"), S05_AXI_awready("S05_AXI_awready"), S05_AXI_wdata("S05_AXI_wdata"), S05_AXI_wstrb("S05_AXI_wstrb"), S05_AXI_wlast("S05_AXI_wlast"), S05_AXI_wvalid("S05_AXI_wvalid"), S05_AXI_wready("S05_AXI_wready"), S05_AXI_bresp("S05_AXI_bresp"), S05_AXI_bvalid("S05_AXI_bvalid"), S05_AXI_bready("S05_AXI_bready"), S06_AXI_araddr("S06_AXI_araddr"), S06_AXI_arlen("S06_AXI_arlen"), S06_AXI_arsize("S06_AXI_arsize"), S06_AXI_arburst("S06_AXI_arburst"), S06_AXI_arlock("S06_AXI_arlock"), S06_AXI_arcache("S06_AXI_arcache"), S06_AXI_arprot("S06_AXI_arprot"), S06_AXI_arqos("S06_AXI_arqos"), S06_AXI_arvalid("S06_AXI_arvalid"), S06_AXI_arready("S06_AXI_arready"), S06_AXI_rdata("S06_AXI_rdata"), S06_AXI_rresp("S06_AXI_rresp"), S06_AXI_rlast("S06_AXI_rlast"), S06_AXI_rvalid("S06_AXI_rvalid"), S06_AXI_rready("S06_AXI_rready"), S07_AXI_awaddr("S07_AXI_awaddr"), S07_AXI_awlen("S07_AXI_awlen"), S07_AXI_awsize("S07_AXI_awsize"), S07_AXI_awburst("S07_AXI_awburst"), S07_AXI_awlock("S07_AXI_awlock"), S07_AXI_awcache("S07_AXI_awcache"), S07_AXI_awprot("S07_AXI_awprot"), S07_AXI_awqos("S07_AXI_awqos"), S07_AXI_awvalid("S07_AXI_awvalid"), S07_AXI_awready("S07_AXI_awready"), S07_AXI_wdata("S07_AXI_wdata"), S07_AXI_wstrb("S07_AXI_wstrb"), S07_AXI_wlast("S07_AXI_wlast"), S07_AXI_wvalid("S07_AXI_wvalid"), S07_AXI_wready("S07_AXI_wready"), S07_AXI_bresp("S07_AXI_bresp"), S07_AXI_bvalid("S07_AXI_bvalid"), S07_AXI_bready("S07_AXI_bready"), S08_AXI_araddr("S08_AXI_araddr"), S08_AXI_arlen("S08_AXI_arlen"), S08_AXI_arsize("S08_AXI_arsize"), S08_AXI_arburst("S08_AXI_arburst"), S08_AXI_arlock("S08_AXI_arlock"), S08_AXI_arcache("S08_AXI_arcache"), S08_AXI_arprot("S08_AXI_arprot"), S08_AXI_arqos("S08_AXI_arqos"), S08_AXI_arvalid("S08_AXI_arvalid"), S08_AXI_arready("S08_AXI_arready"), S08_AXI_rdata("S08_AXI_rdata"), S08_AXI_rresp("S08_AXI_rresp"), S08_AXI_rlast("S08_AXI_rlast"), S08_AXI_rvalid("S08_AXI_rvalid"), S08_AXI_rready("S08_AXI_rready"), S09_AXI_awaddr("S09_AXI_awaddr"), S09_AXI_awlen("S09_AXI_awlen"), S09_AXI_awsize("S09_AXI_awsize"), S09_AXI_awburst("S09_AXI_awburst"), S09_AXI_awlock("S09_AXI_awlock"), S09_AXI_awcache("S09_AXI_awcache"), S09_AXI_awprot("S09_AXI_awprot"), S09_AXI_awqos("S09_AXI_awqos"), S09_AXI_awvalid("S09_AXI_awvalid"), S09_AXI_awready("S09_AXI_awready"), S09_AXI_wdata("S09_AXI_wdata"), S09_AXI_wstrb("S09_AXI_wstrb"), S09_AXI_wlast("S09_AXI_wlast"), S09_AXI_wvalid("S09_AXI_wvalid"), S09_AXI_wready("S09_AXI_wready"), S09_AXI_bresp("S09_AXI_bresp"), S09_AXI_bvalid("S09_AXI_bvalid"), S09_AXI_bready("S09_AXI_bready"), S10_AXI_araddr("S10_AXI_araddr"), S10_AXI_arlen("S10_AXI_arlen"), S10_AXI_arsize("S10_AXI_arsize"), S10_AXI_arburst("S10_AXI_arburst"), S10_AXI_arlock("S10_AXI_arlock"), S10_AXI_arcache("S10_AXI_arcache"), S10_AXI_arprot("S10_AXI_arprot"), S10_AXI_arqos("S10_AXI_arqos"), S10_AXI_arvalid("S10_AXI_arvalid"), S10_AXI_arready("S10_AXI_arready"), S10_AXI_rdata("S10_AXI_rdata"), S10_AXI_rresp("S10_AXI_rresp"), S10_AXI_rlast("S10_AXI_rlast"), S10_AXI_rvalid("S10_AXI_rvalid"), S10_AXI_rready("S10_AXI_rready"), S11_AXI_awaddr("S11_AXI_awaddr"), S11_AXI_awlen("S11_AXI_awlen"), S11_AXI_awsize("S11_AXI_awsize"), S11_AXI_awburst("S11_AXI_awburst"), S11_AXI_awlock("S11_AXI_awlock"), S11_AXI_awcache("S11_AXI_awcache"), S11_AXI_awprot("S11_AXI_awprot"), S11_AXI_awqos("S11_AXI_awqos"), S11_AXI_awvalid("S11_AXI_awvalid"), S11_AXI_awready("S11_AXI_awready"), S11_AXI_wdata("S11_AXI_wdata"), S11_AXI_wstrb("S11_AXI_wstrb"), S11_AXI_wlast("S11_AXI_wlast"), S11_AXI_wvalid("S11_AXI_wvalid"), S11_AXI_wready("S11_AXI_wready"), S11_AXI_bresp("S11_AXI_bresp"), S11_AXI_bvalid("S11_AXI_bvalid"), S11_AXI_bready("S11_AXI_bready"), M00_AXI_awaddr("M00_AXI_awaddr"), M00_AXI_awlen("M00_AXI_awlen"), M00_AXI_awsize("M00_AXI_awsize"), M00_AXI_awburst("M00_AXI_awburst"), M00_AXI_awlock("M00_AXI_awlock"), M00_AXI_awcache("M00_AXI_awcache"), M00_AXI_awprot("M00_AXI_awprot"), M00_AXI_awqos("M00_AXI_awqos"), M00_AXI_awvalid("M00_AXI_awvalid"), M00_AXI_awready("M00_AXI_awready"), M00_AXI_wdata("M00_AXI_wdata"), M00_AXI_wstrb("M00_AXI_wstrb"), M00_AXI_wlast("M00_AXI_wlast"), M00_AXI_wvalid("M00_AXI_wvalid"), M00_AXI_wready("M00_AXI_wready"), M00_AXI_bresp("M00_AXI_bresp"), M00_AXI_bvalid("M00_AXI_bvalid"), M00_AXI_bready("M00_AXI_bready"), M00_AXI_araddr("M00_AXI_araddr"), M00_AXI_arlen("M00_AXI_arlen"), M00_AXI_arsize("M00_AXI_arsize"), M00_AXI_arburst("M00_AXI_arburst"), M00_AXI_arlock("M00_AXI_arlock"), M00_AXI_arcache("M00_AXI_arcache"), M00_AXI_arprot("M00_AXI_arprot"), M00_AXI_arqos("M00_AXI_arqos"), M00_AXI_arvalid("M00_AXI_arvalid"), M00_AXI_arready("M00_AXI_arready"), M00_AXI_rdata("M00_AXI_rdata"), M00_AXI_rresp("M00_AXI_rresp"), M00_AXI_rlast("M00_AXI_rlast"), M00_AXI_rvalid("M00_AXI_rvalid"), M00_AXI_rready("M00_AXI_rready"),mp_S00_AXI_wr_socket_stub(nullptr),mp_S01_AXI_rd_socket_stub(nullptr),mp_S02_AXI_wr_socket_stub(nullptr),mp_S03_AXI_rd_socket_stub(nullptr),mp_S04_AXI_wr_socket_stub(nullptr),mp_S05_AXI_rd_socket_stub(nullptr),mp_S06_AXI_wr_socket_stub(nullptr),mp_S07_AXI_rd_socket_stub(nullptr),mp_S08_AXI_wr_socket_stub(nullptr),mp_S09_AXI_rd_socket_stub(nullptr),mp_S10_AXI_wr_socket_stub(nullptr),mp_S11_AXI_rd_socket_stub(nullptr)
 {
 
   // initialize pins
@@ -89,6 +89,10 @@ design_1_smartconnect_0_0::design_1_smartconnect_0_0(const sc_core::sc_module_na
   mp_S08_AXI_arlock_converter = NULL;
   mp_S09_AXI_transactor = NULL;
   mp_S09_AXI_awlock_converter = NULL;
+  mp_S10_AXI_transactor = NULL;
+  mp_S10_AXI_arlock_converter = NULL;
+  mp_S11_AXI_transactor = NULL;
+  mp_S11_AXI_awlock_converter = NULL;
   mp_M00_AXI_transactor = NULL;
   mp_M00_AXI_awlen_converter = NULL;
   mp_M00_AXI_awlock_converter = NULL;
@@ -106,6 +110,8 @@ design_1_smartconnect_0_0::design_1_smartconnect_0_0(const sc_core::sc_module_na
   mp_S07_AXI_rd_socket_stub = NULL;
   mp_S08_AXI_wr_socket_stub = NULL;
   mp_S09_AXI_rd_socket_stub = NULL;
+  mp_S10_AXI_wr_socket_stub = NULL;
+  mp_S11_AXI_rd_socket_stub = NULL;
 
 }
 
@@ -881,6 +887,161 @@ void design_1_smartconnect_0_0::before_end_of_elaboration()
 
     mp_impl->S09_AXI_tlm_aximm_read_socket->bind(mp_S09_AXI_rd_socket_stub->initiator_socket);
     mp_impl->S09_AXI_tlm_aximm_write_socket->bind(*(mp_S09_AXI_transactor->wr_socket));
+  }
+  else
+  {
+  }
+
+  // configure 'S10_AXI' transactor
+
+  if (xsc::utils::xsc_sim_manager::getInstanceParameterInt("design_1_smartconnect_0_0", "S10_AXI_TLM_MODE") != 1)
+  {
+    // Instantiate Socket Stubs
+    mp_S10_AXI_wr_socket_stub = new xtlm::xtlm_aximm_initiator_stub("wr_socket", 0);
+
+  // 'S10_AXI' transactor parameters
+    xsc::common_cpp::properties S10_AXI_transactor_param_props;
+    S10_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
+    S10_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S10_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
+    S10_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
+    S10_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
+    S10_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
+    S10_AXI_transactor_param_props.addLong("WUSER_WIDTH", "0");
+    S10_AXI_transactor_param_props.addLong("RUSER_WIDTH", "0");
+    S10_AXI_transactor_param_props.addLong("BUSER_WIDTH", "0");
+    S10_AXI_transactor_param_props.addLong("HAS_BURST", "1");
+    S10_AXI_transactor_param_props.addLong("HAS_LOCK", "1");
+    S10_AXI_transactor_param_props.addLong("HAS_PROT", "1");
+    S10_AXI_transactor_param_props.addLong("HAS_CACHE", "1");
+    S10_AXI_transactor_param_props.addLong("HAS_QOS", "1");
+    S10_AXI_transactor_param_props.addLong("HAS_REGION", "0");
+    S10_AXI_transactor_param_props.addLong("HAS_WSTRB", "0");
+    S10_AXI_transactor_param_props.addLong("HAS_BRESP", "0");
+    S10_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
+    S10_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
+    S10_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "16");
+    S10_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "2");
+    S10_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "16");
+    S10_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
+    S10_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
+    S10_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
+    S10_AXI_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
+    S10_AXI_transactor_param_props.addLong("HAS_SIZE", "1");
+    S10_AXI_transactor_param_props.addLong("HAS_RESET", "1");
+    S10_AXI_transactor_param_props.addFloat("PHASE", "0.0");
+    S10_AXI_transactor_param_props.addString("PROTOCOL", "AXI4");
+    S10_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_ONLY");
+    S10_AXI_transactor_param_props.addString("CLK_DOMAIN", "design_1_processing_system7_0_0_FCLK_CLK0");
+
+    mp_S10_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<32,32,1,1,1,1,1,1>("S10_AXI_transactor", S10_AXI_transactor_param_props);
+
+    // S10_AXI' transactor ports
+
+    mp_S10_AXI_transactor->ARADDR(S10_AXI_araddr);
+    mp_S10_AXI_transactor->ARLEN(S10_AXI_arlen);
+    mp_S10_AXI_transactor->ARSIZE(S10_AXI_arsize);
+    mp_S10_AXI_transactor->ARBURST(S10_AXI_arburst);
+    mp_S10_AXI_arlock_converter = new xsc::common::vectorN2scalar_converter<1>("S10_AXI_arlock_converter");
+    mp_S10_AXI_arlock_converter->vector_in(S10_AXI_arlock);
+    mp_S10_AXI_arlock_converter->scalar_out(m_S10_AXI_arlock_converter_signal);
+    mp_S10_AXI_transactor->ARLOCK(m_S10_AXI_arlock_converter_signal);
+    mp_S10_AXI_transactor->ARCACHE(S10_AXI_arcache);
+    mp_S10_AXI_transactor->ARPROT(S10_AXI_arprot);
+    mp_S10_AXI_transactor->ARQOS(S10_AXI_arqos);
+    mp_S10_AXI_transactor->ARVALID(S10_AXI_arvalid);
+    mp_S10_AXI_transactor->ARREADY(S10_AXI_arready);
+    mp_S10_AXI_transactor->RDATA(S10_AXI_rdata);
+    mp_S10_AXI_transactor->RRESP(S10_AXI_rresp);
+    mp_S10_AXI_transactor->RLAST(S10_AXI_rlast);
+    mp_S10_AXI_transactor->RVALID(S10_AXI_rvalid);
+    mp_S10_AXI_transactor->RREADY(S10_AXI_rready);
+    mp_S10_AXI_transactor->CLK(aclk);
+    mp_S10_AXI_transactor->RST(aresetn);
+
+    // S10_AXI' transactor sockets
+
+    mp_impl->S10_AXI_tlm_aximm_read_socket->bind(*(mp_S10_AXI_transactor->rd_socket));
+    mp_impl->S10_AXI_tlm_aximm_write_socket->bind(mp_S10_AXI_wr_socket_stub->initiator_socket);
+  }
+  else
+  {
+  }
+
+  // configure 'S11_AXI' transactor
+
+  if (xsc::utils::xsc_sim_manager::getInstanceParameterInt("design_1_smartconnect_0_0", "S11_AXI_TLM_MODE") != 1)
+  {
+    // Instantiate Socket Stubs
+    mp_S11_AXI_rd_socket_stub = new xtlm::xtlm_aximm_initiator_stub("rd_socket", 0);
+
+  // 'S11_AXI' transactor parameters
+    xsc::common_cpp::properties S11_AXI_transactor_param_props;
+    S11_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
+    S11_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S11_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
+    S11_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
+    S11_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
+    S11_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
+    S11_AXI_transactor_param_props.addLong("WUSER_WIDTH", "0");
+    S11_AXI_transactor_param_props.addLong("RUSER_WIDTH", "0");
+    S11_AXI_transactor_param_props.addLong("BUSER_WIDTH", "0");
+    S11_AXI_transactor_param_props.addLong("HAS_BURST", "1");
+    S11_AXI_transactor_param_props.addLong("HAS_LOCK", "1");
+    S11_AXI_transactor_param_props.addLong("HAS_PROT", "1");
+    S11_AXI_transactor_param_props.addLong("HAS_CACHE", "1");
+    S11_AXI_transactor_param_props.addLong("HAS_QOS", "1");
+    S11_AXI_transactor_param_props.addLong("HAS_REGION", "0");
+    S11_AXI_transactor_param_props.addLong("HAS_WSTRB", "1");
+    S11_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
+    S11_AXI_transactor_param_props.addLong("HAS_RRESP", "0");
+    S11_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
+    S11_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "2");
+    S11_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "16");
+    S11_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "16");
+    S11_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
+    S11_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
+    S11_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
+    S11_AXI_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
+    S11_AXI_transactor_param_props.addLong("HAS_SIZE", "1");
+    S11_AXI_transactor_param_props.addLong("HAS_RESET", "1");
+    S11_AXI_transactor_param_props.addFloat("PHASE", "0.0");
+    S11_AXI_transactor_param_props.addString("PROTOCOL", "AXI4");
+    S11_AXI_transactor_param_props.addString("READ_WRITE_MODE", "WRITE_ONLY");
+    S11_AXI_transactor_param_props.addString("CLK_DOMAIN", "design_1_processing_system7_0_0_FCLK_CLK0");
+
+    mp_S11_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<32,32,1,1,1,1,1,1>("S11_AXI_transactor", S11_AXI_transactor_param_props);
+
+    // S11_AXI' transactor ports
+
+    mp_S11_AXI_transactor->AWADDR(S11_AXI_awaddr);
+    mp_S11_AXI_transactor->AWLEN(S11_AXI_awlen);
+    mp_S11_AXI_transactor->AWSIZE(S11_AXI_awsize);
+    mp_S11_AXI_transactor->AWBURST(S11_AXI_awburst);
+    mp_S11_AXI_awlock_converter = new xsc::common::vectorN2scalar_converter<1>("S11_AXI_awlock_converter");
+    mp_S11_AXI_awlock_converter->vector_in(S11_AXI_awlock);
+    mp_S11_AXI_awlock_converter->scalar_out(m_S11_AXI_awlock_converter_signal);
+    mp_S11_AXI_transactor->AWLOCK(m_S11_AXI_awlock_converter_signal);
+    mp_S11_AXI_transactor->AWCACHE(S11_AXI_awcache);
+    mp_S11_AXI_transactor->AWPROT(S11_AXI_awprot);
+    mp_S11_AXI_transactor->AWQOS(S11_AXI_awqos);
+    mp_S11_AXI_transactor->AWVALID(S11_AXI_awvalid);
+    mp_S11_AXI_transactor->AWREADY(S11_AXI_awready);
+    mp_S11_AXI_transactor->WDATA(S11_AXI_wdata);
+    mp_S11_AXI_transactor->WSTRB(S11_AXI_wstrb);
+    mp_S11_AXI_transactor->WLAST(S11_AXI_wlast);
+    mp_S11_AXI_transactor->WVALID(S11_AXI_wvalid);
+    mp_S11_AXI_transactor->WREADY(S11_AXI_wready);
+    mp_S11_AXI_transactor->BRESP(S11_AXI_bresp);
+    mp_S11_AXI_transactor->BVALID(S11_AXI_bvalid);
+    mp_S11_AXI_transactor->BREADY(S11_AXI_bready);
+    mp_S11_AXI_transactor->CLK(aclk);
+    mp_S11_AXI_transactor->RST(aresetn);
+
+    // S11_AXI' transactor sockets
+
+    mp_impl->S11_AXI_tlm_aximm_read_socket->bind(mp_S11_AXI_rd_socket_stub->initiator_socket);
+    mp_impl->S11_AXI_tlm_aximm_write_socket->bind(*(mp_S11_AXI_transactor->wr_socket));
   }
   else
   {
@@ -996,7 +1157,7 @@ void design_1_smartconnect_0_0::before_end_of_elaboration()
 
 
 #ifdef XM_SYSTEMC
-design_1_smartconnect_0_0::design_1_smartconnect_0_0(const sc_core::sc_module_name& nm) : design_1_smartconnect_0_0_sc(nm), aclk("aclk"), aresetn("aresetn"), S00_AXI_araddr("S00_AXI_araddr"), S00_AXI_arlen("S00_AXI_arlen"), S00_AXI_arsize("S00_AXI_arsize"), S00_AXI_arburst("S00_AXI_arburst"), S00_AXI_arlock("S00_AXI_arlock"), S00_AXI_arcache("S00_AXI_arcache"), S00_AXI_arprot("S00_AXI_arprot"), S00_AXI_arqos("S00_AXI_arqos"), S00_AXI_arvalid("S00_AXI_arvalid"), S00_AXI_arready("S00_AXI_arready"), S00_AXI_rdata("S00_AXI_rdata"), S00_AXI_rresp("S00_AXI_rresp"), S00_AXI_rlast("S00_AXI_rlast"), S00_AXI_rvalid("S00_AXI_rvalid"), S00_AXI_rready("S00_AXI_rready"), S01_AXI_awaddr("S01_AXI_awaddr"), S01_AXI_awlen("S01_AXI_awlen"), S01_AXI_awsize("S01_AXI_awsize"), S01_AXI_awburst("S01_AXI_awburst"), S01_AXI_awlock("S01_AXI_awlock"), S01_AXI_awcache("S01_AXI_awcache"), S01_AXI_awprot("S01_AXI_awprot"), S01_AXI_awqos("S01_AXI_awqos"), S01_AXI_awvalid("S01_AXI_awvalid"), S01_AXI_awready("S01_AXI_awready"), S01_AXI_wdata("S01_AXI_wdata"), S01_AXI_wstrb("S01_AXI_wstrb"), S01_AXI_wlast("S01_AXI_wlast"), S01_AXI_wvalid("S01_AXI_wvalid"), S01_AXI_wready("S01_AXI_wready"), S01_AXI_bresp("S01_AXI_bresp"), S01_AXI_bvalid("S01_AXI_bvalid"), S01_AXI_bready("S01_AXI_bready"), S02_AXI_araddr("S02_AXI_araddr"), S02_AXI_arlen("S02_AXI_arlen"), S02_AXI_arsize("S02_AXI_arsize"), S02_AXI_arburst("S02_AXI_arburst"), S02_AXI_arlock("S02_AXI_arlock"), S02_AXI_arcache("S02_AXI_arcache"), S02_AXI_arprot("S02_AXI_arprot"), S02_AXI_arqos("S02_AXI_arqos"), S02_AXI_arvalid("S02_AXI_arvalid"), S02_AXI_arready("S02_AXI_arready"), S02_AXI_rdata("S02_AXI_rdata"), S02_AXI_rresp("S02_AXI_rresp"), S02_AXI_rlast("S02_AXI_rlast"), S02_AXI_rvalid("S02_AXI_rvalid"), S02_AXI_rready("S02_AXI_rready"), S03_AXI_awaddr("S03_AXI_awaddr"), S03_AXI_awlen("S03_AXI_awlen"), S03_AXI_awsize("S03_AXI_awsize"), S03_AXI_awburst("S03_AXI_awburst"), S03_AXI_awlock("S03_AXI_awlock"), S03_AXI_awcache("S03_AXI_awcache"), S03_AXI_awprot("S03_AXI_awprot"), S03_AXI_awqos("S03_AXI_awqos"), S03_AXI_awvalid("S03_AXI_awvalid"), S03_AXI_awready("S03_AXI_awready"), S03_AXI_wdata("S03_AXI_wdata"), S03_AXI_wstrb("S03_AXI_wstrb"), S03_AXI_wlast("S03_AXI_wlast"), S03_AXI_wvalid("S03_AXI_wvalid"), S03_AXI_wready("S03_AXI_wready"), S03_AXI_bresp("S03_AXI_bresp"), S03_AXI_bvalid("S03_AXI_bvalid"), S03_AXI_bready("S03_AXI_bready"), S04_AXI_araddr("S04_AXI_araddr"), S04_AXI_arlen("S04_AXI_arlen"), S04_AXI_arsize("S04_AXI_arsize"), S04_AXI_arburst("S04_AXI_arburst"), S04_AXI_arlock("S04_AXI_arlock"), S04_AXI_arcache("S04_AXI_arcache"), S04_AXI_arprot("S04_AXI_arprot"), S04_AXI_arqos("S04_AXI_arqos"), S04_AXI_arvalid("S04_AXI_arvalid"), S04_AXI_arready("S04_AXI_arready"), S04_AXI_rdata("S04_AXI_rdata"), S04_AXI_rresp("S04_AXI_rresp"), S04_AXI_rlast("S04_AXI_rlast"), S04_AXI_rvalid("S04_AXI_rvalid"), S04_AXI_rready("S04_AXI_rready"), S05_AXI_awaddr("S05_AXI_awaddr"), S05_AXI_awlen("S05_AXI_awlen"), S05_AXI_awsize("S05_AXI_awsize"), S05_AXI_awburst("S05_AXI_awburst"), S05_AXI_awlock("S05_AXI_awlock"), S05_AXI_awcache("S05_AXI_awcache"), S05_AXI_awprot("S05_AXI_awprot"), S05_AXI_awqos("S05_AXI_awqos"), S05_AXI_awvalid("S05_AXI_awvalid"), S05_AXI_awready("S05_AXI_awready"), S05_AXI_wdata("S05_AXI_wdata"), S05_AXI_wstrb("S05_AXI_wstrb"), S05_AXI_wlast("S05_AXI_wlast"), S05_AXI_wvalid("S05_AXI_wvalid"), S05_AXI_wready("S05_AXI_wready"), S05_AXI_bresp("S05_AXI_bresp"), S05_AXI_bvalid("S05_AXI_bvalid"), S05_AXI_bready("S05_AXI_bready"), S06_AXI_araddr("S06_AXI_araddr"), S06_AXI_arlen("S06_AXI_arlen"), S06_AXI_arsize("S06_AXI_arsize"), S06_AXI_arburst("S06_AXI_arburst"), S06_AXI_arlock("S06_AXI_arlock"), S06_AXI_arcache("S06_AXI_arcache"), S06_AXI_arprot("S06_AXI_arprot"), S06_AXI_arqos("S06_AXI_arqos"), S06_AXI_arvalid("S06_AXI_arvalid"), S06_AXI_arready("S06_AXI_arready"), S06_AXI_rdata("S06_AXI_rdata"), S06_AXI_rresp("S06_AXI_rresp"), S06_AXI_rlast("S06_AXI_rlast"), S06_AXI_rvalid("S06_AXI_rvalid"), S06_AXI_rready("S06_AXI_rready"), S07_AXI_awaddr("S07_AXI_awaddr"), S07_AXI_awlen("S07_AXI_awlen"), S07_AXI_awsize("S07_AXI_awsize"), S07_AXI_awburst("S07_AXI_awburst"), S07_AXI_awlock("S07_AXI_awlock"), S07_AXI_awcache("S07_AXI_awcache"), S07_AXI_awprot("S07_AXI_awprot"), S07_AXI_awqos("S07_AXI_awqos"), S07_AXI_awvalid("S07_AXI_awvalid"), S07_AXI_awready("S07_AXI_awready"), S07_AXI_wdata("S07_AXI_wdata"), S07_AXI_wstrb("S07_AXI_wstrb"), S07_AXI_wlast("S07_AXI_wlast"), S07_AXI_wvalid("S07_AXI_wvalid"), S07_AXI_wready("S07_AXI_wready"), S07_AXI_bresp("S07_AXI_bresp"), S07_AXI_bvalid("S07_AXI_bvalid"), S07_AXI_bready("S07_AXI_bready"), S08_AXI_araddr("S08_AXI_araddr"), S08_AXI_arlen("S08_AXI_arlen"), S08_AXI_arsize("S08_AXI_arsize"), S08_AXI_arburst("S08_AXI_arburst"), S08_AXI_arlock("S08_AXI_arlock"), S08_AXI_arcache("S08_AXI_arcache"), S08_AXI_arprot("S08_AXI_arprot"), S08_AXI_arqos("S08_AXI_arqos"), S08_AXI_arvalid("S08_AXI_arvalid"), S08_AXI_arready("S08_AXI_arready"), S08_AXI_rdata("S08_AXI_rdata"), S08_AXI_rresp("S08_AXI_rresp"), S08_AXI_rlast("S08_AXI_rlast"), S08_AXI_rvalid("S08_AXI_rvalid"), S08_AXI_rready("S08_AXI_rready"), S09_AXI_awaddr("S09_AXI_awaddr"), S09_AXI_awlen("S09_AXI_awlen"), S09_AXI_awsize("S09_AXI_awsize"), S09_AXI_awburst("S09_AXI_awburst"), S09_AXI_awlock("S09_AXI_awlock"), S09_AXI_awcache("S09_AXI_awcache"), S09_AXI_awprot("S09_AXI_awprot"), S09_AXI_awqos("S09_AXI_awqos"), S09_AXI_awvalid("S09_AXI_awvalid"), S09_AXI_awready("S09_AXI_awready"), S09_AXI_wdata("S09_AXI_wdata"), S09_AXI_wstrb("S09_AXI_wstrb"), S09_AXI_wlast("S09_AXI_wlast"), S09_AXI_wvalid("S09_AXI_wvalid"), S09_AXI_wready("S09_AXI_wready"), S09_AXI_bresp("S09_AXI_bresp"), S09_AXI_bvalid("S09_AXI_bvalid"), S09_AXI_bready("S09_AXI_bready"), M00_AXI_awaddr("M00_AXI_awaddr"), M00_AXI_awlen("M00_AXI_awlen"), M00_AXI_awsize("M00_AXI_awsize"), M00_AXI_awburst("M00_AXI_awburst"), M00_AXI_awlock("M00_AXI_awlock"), M00_AXI_awcache("M00_AXI_awcache"), M00_AXI_awprot("M00_AXI_awprot"), M00_AXI_awqos("M00_AXI_awqos"), M00_AXI_awvalid("M00_AXI_awvalid"), M00_AXI_awready("M00_AXI_awready"), M00_AXI_wdata("M00_AXI_wdata"), M00_AXI_wstrb("M00_AXI_wstrb"), M00_AXI_wlast("M00_AXI_wlast"), M00_AXI_wvalid("M00_AXI_wvalid"), M00_AXI_wready("M00_AXI_wready"), M00_AXI_bresp("M00_AXI_bresp"), M00_AXI_bvalid("M00_AXI_bvalid"), M00_AXI_bready("M00_AXI_bready"), M00_AXI_araddr("M00_AXI_araddr"), M00_AXI_arlen("M00_AXI_arlen"), M00_AXI_arsize("M00_AXI_arsize"), M00_AXI_arburst("M00_AXI_arburst"), M00_AXI_arlock("M00_AXI_arlock"), M00_AXI_arcache("M00_AXI_arcache"), M00_AXI_arprot("M00_AXI_arprot"), M00_AXI_arqos("M00_AXI_arqos"), M00_AXI_arvalid("M00_AXI_arvalid"), M00_AXI_arready("M00_AXI_arready"), M00_AXI_rdata("M00_AXI_rdata"), M00_AXI_rresp("M00_AXI_rresp"), M00_AXI_rlast("M00_AXI_rlast"), M00_AXI_rvalid("M00_AXI_rvalid"), M00_AXI_rready("M00_AXI_rready"),mp_S00_AXI_wr_socket_stub(nullptr),mp_S01_AXI_rd_socket_stub(nullptr),mp_S02_AXI_wr_socket_stub(nullptr),mp_S03_AXI_rd_socket_stub(nullptr),mp_S04_AXI_wr_socket_stub(nullptr),mp_S05_AXI_rd_socket_stub(nullptr),mp_S06_AXI_wr_socket_stub(nullptr),mp_S07_AXI_rd_socket_stub(nullptr),mp_S08_AXI_wr_socket_stub(nullptr),mp_S09_AXI_rd_socket_stub(nullptr)
+design_1_smartconnect_0_0::design_1_smartconnect_0_0(const sc_core::sc_module_name& nm) : design_1_smartconnect_0_0_sc(nm), aclk("aclk"), aresetn("aresetn"), S00_AXI_araddr("S00_AXI_araddr"), S00_AXI_arlen("S00_AXI_arlen"), S00_AXI_arsize("S00_AXI_arsize"), S00_AXI_arburst("S00_AXI_arburst"), S00_AXI_arlock("S00_AXI_arlock"), S00_AXI_arcache("S00_AXI_arcache"), S00_AXI_arprot("S00_AXI_arprot"), S00_AXI_arqos("S00_AXI_arqos"), S00_AXI_arvalid("S00_AXI_arvalid"), S00_AXI_arready("S00_AXI_arready"), S00_AXI_rdata("S00_AXI_rdata"), S00_AXI_rresp("S00_AXI_rresp"), S00_AXI_rlast("S00_AXI_rlast"), S00_AXI_rvalid("S00_AXI_rvalid"), S00_AXI_rready("S00_AXI_rready"), S01_AXI_awaddr("S01_AXI_awaddr"), S01_AXI_awlen("S01_AXI_awlen"), S01_AXI_awsize("S01_AXI_awsize"), S01_AXI_awburst("S01_AXI_awburst"), S01_AXI_awlock("S01_AXI_awlock"), S01_AXI_awcache("S01_AXI_awcache"), S01_AXI_awprot("S01_AXI_awprot"), S01_AXI_awqos("S01_AXI_awqos"), S01_AXI_awvalid("S01_AXI_awvalid"), S01_AXI_awready("S01_AXI_awready"), S01_AXI_wdata("S01_AXI_wdata"), S01_AXI_wstrb("S01_AXI_wstrb"), S01_AXI_wlast("S01_AXI_wlast"), S01_AXI_wvalid("S01_AXI_wvalid"), S01_AXI_wready("S01_AXI_wready"), S01_AXI_bresp("S01_AXI_bresp"), S01_AXI_bvalid("S01_AXI_bvalid"), S01_AXI_bready("S01_AXI_bready"), S02_AXI_araddr("S02_AXI_araddr"), S02_AXI_arlen("S02_AXI_arlen"), S02_AXI_arsize("S02_AXI_arsize"), S02_AXI_arburst("S02_AXI_arburst"), S02_AXI_arlock("S02_AXI_arlock"), S02_AXI_arcache("S02_AXI_arcache"), S02_AXI_arprot("S02_AXI_arprot"), S02_AXI_arqos("S02_AXI_arqos"), S02_AXI_arvalid("S02_AXI_arvalid"), S02_AXI_arready("S02_AXI_arready"), S02_AXI_rdata("S02_AXI_rdata"), S02_AXI_rresp("S02_AXI_rresp"), S02_AXI_rlast("S02_AXI_rlast"), S02_AXI_rvalid("S02_AXI_rvalid"), S02_AXI_rready("S02_AXI_rready"), S03_AXI_awaddr("S03_AXI_awaddr"), S03_AXI_awlen("S03_AXI_awlen"), S03_AXI_awsize("S03_AXI_awsize"), S03_AXI_awburst("S03_AXI_awburst"), S03_AXI_awlock("S03_AXI_awlock"), S03_AXI_awcache("S03_AXI_awcache"), S03_AXI_awprot("S03_AXI_awprot"), S03_AXI_awqos("S03_AXI_awqos"), S03_AXI_awvalid("S03_AXI_awvalid"), S03_AXI_awready("S03_AXI_awready"), S03_AXI_wdata("S03_AXI_wdata"), S03_AXI_wstrb("S03_AXI_wstrb"), S03_AXI_wlast("S03_AXI_wlast"), S03_AXI_wvalid("S03_AXI_wvalid"), S03_AXI_wready("S03_AXI_wready"), S03_AXI_bresp("S03_AXI_bresp"), S03_AXI_bvalid("S03_AXI_bvalid"), S03_AXI_bready("S03_AXI_bready"), S04_AXI_araddr("S04_AXI_araddr"), S04_AXI_arlen("S04_AXI_arlen"), S04_AXI_arsize("S04_AXI_arsize"), S04_AXI_arburst("S04_AXI_arburst"), S04_AXI_arlock("S04_AXI_arlock"), S04_AXI_arcache("S04_AXI_arcache"), S04_AXI_arprot("S04_AXI_arprot"), S04_AXI_arqos("S04_AXI_arqos"), S04_AXI_arvalid("S04_AXI_arvalid"), S04_AXI_arready("S04_AXI_arready"), S04_AXI_rdata("S04_AXI_rdata"), S04_AXI_rresp("S04_AXI_rresp"), S04_AXI_rlast("S04_AXI_rlast"), S04_AXI_rvalid("S04_AXI_rvalid"), S04_AXI_rready("S04_AXI_rready"), S05_AXI_awaddr("S05_AXI_awaddr"), S05_AXI_awlen("S05_AXI_awlen"), S05_AXI_awsize("S05_AXI_awsize"), S05_AXI_awburst("S05_AXI_awburst"), S05_AXI_awlock("S05_AXI_awlock"), S05_AXI_awcache("S05_AXI_awcache"), S05_AXI_awprot("S05_AXI_awprot"), S05_AXI_awqos("S05_AXI_awqos"), S05_AXI_awvalid("S05_AXI_awvalid"), S05_AXI_awready("S05_AXI_awready"), S05_AXI_wdata("S05_AXI_wdata"), S05_AXI_wstrb("S05_AXI_wstrb"), S05_AXI_wlast("S05_AXI_wlast"), S05_AXI_wvalid("S05_AXI_wvalid"), S05_AXI_wready("S05_AXI_wready"), S05_AXI_bresp("S05_AXI_bresp"), S05_AXI_bvalid("S05_AXI_bvalid"), S05_AXI_bready("S05_AXI_bready"), S06_AXI_araddr("S06_AXI_araddr"), S06_AXI_arlen("S06_AXI_arlen"), S06_AXI_arsize("S06_AXI_arsize"), S06_AXI_arburst("S06_AXI_arburst"), S06_AXI_arlock("S06_AXI_arlock"), S06_AXI_arcache("S06_AXI_arcache"), S06_AXI_arprot("S06_AXI_arprot"), S06_AXI_arqos("S06_AXI_arqos"), S06_AXI_arvalid("S06_AXI_arvalid"), S06_AXI_arready("S06_AXI_arready"), S06_AXI_rdata("S06_AXI_rdata"), S06_AXI_rresp("S06_AXI_rresp"), S06_AXI_rlast("S06_AXI_rlast"), S06_AXI_rvalid("S06_AXI_rvalid"), S06_AXI_rready("S06_AXI_rready"), S07_AXI_awaddr("S07_AXI_awaddr"), S07_AXI_awlen("S07_AXI_awlen"), S07_AXI_awsize("S07_AXI_awsize"), S07_AXI_awburst("S07_AXI_awburst"), S07_AXI_awlock("S07_AXI_awlock"), S07_AXI_awcache("S07_AXI_awcache"), S07_AXI_awprot("S07_AXI_awprot"), S07_AXI_awqos("S07_AXI_awqos"), S07_AXI_awvalid("S07_AXI_awvalid"), S07_AXI_awready("S07_AXI_awready"), S07_AXI_wdata("S07_AXI_wdata"), S07_AXI_wstrb("S07_AXI_wstrb"), S07_AXI_wlast("S07_AXI_wlast"), S07_AXI_wvalid("S07_AXI_wvalid"), S07_AXI_wready("S07_AXI_wready"), S07_AXI_bresp("S07_AXI_bresp"), S07_AXI_bvalid("S07_AXI_bvalid"), S07_AXI_bready("S07_AXI_bready"), S08_AXI_araddr("S08_AXI_araddr"), S08_AXI_arlen("S08_AXI_arlen"), S08_AXI_arsize("S08_AXI_arsize"), S08_AXI_arburst("S08_AXI_arburst"), S08_AXI_arlock("S08_AXI_arlock"), S08_AXI_arcache("S08_AXI_arcache"), S08_AXI_arprot("S08_AXI_arprot"), S08_AXI_arqos("S08_AXI_arqos"), S08_AXI_arvalid("S08_AXI_arvalid"), S08_AXI_arready("S08_AXI_arready"), S08_AXI_rdata("S08_AXI_rdata"), S08_AXI_rresp("S08_AXI_rresp"), S08_AXI_rlast("S08_AXI_rlast"), S08_AXI_rvalid("S08_AXI_rvalid"), S08_AXI_rready("S08_AXI_rready"), S09_AXI_awaddr("S09_AXI_awaddr"), S09_AXI_awlen("S09_AXI_awlen"), S09_AXI_awsize("S09_AXI_awsize"), S09_AXI_awburst("S09_AXI_awburst"), S09_AXI_awlock("S09_AXI_awlock"), S09_AXI_awcache("S09_AXI_awcache"), S09_AXI_awprot("S09_AXI_awprot"), S09_AXI_awqos("S09_AXI_awqos"), S09_AXI_awvalid("S09_AXI_awvalid"), S09_AXI_awready("S09_AXI_awready"), S09_AXI_wdata("S09_AXI_wdata"), S09_AXI_wstrb("S09_AXI_wstrb"), S09_AXI_wlast("S09_AXI_wlast"), S09_AXI_wvalid("S09_AXI_wvalid"), S09_AXI_wready("S09_AXI_wready"), S09_AXI_bresp("S09_AXI_bresp"), S09_AXI_bvalid("S09_AXI_bvalid"), S09_AXI_bready("S09_AXI_bready"), S10_AXI_araddr("S10_AXI_araddr"), S10_AXI_arlen("S10_AXI_arlen"), S10_AXI_arsize("S10_AXI_arsize"), S10_AXI_arburst("S10_AXI_arburst"), S10_AXI_arlock("S10_AXI_arlock"), S10_AXI_arcache("S10_AXI_arcache"), S10_AXI_arprot("S10_AXI_arprot"), S10_AXI_arqos("S10_AXI_arqos"), S10_AXI_arvalid("S10_AXI_arvalid"), S10_AXI_arready("S10_AXI_arready"), S10_AXI_rdata("S10_AXI_rdata"), S10_AXI_rresp("S10_AXI_rresp"), S10_AXI_rlast("S10_AXI_rlast"), S10_AXI_rvalid("S10_AXI_rvalid"), S10_AXI_rready("S10_AXI_rready"), S11_AXI_awaddr("S11_AXI_awaddr"), S11_AXI_awlen("S11_AXI_awlen"), S11_AXI_awsize("S11_AXI_awsize"), S11_AXI_awburst("S11_AXI_awburst"), S11_AXI_awlock("S11_AXI_awlock"), S11_AXI_awcache("S11_AXI_awcache"), S11_AXI_awprot("S11_AXI_awprot"), S11_AXI_awqos("S11_AXI_awqos"), S11_AXI_awvalid("S11_AXI_awvalid"), S11_AXI_awready("S11_AXI_awready"), S11_AXI_wdata("S11_AXI_wdata"), S11_AXI_wstrb("S11_AXI_wstrb"), S11_AXI_wlast("S11_AXI_wlast"), S11_AXI_wvalid("S11_AXI_wvalid"), S11_AXI_wready("S11_AXI_wready"), S11_AXI_bresp("S11_AXI_bresp"), S11_AXI_bvalid("S11_AXI_bvalid"), S11_AXI_bready("S11_AXI_bready"), M00_AXI_awaddr("M00_AXI_awaddr"), M00_AXI_awlen("M00_AXI_awlen"), M00_AXI_awsize("M00_AXI_awsize"), M00_AXI_awburst("M00_AXI_awburst"), M00_AXI_awlock("M00_AXI_awlock"), M00_AXI_awcache("M00_AXI_awcache"), M00_AXI_awprot("M00_AXI_awprot"), M00_AXI_awqos("M00_AXI_awqos"), M00_AXI_awvalid("M00_AXI_awvalid"), M00_AXI_awready("M00_AXI_awready"), M00_AXI_wdata("M00_AXI_wdata"), M00_AXI_wstrb("M00_AXI_wstrb"), M00_AXI_wlast("M00_AXI_wlast"), M00_AXI_wvalid("M00_AXI_wvalid"), M00_AXI_wready("M00_AXI_wready"), M00_AXI_bresp("M00_AXI_bresp"), M00_AXI_bvalid("M00_AXI_bvalid"), M00_AXI_bready("M00_AXI_bready"), M00_AXI_araddr("M00_AXI_araddr"), M00_AXI_arlen("M00_AXI_arlen"), M00_AXI_arsize("M00_AXI_arsize"), M00_AXI_arburst("M00_AXI_arburst"), M00_AXI_arlock("M00_AXI_arlock"), M00_AXI_arcache("M00_AXI_arcache"), M00_AXI_arprot("M00_AXI_arprot"), M00_AXI_arqos("M00_AXI_arqos"), M00_AXI_arvalid("M00_AXI_arvalid"), M00_AXI_arready("M00_AXI_arready"), M00_AXI_rdata("M00_AXI_rdata"), M00_AXI_rresp("M00_AXI_rresp"), M00_AXI_rlast("M00_AXI_rlast"), M00_AXI_rvalid("M00_AXI_rvalid"), M00_AXI_rready("M00_AXI_rready"),mp_S00_AXI_wr_socket_stub(nullptr),mp_S01_AXI_rd_socket_stub(nullptr),mp_S02_AXI_wr_socket_stub(nullptr),mp_S03_AXI_rd_socket_stub(nullptr),mp_S04_AXI_wr_socket_stub(nullptr),mp_S05_AXI_rd_socket_stub(nullptr),mp_S06_AXI_wr_socket_stub(nullptr),mp_S07_AXI_rd_socket_stub(nullptr),mp_S08_AXI_wr_socket_stub(nullptr),mp_S09_AXI_rd_socket_stub(nullptr),mp_S10_AXI_wr_socket_stub(nullptr),mp_S11_AXI_rd_socket_stub(nullptr)
 {
 
   // initialize pins
@@ -1024,6 +1185,10 @@ design_1_smartconnect_0_0::design_1_smartconnect_0_0(const sc_core::sc_module_na
   mp_S08_AXI_arlock_converter = NULL;
   mp_S09_AXI_transactor = NULL;
   mp_S09_AXI_awlock_converter = NULL;
+  mp_S10_AXI_transactor = NULL;
+  mp_S10_AXI_arlock_converter = NULL;
+  mp_S11_AXI_transactor = NULL;
+  mp_S11_AXI_awlock_converter = NULL;
   mp_M00_AXI_transactor = NULL;
   mp_M00_AXI_awlen_converter = NULL;
   mp_M00_AXI_awlock_converter = NULL;
@@ -1041,6 +1206,8 @@ design_1_smartconnect_0_0::design_1_smartconnect_0_0(const sc_core::sc_module_na
   mp_S07_AXI_rd_socket_stub = NULL;
   mp_S08_AXI_wr_socket_stub = NULL;
   mp_S09_AXI_rd_socket_stub = NULL;
+  mp_S10_AXI_wr_socket_stub = NULL;
+  mp_S11_AXI_rd_socket_stub = NULL;
 
 }
 
@@ -1816,6 +1983,161 @@ void design_1_smartconnect_0_0::before_end_of_elaboration()
 
     mp_impl->S09_AXI_tlm_aximm_read_socket->bind(mp_S09_AXI_rd_socket_stub->initiator_socket);
     mp_impl->S09_AXI_tlm_aximm_write_socket->bind(*(mp_S09_AXI_transactor->wr_socket));
+  }
+  else
+  {
+  }
+
+  // configure 'S10_AXI' transactor
+
+  if (xsc::utils::xsc_sim_manager::getInstanceParameterInt("design_1_smartconnect_0_0", "S10_AXI_TLM_MODE") != 1)
+  {
+    // Instantiate Socket Stubs
+    mp_S10_AXI_wr_socket_stub = new xtlm::xtlm_aximm_initiator_stub("wr_socket", 0);
+
+  // 'S10_AXI' transactor parameters
+    xsc::common_cpp::properties S10_AXI_transactor_param_props;
+    S10_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
+    S10_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S10_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
+    S10_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
+    S10_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
+    S10_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
+    S10_AXI_transactor_param_props.addLong("WUSER_WIDTH", "0");
+    S10_AXI_transactor_param_props.addLong("RUSER_WIDTH", "0");
+    S10_AXI_transactor_param_props.addLong("BUSER_WIDTH", "0");
+    S10_AXI_transactor_param_props.addLong("HAS_BURST", "1");
+    S10_AXI_transactor_param_props.addLong("HAS_LOCK", "1");
+    S10_AXI_transactor_param_props.addLong("HAS_PROT", "1");
+    S10_AXI_transactor_param_props.addLong("HAS_CACHE", "1");
+    S10_AXI_transactor_param_props.addLong("HAS_QOS", "1");
+    S10_AXI_transactor_param_props.addLong("HAS_REGION", "0");
+    S10_AXI_transactor_param_props.addLong("HAS_WSTRB", "0");
+    S10_AXI_transactor_param_props.addLong("HAS_BRESP", "0");
+    S10_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
+    S10_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
+    S10_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "16");
+    S10_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "2");
+    S10_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "16");
+    S10_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
+    S10_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
+    S10_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
+    S10_AXI_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
+    S10_AXI_transactor_param_props.addLong("HAS_SIZE", "1");
+    S10_AXI_transactor_param_props.addLong("HAS_RESET", "1");
+    S10_AXI_transactor_param_props.addFloat("PHASE", "0.0");
+    S10_AXI_transactor_param_props.addString("PROTOCOL", "AXI4");
+    S10_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_ONLY");
+    S10_AXI_transactor_param_props.addString("CLK_DOMAIN", "design_1_processing_system7_0_0_FCLK_CLK0");
+
+    mp_S10_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<32,32,1,1,1,1,1,1>("S10_AXI_transactor", S10_AXI_transactor_param_props);
+
+    // S10_AXI' transactor ports
+
+    mp_S10_AXI_transactor->ARADDR(S10_AXI_araddr);
+    mp_S10_AXI_transactor->ARLEN(S10_AXI_arlen);
+    mp_S10_AXI_transactor->ARSIZE(S10_AXI_arsize);
+    mp_S10_AXI_transactor->ARBURST(S10_AXI_arburst);
+    mp_S10_AXI_arlock_converter = new xsc::common::vectorN2scalar_converter<1>("S10_AXI_arlock_converter");
+    mp_S10_AXI_arlock_converter->vector_in(S10_AXI_arlock);
+    mp_S10_AXI_arlock_converter->scalar_out(m_S10_AXI_arlock_converter_signal);
+    mp_S10_AXI_transactor->ARLOCK(m_S10_AXI_arlock_converter_signal);
+    mp_S10_AXI_transactor->ARCACHE(S10_AXI_arcache);
+    mp_S10_AXI_transactor->ARPROT(S10_AXI_arprot);
+    mp_S10_AXI_transactor->ARQOS(S10_AXI_arqos);
+    mp_S10_AXI_transactor->ARVALID(S10_AXI_arvalid);
+    mp_S10_AXI_transactor->ARREADY(S10_AXI_arready);
+    mp_S10_AXI_transactor->RDATA(S10_AXI_rdata);
+    mp_S10_AXI_transactor->RRESP(S10_AXI_rresp);
+    mp_S10_AXI_transactor->RLAST(S10_AXI_rlast);
+    mp_S10_AXI_transactor->RVALID(S10_AXI_rvalid);
+    mp_S10_AXI_transactor->RREADY(S10_AXI_rready);
+    mp_S10_AXI_transactor->CLK(aclk);
+    mp_S10_AXI_transactor->RST(aresetn);
+
+    // S10_AXI' transactor sockets
+
+    mp_impl->S10_AXI_tlm_aximm_read_socket->bind(*(mp_S10_AXI_transactor->rd_socket));
+    mp_impl->S10_AXI_tlm_aximm_write_socket->bind(mp_S10_AXI_wr_socket_stub->initiator_socket);
+  }
+  else
+  {
+  }
+
+  // configure 'S11_AXI' transactor
+
+  if (xsc::utils::xsc_sim_manager::getInstanceParameterInt("design_1_smartconnect_0_0", "S11_AXI_TLM_MODE") != 1)
+  {
+    // Instantiate Socket Stubs
+    mp_S11_AXI_rd_socket_stub = new xtlm::xtlm_aximm_initiator_stub("rd_socket", 0);
+
+  // 'S11_AXI' transactor parameters
+    xsc::common_cpp::properties S11_AXI_transactor_param_props;
+    S11_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
+    S11_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S11_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
+    S11_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
+    S11_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
+    S11_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
+    S11_AXI_transactor_param_props.addLong("WUSER_WIDTH", "0");
+    S11_AXI_transactor_param_props.addLong("RUSER_WIDTH", "0");
+    S11_AXI_transactor_param_props.addLong("BUSER_WIDTH", "0");
+    S11_AXI_transactor_param_props.addLong("HAS_BURST", "1");
+    S11_AXI_transactor_param_props.addLong("HAS_LOCK", "1");
+    S11_AXI_transactor_param_props.addLong("HAS_PROT", "1");
+    S11_AXI_transactor_param_props.addLong("HAS_CACHE", "1");
+    S11_AXI_transactor_param_props.addLong("HAS_QOS", "1");
+    S11_AXI_transactor_param_props.addLong("HAS_REGION", "0");
+    S11_AXI_transactor_param_props.addLong("HAS_WSTRB", "1");
+    S11_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
+    S11_AXI_transactor_param_props.addLong("HAS_RRESP", "0");
+    S11_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
+    S11_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "2");
+    S11_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "16");
+    S11_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "16");
+    S11_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
+    S11_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
+    S11_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
+    S11_AXI_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
+    S11_AXI_transactor_param_props.addLong("HAS_SIZE", "1");
+    S11_AXI_transactor_param_props.addLong("HAS_RESET", "1");
+    S11_AXI_transactor_param_props.addFloat("PHASE", "0.0");
+    S11_AXI_transactor_param_props.addString("PROTOCOL", "AXI4");
+    S11_AXI_transactor_param_props.addString("READ_WRITE_MODE", "WRITE_ONLY");
+    S11_AXI_transactor_param_props.addString("CLK_DOMAIN", "design_1_processing_system7_0_0_FCLK_CLK0");
+
+    mp_S11_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<32,32,1,1,1,1,1,1>("S11_AXI_transactor", S11_AXI_transactor_param_props);
+
+    // S11_AXI' transactor ports
+
+    mp_S11_AXI_transactor->AWADDR(S11_AXI_awaddr);
+    mp_S11_AXI_transactor->AWLEN(S11_AXI_awlen);
+    mp_S11_AXI_transactor->AWSIZE(S11_AXI_awsize);
+    mp_S11_AXI_transactor->AWBURST(S11_AXI_awburst);
+    mp_S11_AXI_awlock_converter = new xsc::common::vectorN2scalar_converter<1>("S11_AXI_awlock_converter");
+    mp_S11_AXI_awlock_converter->vector_in(S11_AXI_awlock);
+    mp_S11_AXI_awlock_converter->scalar_out(m_S11_AXI_awlock_converter_signal);
+    mp_S11_AXI_transactor->AWLOCK(m_S11_AXI_awlock_converter_signal);
+    mp_S11_AXI_transactor->AWCACHE(S11_AXI_awcache);
+    mp_S11_AXI_transactor->AWPROT(S11_AXI_awprot);
+    mp_S11_AXI_transactor->AWQOS(S11_AXI_awqos);
+    mp_S11_AXI_transactor->AWVALID(S11_AXI_awvalid);
+    mp_S11_AXI_transactor->AWREADY(S11_AXI_awready);
+    mp_S11_AXI_transactor->WDATA(S11_AXI_wdata);
+    mp_S11_AXI_transactor->WSTRB(S11_AXI_wstrb);
+    mp_S11_AXI_transactor->WLAST(S11_AXI_wlast);
+    mp_S11_AXI_transactor->WVALID(S11_AXI_wvalid);
+    mp_S11_AXI_transactor->WREADY(S11_AXI_wready);
+    mp_S11_AXI_transactor->BRESP(S11_AXI_bresp);
+    mp_S11_AXI_transactor->BVALID(S11_AXI_bvalid);
+    mp_S11_AXI_transactor->BREADY(S11_AXI_bready);
+    mp_S11_AXI_transactor->CLK(aclk);
+    mp_S11_AXI_transactor->RST(aresetn);
+
+    // S11_AXI' transactor sockets
+
+    mp_impl->S11_AXI_tlm_aximm_read_socket->bind(mp_S11_AXI_rd_socket_stub->initiator_socket);
+    mp_impl->S11_AXI_tlm_aximm_write_socket->bind(*(mp_S11_AXI_transactor->wr_socket));
   }
   else
   {
@@ -1931,7 +2253,7 @@ void design_1_smartconnect_0_0::before_end_of_elaboration()
 
 
 #ifdef RIVIERA
-design_1_smartconnect_0_0::design_1_smartconnect_0_0(const sc_core::sc_module_name& nm) : design_1_smartconnect_0_0_sc(nm), aclk("aclk"), aresetn("aresetn"), S00_AXI_araddr("S00_AXI_araddr"), S00_AXI_arlen("S00_AXI_arlen"), S00_AXI_arsize("S00_AXI_arsize"), S00_AXI_arburst("S00_AXI_arburst"), S00_AXI_arlock("S00_AXI_arlock"), S00_AXI_arcache("S00_AXI_arcache"), S00_AXI_arprot("S00_AXI_arprot"), S00_AXI_arqos("S00_AXI_arqos"), S00_AXI_arvalid("S00_AXI_arvalid"), S00_AXI_arready("S00_AXI_arready"), S00_AXI_rdata("S00_AXI_rdata"), S00_AXI_rresp("S00_AXI_rresp"), S00_AXI_rlast("S00_AXI_rlast"), S00_AXI_rvalid("S00_AXI_rvalid"), S00_AXI_rready("S00_AXI_rready"), S01_AXI_awaddr("S01_AXI_awaddr"), S01_AXI_awlen("S01_AXI_awlen"), S01_AXI_awsize("S01_AXI_awsize"), S01_AXI_awburst("S01_AXI_awburst"), S01_AXI_awlock("S01_AXI_awlock"), S01_AXI_awcache("S01_AXI_awcache"), S01_AXI_awprot("S01_AXI_awprot"), S01_AXI_awqos("S01_AXI_awqos"), S01_AXI_awvalid("S01_AXI_awvalid"), S01_AXI_awready("S01_AXI_awready"), S01_AXI_wdata("S01_AXI_wdata"), S01_AXI_wstrb("S01_AXI_wstrb"), S01_AXI_wlast("S01_AXI_wlast"), S01_AXI_wvalid("S01_AXI_wvalid"), S01_AXI_wready("S01_AXI_wready"), S01_AXI_bresp("S01_AXI_bresp"), S01_AXI_bvalid("S01_AXI_bvalid"), S01_AXI_bready("S01_AXI_bready"), S02_AXI_araddr("S02_AXI_araddr"), S02_AXI_arlen("S02_AXI_arlen"), S02_AXI_arsize("S02_AXI_arsize"), S02_AXI_arburst("S02_AXI_arburst"), S02_AXI_arlock("S02_AXI_arlock"), S02_AXI_arcache("S02_AXI_arcache"), S02_AXI_arprot("S02_AXI_arprot"), S02_AXI_arqos("S02_AXI_arqos"), S02_AXI_arvalid("S02_AXI_arvalid"), S02_AXI_arready("S02_AXI_arready"), S02_AXI_rdata("S02_AXI_rdata"), S02_AXI_rresp("S02_AXI_rresp"), S02_AXI_rlast("S02_AXI_rlast"), S02_AXI_rvalid("S02_AXI_rvalid"), S02_AXI_rready("S02_AXI_rready"), S03_AXI_awaddr("S03_AXI_awaddr"), S03_AXI_awlen("S03_AXI_awlen"), S03_AXI_awsize("S03_AXI_awsize"), S03_AXI_awburst("S03_AXI_awburst"), S03_AXI_awlock("S03_AXI_awlock"), S03_AXI_awcache("S03_AXI_awcache"), S03_AXI_awprot("S03_AXI_awprot"), S03_AXI_awqos("S03_AXI_awqos"), S03_AXI_awvalid("S03_AXI_awvalid"), S03_AXI_awready("S03_AXI_awready"), S03_AXI_wdata("S03_AXI_wdata"), S03_AXI_wstrb("S03_AXI_wstrb"), S03_AXI_wlast("S03_AXI_wlast"), S03_AXI_wvalid("S03_AXI_wvalid"), S03_AXI_wready("S03_AXI_wready"), S03_AXI_bresp("S03_AXI_bresp"), S03_AXI_bvalid("S03_AXI_bvalid"), S03_AXI_bready("S03_AXI_bready"), S04_AXI_araddr("S04_AXI_araddr"), S04_AXI_arlen("S04_AXI_arlen"), S04_AXI_arsize("S04_AXI_arsize"), S04_AXI_arburst("S04_AXI_arburst"), S04_AXI_arlock("S04_AXI_arlock"), S04_AXI_arcache("S04_AXI_arcache"), S04_AXI_arprot("S04_AXI_arprot"), S04_AXI_arqos("S04_AXI_arqos"), S04_AXI_arvalid("S04_AXI_arvalid"), S04_AXI_arready("S04_AXI_arready"), S04_AXI_rdata("S04_AXI_rdata"), S04_AXI_rresp("S04_AXI_rresp"), S04_AXI_rlast("S04_AXI_rlast"), S04_AXI_rvalid("S04_AXI_rvalid"), S04_AXI_rready("S04_AXI_rready"), S05_AXI_awaddr("S05_AXI_awaddr"), S05_AXI_awlen("S05_AXI_awlen"), S05_AXI_awsize("S05_AXI_awsize"), S05_AXI_awburst("S05_AXI_awburst"), S05_AXI_awlock("S05_AXI_awlock"), S05_AXI_awcache("S05_AXI_awcache"), S05_AXI_awprot("S05_AXI_awprot"), S05_AXI_awqos("S05_AXI_awqos"), S05_AXI_awvalid("S05_AXI_awvalid"), S05_AXI_awready("S05_AXI_awready"), S05_AXI_wdata("S05_AXI_wdata"), S05_AXI_wstrb("S05_AXI_wstrb"), S05_AXI_wlast("S05_AXI_wlast"), S05_AXI_wvalid("S05_AXI_wvalid"), S05_AXI_wready("S05_AXI_wready"), S05_AXI_bresp("S05_AXI_bresp"), S05_AXI_bvalid("S05_AXI_bvalid"), S05_AXI_bready("S05_AXI_bready"), S06_AXI_araddr("S06_AXI_araddr"), S06_AXI_arlen("S06_AXI_arlen"), S06_AXI_arsize("S06_AXI_arsize"), S06_AXI_arburst("S06_AXI_arburst"), S06_AXI_arlock("S06_AXI_arlock"), S06_AXI_arcache("S06_AXI_arcache"), S06_AXI_arprot("S06_AXI_arprot"), S06_AXI_arqos("S06_AXI_arqos"), S06_AXI_arvalid("S06_AXI_arvalid"), S06_AXI_arready("S06_AXI_arready"), S06_AXI_rdata("S06_AXI_rdata"), S06_AXI_rresp("S06_AXI_rresp"), S06_AXI_rlast("S06_AXI_rlast"), S06_AXI_rvalid("S06_AXI_rvalid"), S06_AXI_rready("S06_AXI_rready"), S07_AXI_awaddr("S07_AXI_awaddr"), S07_AXI_awlen("S07_AXI_awlen"), S07_AXI_awsize("S07_AXI_awsize"), S07_AXI_awburst("S07_AXI_awburst"), S07_AXI_awlock("S07_AXI_awlock"), S07_AXI_awcache("S07_AXI_awcache"), S07_AXI_awprot("S07_AXI_awprot"), S07_AXI_awqos("S07_AXI_awqos"), S07_AXI_awvalid("S07_AXI_awvalid"), S07_AXI_awready("S07_AXI_awready"), S07_AXI_wdata("S07_AXI_wdata"), S07_AXI_wstrb("S07_AXI_wstrb"), S07_AXI_wlast("S07_AXI_wlast"), S07_AXI_wvalid("S07_AXI_wvalid"), S07_AXI_wready("S07_AXI_wready"), S07_AXI_bresp("S07_AXI_bresp"), S07_AXI_bvalid("S07_AXI_bvalid"), S07_AXI_bready("S07_AXI_bready"), S08_AXI_araddr("S08_AXI_araddr"), S08_AXI_arlen("S08_AXI_arlen"), S08_AXI_arsize("S08_AXI_arsize"), S08_AXI_arburst("S08_AXI_arburst"), S08_AXI_arlock("S08_AXI_arlock"), S08_AXI_arcache("S08_AXI_arcache"), S08_AXI_arprot("S08_AXI_arprot"), S08_AXI_arqos("S08_AXI_arqos"), S08_AXI_arvalid("S08_AXI_arvalid"), S08_AXI_arready("S08_AXI_arready"), S08_AXI_rdata("S08_AXI_rdata"), S08_AXI_rresp("S08_AXI_rresp"), S08_AXI_rlast("S08_AXI_rlast"), S08_AXI_rvalid("S08_AXI_rvalid"), S08_AXI_rready("S08_AXI_rready"), S09_AXI_awaddr("S09_AXI_awaddr"), S09_AXI_awlen("S09_AXI_awlen"), S09_AXI_awsize("S09_AXI_awsize"), S09_AXI_awburst("S09_AXI_awburst"), S09_AXI_awlock("S09_AXI_awlock"), S09_AXI_awcache("S09_AXI_awcache"), S09_AXI_awprot("S09_AXI_awprot"), S09_AXI_awqos("S09_AXI_awqos"), S09_AXI_awvalid("S09_AXI_awvalid"), S09_AXI_awready("S09_AXI_awready"), S09_AXI_wdata("S09_AXI_wdata"), S09_AXI_wstrb("S09_AXI_wstrb"), S09_AXI_wlast("S09_AXI_wlast"), S09_AXI_wvalid("S09_AXI_wvalid"), S09_AXI_wready("S09_AXI_wready"), S09_AXI_bresp("S09_AXI_bresp"), S09_AXI_bvalid("S09_AXI_bvalid"), S09_AXI_bready("S09_AXI_bready"), M00_AXI_awaddr("M00_AXI_awaddr"), M00_AXI_awlen("M00_AXI_awlen"), M00_AXI_awsize("M00_AXI_awsize"), M00_AXI_awburst("M00_AXI_awburst"), M00_AXI_awlock("M00_AXI_awlock"), M00_AXI_awcache("M00_AXI_awcache"), M00_AXI_awprot("M00_AXI_awprot"), M00_AXI_awqos("M00_AXI_awqos"), M00_AXI_awvalid("M00_AXI_awvalid"), M00_AXI_awready("M00_AXI_awready"), M00_AXI_wdata("M00_AXI_wdata"), M00_AXI_wstrb("M00_AXI_wstrb"), M00_AXI_wlast("M00_AXI_wlast"), M00_AXI_wvalid("M00_AXI_wvalid"), M00_AXI_wready("M00_AXI_wready"), M00_AXI_bresp("M00_AXI_bresp"), M00_AXI_bvalid("M00_AXI_bvalid"), M00_AXI_bready("M00_AXI_bready"), M00_AXI_araddr("M00_AXI_araddr"), M00_AXI_arlen("M00_AXI_arlen"), M00_AXI_arsize("M00_AXI_arsize"), M00_AXI_arburst("M00_AXI_arburst"), M00_AXI_arlock("M00_AXI_arlock"), M00_AXI_arcache("M00_AXI_arcache"), M00_AXI_arprot("M00_AXI_arprot"), M00_AXI_arqos("M00_AXI_arqos"), M00_AXI_arvalid("M00_AXI_arvalid"), M00_AXI_arready("M00_AXI_arready"), M00_AXI_rdata("M00_AXI_rdata"), M00_AXI_rresp("M00_AXI_rresp"), M00_AXI_rlast("M00_AXI_rlast"), M00_AXI_rvalid("M00_AXI_rvalid"), M00_AXI_rready("M00_AXI_rready"),mp_S00_AXI_wr_socket_stub(nullptr),mp_S01_AXI_rd_socket_stub(nullptr),mp_S02_AXI_wr_socket_stub(nullptr),mp_S03_AXI_rd_socket_stub(nullptr),mp_S04_AXI_wr_socket_stub(nullptr),mp_S05_AXI_rd_socket_stub(nullptr),mp_S06_AXI_wr_socket_stub(nullptr),mp_S07_AXI_rd_socket_stub(nullptr),mp_S08_AXI_wr_socket_stub(nullptr),mp_S09_AXI_rd_socket_stub(nullptr)
+design_1_smartconnect_0_0::design_1_smartconnect_0_0(const sc_core::sc_module_name& nm) : design_1_smartconnect_0_0_sc(nm), aclk("aclk"), aresetn("aresetn"), S00_AXI_araddr("S00_AXI_araddr"), S00_AXI_arlen("S00_AXI_arlen"), S00_AXI_arsize("S00_AXI_arsize"), S00_AXI_arburst("S00_AXI_arburst"), S00_AXI_arlock("S00_AXI_arlock"), S00_AXI_arcache("S00_AXI_arcache"), S00_AXI_arprot("S00_AXI_arprot"), S00_AXI_arqos("S00_AXI_arqos"), S00_AXI_arvalid("S00_AXI_arvalid"), S00_AXI_arready("S00_AXI_arready"), S00_AXI_rdata("S00_AXI_rdata"), S00_AXI_rresp("S00_AXI_rresp"), S00_AXI_rlast("S00_AXI_rlast"), S00_AXI_rvalid("S00_AXI_rvalid"), S00_AXI_rready("S00_AXI_rready"), S01_AXI_awaddr("S01_AXI_awaddr"), S01_AXI_awlen("S01_AXI_awlen"), S01_AXI_awsize("S01_AXI_awsize"), S01_AXI_awburst("S01_AXI_awburst"), S01_AXI_awlock("S01_AXI_awlock"), S01_AXI_awcache("S01_AXI_awcache"), S01_AXI_awprot("S01_AXI_awprot"), S01_AXI_awqos("S01_AXI_awqos"), S01_AXI_awvalid("S01_AXI_awvalid"), S01_AXI_awready("S01_AXI_awready"), S01_AXI_wdata("S01_AXI_wdata"), S01_AXI_wstrb("S01_AXI_wstrb"), S01_AXI_wlast("S01_AXI_wlast"), S01_AXI_wvalid("S01_AXI_wvalid"), S01_AXI_wready("S01_AXI_wready"), S01_AXI_bresp("S01_AXI_bresp"), S01_AXI_bvalid("S01_AXI_bvalid"), S01_AXI_bready("S01_AXI_bready"), S02_AXI_araddr("S02_AXI_araddr"), S02_AXI_arlen("S02_AXI_arlen"), S02_AXI_arsize("S02_AXI_arsize"), S02_AXI_arburst("S02_AXI_arburst"), S02_AXI_arlock("S02_AXI_arlock"), S02_AXI_arcache("S02_AXI_arcache"), S02_AXI_arprot("S02_AXI_arprot"), S02_AXI_arqos("S02_AXI_arqos"), S02_AXI_arvalid("S02_AXI_arvalid"), S02_AXI_arready("S02_AXI_arready"), S02_AXI_rdata("S02_AXI_rdata"), S02_AXI_rresp("S02_AXI_rresp"), S02_AXI_rlast("S02_AXI_rlast"), S02_AXI_rvalid("S02_AXI_rvalid"), S02_AXI_rready("S02_AXI_rready"), S03_AXI_awaddr("S03_AXI_awaddr"), S03_AXI_awlen("S03_AXI_awlen"), S03_AXI_awsize("S03_AXI_awsize"), S03_AXI_awburst("S03_AXI_awburst"), S03_AXI_awlock("S03_AXI_awlock"), S03_AXI_awcache("S03_AXI_awcache"), S03_AXI_awprot("S03_AXI_awprot"), S03_AXI_awqos("S03_AXI_awqos"), S03_AXI_awvalid("S03_AXI_awvalid"), S03_AXI_awready("S03_AXI_awready"), S03_AXI_wdata("S03_AXI_wdata"), S03_AXI_wstrb("S03_AXI_wstrb"), S03_AXI_wlast("S03_AXI_wlast"), S03_AXI_wvalid("S03_AXI_wvalid"), S03_AXI_wready("S03_AXI_wready"), S03_AXI_bresp("S03_AXI_bresp"), S03_AXI_bvalid("S03_AXI_bvalid"), S03_AXI_bready("S03_AXI_bready"), S04_AXI_araddr("S04_AXI_araddr"), S04_AXI_arlen("S04_AXI_arlen"), S04_AXI_arsize("S04_AXI_arsize"), S04_AXI_arburst("S04_AXI_arburst"), S04_AXI_arlock("S04_AXI_arlock"), S04_AXI_arcache("S04_AXI_arcache"), S04_AXI_arprot("S04_AXI_arprot"), S04_AXI_arqos("S04_AXI_arqos"), S04_AXI_arvalid("S04_AXI_arvalid"), S04_AXI_arready("S04_AXI_arready"), S04_AXI_rdata("S04_AXI_rdata"), S04_AXI_rresp("S04_AXI_rresp"), S04_AXI_rlast("S04_AXI_rlast"), S04_AXI_rvalid("S04_AXI_rvalid"), S04_AXI_rready("S04_AXI_rready"), S05_AXI_awaddr("S05_AXI_awaddr"), S05_AXI_awlen("S05_AXI_awlen"), S05_AXI_awsize("S05_AXI_awsize"), S05_AXI_awburst("S05_AXI_awburst"), S05_AXI_awlock("S05_AXI_awlock"), S05_AXI_awcache("S05_AXI_awcache"), S05_AXI_awprot("S05_AXI_awprot"), S05_AXI_awqos("S05_AXI_awqos"), S05_AXI_awvalid("S05_AXI_awvalid"), S05_AXI_awready("S05_AXI_awready"), S05_AXI_wdata("S05_AXI_wdata"), S05_AXI_wstrb("S05_AXI_wstrb"), S05_AXI_wlast("S05_AXI_wlast"), S05_AXI_wvalid("S05_AXI_wvalid"), S05_AXI_wready("S05_AXI_wready"), S05_AXI_bresp("S05_AXI_bresp"), S05_AXI_bvalid("S05_AXI_bvalid"), S05_AXI_bready("S05_AXI_bready"), S06_AXI_araddr("S06_AXI_araddr"), S06_AXI_arlen("S06_AXI_arlen"), S06_AXI_arsize("S06_AXI_arsize"), S06_AXI_arburst("S06_AXI_arburst"), S06_AXI_arlock("S06_AXI_arlock"), S06_AXI_arcache("S06_AXI_arcache"), S06_AXI_arprot("S06_AXI_arprot"), S06_AXI_arqos("S06_AXI_arqos"), S06_AXI_arvalid("S06_AXI_arvalid"), S06_AXI_arready("S06_AXI_arready"), S06_AXI_rdata("S06_AXI_rdata"), S06_AXI_rresp("S06_AXI_rresp"), S06_AXI_rlast("S06_AXI_rlast"), S06_AXI_rvalid("S06_AXI_rvalid"), S06_AXI_rready("S06_AXI_rready"), S07_AXI_awaddr("S07_AXI_awaddr"), S07_AXI_awlen("S07_AXI_awlen"), S07_AXI_awsize("S07_AXI_awsize"), S07_AXI_awburst("S07_AXI_awburst"), S07_AXI_awlock("S07_AXI_awlock"), S07_AXI_awcache("S07_AXI_awcache"), S07_AXI_awprot("S07_AXI_awprot"), S07_AXI_awqos("S07_AXI_awqos"), S07_AXI_awvalid("S07_AXI_awvalid"), S07_AXI_awready("S07_AXI_awready"), S07_AXI_wdata("S07_AXI_wdata"), S07_AXI_wstrb("S07_AXI_wstrb"), S07_AXI_wlast("S07_AXI_wlast"), S07_AXI_wvalid("S07_AXI_wvalid"), S07_AXI_wready("S07_AXI_wready"), S07_AXI_bresp("S07_AXI_bresp"), S07_AXI_bvalid("S07_AXI_bvalid"), S07_AXI_bready("S07_AXI_bready"), S08_AXI_araddr("S08_AXI_araddr"), S08_AXI_arlen("S08_AXI_arlen"), S08_AXI_arsize("S08_AXI_arsize"), S08_AXI_arburst("S08_AXI_arburst"), S08_AXI_arlock("S08_AXI_arlock"), S08_AXI_arcache("S08_AXI_arcache"), S08_AXI_arprot("S08_AXI_arprot"), S08_AXI_arqos("S08_AXI_arqos"), S08_AXI_arvalid("S08_AXI_arvalid"), S08_AXI_arready("S08_AXI_arready"), S08_AXI_rdata("S08_AXI_rdata"), S08_AXI_rresp("S08_AXI_rresp"), S08_AXI_rlast("S08_AXI_rlast"), S08_AXI_rvalid("S08_AXI_rvalid"), S08_AXI_rready("S08_AXI_rready"), S09_AXI_awaddr("S09_AXI_awaddr"), S09_AXI_awlen("S09_AXI_awlen"), S09_AXI_awsize("S09_AXI_awsize"), S09_AXI_awburst("S09_AXI_awburst"), S09_AXI_awlock("S09_AXI_awlock"), S09_AXI_awcache("S09_AXI_awcache"), S09_AXI_awprot("S09_AXI_awprot"), S09_AXI_awqos("S09_AXI_awqos"), S09_AXI_awvalid("S09_AXI_awvalid"), S09_AXI_awready("S09_AXI_awready"), S09_AXI_wdata("S09_AXI_wdata"), S09_AXI_wstrb("S09_AXI_wstrb"), S09_AXI_wlast("S09_AXI_wlast"), S09_AXI_wvalid("S09_AXI_wvalid"), S09_AXI_wready("S09_AXI_wready"), S09_AXI_bresp("S09_AXI_bresp"), S09_AXI_bvalid("S09_AXI_bvalid"), S09_AXI_bready("S09_AXI_bready"), S10_AXI_araddr("S10_AXI_araddr"), S10_AXI_arlen("S10_AXI_arlen"), S10_AXI_arsize("S10_AXI_arsize"), S10_AXI_arburst("S10_AXI_arburst"), S10_AXI_arlock("S10_AXI_arlock"), S10_AXI_arcache("S10_AXI_arcache"), S10_AXI_arprot("S10_AXI_arprot"), S10_AXI_arqos("S10_AXI_arqos"), S10_AXI_arvalid("S10_AXI_arvalid"), S10_AXI_arready("S10_AXI_arready"), S10_AXI_rdata("S10_AXI_rdata"), S10_AXI_rresp("S10_AXI_rresp"), S10_AXI_rlast("S10_AXI_rlast"), S10_AXI_rvalid("S10_AXI_rvalid"), S10_AXI_rready("S10_AXI_rready"), S11_AXI_awaddr("S11_AXI_awaddr"), S11_AXI_awlen("S11_AXI_awlen"), S11_AXI_awsize("S11_AXI_awsize"), S11_AXI_awburst("S11_AXI_awburst"), S11_AXI_awlock("S11_AXI_awlock"), S11_AXI_awcache("S11_AXI_awcache"), S11_AXI_awprot("S11_AXI_awprot"), S11_AXI_awqos("S11_AXI_awqos"), S11_AXI_awvalid("S11_AXI_awvalid"), S11_AXI_awready("S11_AXI_awready"), S11_AXI_wdata("S11_AXI_wdata"), S11_AXI_wstrb("S11_AXI_wstrb"), S11_AXI_wlast("S11_AXI_wlast"), S11_AXI_wvalid("S11_AXI_wvalid"), S11_AXI_wready("S11_AXI_wready"), S11_AXI_bresp("S11_AXI_bresp"), S11_AXI_bvalid("S11_AXI_bvalid"), S11_AXI_bready("S11_AXI_bready"), M00_AXI_awaddr("M00_AXI_awaddr"), M00_AXI_awlen("M00_AXI_awlen"), M00_AXI_awsize("M00_AXI_awsize"), M00_AXI_awburst("M00_AXI_awburst"), M00_AXI_awlock("M00_AXI_awlock"), M00_AXI_awcache("M00_AXI_awcache"), M00_AXI_awprot("M00_AXI_awprot"), M00_AXI_awqos("M00_AXI_awqos"), M00_AXI_awvalid("M00_AXI_awvalid"), M00_AXI_awready("M00_AXI_awready"), M00_AXI_wdata("M00_AXI_wdata"), M00_AXI_wstrb("M00_AXI_wstrb"), M00_AXI_wlast("M00_AXI_wlast"), M00_AXI_wvalid("M00_AXI_wvalid"), M00_AXI_wready("M00_AXI_wready"), M00_AXI_bresp("M00_AXI_bresp"), M00_AXI_bvalid("M00_AXI_bvalid"), M00_AXI_bready("M00_AXI_bready"), M00_AXI_araddr("M00_AXI_araddr"), M00_AXI_arlen("M00_AXI_arlen"), M00_AXI_arsize("M00_AXI_arsize"), M00_AXI_arburst("M00_AXI_arburst"), M00_AXI_arlock("M00_AXI_arlock"), M00_AXI_arcache("M00_AXI_arcache"), M00_AXI_arprot("M00_AXI_arprot"), M00_AXI_arqos("M00_AXI_arqos"), M00_AXI_arvalid("M00_AXI_arvalid"), M00_AXI_arready("M00_AXI_arready"), M00_AXI_rdata("M00_AXI_rdata"), M00_AXI_rresp("M00_AXI_rresp"), M00_AXI_rlast("M00_AXI_rlast"), M00_AXI_rvalid("M00_AXI_rvalid"), M00_AXI_rready("M00_AXI_rready"),mp_S00_AXI_wr_socket_stub(nullptr),mp_S01_AXI_rd_socket_stub(nullptr),mp_S02_AXI_wr_socket_stub(nullptr),mp_S03_AXI_rd_socket_stub(nullptr),mp_S04_AXI_wr_socket_stub(nullptr),mp_S05_AXI_rd_socket_stub(nullptr),mp_S06_AXI_wr_socket_stub(nullptr),mp_S07_AXI_rd_socket_stub(nullptr),mp_S08_AXI_wr_socket_stub(nullptr),mp_S09_AXI_rd_socket_stub(nullptr),mp_S10_AXI_wr_socket_stub(nullptr),mp_S11_AXI_rd_socket_stub(nullptr)
 {
 
   // initialize pins
@@ -1959,6 +2281,10 @@ design_1_smartconnect_0_0::design_1_smartconnect_0_0(const sc_core::sc_module_na
   mp_S08_AXI_arlock_converter = NULL;
   mp_S09_AXI_transactor = NULL;
   mp_S09_AXI_awlock_converter = NULL;
+  mp_S10_AXI_transactor = NULL;
+  mp_S10_AXI_arlock_converter = NULL;
+  mp_S11_AXI_transactor = NULL;
+  mp_S11_AXI_awlock_converter = NULL;
   mp_M00_AXI_transactor = NULL;
   mp_M00_AXI_awlen_converter = NULL;
   mp_M00_AXI_awlock_converter = NULL;
@@ -1976,6 +2302,8 @@ design_1_smartconnect_0_0::design_1_smartconnect_0_0(const sc_core::sc_module_na
   mp_S07_AXI_rd_socket_stub = NULL;
   mp_S08_AXI_wr_socket_stub = NULL;
   mp_S09_AXI_rd_socket_stub = NULL;
+  mp_S10_AXI_wr_socket_stub = NULL;
+  mp_S11_AXI_rd_socket_stub = NULL;
 
 }
 
@@ -2756,6 +3084,161 @@ void design_1_smartconnect_0_0::before_end_of_elaboration()
   {
   }
 
+  // configure 'S10_AXI' transactor
+
+  if (xsc::utils::xsc_sim_manager::getInstanceParameterInt("design_1_smartconnect_0_0", "S10_AXI_TLM_MODE") != 1)
+  {
+    // Instantiate Socket Stubs
+    mp_S10_AXI_wr_socket_stub = new xtlm::xtlm_aximm_initiator_stub("wr_socket", 0);
+
+  // 'S10_AXI' transactor parameters
+    xsc::common_cpp::properties S10_AXI_transactor_param_props;
+    S10_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
+    S10_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S10_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
+    S10_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
+    S10_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
+    S10_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
+    S10_AXI_transactor_param_props.addLong("WUSER_WIDTH", "0");
+    S10_AXI_transactor_param_props.addLong("RUSER_WIDTH", "0");
+    S10_AXI_transactor_param_props.addLong("BUSER_WIDTH", "0");
+    S10_AXI_transactor_param_props.addLong("HAS_BURST", "1");
+    S10_AXI_transactor_param_props.addLong("HAS_LOCK", "1");
+    S10_AXI_transactor_param_props.addLong("HAS_PROT", "1");
+    S10_AXI_transactor_param_props.addLong("HAS_CACHE", "1");
+    S10_AXI_transactor_param_props.addLong("HAS_QOS", "1");
+    S10_AXI_transactor_param_props.addLong("HAS_REGION", "0");
+    S10_AXI_transactor_param_props.addLong("HAS_WSTRB", "0");
+    S10_AXI_transactor_param_props.addLong("HAS_BRESP", "0");
+    S10_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
+    S10_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
+    S10_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "16");
+    S10_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "2");
+    S10_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "16");
+    S10_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
+    S10_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
+    S10_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
+    S10_AXI_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
+    S10_AXI_transactor_param_props.addLong("HAS_SIZE", "1");
+    S10_AXI_transactor_param_props.addLong("HAS_RESET", "1");
+    S10_AXI_transactor_param_props.addFloat("PHASE", "0.0");
+    S10_AXI_transactor_param_props.addString("PROTOCOL", "AXI4");
+    S10_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_ONLY");
+    S10_AXI_transactor_param_props.addString("CLK_DOMAIN", "design_1_processing_system7_0_0_FCLK_CLK0");
+
+    mp_S10_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<32,32,1,1,1,1,1,1>("S10_AXI_transactor", S10_AXI_transactor_param_props);
+
+    // S10_AXI' transactor ports
+
+    mp_S10_AXI_transactor->ARADDR(S10_AXI_araddr);
+    mp_S10_AXI_transactor->ARLEN(S10_AXI_arlen);
+    mp_S10_AXI_transactor->ARSIZE(S10_AXI_arsize);
+    mp_S10_AXI_transactor->ARBURST(S10_AXI_arburst);
+    mp_S10_AXI_arlock_converter = new xsc::common::vectorN2scalar_converter<1>("S10_AXI_arlock_converter");
+    mp_S10_AXI_arlock_converter->vector_in(S10_AXI_arlock);
+    mp_S10_AXI_arlock_converter->scalar_out(m_S10_AXI_arlock_converter_signal);
+    mp_S10_AXI_transactor->ARLOCK(m_S10_AXI_arlock_converter_signal);
+    mp_S10_AXI_transactor->ARCACHE(S10_AXI_arcache);
+    mp_S10_AXI_transactor->ARPROT(S10_AXI_arprot);
+    mp_S10_AXI_transactor->ARQOS(S10_AXI_arqos);
+    mp_S10_AXI_transactor->ARVALID(S10_AXI_arvalid);
+    mp_S10_AXI_transactor->ARREADY(S10_AXI_arready);
+    mp_S10_AXI_transactor->RDATA(S10_AXI_rdata);
+    mp_S10_AXI_transactor->RRESP(S10_AXI_rresp);
+    mp_S10_AXI_transactor->RLAST(S10_AXI_rlast);
+    mp_S10_AXI_transactor->RVALID(S10_AXI_rvalid);
+    mp_S10_AXI_transactor->RREADY(S10_AXI_rready);
+    mp_S10_AXI_transactor->CLK(aclk);
+    mp_S10_AXI_transactor->RST(aresetn);
+
+    // S10_AXI' transactor sockets
+
+    mp_impl->S10_AXI_tlm_aximm_read_socket->bind(*(mp_S10_AXI_transactor->rd_socket));
+    mp_impl->S10_AXI_tlm_aximm_write_socket->bind(mp_S10_AXI_wr_socket_stub->initiator_socket);
+  }
+  else
+  {
+  }
+
+  // configure 'S11_AXI' transactor
+
+  if (xsc::utils::xsc_sim_manager::getInstanceParameterInt("design_1_smartconnect_0_0", "S11_AXI_TLM_MODE") != 1)
+  {
+    // Instantiate Socket Stubs
+    mp_S11_AXI_rd_socket_stub = new xtlm::xtlm_aximm_initiator_stub("rd_socket", 0);
+
+  // 'S11_AXI' transactor parameters
+    xsc::common_cpp::properties S11_AXI_transactor_param_props;
+    S11_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
+    S11_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S11_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
+    S11_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
+    S11_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
+    S11_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
+    S11_AXI_transactor_param_props.addLong("WUSER_WIDTH", "0");
+    S11_AXI_transactor_param_props.addLong("RUSER_WIDTH", "0");
+    S11_AXI_transactor_param_props.addLong("BUSER_WIDTH", "0");
+    S11_AXI_transactor_param_props.addLong("HAS_BURST", "1");
+    S11_AXI_transactor_param_props.addLong("HAS_LOCK", "1");
+    S11_AXI_transactor_param_props.addLong("HAS_PROT", "1");
+    S11_AXI_transactor_param_props.addLong("HAS_CACHE", "1");
+    S11_AXI_transactor_param_props.addLong("HAS_QOS", "1");
+    S11_AXI_transactor_param_props.addLong("HAS_REGION", "0");
+    S11_AXI_transactor_param_props.addLong("HAS_WSTRB", "1");
+    S11_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
+    S11_AXI_transactor_param_props.addLong("HAS_RRESP", "0");
+    S11_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
+    S11_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "2");
+    S11_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "16");
+    S11_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "16");
+    S11_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
+    S11_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
+    S11_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
+    S11_AXI_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
+    S11_AXI_transactor_param_props.addLong("HAS_SIZE", "1");
+    S11_AXI_transactor_param_props.addLong("HAS_RESET", "1");
+    S11_AXI_transactor_param_props.addFloat("PHASE", "0.0");
+    S11_AXI_transactor_param_props.addString("PROTOCOL", "AXI4");
+    S11_AXI_transactor_param_props.addString("READ_WRITE_MODE", "WRITE_ONLY");
+    S11_AXI_transactor_param_props.addString("CLK_DOMAIN", "design_1_processing_system7_0_0_FCLK_CLK0");
+
+    mp_S11_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<32,32,1,1,1,1,1,1>("S11_AXI_transactor", S11_AXI_transactor_param_props);
+
+    // S11_AXI' transactor ports
+
+    mp_S11_AXI_transactor->AWADDR(S11_AXI_awaddr);
+    mp_S11_AXI_transactor->AWLEN(S11_AXI_awlen);
+    mp_S11_AXI_transactor->AWSIZE(S11_AXI_awsize);
+    mp_S11_AXI_transactor->AWBURST(S11_AXI_awburst);
+    mp_S11_AXI_awlock_converter = new xsc::common::vectorN2scalar_converter<1>("S11_AXI_awlock_converter");
+    mp_S11_AXI_awlock_converter->vector_in(S11_AXI_awlock);
+    mp_S11_AXI_awlock_converter->scalar_out(m_S11_AXI_awlock_converter_signal);
+    mp_S11_AXI_transactor->AWLOCK(m_S11_AXI_awlock_converter_signal);
+    mp_S11_AXI_transactor->AWCACHE(S11_AXI_awcache);
+    mp_S11_AXI_transactor->AWPROT(S11_AXI_awprot);
+    mp_S11_AXI_transactor->AWQOS(S11_AXI_awqos);
+    mp_S11_AXI_transactor->AWVALID(S11_AXI_awvalid);
+    mp_S11_AXI_transactor->AWREADY(S11_AXI_awready);
+    mp_S11_AXI_transactor->WDATA(S11_AXI_wdata);
+    mp_S11_AXI_transactor->WSTRB(S11_AXI_wstrb);
+    mp_S11_AXI_transactor->WLAST(S11_AXI_wlast);
+    mp_S11_AXI_transactor->WVALID(S11_AXI_wvalid);
+    mp_S11_AXI_transactor->WREADY(S11_AXI_wready);
+    mp_S11_AXI_transactor->BRESP(S11_AXI_bresp);
+    mp_S11_AXI_transactor->BVALID(S11_AXI_bvalid);
+    mp_S11_AXI_transactor->BREADY(S11_AXI_bready);
+    mp_S11_AXI_transactor->CLK(aclk);
+    mp_S11_AXI_transactor->RST(aresetn);
+
+    // S11_AXI' transactor sockets
+
+    mp_impl->S11_AXI_tlm_aximm_read_socket->bind(mp_S11_AXI_rd_socket_stub->initiator_socket);
+    mp_impl->S11_AXI_tlm_aximm_write_socket->bind(*(mp_S11_AXI_transactor->wr_socket));
+  }
+  else
+  {
+  }
+
   // configure 'M00_AXI' transactor
 
   if (xsc::utils::xsc_sim_manager::getInstanceParameterInt("design_1_smartconnect_0_0", "M00_AXI_TLM_MODE") != 1)
@@ -2866,7 +3349,7 @@ void design_1_smartconnect_0_0::before_end_of_elaboration()
 
 
 #ifdef VCSSYSTEMC
-design_1_smartconnect_0_0::design_1_smartconnect_0_0(const sc_core::sc_module_name& nm) : design_1_smartconnect_0_0_sc(nm),  aclk("aclk"), aresetn("aresetn"), S00_AXI_araddr("S00_AXI_araddr"), S00_AXI_arlen("S00_AXI_arlen"), S00_AXI_arsize("S00_AXI_arsize"), S00_AXI_arburst("S00_AXI_arburst"), S00_AXI_arlock("S00_AXI_arlock"), S00_AXI_arcache("S00_AXI_arcache"), S00_AXI_arprot("S00_AXI_arprot"), S00_AXI_arqos("S00_AXI_arqos"), S00_AXI_arvalid("S00_AXI_arvalid"), S00_AXI_arready("S00_AXI_arready"), S00_AXI_rdata("S00_AXI_rdata"), S00_AXI_rresp("S00_AXI_rresp"), S00_AXI_rlast("S00_AXI_rlast"), S00_AXI_rvalid("S00_AXI_rvalid"), S00_AXI_rready("S00_AXI_rready"), S01_AXI_awaddr("S01_AXI_awaddr"), S01_AXI_awlen("S01_AXI_awlen"), S01_AXI_awsize("S01_AXI_awsize"), S01_AXI_awburst("S01_AXI_awburst"), S01_AXI_awlock("S01_AXI_awlock"), S01_AXI_awcache("S01_AXI_awcache"), S01_AXI_awprot("S01_AXI_awprot"), S01_AXI_awqos("S01_AXI_awqos"), S01_AXI_awvalid("S01_AXI_awvalid"), S01_AXI_awready("S01_AXI_awready"), S01_AXI_wdata("S01_AXI_wdata"), S01_AXI_wstrb("S01_AXI_wstrb"), S01_AXI_wlast("S01_AXI_wlast"), S01_AXI_wvalid("S01_AXI_wvalid"), S01_AXI_wready("S01_AXI_wready"), S01_AXI_bresp("S01_AXI_bresp"), S01_AXI_bvalid("S01_AXI_bvalid"), S01_AXI_bready("S01_AXI_bready"), S02_AXI_araddr("S02_AXI_araddr"), S02_AXI_arlen("S02_AXI_arlen"), S02_AXI_arsize("S02_AXI_arsize"), S02_AXI_arburst("S02_AXI_arburst"), S02_AXI_arlock("S02_AXI_arlock"), S02_AXI_arcache("S02_AXI_arcache"), S02_AXI_arprot("S02_AXI_arprot"), S02_AXI_arqos("S02_AXI_arqos"), S02_AXI_arvalid("S02_AXI_arvalid"), S02_AXI_arready("S02_AXI_arready"), S02_AXI_rdata("S02_AXI_rdata"), S02_AXI_rresp("S02_AXI_rresp"), S02_AXI_rlast("S02_AXI_rlast"), S02_AXI_rvalid("S02_AXI_rvalid"), S02_AXI_rready("S02_AXI_rready"), S03_AXI_awaddr("S03_AXI_awaddr"), S03_AXI_awlen("S03_AXI_awlen"), S03_AXI_awsize("S03_AXI_awsize"), S03_AXI_awburst("S03_AXI_awburst"), S03_AXI_awlock("S03_AXI_awlock"), S03_AXI_awcache("S03_AXI_awcache"), S03_AXI_awprot("S03_AXI_awprot"), S03_AXI_awqos("S03_AXI_awqos"), S03_AXI_awvalid("S03_AXI_awvalid"), S03_AXI_awready("S03_AXI_awready"), S03_AXI_wdata("S03_AXI_wdata"), S03_AXI_wstrb("S03_AXI_wstrb"), S03_AXI_wlast("S03_AXI_wlast"), S03_AXI_wvalid("S03_AXI_wvalid"), S03_AXI_wready("S03_AXI_wready"), S03_AXI_bresp("S03_AXI_bresp"), S03_AXI_bvalid("S03_AXI_bvalid"), S03_AXI_bready("S03_AXI_bready"), S04_AXI_araddr("S04_AXI_araddr"), S04_AXI_arlen("S04_AXI_arlen"), S04_AXI_arsize("S04_AXI_arsize"), S04_AXI_arburst("S04_AXI_arburst"), S04_AXI_arlock("S04_AXI_arlock"), S04_AXI_arcache("S04_AXI_arcache"), S04_AXI_arprot("S04_AXI_arprot"), S04_AXI_arqos("S04_AXI_arqos"), S04_AXI_arvalid("S04_AXI_arvalid"), S04_AXI_arready("S04_AXI_arready"), S04_AXI_rdata("S04_AXI_rdata"), S04_AXI_rresp("S04_AXI_rresp"), S04_AXI_rlast("S04_AXI_rlast"), S04_AXI_rvalid("S04_AXI_rvalid"), S04_AXI_rready("S04_AXI_rready"), S05_AXI_awaddr("S05_AXI_awaddr"), S05_AXI_awlen("S05_AXI_awlen"), S05_AXI_awsize("S05_AXI_awsize"), S05_AXI_awburst("S05_AXI_awburst"), S05_AXI_awlock("S05_AXI_awlock"), S05_AXI_awcache("S05_AXI_awcache"), S05_AXI_awprot("S05_AXI_awprot"), S05_AXI_awqos("S05_AXI_awqos"), S05_AXI_awvalid("S05_AXI_awvalid"), S05_AXI_awready("S05_AXI_awready"), S05_AXI_wdata("S05_AXI_wdata"), S05_AXI_wstrb("S05_AXI_wstrb"), S05_AXI_wlast("S05_AXI_wlast"), S05_AXI_wvalid("S05_AXI_wvalid"), S05_AXI_wready("S05_AXI_wready"), S05_AXI_bresp("S05_AXI_bresp"), S05_AXI_bvalid("S05_AXI_bvalid"), S05_AXI_bready("S05_AXI_bready"), S06_AXI_araddr("S06_AXI_araddr"), S06_AXI_arlen("S06_AXI_arlen"), S06_AXI_arsize("S06_AXI_arsize"), S06_AXI_arburst("S06_AXI_arburst"), S06_AXI_arlock("S06_AXI_arlock"), S06_AXI_arcache("S06_AXI_arcache"), S06_AXI_arprot("S06_AXI_arprot"), S06_AXI_arqos("S06_AXI_arqos"), S06_AXI_arvalid("S06_AXI_arvalid"), S06_AXI_arready("S06_AXI_arready"), S06_AXI_rdata("S06_AXI_rdata"), S06_AXI_rresp("S06_AXI_rresp"), S06_AXI_rlast("S06_AXI_rlast"), S06_AXI_rvalid("S06_AXI_rvalid"), S06_AXI_rready("S06_AXI_rready"), S07_AXI_awaddr("S07_AXI_awaddr"), S07_AXI_awlen("S07_AXI_awlen"), S07_AXI_awsize("S07_AXI_awsize"), S07_AXI_awburst("S07_AXI_awburst"), S07_AXI_awlock("S07_AXI_awlock"), S07_AXI_awcache("S07_AXI_awcache"), S07_AXI_awprot("S07_AXI_awprot"), S07_AXI_awqos("S07_AXI_awqos"), S07_AXI_awvalid("S07_AXI_awvalid"), S07_AXI_awready("S07_AXI_awready"), S07_AXI_wdata("S07_AXI_wdata"), S07_AXI_wstrb("S07_AXI_wstrb"), S07_AXI_wlast("S07_AXI_wlast"), S07_AXI_wvalid("S07_AXI_wvalid"), S07_AXI_wready("S07_AXI_wready"), S07_AXI_bresp("S07_AXI_bresp"), S07_AXI_bvalid("S07_AXI_bvalid"), S07_AXI_bready("S07_AXI_bready"), S08_AXI_araddr("S08_AXI_araddr"), S08_AXI_arlen("S08_AXI_arlen"), S08_AXI_arsize("S08_AXI_arsize"), S08_AXI_arburst("S08_AXI_arburst"), S08_AXI_arlock("S08_AXI_arlock"), S08_AXI_arcache("S08_AXI_arcache"), S08_AXI_arprot("S08_AXI_arprot"), S08_AXI_arqos("S08_AXI_arqos"), S08_AXI_arvalid("S08_AXI_arvalid"), S08_AXI_arready("S08_AXI_arready"), S08_AXI_rdata("S08_AXI_rdata"), S08_AXI_rresp("S08_AXI_rresp"), S08_AXI_rlast("S08_AXI_rlast"), S08_AXI_rvalid("S08_AXI_rvalid"), S08_AXI_rready("S08_AXI_rready"), S09_AXI_awaddr("S09_AXI_awaddr"), S09_AXI_awlen("S09_AXI_awlen"), S09_AXI_awsize("S09_AXI_awsize"), S09_AXI_awburst("S09_AXI_awburst"), S09_AXI_awlock("S09_AXI_awlock"), S09_AXI_awcache("S09_AXI_awcache"), S09_AXI_awprot("S09_AXI_awprot"), S09_AXI_awqos("S09_AXI_awqos"), S09_AXI_awvalid("S09_AXI_awvalid"), S09_AXI_awready("S09_AXI_awready"), S09_AXI_wdata("S09_AXI_wdata"), S09_AXI_wstrb("S09_AXI_wstrb"), S09_AXI_wlast("S09_AXI_wlast"), S09_AXI_wvalid("S09_AXI_wvalid"), S09_AXI_wready("S09_AXI_wready"), S09_AXI_bresp("S09_AXI_bresp"), S09_AXI_bvalid("S09_AXI_bvalid"), S09_AXI_bready("S09_AXI_bready"), M00_AXI_awaddr("M00_AXI_awaddr"), M00_AXI_awlen("M00_AXI_awlen"), M00_AXI_awsize("M00_AXI_awsize"), M00_AXI_awburst("M00_AXI_awburst"), M00_AXI_awlock("M00_AXI_awlock"), M00_AXI_awcache("M00_AXI_awcache"), M00_AXI_awprot("M00_AXI_awprot"), M00_AXI_awqos("M00_AXI_awqos"), M00_AXI_awvalid("M00_AXI_awvalid"), M00_AXI_awready("M00_AXI_awready"), M00_AXI_wdata("M00_AXI_wdata"), M00_AXI_wstrb("M00_AXI_wstrb"), M00_AXI_wlast("M00_AXI_wlast"), M00_AXI_wvalid("M00_AXI_wvalid"), M00_AXI_wready("M00_AXI_wready"), M00_AXI_bresp("M00_AXI_bresp"), M00_AXI_bvalid("M00_AXI_bvalid"), M00_AXI_bready("M00_AXI_bready"), M00_AXI_araddr("M00_AXI_araddr"), M00_AXI_arlen("M00_AXI_arlen"), M00_AXI_arsize("M00_AXI_arsize"), M00_AXI_arburst("M00_AXI_arburst"), M00_AXI_arlock("M00_AXI_arlock"), M00_AXI_arcache("M00_AXI_arcache"), M00_AXI_arprot("M00_AXI_arprot"), M00_AXI_arqos("M00_AXI_arqos"), M00_AXI_arvalid("M00_AXI_arvalid"), M00_AXI_arready("M00_AXI_arready"), M00_AXI_rdata("M00_AXI_rdata"), M00_AXI_rresp("M00_AXI_rresp"), M00_AXI_rlast("M00_AXI_rlast"), M00_AXI_rvalid("M00_AXI_rvalid"), M00_AXI_rready("M00_AXI_rready"),mp_S00_AXI_wr_socket_stub(nullptr),mp_S01_AXI_rd_socket_stub(nullptr),mp_S02_AXI_wr_socket_stub(nullptr),mp_S03_AXI_rd_socket_stub(nullptr),mp_S04_AXI_wr_socket_stub(nullptr),mp_S05_AXI_rd_socket_stub(nullptr),mp_S06_AXI_wr_socket_stub(nullptr),mp_S07_AXI_rd_socket_stub(nullptr),mp_S08_AXI_wr_socket_stub(nullptr),mp_S09_AXI_rd_socket_stub(nullptr)
+design_1_smartconnect_0_0::design_1_smartconnect_0_0(const sc_core::sc_module_name& nm) : design_1_smartconnect_0_0_sc(nm),  aclk("aclk"), aresetn("aresetn"), S00_AXI_araddr("S00_AXI_araddr"), S00_AXI_arlen("S00_AXI_arlen"), S00_AXI_arsize("S00_AXI_arsize"), S00_AXI_arburst("S00_AXI_arburst"), S00_AXI_arlock("S00_AXI_arlock"), S00_AXI_arcache("S00_AXI_arcache"), S00_AXI_arprot("S00_AXI_arprot"), S00_AXI_arqos("S00_AXI_arqos"), S00_AXI_arvalid("S00_AXI_arvalid"), S00_AXI_arready("S00_AXI_arready"), S00_AXI_rdata("S00_AXI_rdata"), S00_AXI_rresp("S00_AXI_rresp"), S00_AXI_rlast("S00_AXI_rlast"), S00_AXI_rvalid("S00_AXI_rvalid"), S00_AXI_rready("S00_AXI_rready"), S01_AXI_awaddr("S01_AXI_awaddr"), S01_AXI_awlen("S01_AXI_awlen"), S01_AXI_awsize("S01_AXI_awsize"), S01_AXI_awburst("S01_AXI_awburst"), S01_AXI_awlock("S01_AXI_awlock"), S01_AXI_awcache("S01_AXI_awcache"), S01_AXI_awprot("S01_AXI_awprot"), S01_AXI_awqos("S01_AXI_awqos"), S01_AXI_awvalid("S01_AXI_awvalid"), S01_AXI_awready("S01_AXI_awready"), S01_AXI_wdata("S01_AXI_wdata"), S01_AXI_wstrb("S01_AXI_wstrb"), S01_AXI_wlast("S01_AXI_wlast"), S01_AXI_wvalid("S01_AXI_wvalid"), S01_AXI_wready("S01_AXI_wready"), S01_AXI_bresp("S01_AXI_bresp"), S01_AXI_bvalid("S01_AXI_bvalid"), S01_AXI_bready("S01_AXI_bready"), S02_AXI_araddr("S02_AXI_araddr"), S02_AXI_arlen("S02_AXI_arlen"), S02_AXI_arsize("S02_AXI_arsize"), S02_AXI_arburst("S02_AXI_arburst"), S02_AXI_arlock("S02_AXI_arlock"), S02_AXI_arcache("S02_AXI_arcache"), S02_AXI_arprot("S02_AXI_arprot"), S02_AXI_arqos("S02_AXI_arqos"), S02_AXI_arvalid("S02_AXI_arvalid"), S02_AXI_arready("S02_AXI_arready"), S02_AXI_rdata("S02_AXI_rdata"), S02_AXI_rresp("S02_AXI_rresp"), S02_AXI_rlast("S02_AXI_rlast"), S02_AXI_rvalid("S02_AXI_rvalid"), S02_AXI_rready("S02_AXI_rready"), S03_AXI_awaddr("S03_AXI_awaddr"), S03_AXI_awlen("S03_AXI_awlen"), S03_AXI_awsize("S03_AXI_awsize"), S03_AXI_awburst("S03_AXI_awburst"), S03_AXI_awlock("S03_AXI_awlock"), S03_AXI_awcache("S03_AXI_awcache"), S03_AXI_awprot("S03_AXI_awprot"), S03_AXI_awqos("S03_AXI_awqos"), S03_AXI_awvalid("S03_AXI_awvalid"), S03_AXI_awready("S03_AXI_awready"), S03_AXI_wdata("S03_AXI_wdata"), S03_AXI_wstrb("S03_AXI_wstrb"), S03_AXI_wlast("S03_AXI_wlast"), S03_AXI_wvalid("S03_AXI_wvalid"), S03_AXI_wready("S03_AXI_wready"), S03_AXI_bresp("S03_AXI_bresp"), S03_AXI_bvalid("S03_AXI_bvalid"), S03_AXI_bready("S03_AXI_bready"), S04_AXI_araddr("S04_AXI_araddr"), S04_AXI_arlen("S04_AXI_arlen"), S04_AXI_arsize("S04_AXI_arsize"), S04_AXI_arburst("S04_AXI_arburst"), S04_AXI_arlock("S04_AXI_arlock"), S04_AXI_arcache("S04_AXI_arcache"), S04_AXI_arprot("S04_AXI_arprot"), S04_AXI_arqos("S04_AXI_arqos"), S04_AXI_arvalid("S04_AXI_arvalid"), S04_AXI_arready("S04_AXI_arready"), S04_AXI_rdata("S04_AXI_rdata"), S04_AXI_rresp("S04_AXI_rresp"), S04_AXI_rlast("S04_AXI_rlast"), S04_AXI_rvalid("S04_AXI_rvalid"), S04_AXI_rready("S04_AXI_rready"), S05_AXI_awaddr("S05_AXI_awaddr"), S05_AXI_awlen("S05_AXI_awlen"), S05_AXI_awsize("S05_AXI_awsize"), S05_AXI_awburst("S05_AXI_awburst"), S05_AXI_awlock("S05_AXI_awlock"), S05_AXI_awcache("S05_AXI_awcache"), S05_AXI_awprot("S05_AXI_awprot"), S05_AXI_awqos("S05_AXI_awqos"), S05_AXI_awvalid("S05_AXI_awvalid"), S05_AXI_awready("S05_AXI_awready"), S05_AXI_wdata("S05_AXI_wdata"), S05_AXI_wstrb("S05_AXI_wstrb"), S05_AXI_wlast("S05_AXI_wlast"), S05_AXI_wvalid("S05_AXI_wvalid"), S05_AXI_wready("S05_AXI_wready"), S05_AXI_bresp("S05_AXI_bresp"), S05_AXI_bvalid("S05_AXI_bvalid"), S05_AXI_bready("S05_AXI_bready"), S06_AXI_araddr("S06_AXI_araddr"), S06_AXI_arlen("S06_AXI_arlen"), S06_AXI_arsize("S06_AXI_arsize"), S06_AXI_arburst("S06_AXI_arburst"), S06_AXI_arlock("S06_AXI_arlock"), S06_AXI_arcache("S06_AXI_arcache"), S06_AXI_arprot("S06_AXI_arprot"), S06_AXI_arqos("S06_AXI_arqos"), S06_AXI_arvalid("S06_AXI_arvalid"), S06_AXI_arready("S06_AXI_arready"), S06_AXI_rdata("S06_AXI_rdata"), S06_AXI_rresp("S06_AXI_rresp"), S06_AXI_rlast("S06_AXI_rlast"), S06_AXI_rvalid("S06_AXI_rvalid"), S06_AXI_rready("S06_AXI_rready"), S07_AXI_awaddr("S07_AXI_awaddr"), S07_AXI_awlen("S07_AXI_awlen"), S07_AXI_awsize("S07_AXI_awsize"), S07_AXI_awburst("S07_AXI_awburst"), S07_AXI_awlock("S07_AXI_awlock"), S07_AXI_awcache("S07_AXI_awcache"), S07_AXI_awprot("S07_AXI_awprot"), S07_AXI_awqos("S07_AXI_awqos"), S07_AXI_awvalid("S07_AXI_awvalid"), S07_AXI_awready("S07_AXI_awready"), S07_AXI_wdata("S07_AXI_wdata"), S07_AXI_wstrb("S07_AXI_wstrb"), S07_AXI_wlast("S07_AXI_wlast"), S07_AXI_wvalid("S07_AXI_wvalid"), S07_AXI_wready("S07_AXI_wready"), S07_AXI_bresp("S07_AXI_bresp"), S07_AXI_bvalid("S07_AXI_bvalid"), S07_AXI_bready("S07_AXI_bready"), S08_AXI_araddr("S08_AXI_araddr"), S08_AXI_arlen("S08_AXI_arlen"), S08_AXI_arsize("S08_AXI_arsize"), S08_AXI_arburst("S08_AXI_arburst"), S08_AXI_arlock("S08_AXI_arlock"), S08_AXI_arcache("S08_AXI_arcache"), S08_AXI_arprot("S08_AXI_arprot"), S08_AXI_arqos("S08_AXI_arqos"), S08_AXI_arvalid("S08_AXI_arvalid"), S08_AXI_arready("S08_AXI_arready"), S08_AXI_rdata("S08_AXI_rdata"), S08_AXI_rresp("S08_AXI_rresp"), S08_AXI_rlast("S08_AXI_rlast"), S08_AXI_rvalid("S08_AXI_rvalid"), S08_AXI_rready("S08_AXI_rready"), S09_AXI_awaddr("S09_AXI_awaddr"), S09_AXI_awlen("S09_AXI_awlen"), S09_AXI_awsize("S09_AXI_awsize"), S09_AXI_awburst("S09_AXI_awburst"), S09_AXI_awlock("S09_AXI_awlock"), S09_AXI_awcache("S09_AXI_awcache"), S09_AXI_awprot("S09_AXI_awprot"), S09_AXI_awqos("S09_AXI_awqos"), S09_AXI_awvalid("S09_AXI_awvalid"), S09_AXI_awready("S09_AXI_awready"), S09_AXI_wdata("S09_AXI_wdata"), S09_AXI_wstrb("S09_AXI_wstrb"), S09_AXI_wlast("S09_AXI_wlast"), S09_AXI_wvalid("S09_AXI_wvalid"), S09_AXI_wready("S09_AXI_wready"), S09_AXI_bresp("S09_AXI_bresp"), S09_AXI_bvalid("S09_AXI_bvalid"), S09_AXI_bready("S09_AXI_bready"), S10_AXI_araddr("S10_AXI_araddr"), S10_AXI_arlen("S10_AXI_arlen"), S10_AXI_arsize("S10_AXI_arsize"), S10_AXI_arburst("S10_AXI_arburst"), S10_AXI_arlock("S10_AXI_arlock"), S10_AXI_arcache("S10_AXI_arcache"), S10_AXI_arprot("S10_AXI_arprot"), S10_AXI_arqos("S10_AXI_arqos"), S10_AXI_arvalid("S10_AXI_arvalid"), S10_AXI_arready("S10_AXI_arready"), S10_AXI_rdata("S10_AXI_rdata"), S10_AXI_rresp("S10_AXI_rresp"), S10_AXI_rlast("S10_AXI_rlast"), S10_AXI_rvalid("S10_AXI_rvalid"), S10_AXI_rready("S10_AXI_rready"), S11_AXI_awaddr("S11_AXI_awaddr"), S11_AXI_awlen("S11_AXI_awlen"), S11_AXI_awsize("S11_AXI_awsize"), S11_AXI_awburst("S11_AXI_awburst"), S11_AXI_awlock("S11_AXI_awlock"), S11_AXI_awcache("S11_AXI_awcache"), S11_AXI_awprot("S11_AXI_awprot"), S11_AXI_awqos("S11_AXI_awqos"), S11_AXI_awvalid("S11_AXI_awvalid"), S11_AXI_awready("S11_AXI_awready"), S11_AXI_wdata("S11_AXI_wdata"), S11_AXI_wstrb("S11_AXI_wstrb"), S11_AXI_wlast("S11_AXI_wlast"), S11_AXI_wvalid("S11_AXI_wvalid"), S11_AXI_wready("S11_AXI_wready"), S11_AXI_bresp("S11_AXI_bresp"), S11_AXI_bvalid("S11_AXI_bvalid"), S11_AXI_bready("S11_AXI_bready"), M00_AXI_awaddr("M00_AXI_awaddr"), M00_AXI_awlen("M00_AXI_awlen"), M00_AXI_awsize("M00_AXI_awsize"), M00_AXI_awburst("M00_AXI_awburst"), M00_AXI_awlock("M00_AXI_awlock"), M00_AXI_awcache("M00_AXI_awcache"), M00_AXI_awprot("M00_AXI_awprot"), M00_AXI_awqos("M00_AXI_awqos"), M00_AXI_awvalid("M00_AXI_awvalid"), M00_AXI_awready("M00_AXI_awready"), M00_AXI_wdata("M00_AXI_wdata"), M00_AXI_wstrb("M00_AXI_wstrb"), M00_AXI_wlast("M00_AXI_wlast"), M00_AXI_wvalid("M00_AXI_wvalid"), M00_AXI_wready("M00_AXI_wready"), M00_AXI_bresp("M00_AXI_bresp"), M00_AXI_bvalid("M00_AXI_bvalid"), M00_AXI_bready("M00_AXI_bready"), M00_AXI_araddr("M00_AXI_araddr"), M00_AXI_arlen("M00_AXI_arlen"), M00_AXI_arsize("M00_AXI_arsize"), M00_AXI_arburst("M00_AXI_arburst"), M00_AXI_arlock("M00_AXI_arlock"), M00_AXI_arcache("M00_AXI_arcache"), M00_AXI_arprot("M00_AXI_arprot"), M00_AXI_arqos("M00_AXI_arqos"), M00_AXI_arvalid("M00_AXI_arvalid"), M00_AXI_arready("M00_AXI_arready"), M00_AXI_rdata("M00_AXI_rdata"), M00_AXI_rresp("M00_AXI_rresp"), M00_AXI_rlast("M00_AXI_rlast"), M00_AXI_rvalid("M00_AXI_rvalid"), M00_AXI_rready("M00_AXI_rready"),mp_S00_AXI_wr_socket_stub(nullptr),mp_S01_AXI_rd_socket_stub(nullptr),mp_S02_AXI_wr_socket_stub(nullptr),mp_S03_AXI_rd_socket_stub(nullptr),mp_S04_AXI_wr_socket_stub(nullptr),mp_S05_AXI_rd_socket_stub(nullptr),mp_S06_AXI_wr_socket_stub(nullptr),mp_S07_AXI_rd_socket_stub(nullptr),mp_S08_AXI_wr_socket_stub(nullptr),mp_S09_AXI_rd_socket_stub(nullptr),mp_S10_AXI_wr_socket_stub(nullptr),mp_S11_AXI_rd_socket_stub(nullptr)
 {
   // initialize pins
   mp_impl->aclk(aclk);
@@ -2893,6 +3376,10 @@ design_1_smartconnect_0_0::design_1_smartconnect_0_0(const sc_core::sc_module_na
   mp_S08_AXI_arlock_converter = NULL;
   mp_S09_AXI_transactor = NULL;
   mp_S09_AXI_awlock_converter = NULL;
+  mp_S10_AXI_transactor = NULL;
+  mp_S10_AXI_arlock_converter = NULL;
+  mp_S11_AXI_transactor = NULL;
+  mp_S11_AXI_awlock_converter = NULL;
   mp_M00_AXI_transactor = NULL;
   mp_M00_AXI_awlen_converter = NULL;
   mp_M00_AXI_awlock_converter = NULL;
@@ -2910,6 +3397,8 @@ design_1_smartconnect_0_0::design_1_smartconnect_0_0(const sc_core::sc_module_na
   mp_S07_AXI_rd_socket_stub = NULL;
   mp_S08_AXI_wr_socket_stub = NULL;
   mp_S09_AXI_rd_socket_stub = NULL;
+  mp_S10_AXI_wr_socket_stub = NULL;
+  mp_S11_AXI_rd_socket_stub = NULL;
 
   // configure S00_AXI_transactor
     xsc::common_cpp::properties S00_AXI_transactor_param_props;
@@ -3486,6 +3975,121 @@ design_1_smartconnect_0_0::design_1_smartconnect_0_0(const sc_core::sc_module_na
   mp_S09_AXI_transactor->BREADY(S09_AXI_bready);
   mp_S09_AXI_transactor->CLK(aclk);
   mp_S09_AXI_transactor->RST(aresetn);
+  // configure S10_AXI_transactor
+    xsc::common_cpp::properties S10_AXI_transactor_param_props;
+    S10_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
+    S10_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S10_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
+    S10_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
+    S10_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
+    S10_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
+    S10_AXI_transactor_param_props.addLong("WUSER_WIDTH", "0");
+    S10_AXI_transactor_param_props.addLong("RUSER_WIDTH", "0");
+    S10_AXI_transactor_param_props.addLong("BUSER_WIDTH", "0");
+    S10_AXI_transactor_param_props.addLong("HAS_BURST", "1");
+    S10_AXI_transactor_param_props.addLong("HAS_LOCK", "1");
+    S10_AXI_transactor_param_props.addLong("HAS_PROT", "1");
+    S10_AXI_transactor_param_props.addLong("HAS_CACHE", "1");
+    S10_AXI_transactor_param_props.addLong("HAS_QOS", "1");
+    S10_AXI_transactor_param_props.addLong("HAS_REGION", "0");
+    S10_AXI_transactor_param_props.addLong("HAS_WSTRB", "0");
+    S10_AXI_transactor_param_props.addLong("HAS_BRESP", "0");
+    S10_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
+    S10_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
+    S10_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "16");
+    S10_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "2");
+    S10_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "16");
+    S10_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
+    S10_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
+    S10_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
+    S10_AXI_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
+    S10_AXI_transactor_param_props.addLong("HAS_SIZE", "1");
+    S10_AXI_transactor_param_props.addLong("HAS_RESET", "1");
+    S10_AXI_transactor_param_props.addFloat("PHASE", "0.0");
+    S10_AXI_transactor_param_props.addString("PROTOCOL", "AXI4");
+    S10_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_ONLY");
+    S10_AXI_transactor_param_props.addString("CLK_DOMAIN", "design_1_processing_system7_0_0_FCLK_CLK0");
+
+    mp_S10_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<32,32,1,1,1,1,1,1>("S10_AXI_transactor", S10_AXI_transactor_param_props);
+  mp_S10_AXI_transactor->ARADDR(S10_AXI_araddr);
+  mp_S10_AXI_transactor->ARLEN(S10_AXI_arlen);
+  mp_S10_AXI_transactor->ARSIZE(S10_AXI_arsize);
+  mp_S10_AXI_transactor->ARBURST(S10_AXI_arburst);
+  mp_S10_AXI_arlock_converter = new xsc::common::vectorN2scalar_converter<1>("S10_AXI_arlock_converter");
+  mp_S10_AXI_arlock_converter->vector_in(S10_AXI_arlock);
+  mp_S10_AXI_arlock_converter->scalar_out(m_S10_AXI_arlock_converter_signal);
+  mp_S10_AXI_transactor->ARLOCK(m_S10_AXI_arlock_converter_signal);
+  mp_S10_AXI_transactor->ARCACHE(S10_AXI_arcache);
+  mp_S10_AXI_transactor->ARPROT(S10_AXI_arprot);
+  mp_S10_AXI_transactor->ARQOS(S10_AXI_arqos);
+  mp_S10_AXI_transactor->ARVALID(S10_AXI_arvalid);
+  mp_S10_AXI_transactor->ARREADY(S10_AXI_arready);
+  mp_S10_AXI_transactor->RDATA(S10_AXI_rdata);
+  mp_S10_AXI_transactor->RRESP(S10_AXI_rresp);
+  mp_S10_AXI_transactor->RLAST(S10_AXI_rlast);
+  mp_S10_AXI_transactor->RVALID(S10_AXI_rvalid);
+  mp_S10_AXI_transactor->RREADY(S10_AXI_rready);
+  mp_S10_AXI_transactor->CLK(aclk);
+  mp_S10_AXI_transactor->RST(aresetn);
+  // configure S11_AXI_transactor
+    xsc::common_cpp::properties S11_AXI_transactor_param_props;
+    S11_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
+    S11_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S11_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
+    S11_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
+    S11_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
+    S11_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
+    S11_AXI_transactor_param_props.addLong("WUSER_WIDTH", "0");
+    S11_AXI_transactor_param_props.addLong("RUSER_WIDTH", "0");
+    S11_AXI_transactor_param_props.addLong("BUSER_WIDTH", "0");
+    S11_AXI_transactor_param_props.addLong("HAS_BURST", "1");
+    S11_AXI_transactor_param_props.addLong("HAS_LOCK", "1");
+    S11_AXI_transactor_param_props.addLong("HAS_PROT", "1");
+    S11_AXI_transactor_param_props.addLong("HAS_CACHE", "1");
+    S11_AXI_transactor_param_props.addLong("HAS_QOS", "1");
+    S11_AXI_transactor_param_props.addLong("HAS_REGION", "0");
+    S11_AXI_transactor_param_props.addLong("HAS_WSTRB", "1");
+    S11_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
+    S11_AXI_transactor_param_props.addLong("HAS_RRESP", "0");
+    S11_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
+    S11_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "2");
+    S11_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "16");
+    S11_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "16");
+    S11_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
+    S11_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
+    S11_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
+    S11_AXI_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
+    S11_AXI_transactor_param_props.addLong("HAS_SIZE", "1");
+    S11_AXI_transactor_param_props.addLong("HAS_RESET", "1");
+    S11_AXI_transactor_param_props.addFloat("PHASE", "0.0");
+    S11_AXI_transactor_param_props.addString("PROTOCOL", "AXI4");
+    S11_AXI_transactor_param_props.addString("READ_WRITE_MODE", "WRITE_ONLY");
+    S11_AXI_transactor_param_props.addString("CLK_DOMAIN", "design_1_processing_system7_0_0_FCLK_CLK0");
+
+    mp_S11_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<32,32,1,1,1,1,1,1>("S11_AXI_transactor", S11_AXI_transactor_param_props);
+  mp_S11_AXI_transactor->AWADDR(S11_AXI_awaddr);
+  mp_S11_AXI_transactor->AWLEN(S11_AXI_awlen);
+  mp_S11_AXI_transactor->AWSIZE(S11_AXI_awsize);
+  mp_S11_AXI_transactor->AWBURST(S11_AXI_awburst);
+  mp_S11_AXI_awlock_converter = new xsc::common::vectorN2scalar_converter<1>("S11_AXI_awlock_converter");
+  mp_S11_AXI_awlock_converter->vector_in(S11_AXI_awlock);
+  mp_S11_AXI_awlock_converter->scalar_out(m_S11_AXI_awlock_converter_signal);
+  mp_S11_AXI_transactor->AWLOCK(m_S11_AXI_awlock_converter_signal);
+  mp_S11_AXI_transactor->AWCACHE(S11_AXI_awcache);
+  mp_S11_AXI_transactor->AWPROT(S11_AXI_awprot);
+  mp_S11_AXI_transactor->AWQOS(S11_AXI_awqos);
+  mp_S11_AXI_transactor->AWVALID(S11_AXI_awvalid);
+  mp_S11_AXI_transactor->AWREADY(S11_AXI_awready);
+  mp_S11_AXI_transactor->WDATA(S11_AXI_wdata);
+  mp_S11_AXI_transactor->WSTRB(S11_AXI_wstrb);
+  mp_S11_AXI_transactor->WLAST(S11_AXI_wlast);
+  mp_S11_AXI_transactor->WVALID(S11_AXI_wvalid);
+  mp_S11_AXI_transactor->WREADY(S11_AXI_wready);
+  mp_S11_AXI_transactor->BRESP(S11_AXI_bresp);
+  mp_S11_AXI_transactor->BVALID(S11_AXI_bvalid);
+  mp_S11_AXI_transactor->BREADY(S11_AXI_bready);
+  mp_S11_AXI_transactor->CLK(aclk);
+  mp_S11_AXI_transactor->RST(aresetn);
   // configure M00_AXI_transactor
     xsc::common_cpp::properties M00_AXI_transactor_param_props;
     M00_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
@@ -3581,6 +4185,8 @@ design_1_smartconnect_0_0::design_1_smartconnect_0_0(const sc_core::sc_module_na
   S07_AXI_transactor_target_wr_socket_stub = nullptr;
   S08_AXI_transactor_target_rd_socket_stub = nullptr;
   S09_AXI_transactor_target_wr_socket_stub = nullptr;
+  S10_AXI_transactor_target_rd_socket_stub = nullptr;
+  S11_AXI_transactor_target_wr_socket_stub = nullptr;
   M00_AXI_transactor_initiator_wr_socket_stub = nullptr;
   M00_AXI_transactor_initiator_rd_socket_stub = nullptr;
 
@@ -3736,6 +4342,36 @@ void design_1_smartconnect_0_0::before_end_of_elaboration()
     S09_AXI_transactor_target_wr_socket_stub = new xtlm::xtlm_aximm_target_stub("wr_socket",0);
     S09_AXI_transactor_target_wr_socket_stub->bind(*(mp_S09_AXI_transactor->wr_socket));
     mp_S09_AXI_transactor->disable_transactor();
+  }
+
+  // configure 'S10_AXI' transactor
+  if (xsc::utils::xsc_sim_manager::getInstanceParameterInt("design_1_smartconnect_0_0", "S10_AXI_TLM_MODE") != 1)
+  {
+    mp_impl->S10_AXI_tlm_aximm_read_socket->bind(*(mp_S10_AXI_transactor->rd_socket));
+    mp_S10_AXI_wr_socket_stub = new xtlm::xtlm_aximm_initiator_stub("wr_socket", 0);
+    mp_impl->S10_AXI_tlm_aximm_write_socket->bind(mp_S10_AXI_wr_socket_stub->initiator_socket);
+  
+  }
+  else
+  {
+    S10_AXI_transactor_target_rd_socket_stub = new xtlm::xtlm_aximm_target_stub("rd_socket",0);
+    S10_AXI_transactor_target_rd_socket_stub->bind(*(mp_S10_AXI_transactor->rd_socket));
+    mp_S10_AXI_transactor->disable_transactor();
+  }
+
+  // configure 'S11_AXI' transactor
+  if (xsc::utils::xsc_sim_manager::getInstanceParameterInt("design_1_smartconnect_0_0", "S11_AXI_TLM_MODE") != 1)
+  {
+    mp_S11_AXI_rd_socket_stub = new xtlm::xtlm_aximm_initiator_stub("rd_socket", 0);
+    mp_impl->S11_AXI_tlm_aximm_read_socket->bind(mp_S11_AXI_rd_socket_stub->initiator_socket);
+    mp_impl->S11_AXI_tlm_aximm_write_socket->bind(*(mp_S11_AXI_transactor->wr_socket));
+  
+  }
+  else
+  {
+    S11_AXI_transactor_target_wr_socket_stub = new xtlm::xtlm_aximm_target_stub("wr_socket",0);
+    S11_AXI_transactor_target_wr_socket_stub->bind(*(mp_S11_AXI_transactor->wr_socket));
+    mp_S11_AXI_transactor->disable_transactor();
   }
 
   // configure 'M00_AXI' transactor
@@ -3762,7 +4398,7 @@ void design_1_smartconnect_0_0::before_end_of_elaboration()
 
 
 #ifdef MTI_SYSTEMC
-design_1_smartconnect_0_0::design_1_smartconnect_0_0(const sc_core::sc_module_name& nm) : design_1_smartconnect_0_0_sc(nm),  aclk("aclk"), aresetn("aresetn"), S00_AXI_araddr("S00_AXI_araddr"), S00_AXI_arlen("S00_AXI_arlen"), S00_AXI_arsize("S00_AXI_arsize"), S00_AXI_arburst("S00_AXI_arburst"), S00_AXI_arlock("S00_AXI_arlock"), S00_AXI_arcache("S00_AXI_arcache"), S00_AXI_arprot("S00_AXI_arprot"), S00_AXI_arqos("S00_AXI_arqos"), S00_AXI_arvalid("S00_AXI_arvalid"), S00_AXI_arready("S00_AXI_arready"), S00_AXI_rdata("S00_AXI_rdata"), S00_AXI_rresp("S00_AXI_rresp"), S00_AXI_rlast("S00_AXI_rlast"), S00_AXI_rvalid("S00_AXI_rvalid"), S00_AXI_rready("S00_AXI_rready"), S01_AXI_awaddr("S01_AXI_awaddr"), S01_AXI_awlen("S01_AXI_awlen"), S01_AXI_awsize("S01_AXI_awsize"), S01_AXI_awburst("S01_AXI_awburst"), S01_AXI_awlock("S01_AXI_awlock"), S01_AXI_awcache("S01_AXI_awcache"), S01_AXI_awprot("S01_AXI_awprot"), S01_AXI_awqos("S01_AXI_awqos"), S01_AXI_awvalid("S01_AXI_awvalid"), S01_AXI_awready("S01_AXI_awready"), S01_AXI_wdata("S01_AXI_wdata"), S01_AXI_wstrb("S01_AXI_wstrb"), S01_AXI_wlast("S01_AXI_wlast"), S01_AXI_wvalid("S01_AXI_wvalid"), S01_AXI_wready("S01_AXI_wready"), S01_AXI_bresp("S01_AXI_bresp"), S01_AXI_bvalid("S01_AXI_bvalid"), S01_AXI_bready("S01_AXI_bready"), S02_AXI_araddr("S02_AXI_araddr"), S02_AXI_arlen("S02_AXI_arlen"), S02_AXI_arsize("S02_AXI_arsize"), S02_AXI_arburst("S02_AXI_arburst"), S02_AXI_arlock("S02_AXI_arlock"), S02_AXI_arcache("S02_AXI_arcache"), S02_AXI_arprot("S02_AXI_arprot"), S02_AXI_arqos("S02_AXI_arqos"), S02_AXI_arvalid("S02_AXI_arvalid"), S02_AXI_arready("S02_AXI_arready"), S02_AXI_rdata("S02_AXI_rdata"), S02_AXI_rresp("S02_AXI_rresp"), S02_AXI_rlast("S02_AXI_rlast"), S02_AXI_rvalid("S02_AXI_rvalid"), S02_AXI_rready("S02_AXI_rready"), S03_AXI_awaddr("S03_AXI_awaddr"), S03_AXI_awlen("S03_AXI_awlen"), S03_AXI_awsize("S03_AXI_awsize"), S03_AXI_awburst("S03_AXI_awburst"), S03_AXI_awlock("S03_AXI_awlock"), S03_AXI_awcache("S03_AXI_awcache"), S03_AXI_awprot("S03_AXI_awprot"), S03_AXI_awqos("S03_AXI_awqos"), S03_AXI_awvalid("S03_AXI_awvalid"), S03_AXI_awready("S03_AXI_awready"), S03_AXI_wdata("S03_AXI_wdata"), S03_AXI_wstrb("S03_AXI_wstrb"), S03_AXI_wlast("S03_AXI_wlast"), S03_AXI_wvalid("S03_AXI_wvalid"), S03_AXI_wready("S03_AXI_wready"), S03_AXI_bresp("S03_AXI_bresp"), S03_AXI_bvalid("S03_AXI_bvalid"), S03_AXI_bready("S03_AXI_bready"), S04_AXI_araddr("S04_AXI_araddr"), S04_AXI_arlen("S04_AXI_arlen"), S04_AXI_arsize("S04_AXI_arsize"), S04_AXI_arburst("S04_AXI_arburst"), S04_AXI_arlock("S04_AXI_arlock"), S04_AXI_arcache("S04_AXI_arcache"), S04_AXI_arprot("S04_AXI_arprot"), S04_AXI_arqos("S04_AXI_arqos"), S04_AXI_arvalid("S04_AXI_arvalid"), S04_AXI_arready("S04_AXI_arready"), S04_AXI_rdata("S04_AXI_rdata"), S04_AXI_rresp("S04_AXI_rresp"), S04_AXI_rlast("S04_AXI_rlast"), S04_AXI_rvalid("S04_AXI_rvalid"), S04_AXI_rready("S04_AXI_rready"), S05_AXI_awaddr("S05_AXI_awaddr"), S05_AXI_awlen("S05_AXI_awlen"), S05_AXI_awsize("S05_AXI_awsize"), S05_AXI_awburst("S05_AXI_awburst"), S05_AXI_awlock("S05_AXI_awlock"), S05_AXI_awcache("S05_AXI_awcache"), S05_AXI_awprot("S05_AXI_awprot"), S05_AXI_awqos("S05_AXI_awqos"), S05_AXI_awvalid("S05_AXI_awvalid"), S05_AXI_awready("S05_AXI_awready"), S05_AXI_wdata("S05_AXI_wdata"), S05_AXI_wstrb("S05_AXI_wstrb"), S05_AXI_wlast("S05_AXI_wlast"), S05_AXI_wvalid("S05_AXI_wvalid"), S05_AXI_wready("S05_AXI_wready"), S05_AXI_bresp("S05_AXI_bresp"), S05_AXI_bvalid("S05_AXI_bvalid"), S05_AXI_bready("S05_AXI_bready"), S06_AXI_araddr("S06_AXI_araddr"), S06_AXI_arlen("S06_AXI_arlen"), S06_AXI_arsize("S06_AXI_arsize"), S06_AXI_arburst("S06_AXI_arburst"), S06_AXI_arlock("S06_AXI_arlock"), S06_AXI_arcache("S06_AXI_arcache"), S06_AXI_arprot("S06_AXI_arprot"), S06_AXI_arqos("S06_AXI_arqos"), S06_AXI_arvalid("S06_AXI_arvalid"), S06_AXI_arready("S06_AXI_arready"), S06_AXI_rdata("S06_AXI_rdata"), S06_AXI_rresp("S06_AXI_rresp"), S06_AXI_rlast("S06_AXI_rlast"), S06_AXI_rvalid("S06_AXI_rvalid"), S06_AXI_rready("S06_AXI_rready"), S07_AXI_awaddr("S07_AXI_awaddr"), S07_AXI_awlen("S07_AXI_awlen"), S07_AXI_awsize("S07_AXI_awsize"), S07_AXI_awburst("S07_AXI_awburst"), S07_AXI_awlock("S07_AXI_awlock"), S07_AXI_awcache("S07_AXI_awcache"), S07_AXI_awprot("S07_AXI_awprot"), S07_AXI_awqos("S07_AXI_awqos"), S07_AXI_awvalid("S07_AXI_awvalid"), S07_AXI_awready("S07_AXI_awready"), S07_AXI_wdata("S07_AXI_wdata"), S07_AXI_wstrb("S07_AXI_wstrb"), S07_AXI_wlast("S07_AXI_wlast"), S07_AXI_wvalid("S07_AXI_wvalid"), S07_AXI_wready("S07_AXI_wready"), S07_AXI_bresp("S07_AXI_bresp"), S07_AXI_bvalid("S07_AXI_bvalid"), S07_AXI_bready("S07_AXI_bready"), S08_AXI_araddr("S08_AXI_araddr"), S08_AXI_arlen("S08_AXI_arlen"), S08_AXI_arsize("S08_AXI_arsize"), S08_AXI_arburst("S08_AXI_arburst"), S08_AXI_arlock("S08_AXI_arlock"), S08_AXI_arcache("S08_AXI_arcache"), S08_AXI_arprot("S08_AXI_arprot"), S08_AXI_arqos("S08_AXI_arqos"), S08_AXI_arvalid("S08_AXI_arvalid"), S08_AXI_arready("S08_AXI_arready"), S08_AXI_rdata("S08_AXI_rdata"), S08_AXI_rresp("S08_AXI_rresp"), S08_AXI_rlast("S08_AXI_rlast"), S08_AXI_rvalid("S08_AXI_rvalid"), S08_AXI_rready("S08_AXI_rready"), S09_AXI_awaddr("S09_AXI_awaddr"), S09_AXI_awlen("S09_AXI_awlen"), S09_AXI_awsize("S09_AXI_awsize"), S09_AXI_awburst("S09_AXI_awburst"), S09_AXI_awlock("S09_AXI_awlock"), S09_AXI_awcache("S09_AXI_awcache"), S09_AXI_awprot("S09_AXI_awprot"), S09_AXI_awqos("S09_AXI_awqos"), S09_AXI_awvalid("S09_AXI_awvalid"), S09_AXI_awready("S09_AXI_awready"), S09_AXI_wdata("S09_AXI_wdata"), S09_AXI_wstrb("S09_AXI_wstrb"), S09_AXI_wlast("S09_AXI_wlast"), S09_AXI_wvalid("S09_AXI_wvalid"), S09_AXI_wready("S09_AXI_wready"), S09_AXI_bresp("S09_AXI_bresp"), S09_AXI_bvalid("S09_AXI_bvalid"), S09_AXI_bready("S09_AXI_bready"), M00_AXI_awaddr("M00_AXI_awaddr"), M00_AXI_awlen("M00_AXI_awlen"), M00_AXI_awsize("M00_AXI_awsize"), M00_AXI_awburst("M00_AXI_awburst"), M00_AXI_awlock("M00_AXI_awlock"), M00_AXI_awcache("M00_AXI_awcache"), M00_AXI_awprot("M00_AXI_awprot"), M00_AXI_awqos("M00_AXI_awqos"), M00_AXI_awvalid("M00_AXI_awvalid"), M00_AXI_awready("M00_AXI_awready"), M00_AXI_wdata("M00_AXI_wdata"), M00_AXI_wstrb("M00_AXI_wstrb"), M00_AXI_wlast("M00_AXI_wlast"), M00_AXI_wvalid("M00_AXI_wvalid"), M00_AXI_wready("M00_AXI_wready"), M00_AXI_bresp("M00_AXI_bresp"), M00_AXI_bvalid("M00_AXI_bvalid"), M00_AXI_bready("M00_AXI_bready"), M00_AXI_araddr("M00_AXI_araddr"), M00_AXI_arlen("M00_AXI_arlen"), M00_AXI_arsize("M00_AXI_arsize"), M00_AXI_arburst("M00_AXI_arburst"), M00_AXI_arlock("M00_AXI_arlock"), M00_AXI_arcache("M00_AXI_arcache"), M00_AXI_arprot("M00_AXI_arprot"), M00_AXI_arqos("M00_AXI_arqos"), M00_AXI_arvalid("M00_AXI_arvalid"), M00_AXI_arready("M00_AXI_arready"), M00_AXI_rdata("M00_AXI_rdata"), M00_AXI_rresp("M00_AXI_rresp"), M00_AXI_rlast("M00_AXI_rlast"), M00_AXI_rvalid("M00_AXI_rvalid"), M00_AXI_rready("M00_AXI_rready"),mp_S00_AXI_wr_socket_stub(nullptr),mp_S01_AXI_rd_socket_stub(nullptr),mp_S02_AXI_wr_socket_stub(nullptr),mp_S03_AXI_rd_socket_stub(nullptr),mp_S04_AXI_wr_socket_stub(nullptr),mp_S05_AXI_rd_socket_stub(nullptr),mp_S06_AXI_wr_socket_stub(nullptr),mp_S07_AXI_rd_socket_stub(nullptr),mp_S08_AXI_wr_socket_stub(nullptr),mp_S09_AXI_rd_socket_stub(nullptr)
+design_1_smartconnect_0_0::design_1_smartconnect_0_0(const sc_core::sc_module_name& nm) : design_1_smartconnect_0_0_sc(nm),  aclk("aclk"), aresetn("aresetn"), S00_AXI_araddr("S00_AXI_araddr"), S00_AXI_arlen("S00_AXI_arlen"), S00_AXI_arsize("S00_AXI_arsize"), S00_AXI_arburst("S00_AXI_arburst"), S00_AXI_arlock("S00_AXI_arlock"), S00_AXI_arcache("S00_AXI_arcache"), S00_AXI_arprot("S00_AXI_arprot"), S00_AXI_arqos("S00_AXI_arqos"), S00_AXI_arvalid("S00_AXI_arvalid"), S00_AXI_arready("S00_AXI_arready"), S00_AXI_rdata("S00_AXI_rdata"), S00_AXI_rresp("S00_AXI_rresp"), S00_AXI_rlast("S00_AXI_rlast"), S00_AXI_rvalid("S00_AXI_rvalid"), S00_AXI_rready("S00_AXI_rready"), S01_AXI_awaddr("S01_AXI_awaddr"), S01_AXI_awlen("S01_AXI_awlen"), S01_AXI_awsize("S01_AXI_awsize"), S01_AXI_awburst("S01_AXI_awburst"), S01_AXI_awlock("S01_AXI_awlock"), S01_AXI_awcache("S01_AXI_awcache"), S01_AXI_awprot("S01_AXI_awprot"), S01_AXI_awqos("S01_AXI_awqos"), S01_AXI_awvalid("S01_AXI_awvalid"), S01_AXI_awready("S01_AXI_awready"), S01_AXI_wdata("S01_AXI_wdata"), S01_AXI_wstrb("S01_AXI_wstrb"), S01_AXI_wlast("S01_AXI_wlast"), S01_AXI_wvalid("S01_AXI_wvalid"), S01_AXI_wready("S01_AXI_wready"), S01_AXI_bresp("S01_AXI_bresp"), S01_AXI_bvalid("S01_AXI_bvalid"), S01_AXI_bready("S01_AXI_bready"), S02_AXI_araddr("S02_AXI_araddr"), S02_AXI_arlen("S02_AXI_arlen"), S02_AXI_arsize("S02_AXI_arsize"), S02_AXI_arburst("S02_AXI_arburst"), S02_AXI_arlock("S02_AXI_arlock"), S02_AXI_arcache("S02_AXI_arcache"), S02_AXI_arprot("S02_AXI_arprot"), S02_AXI_arqos("S02_AXI_arqos"), S02_AXI_arvalid("S02_AXI_arvalid"), S02_AXI_arready("S02_AXI_arready"), S02_AXI_rdata("S02_AXI_rdata"), S02_AXI_rresp("S02_AXI_rresp"), S02_AXI_rlast("S02_AXI_rlast"), S02_AXI_rvalid("S02_AXI_rvalid"), S02_AXI_rready("S02_AXI_rready"), S03_AXI_awaddr("S03_AXI_awaddr"), S03_AXI_awlen("S03_AXI_awlen"), S03_AXI_awsize("S03_AXI_awsize"), S03_AXI_awburst("S03_AXI_awburst"), S03_AXI_awlock("S03_AXI_awlock"), S03_AXI_awcache("S03_AXI_awcache"), S03_AXI_awprot("S03_AXI_awprot"), S03_AXI_awqos("S03_AXI_awqos"), S03_AXI_awvalid("S03_AXI_awvalid"), S03_AXI_awready("S03_AXI_awready"), S03_AXI_wdata("S03_AXI_wdata"), S03_AXI_wstrb("S03_AXI_wstrb"), S03_AXI_wlast("S03_AXI_wlast"), S03_AXI_wvalid("S03_AXI_wvalid"), S03_AXI_wready("S03_AXI_wready"), S03_AXI_bresp("S03_AXI_bresp"), S03_AXI_bvalid("S03_AXI_bvalid"), S03_AXI_bready("S03_AXI_bready"), S04_AXI_araddr("S04_AXI_araddr"), S04_AXI_arlen("S04_AXI_arlen"), S04_AXI_arsize("S04_AXI_arsize"), S04_AXI_arburst("S04_AXI_arburst"), S04_AXI_arlock("S04_AXI_arlock"), S04_AXI_arcache("S04_AXI_arcache"), S04_AXI_arprot("S04_AXI_arprot"), S04_AXI_arqos("S04_AXI_arqos"), S04_AXI_arvalid("S04_AXI_arvalid"), S04_AXI_arready("S04_AXI_arready"), S04_AXI_rdata("S04_AXI_rdata"), S04_AXI_rresp("S04_AXI_rresp"), S04_AXI_rlast("S04_AXI_rlast"), S04_AXI_rvalid("S04_AXI_rvalid"), S04_AXI_rready("S04_AXI_rready"), S05_AXI_awaddr("S05_AXI_awaddr"), S05_AXI_awlen("S05_AXI_awlen"), S05_AXI_awsize("S05_AXI_awsize"), S05_AXI_awburst("S05_AXI_awburst"), S05_AXI_awlock("S05_AXI_awlock"), S05_AXI_awcache("S05_AXI_awcache"), S05_AXI_awprot("S05_AXI_awprot"), S05_AXI_awqos("S05_AXI_awqos"), S05_AXI_awvalid("S05_AXI_awvalid"), S05_AXI_awready("S05_AXI_awready"), S05_AXI_wdata("S05_AXI_wdata"), S05_AXI_wstrb("S05_AXI_wstrb"), S05_AXI_wlast("S05_AXI_wlast"), S05_AXI_wvalid("S05_AXI_wvalid"), S05_AXI_wready("S05_AXI_wready"), S05_AXI_bresp("S05_AXI_bresp"), S05_AXI_bvalid("S05_AXI_bvalid"), S05_AXI_bready("S05_AXI_bready"), S06_AXI_araddr("S06_AXI_araddr"), S06_AXI_arlen("S06_AXI_arlen"), S06_AXI_arsize("S06_AXI_arsize"), S06_AXI_arburst("S06_AXI_arburst"), S06_AXI_arlock("S06_AXI_arlock"), S06_AXI_arcache("S06_AXI_arcache"), S06_AXI_arprot("S06_AXI_arprot"), S06_AXI_arqos("S06_AXI_arqos"), S06_AXI_arvalid("S06_AXI_arvalid"), S06_AXI_arready("S06_AXI_arready"), S06_AXI_rdata("S06_AXI_rdata"), S06_AXI_rresp("S06_AXI_rresp"), S06_AXI_rlast("S06_AXI_rlast"), S06_AXI_rvalid("S06_AXI_rvalid"), S06_AXI_rready("S06_AXI_rready"), S07_AXI_awaddr("S07_AXI_awaddr"), S07_AXI_awlen("S07_AXI_awlen"), S07_AXI_awsize("S07_AXI_awsize"), S07_AXI_awburst("S07_AXI_awburst"), S07_AXI_awlock("S07_AXI_awlock"), S07_AXI_awcache("S07_AXI_awcache"), S07_AXI_awprot("S07_AXI_awprot"), S07_AXI_awqos("S07_AXI_awqos"), S07_AXI_awvalid("S07_AXI_awvalid"), S07_AXI_awready("S07_AXI_awready"), S07_AXI_wdata("S07_AXI_wdata"), S07_AXI_wstrb("S07_AXI_wstrb"), S07_AXI_wlast("S07_AXI_wlast"), S07_AXI_wvalid("S07_AXI_wvalid"), S07_AXI_wready("S07_AXI_wready"), S07_AXI_bresp("S07_AXI_bresp"), S07_AXI_bvalid("S07_AXI_bvalid"), S07_AXI_bready("S07_AXI_bready"), S08_AXI_araddr("S08_AXI_araddr"), S08_AXI_arlen("S08_AXI_arlen"), S08_AXI_arsize("S08_AXI_arsize"), S08_AXI_arburst("S08_AXI_arburst"), S08_AXI_arlock("S08_AXI_arlock"), S08_AXI_arcache("S08_AXI_arcache"), S08_AXI_arprot("S08_AXI_arprot"), S08_AXI_arqos("S08_AXI_arqos"), S08_AXI_arvalid("S08_AXI_arvalid"), S08_AXI_arready("S08_AXI_arready"), S08_AXI_rdata("S08_AXI_rdata"), S08_AXI_rresp("S08_AXI_rresp"), S08_AXI_rlast("S08_AXI_rlast"), S08_AXI_rvalid("S08_AXI_rvalid"), S08_AXI_rready("S08_AXI_rready"), S09_AXI_awaddr("S09_AXI_awaddr"), S09_AXI_awlen("S09_AXI_awlen"), S09_AXI_awsize("S09_AXI_awsize"), S09_AXI_awburst("S09_AXI_awburst"), S09_AXI_awlock("S09_AXI_awlock"), S09_AXI_awcache("S09_AXI_awcache"), S09_AXI_awprot("S09_AXI_awprot"), S09_AXI_awqos("S09_AXI_awqos"), S09_AXI_awvalid("S09_AXI_awvalid"), S09_AXI_awready("S09_AXI_awready"), S09_AXI_wdata("S09_AXI_wdata"), S09_AXI_wstrb("S09_AXI_wstrb"), S09_AXI_wlast("S09_AXI_wlast"), S09_AXI_wvalid("S09_AXI_wvalid"), S09_AXI_wready("S09_AXI_wready"), S09_AXI_bresp("S09_AXI_bresp"), S09_AXI_bvalid("S09_AXI_bvalid"), S09_AXI_bready("S09_AXI_bready"), S10_AXI_araddr("S10_AXI_araddr"), S10_AXI_arlen("S10_AXI_arlen"), S10_AXI_arsize("S10_AXI_arsize"), S10_AXI_arburst("S10_AXI_arburst"), S10_AXI_arlock("S10_AXI_arlock"), S10_AXI_arcache("S10_AXI_arcache"), S10_AXI_arprot("S10_AXI_arprot"), S10_AXI_arqos("S10_AXI_arqos"), S10_AXI_arvalid("S10_AXI_arvalid"), S10_AXI_arready("S10_AXI_arready"), S10_AXI_rdata("S10_AXI_rdata"), S10_AXI_rresp("S10_AXI_rresp"), S10_AXI_rlast("S10_AXI_rlast"), S10_AXI_rvalid("S10_AXI_rvalid"), S10_AXI_rready("S10_AXI_rready"), S11_AXI_awaddr("S11_AXI_awaddr"), S11_AXI_awlen("S11_AXI_awlen"), S11_AXI_awsize("S11_AXI_awsize"), S11_AXI_awburst("S11_AXI_awburst"), S11_AXI_awlock("S11_AXI_awlock"), S11_AXI_awcache("S11_AXI_awcache"), S11_AXI_awprot("S11_AXI_awprot"), S11_AXI_awqos("S11_AXI_awqos"), S11_AXI_awvalid("S11_AXI_awvalid"), S11_AXI_awready("S11_AXI_awready"), S11_AXI_wdata("S11_AXI_wdata"), S11_AXI_wstrb("S11_AXI_wstrb"), S11_AXI_wlast("S11_AXI_wlast"), S11_AXI_wvalid("S11_AXI_wvalid"), S11_AXI_wready("S11_AXI_wready"), S11_AXI_bresp("S11_AXI_bresp"), S11_AXI_bvalid("S11_AXI_bvalid"), S11_AXI_bready("S11_AXI_bready"), M00_AXI_awaddr("M00_AXI_awaddr"), M00_AXI_awlen("M00_AXI_awlen"), M00_AXI_awsize("M00_AXI_awsize"), M00_AXI_awburst("M00_AXI_awburst"), M00_AXI_awlock("M00_AXI_awlock"), M00_AXI_awcache("M00_AXI_awcache"), M00_AXI_awprot("M00_AXI_awprot"), M00_AXI_awqos("M00_AXI_awqos"), M00_AXI_awvalid("M00_AXI_awvalid"), M00_AXI_awready("M00_AXI_awready"), M00_AXI_wdata("M00_AXI_wdata"), M00_AXI_wstrb("M00_AXI_wstrb"), M00_AXI_wlast("M00_AXI_wlast"), M00_AXI_wvalid("M00_AXI_wvalid"), M00_AXI_wready("M00_AXI_wready"), M00_AXI_bresp("M00_AXI_bresp"), M00_AXI_bvalid("M00_AXI_bvalid"), M00_AXI_bready("M00_AXI_bready"), M00_AXI_araddr("M00_AXI_araddr"), M00_AXI_arlen("M00_AXI_arlen"), M00_AXI_arsize("M00_AXI_arsize"), M00_AXI_arburst("M00_AXI_arburst"), M00_AXI_arlock("M00_AXI_arlock"), M00_AXI_arcache("M00_AXI_arcache"), M00_AXI_arprot("M00_AXI_arprot"), M00_AXI_arqos("M00_AXI_arqos"), M00_AXI_arvalid("M00_AXI_arvalid"), M00_AXI_arready("M00_AXI_arready"), M00_AXI_rdata("M00_AXI_rdata"), M00_AXI_rresp("M00_AXI_rresp"), M00_AXI_rlast("M00_AXI_rlast"), M00_AXI_rvalid("M00_AXI_rvalid"), M00_AXI_rready("M00_AXI_rready"),mp_S00_AXI_wr_socket_stub(nullptr),mp_S01_AXI_rd_socket_stub(nullptr),mp_S02_AXI_wr_socket_stub(nullptr),mp_S03_AXI_rd_socket_stub(nullptr),mp_S04_AXI_wr_socket_stub(nullptr),mp_S05_AXI_rd_socket_stub(nullptr),mp_S06_AXI_wr_socket_stub(nullptr),mp_S07_AXI_rd_socket_stub(nullptr),mp_S08_AXI_wr_socket_stub(nullptr),mp_S09_AXI_rd_socket_stub(nullptr),mp_S10_AXI_wr_socket_stub(nullptr),mp_S11_AXI_rd_socket_stub(nullptr)
 {
   // initialize pins
   mp_impl->aclk(aclk);
@@ -3789,6 +4425,10 @@ design_1_smartconnect_0_0::design_1_smartconnect_0_0(const sc_core::sc_module_na
   mp_S08_AXI_arlock_converter = NULL;
   mp_S09_AXI_transactor = NULL;
   mp_S09_AXI_awlock_converter = NULL;
+  mp_S10_AXI_transactor = NULL;
+  mp_S10_AXI_arlock_converter = NULL;
+  mp_S11_AXI_transactor = NULL;
+  mp_S11_AXI_awlock_converter = NULL;
   mp_M00_AXI_transactor = NULL;
   mp_M00_AXI_awlen_converter = NULL;
   mp_M00_AXI_awlock_converter = NULL;
@@ -3806,6 +4446,8 @@ design_1_smartconnect_0_0::design_1_smartconnect_0_0(const sc_core::sc_module_na
   mp_S07_AXI_rd_socket_stub = NULL;
   mp_S08_AXI_wr_socket_stub = NULL;
   mp_S09_AXI_rd_socket_stub = NULL;
+  mp_S10_AXI_wr_socket_stub = NULL;
+  mp_S11_AXI_rd_socket_stub = NULL;
 
   // configure S00_AXI_transactor
     xsc::common_cpp::properties S00_AXI_transactor_param_props;
@@ -4382,6 +5024,121 @@ design_1_smartconnect_0_0::design_1_smartconnect_0_0(const sc_core::sc_module_na
   mp_S09_AXI_transactor->BREADY(S09_AXI_bready);
   mp_S09_AXI_transactor->CLK(aclk);
   mp_S09_AXI_transactor->RST(aresetn);
+  // configure S10_AXI_transactor
+    xsc::common_cpp::properties S10_AXI_transactor_param_props;
+    S10_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
+    S10_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S10_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
+    S10_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
+    S10_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
+    S10_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
+    S10_AXI_transactor_param_props.addLong("WUSER_WIDTH", "0");
+    S10_AXI_transactor_param_props.addLong("RUSER_WIDTH", "0");
+    S10_AXI_transactor_param_props.addLong("BUSER_WIDTH", "0");
+    S10_AXI_transactor_param_props.addLong("HAS_BURST", "1");
+    S10_AXI_transactor_param_props.addLong("HAS_LOCK", "1");
+    S10_AXI_transactor_param_props.addLong("HAS_PROT", "1");
+    S10_AXI_transactor_param_props.addLong("HAS_CACHE", "1");
+    S10_AXI_transactor_param_props.addLong("HAS_QOS", "1");
+    S10_AXI_transactor_param_props.addLong("HAS_REGION", "0");
+    S10_AXI_transactor_param_props.addLong("HAS_WSTRB", "0");
+    S10_AXI_transactor_param_props.addLong("HAS_BRESP", "0");
+    S10_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
+    S10_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
+    S10_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "16");
+    S10_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "2");
+    S10_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "16");
+    S10_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
+    S10_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
+    S10_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
+    S10_AXI_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
+    S10_AXI_transactor_param_props.addLong("HAS_SIZE", "1");
+    S10_AXI_transactor_param_props.addLong("HAS_RESET", "1");
+    S10_AXI_transactor_param_props.addFloat("PHASE", "0.0");
+    S10_AXI_transactor_param_props.addString("PROTOCOL", "AXI4");
+    S10_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_ONLY");
+    S10_AXI_transactor_param_props.addString("CLK_DOMAIN", "design_1_processing_system7_0_0_FCLK_CLK0");
+
+    mp_S10_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<32,32,1,1,1,1,1,1>("S10_AXI_transactor", S10_AXI_transactor_param_props);
+  mp_S10_AXI_transactor->ARADDR(S10_AXI_araddr);
+  mp_S10_AXI_transactor->ARLEN(S10_AXI_arlen);
+  mp_S10_AXI_transactor->ARSIZE(S10_AXI_arsize);
+  mp_S10_AXI_transactor->ARBURST(S10_AXI_arburst);
+  mp_S10_AXI_arlock_converter = new xsc::common::vectorN2scalar_converter<1>("S10_AXI_arlock_converter");
+  mp_S10_AXI_arlock_converter->vector_in(S10_AXI_arlock);
+  mp_S10_AXI_arlock_converter->scalar_out(m_S10_AXI_arlock_converter_signal);
+  mp_S10_AXI_transactor->ARLOCK(m_S10_AXI_arlock_converter_signal);
+  mp_S10_AXI_transactor->ARCACHE(S10_AXI_arcache);
+  mp_S10_AXI_transactor->ARPROT(S10_AXI_arprot);
+  mp_S10_AXI_transactor->ARQOS(S10_AXI_arqos);
+  mp_S10_AXI_transactor->ARVALID(S10_AXI_arvalid);
+  mp_S10_AXI_transactor->ARREADY(S10_AXI_arready);
+  mp_S10_AXI_transactor->RDATA(S10_AXI_rdata);
+  mp_S10_AXI_transactor->RRESP(S10_AXI_rresp);
+  mp_S10_AXI_transactor->RLAST(S10_AXI_rlast);
+  mp_S10_AXI_transactor->RVALID(S10_AXI_rvalid);
+  mp_S10_AXI_transactor->RREADY(S10_AXI_rready);
+  mp_S10_AXI_transactor->CLK(aclk);
+  mp_S10_AXI_transactor->RST(aresetn);
+  // configure S11_AXI_transactor
+    xsc::common_cpp::properties S11_AXI_transactor_param_props;
+    S11_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
+    S11_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S11_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
+    S11_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
+    S11_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
+    S11_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
+    S11_AXI_transactor_param_props.addLong("WUSER_WIDTH", "0");
+    S11_AXI_transactor_param_props.addLong("RUSER_WIDTH", "0");
+    S11_AXI_transactor_param_props.addLong("BUSER_WIDTH", "0");
+    S11_AXI_transactor_param_props.addLong("HAS_BURST", "1");
+    S11_AXI_transactor_param_props.addLong("HAS_LOCK", "1");
+    S11_AXI_transactor_param_props.addLong("HAS_PROT", "1");
+    S11_AXI_transactor_param_props.addLong("HAS_CACHE", "1");
+    S11_AXI_transactor_param_props.addLong("HAS_QOS", "1");
+    S11_AXI_transactor_param_props.addLong("HAS_REGION", "0");
+    S11_AXI_transactor_param_props.addLong("HAS_WSTRB", "1");
+    S11_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
+    S11_AXI_transactor_param_props.addLong("HAS_RRESP", "0");
+    S11_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
+    S11_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "2");
+    S11_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "16");
+    S11_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "16");
+    S11_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
+    S11_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
+    S11_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
+    S11_AXI_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
+    S11_AXI_transactor_param_props.addLong("HAS_SIZE", "1");
+    S11_AXI_transactor_param_props.addLong("HAS_RESET", "1");
+    S11_AXI_transactor_param_props.addFloat("PHASE", "0.0");
+    S11_AXI_transactor_param_props.addString("PROTOCOL", "AXI4");
+    S11_AXI_transactor_param_props.addString("READ_WRITE_MODE", "WRITE_ONLY");
+    S11_AXI_transactor_param_props.addString("CLK_DOMAIN", "design_1_processing_system7_0_0_FCLK_CLK0");
+
+    mp_S11_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<32,32,1,1,1,1,1,1>("S11_AXI_transactor", S11_AXI_transactor_param_props);
+  mp_S11_AXI_transactor->AWADDR(S11_AXI_awaddr);
+  mp_S11_AXI_transactor->AWLEN(S11_AXI_awlen);
+  mp_S11_AXI_transactor->AWSIZE(S11_AXI_awsize);
+  mp_S11_AXI_transactor->AWBURST(S11_AXI_awburst);
+  mp_S11_AXI_awlock_converter = new xsc::common::vectorN2scalar_converter<1>("S11_AXI_awlock_converter");
+  mp_S11_AXI_awlock_converter->vector_in(S11_AXI_awlock);
+  mp_S11_AXI_awlock_converter->scalar_out(m_S11_AXI_awlock_converter_signal);
+  mp_S11_AXI_transactor->AWLOCK(m_S11_AXI_awlock_converter_signal);
+  mp_S11_AXI_transactor->AWCACHE(S11_AXI_awcache);
+  mp_S11_AXI_transactor->AWPROT(S11_AXI_awprot);
+  mp_S11_AXI_transactor->AWQOS(S11_AXI_awqos);
+  mp_S11_AXI_transactor->AWVALID(S11_AXI_awvalid);
+  mp_S11_AXI_transactor->AWREADY(S11_AXI_awready);
+  mp_S11_AXI_transactor->WDATA(S11_AXI_wdata);
+  mp_S11_AXI_transactor->WSTRB(S11_AXI_wstrb);
+  mp_S11_AXI_transactor->WLAST(S11_AXI_wlast);
+  mp_S11_AXI_transactor->WVALID(S11_AXI_wvalid);
+  mp_S11_AXI_transactor->WREADY(S11_AXI_wready);
+  mp_S11_AXI_transactor->BRESP(S11_AXI_bresp);
+  mp_S11_AXI_transactor->BVALID(S11_AXI_bvalid);
+  mp_S11_AXI_transactor->BREADY(S11_AXI_bready);
+  mp_S11_AXI_transactor->CLK(aclk);
+  mp_S11_AXI_transactor->RST(aresetn);
   // configure M00_AXI_transactor
     xsc::common_cpp::properties M00_AXI_transactor_param_props;
     M00_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
@@ -4477,6 +5234,8 @@ design_1_smartconnect_0_0::design_1_smartconnect_0_0(const sc_core::sc_module_na
   S07_AXI_transactor_target_wr_socket_stub = nullptr;
   S08_AXI_transactor_target_rd_socket_stub = nullptr;
   S09_AXI_transactor_target_wr_socket_stub = nullptr;
+  S10_AXI_transactor_target_rd_socket_stub = nullptr;
+  S11_AXI_transactor_target_wr_socket_stub = nullptr;
   M00_AXI_transactor_initiator_wr_socket_stub = nullptr;
   M00_AXI_transactor_initiator_rd_socket_stub = nullptr;
 
@@ -4632,6 +5391,36 @@ void design_1_smartconnect_0_0::before_end_of_elaboration()
     S09_AXI_transactor_target_wr_socket_stub = new xtlm::xtlm_aximm_target_stub("wr_socket",0);
     S09_AXI_transactor_target_wr_socket_stub->bind(*(mp_S09_AXI_transactor->wr_socket));
     mp_S09_AXI_transactor->disable_transactor();
+  }
+
+  // configure 'S10_AXI' transactor
+  if (xsc::utils::xsc_sim_manager::getInstanceParameterInt("design_1_smartconnect_0_0", "S10_AXI_TLM_MODE") != 1)
+  {
+    mp_impl->S10_AXI_tlm_aximm_read_socket->bind(*(mp_S10_AXI_transactor->rd_socket));
+    mp_S10_AXI_wr_socket_stub = new xtlm::xtlm_aximm_initiator_stub("wr_socket", 0);
+    mp_impl->S10_AXI_tlm_aximm_write_socket->bind(mp_S10_AXI_wr_socket_stub->initiator_socket);
+  
+  }
+  else
+  {
+    S10_AXI_transactor_target_rd_socket_stub = new xtlm::xtlm_aximm_target_stub("rd_socket",0);
+    S10_AXI_transactor_target_rd_socket_stub->bind(*(mp_S10_AXI_transactor->rd_socket));
+    mp_S10_AXI_transactor->disable_transactor();
+  }
+
+  // configure 'S11_AXI' transactor
+  if (xsc::utils::xsc_sim_manager::getInstanceParameterInt("design_1_smartconnect_0_0", "S11_AXI_TLM_MODE") != 1)
+  {
+    mp_S11_AXI_rd_socket_stub = new xtlm::xtlm_aximm_initiator_stub("rd_socket", 0);
+    mp_impl->S11_AXI_tlm_aximm_read_socket->bind(mp_S11_AXI_rd_socket_stub->initiator_socket);
+    mp_impl->S11_AXI_tlm_aximm_write_socket->bind(*(mp_S11_AXI_transactor->wr_socket));
+  
+  }
+  else
+  {
+    S11_AXI_transactor_target_wr_socket_stub = new xtlm::xtlm_aximm_target_stub("wr_socket",0);
+    S11_AXI_transactor_target_wr_socket_stub->bind(*(mp_S11_AXI_transactor->wr_socket));
+    mp_S11_AXI_transactor->disable_transactor();
   }
 
   // configure 'M00_AXI' transactor
@@ -4727,6 +5516,20 @@ design_1_smartconnect_0_0::~design_1_smartconnect_0_0()
   if (xsc::utils::xsc_sim_manager::getInstanceParameterInt("design_1_smartconnect_0_0", "S09_AXI_TLM_MODE") != 1)
   {
     delete mp_S09_AXI_rd_socket_stub;
+  }
+
+  delete mp_S10_AXI_transactor;
+  delete mp_S10_AXI_arlock_converter;
+  if (xsc::utils::xsc_sim_manager::getInstanceParameterInt("design_1_smartconnect_0_0", "S10_AXI_TLM_MODE") != 1)
+  {
+    delete mp_S10_AXI_wr_socket_stub;
+  }
+
+  delete mp_S11_AXI_transactor;
+  delete mp_S11_AXI_awlock_converter;
+  if (xsc::utils::xsc_sim_manager::getInstanceParameterInt("design_1_smartconnect_0_0", "S11_AXI_TLM_MODE") != 1)
+  {
+    delete mp_S11_AXI_rd_socket_stub;
   }
 
   delete mp_M00_AXI_transactor;

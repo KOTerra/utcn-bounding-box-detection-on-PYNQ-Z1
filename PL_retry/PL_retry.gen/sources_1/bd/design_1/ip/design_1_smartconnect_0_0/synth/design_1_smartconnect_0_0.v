@@ -222,6 +222,39 @@ module design_1_smartconnect_0_0 (
   S09_AXI_bresp,
   S09_AXI_bvalid,
   S09_AXI_bready,
+  S10_AXI_araddr,
+  S10_AXI_arlen,
+  S10_AXI_arsize,
+  S10_AXI_arburst,
+  S10_AXI_arlock,
+  S10_AXI_arcache,
+  S10_AXI_arprot,
+  S10_AXI_arqos,
+  S10_AXI_arvalid,
+  S10_AXI_arready,
+  S10_AXI_rdata,
+  S10_AXI_rresp,
+  S10_AXI_rlast,
+  S10_AXI_rvalid,
+  S10_AXI_rready,
+  S11_AXI_awaddr,
+  S11_AXI_awlen,
+  S11_AXI_awsize,
+  S11_AXI_awburst,
+  S11_AXI_awlock,
+  S11_AXI_awcache,
+  S11_AXI_awprot,
+  S11_AXI_awqos,
+  S11_AXI_awvalid,
+  S11_AXI_awready,
+  S11_AXI_wdata,
+  S11_AXI_wstrb,
+  S11_AXI_wlast,
+  S11_AXI_wvalid,
+  S11_AXI_wready,
+  S11_AXI_bresp,
+  S11_AXI_bvalid,
+  S11_AXI_bready,
   M00_AXI_awaddr,
   M00_AXI_awlen,
   M00_AXI_awsize,
@@ -257,7 +290,7 @@ module design_1_smartconnect_0_0 (
   M00_AXI_rready
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.aclk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, ASSOCIATED_BUSIF M00_AXI:S00_AXI:S01_AXI:S02_AXI:S03_AXI:S04_AXI:S05_AXI:S06_AXI:S07_AXI:S08_AXI:S09_AXI, INSERT_VIP 0, ASSOCIATED_CLKEN m_sc_aclken" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.aclk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, ASSOCIATED_BUSIF M00_AXI:S00_AXI:S01_AXI:S02_AXI:S03_AXI:S04_AXI:S05_AXI:S06_AXI:S07_AXI:S08_AXI:S09_AXI:S10_AXI:S11_AXI, INSERT_VIP 0, ASSOCIATED_CLKEN m_sc_aclken" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.aclk CLK" *)
 input wire aclk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
@@ -613,6 +646,76 @@ output wire S09_AXI_bvalid;
 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S09_AXI BREADY" *)
 input wire S09_AXI_bready;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S10_AXI ARADDR" *)
+input wire [31 : 0] S10_AXI_araddr;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S10_AXI ARLEN" *)
+input wire [7 : 0] S10_AXI_arlen;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S10_AXI ARSIZE" *)
+input wire [2 : 0] S10_AXI_arsize;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S10_AXI ARBURST" *)
+input wire [1 : 0] S10_AXI_arburst;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S10_AXI ARLOCK" *)
+input wire [0 : 0] S10_AXI_arlock;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S10_AXI ARCACHE" *)
+input wire [3 : 0] S10_AXI_arcache;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S10_AXI ARPROT" *)
+input wire [2 : 0] S10_AXI_arprot;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S10_AXI ARQOS" *)
+input wire [3 : 0] S10_AXI_arqos;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S10_AXI ARVALID" *)
+input wire S10_AXI_arvalid;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S10_AXI ARREADY" *)
+output wire S10_AXI_arready;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S10_AXI RDATA" *)
+output wire [31 : 0] S10_AXI_rdata;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S10_AXI RRESP" *)
+output wire [1 : 0] S10_AXI_rresp;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S10_AXI RLAST" *)
+output wire S10_AXI_rlast;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S10_AXI RVALID" *)
+output wire S10_AXI_rvalid;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S10_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_ONLY, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 0, HAS_BRESP 0, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 16, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 16, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1\
+, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S10_AXI RREADY" *)
+input wire S10_AXI_rready;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S11_AXI AWADDR" *)
+input wire [31 : 0] S11_AXI_awaddr;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S11_AXI AWLEN" *)
+input wire [7 : 0] S11_AXI_awlen;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S11_AXI AWSIZE" *)
+input wire [2 : 0] S11_AXI_awsize;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S11_AXI AWBURST" *)
+input wire [1 : 0] S11_AXI_awburst;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S11_AXI AWLOCK" *)
+input wire [0 : 0] S11_AXI_awlock;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S11_AXI AWCACHE" *)
+input wire [3 : 0] S11_AXI_awcache;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S11_AXI AWPROT" *)
+input wire [2 : 0] S11_AXI_awprot;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S11_AXI AWQOS" *)
+input wire [3 : 0] S11_AXI_awqos;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S11_AXI AWVALID" *)
+input wire S11_AXI_awvalid;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S11_AXI AWREADY" *)
+output wire S11_AXI_awready;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S11_AXI WDATA" *)
+input wire [31 : 0] S11_AXI_wdata;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S11_AXI WSTRB" *)
+input wire [3 : 0] S11_AXI_wstrb;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S11_AXI WLAST" *)
+input wire S11_AXI_wlast;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S11_AXI WVALID" *)
+input wire S11_AXI_wvalid;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S11_AXI WREADY" *)
+output wire S11_AXI_wready;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S11_AXI BRESP" *)
+output wire [1 : 0] S11_AXI_bresp;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S11_AXI BVALID" *)
+output wire S11_AXI_bvalid;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S11_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE WRITE_ONLY, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 0, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 16, MAX_BURST_LENGTH 16, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS \
+1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S11_AXI BREADY" *)
+input wire S11_AXI_bready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M00_AXI AWADDR" *)
 output wire [31 : 0] M00_AXI_awaddr;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M00_AXI AWLEN" *)
@@ -850,6 +953,39 @@ output wire M00_AXI_rready;
     .S09_AXI_bresp(S09_AXI_bresp),
     .S09_AXI_bvalid(S09_AXI_bvalid),
     .S09_AXI_bready(S09_AXI_bready),
+    .S10_AXI_araddr(S10_AXI_araddr),
+    .S10_AXI_arlen(S10_AXI_arlen),
+    .S10_AXI_arsize(S10_AXI_arsize),
+    .S10_AXI_arburst(S10_AXI_arburst),
+    .S10_AXI_arlock(S10_AXI_arlock),
+    .S10_AXI_arcache(S10_AXI_arcache),
+    .S10_AXI_arprot(S10_AXI_arprot),
+    .S10_AXI_arqos(S10_AXI_arqos),
+    .S10_AXI_arvalid(S10_AXI_arvalid),
+    .S10_AXI_arready(S10_AXI_arready),
+    .S10_AXI_rdata(S10_AXI_rdata),
+    .S10_AXI_rresp(S10_AXI_rresp),
+    .S10_AXI_rlast(S10_AXI_rlast),
+    .S10_AXI_rvalid(S10_AXI_rvalid),
+    .S10_AXI_rready(S10_AXI_rready),
+    .S11_AXI_awaddr(S11_AXI_awaddr),
+    .S11_AXI_awlen(S11_AXI_awlen),
+    .S11_AXI_awsize(S11_AXI_awsize),
+    .S11_AXI_awburst(S11_AXI_awburst),
+    .S11_AXI_awlock(S11_AXI_awlock),
+    .S11_AXI_awcache(S11_AXI_awcache),
+    .S11_AXI_awprot(S11_AXI_awprot),
+    .S11_AXI_awqos(S11_AXI_awqos),
+    .S11_AXI_awvalid(S11_AXI_awvalid),
+    .S11_AXI_awready(S11_AXI_awready),
+    .S11_AXI_wdata(S11_AXI_wdata),
+    .S11_AXI_wstrb(S11_AXI_wstrb),
+    .S11_AXI_wlast(S11_AXI_wlast),
+    .S11_AXI_wvalid(S11_AXI_wvalid),
+    .S11_AXI_wready(S11_AXI_wready),
+    .S11_AXI_bresp(S11_AXI_bresp),
+    .S11_AXI_bvalid(S11_AXI_bvalid),
+    .S11_AXI_bready(S11_AXI_bready),
     .M00_AXI_awaddr(M00_AXI_awaddr),
     .M00_AXI_awlen(M00_AXI_awlen),
     .M00_AXI_awsize(M00_AXI_awsize),
