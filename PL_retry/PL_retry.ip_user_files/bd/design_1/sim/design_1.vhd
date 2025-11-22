@@ -2,7 +2,7 @@
 --Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
---Date        : Sat Nov 22 11:26:18 2025
+--Date        : Sat Nov 22 16:36:35 2025
 --Host        : POWERSLAVE running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -4735,11 +4735,10 @@ entity design_1 is
     FIXED_IO_mio : inout STD_LOGIC_VECTOR ( 53 downto 0 );
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
-    FIXED_IO_ps_srstb : inout STD_LOGIC;
-    irq_done_0 : out STD_LOGIC
+    FIXED_IO_ps_srstb : inout STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=44,numReposBlks=24,numNonXlnxBlks=0,numHierBlks=20,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=5,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=31,da_clkrst_cnt=19,da_ps7_cnt=1,synth_mode=Hierarchical}";
+  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=44,numReposBlks=24,numNonXlnxBlks=0,numHierBlks=20,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=5,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=31,da_clkrst_cnt=19,da_ps7_cnt=1,synth_mode=None}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_1 : entity is "design_1.hwdef";
 end design_1;
@@ -6101,7 +6100,6 @@ architecture STRUCTURE of design_1 is
   signal axi_interconnect_0_M00_AXI_WREADY : STD_LOGIC;
   signal axi_interconnect_0_M00_AXI_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal axi_interconnect_0_M00_AXI_WVALID : STD_LOGIC;
-  signal ccl_relabel_core_0_irq_done : STD_LOGIC;
   signal ccl_relabel_core_0_m_axi_lut_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal ccl_relabel_core_0_m_axi_lut_ARREADY : STD_LOGIC_VECTOR ( 0 to 0 );
   signal ccl_relabel_core_0_m_axi_lut_ARVALID : STD_LOGIC;
@@ -6521,6 +6519,7 @@ architecture STRUCTURE of design_1 is
   signal NLW_axi_dma_5_s2mm_introut_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_dma_5_s2mm_prmry_reset_out_n_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_dma_5_m_axis_mm2s_tkeep_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal NLW_ccl_relabel_core_0_irq_done_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_S_AXI_GP0_ARREADY_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_S_AXI_GP0_AWREADY_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_S_AXI_GP0_BVALID_UNCONNECTED : STD_LOGIC;
@@ -6585,7 +6584,6 @@ begin
   BRAM_PORTA_0_rst <= axi_bram_ctrl_0_BRAM_PORTA_RST;
   BRAM_PORTA_0_we(3 downto 0) <= axi_bram_ctrl_0_BRAM_PORTA_WE(3 downto 0);
   axi_bram_ctrl_0_BRAM_PORTA_DOUT(31 downto 0) <= BRAM_PORTA_0_dout(31 downto 0);
-  irq_done_0 <= ccl_relabel_core_0_irq_done;
 axi_bram_ctrl_0: component design_1_axi_bram_ctrl_0_2
      port map (
       bram_addr_a(12 downto 0) => axi_bram_ctrl_0_BRAM_PORTA_ADDR(12 downto 0),
@@ -7157,7 +7155,7 @@ ccl_relabel_core_0: component design_1_ccl_relabel_core_0_0
      port map (
       aclkrst_clk => processing_system7_0_FCLK_CLK0,
       aclkrst_n => rst_ps7_0_100M_peripheral_aresetn(0),
-      irq_done => ccl_relabel_core_0_irq_done,
+      irq_done => NLW_ccl_relabel_core_0_irq_done_UNCONNECTED,
       m_axi_lut_araddr(31 downto 0) => ccl_relabel_core_0_m_axi_lut_ARADDR(31 downto 0),
       m_axi_lut_arready => ccl_relabel_core_0_m_axi_lut_ARREADY(0),
       m_axi_lut_arvalid => ccl_relabel_core_0_m_axi_lut_ARVALID,

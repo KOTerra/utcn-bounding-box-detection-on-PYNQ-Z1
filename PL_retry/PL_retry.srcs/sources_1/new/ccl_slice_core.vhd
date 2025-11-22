@@ -165,10 +165,18 @@ architecture rtl of ccl_slice_core is
     signal lut_write_pending: std_logic := '0';
     signal lut_write_ptr    : unsigned(15 downto 0) := (others => '0');
 
+    -------------------------------------------------------------------------
+    -- LUT addressing (shared BRAM at 0xC0000000, 8KB per slice)
+    --  8KB = 0x2000 bytes per slice. We use a simple shift-based computation
+    --  instead of multiplication to avoid widening to 64 bits.
+    -------------------------------------------------------------------------
+    constant LUT_BASE_ADDR    : unsigned(31 downto 0) := x"C0000000";
+    constant LUT_SLICE_STRIDE : unsigned(31 downto 0) := x"00002000";  -- 8KB per slice
+
 begin
 
     ----------------------------------------------------------------------------
-    -- AXI-Lite simple register handling
+    -- AXI-Lite simple register handling (non-strict but OK with PS/AXI interconnect)
     ----------------------------------------------------------------------------
     s_axi_awready <= '1' when AXIL_ALWAYS_READY else '0';
     s_axi_wready  <= '1' when AXIL_ALWAYS_READY else '0';
@@ -178,7 +186,7 @@ begin
     s_axi_rvalid  <= '1' when AXIL_ALWAYS_READY else '0';
     s_axi_rresp   <= "00";
 
-    -- Single process for control + status (avoids multiple drivers)
+    -- Single process for control + status
     process(aclkrst_clk)
     begin
         if rising_edge(aclkrst_clk) then
@@ -288,34 +296,7 @@ begin
     m_axi_lut_rready  <= '0';
 
     ----------------------------------------------------------------------------
-    -- Simple write-only AXI master for equivalence pairs
-    ----------------------------------------------------------------------------
-    process(aclkrst_clk)
-    begin
-        if rising_edge(aclkrst_clk) then
-            if aclkrst_n = '0' then
-                lut_awvalid_reg    <= '0';
-                lut_wvalid_reg     <= '0';
-                lut_wstrb_reg      <= (others => '0');
-                lut_awaddr_reg     <= (others => '0');
-                lut_wdata_reg      <= (others => '0');
-                lut_write_pending  <= '0';
-                lut_write_ptr      <= (others => '0');
-            else
-                if lut_write_pending = '1' then
-                    if (m_axi_lut_awready = '1') and (m_axi_lut_wready = '1') then
-                        lut_awvalid_reg    <= '0';
-                        lut_wvalid_reg     <= '0';
-                        lut_write_pending  <= '0';
-                        lut_write_ptr      <= lut_write_ptr + 1;
-                    end if;
-                end if;
-            end if;
-        end if;
-    end process;
-
-    ----------------------------------------------------------------------------
-    -- Main processing FSM with CCL + equivalence logging
+    -- Main processing FSM + LUT write logic (single process - no multi-drivers)
     ----------------------------------------------------------------------------
     process(aclkrst_clk)
         variable cur_bit_idx : integer := 0;
@@ -327,6 +308,7 @@ begin
         variable lo_lbl      : unsigned(15 downto 0);
         variable gv_lbl      : unsigned(31 downto 0);
         variable addr_calc   : unsigned(31 downto 0);
+        variable slice_base  : unsigned(31 downto 0);
         variable pair32      : std_logic_vector(31 downto 0);
     begin
         if rising_edge(aclkrst_clk) then
@@ -341,7 +323,30 @@ begin
                 out_valid_reg       <= '0';
                 out_data_reg        <= (others => '0');
                 out_last_reg        <= '0';
+
+                lut_awvalid_reg     <= '0';
+                lut_wvalid_reg      <= '0';
+                lut_wstrb_reg       <= (others => '0');
+                lut_awaddr_reg      <= (others => '0');
+                lut_wdata_reg       <= (others => '0');
+                lut_write_pending   <= '0';
+                lut_write_ptr       <= (others => '0');
             else
+                ----------------------------------------------------------------
+                -- Default LUT write handshake behavior
+                ----------------------------------------------------------------
+                if lut_write_pending = '1' then
+                    if (m_axi_lut_awready = '1') and (m_axi_lut_wready = '1') then
+                        lut_awvalid_reg   <= '0';
+                        lut_wvalid_reg    <= '0';
+                        lut_write_pending <= '0';
+                        lut_write_ptr     <= lut_write_ptr + 1;
+                    end if;
+                end if;
+
+                ----------------------------------------------------------------
+                -- Main FSM
+                ----------------------------------------------------------------
                 case proc_state is
 
                     ------------------------------------------------------------------
@@ -350,6 +355,8 @@ begin
                         out_last_reg     <= '0';
                         unpack_bits_left <= 0;
                         last_left_lbl    <= (others => '0');
+                        -- don't accumulate between runs
+                        lut_write_ptr    <= (others => '0');
 
                         if reg_control(0) = '1' then
                             proc_state          <= RUNNING;
@@ -414,9 +421,18 @@ begin
 
                                     -- schedule LUT write if none pending
                                     if lut_write_pending = '0' then
-                                        -- address = (slice_id << 16) + lut_write_ptr
-                                        addr_calc := (resize(slice_id_u,32) sll 16) +
-                                                     resize(lut_write_ptr,32);
+                                        ----------------------------------------------------------------
+                                        -- FIXED: avoid 64-bit multiply
+                                        -- LUT_SLICE_STRIDE = 0x2000 = 2^13, so:
+                                        --   slice_base = LUT_BASE_ADDR + slice_id * 0x2000
+                                        --            = LUT_BASE_ADDR + (slice_id << 13)
+                                        ----------------------------------------------------------------
+                                        slice_base := LUT_BASE_ADDR +
+                                                      (resize(slice_id_u, 32) sll 13);
+
+                                        -- word address = slice_base + (ptr * 4)
+                                        addr_calc := slice_base +
+                                                     (resize(lut_write_ptr, 32) sll 2);
                                         lut_awaddr_reg  <= std_logic_vector(addr_calc);
 
                                         pair32          := std_logic_vector(hi_lbl) &

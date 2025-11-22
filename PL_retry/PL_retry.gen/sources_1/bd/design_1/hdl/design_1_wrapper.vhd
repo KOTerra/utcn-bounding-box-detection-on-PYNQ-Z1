@@ -2,7 +2,7 @@
 --Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
---Date        : Sat Nov 22 11:26:18 2025
+--Date        : Sat Nov 22 16:36:36 2025
 --Host        : POWERSLAVE running 64-bit major release  (build 9200)
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
@@ -41,8 +41,7 @@ entity design_1_wrapper is
     FIXED_IO_mio : inout STD_LOGIC_VECTOR ( 53 downto 0 );
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
-    FIXED_IO_ps_srstb : inout STD_LOGIC;
-    irq_done_0 : out STD_LOGIC
+    FIXED_IO_ps_srstb : inout STD_LOGIC
   );
 end design_1_wrapper;
 
@@ -76,8 +75,7 @@ architecture STRUCTURE of design_1_wrapper is
     BRAM_PORTA_0_dout : in STD_LOGIC_VECTOR ( 31 downto 0 );
     BRAM_PORTA_0_en : out STD_LOGIC;
     BRAM_PORTA_0_rst : out STD_LOGIC;
-    BRAM_PORTA_0_we : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    irq_done_0 : out STD_LOGIC
+    BRAM_PORTA_0_we : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component design_1;
 begin
@@ -110,7 +108,6 @@ design_1_i: component design_1
       FIXED_IO_mio(53 downto 0) => FIXED_IO_mio(53 downto 0),
       FIXED_IO_ps_clk => FIXED_IO_ps_clk,
       FIXED_IO_ps_porb => FIXED_IO_ps_porb,
-      FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
-      irq_done_0 => irq_done_0
+      FIXED_IO_ps_srstb => FIXED_IO_ps_srstb
     );
 end STRUCTURE;

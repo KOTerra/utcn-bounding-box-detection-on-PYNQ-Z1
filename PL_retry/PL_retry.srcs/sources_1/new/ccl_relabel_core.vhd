@@ -109,17 +109,12 @@ begin
 
     m_axis_tvalid <= m_axis_tvalid_int;
     m_axis_tdata  <= m_axis_tdata_int;
-    -- For now, just propagate TLAST when data flows; s_axis_tlast is only seen
-    -- when s_axis_tready_int = '1', so this is safe.
-    m_axis_tlast  <= s_axis_tlast;
+    m_axis_tlast  <= s_axis_tlast;  -- TLAST just passed through
 
     irq_done <= irq_done_reg;
 
     ----------------------------------------------------------------------------
     -- AXIS ready logic:
-    --   - In WAIT_SLICES: do not accept data (tready = 0)
-    --   - In RUNNING: accept data whenever downstream (DMA) is ready
-    --   - In DONE: stop accepting data until reset
     ----------------------------------------------------------------------------
     s_axis_tready_int <= '1' when (state = RUNNING and m_axis_tready = '1') else '0';
 
@@ -148,33 +143,26 @@ begin
                         end if;
 
                     ----------------------------------------------------------------
-                    -- RUNNING: stream input labels through (for now, just pass-through)
-                    -- Later this is where LUT-based relabeling logic will go.
+                    -- RUNNING: stream input labels through (for now just pass-through)
                     ----------------------------------------------------------------
                     when RUNNING =>
-                        -- When we can accept and forward one beat
                         if (s_axis_tvalid = '1' and s_axis_tready_int = '1') then
                             m_axis_tdata_int  <= s_axis_tdata;
                             m_axis_tvalid_int <= '1';
 
-                            -- If this beat is TLAST, mark DONE
                             if s_axis_tlast = '1' then
                                 state        <= DONE;
                                 irq_done_reg <= '1';
                             end if;
                         elsif (m_axis_tready = '1' and m_axis_tvalid_int = '1') then
-                            -- Downstream consumed the last valid beat, deassert valid
                             m_axis_tvalid_int <= '0';
                         end if;
 
                     ----------------------------------------------------------------
                     -- DONE: hold irq_done high until reset
-                    -- (could be changed later to clear on AXI-Lite write)
                     ----------------------------------------------------------------
                     when DONE =>
-                        -- Keep irq_done_reg = '1' until reset
                         m_axis_tvalid_int <= '0';
-                        -- no state change here, wait for reset
 
                 end case;
             end if;
@@ -195,7 +183,7 @@ begin
     m_axi_lut_rready  <= '1';
 
     ----------------------------------------------------------------------------
-    -- AXI-Lite minimal interface (always ready, no control yet)
+    -- AXI-Lite minimal interface (dummy, always OK)
     ----------------------------------------------------------------------------
     s_axi_awready <= '1';
     s_axi_wready  <= '1';

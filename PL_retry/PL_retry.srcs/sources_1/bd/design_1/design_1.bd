@@ -1,12 +1,12 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xAF8F31674238C7FD",
+      "boundary_crc": "0x63C1EFE890745B8",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../PL_retry.gen/sources_1/bd/design_1",
       "name": "design_1",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
-      "synth_flow_mode": "Hierarchical",
+      "synth_flow_mode": "None",
       "tool_version": "2024.1",
       "validated": "true"
     },
@@ -295,11 +295,6 @@
             "right": "0"
           }
         }
-      }
-    },
-    "ports": {
-      "irq_done_0": {
-        "direction": "O"
       }
     },
     "components": {
@@ -7636,12 +7631,6 @@
       }
     },
     "nets": {
-      "ccl_relabel_core_0_irq_done": {
-        "ports": [
-          "ccl_relabel_core_0/irq_done",
-          "irq_done_0"
-        ]
-      },
       "ccl_slice_core_0_irq_done": {
         "ports": [
           "ccl_slice_core_0/irq_done",
@@ -7678,10 +7667,6 @@
           "axi_dma_0/m_axi_mm2s_aclk",
           "processing_system7_0/S_AXI_GP0_ACLK",
           "processing_system7_0/S_AXI_HP0_ACLK",
-          "ccl_slice_core_0/aclkrst_clk",
-          "ccl_slice_core_1/aclkrst_clk",
-          "ccl_slice_core_2/aclkrst_clk",
-          "ccl_slice_core_3/aclkrst_clk",
           "axi_dma_1/m_axi_mm2s_aclk",
           "axi_dma_3/m_axi_mm2s_aclk",
           "axi_dma_4/m_axi_mm2s_aclk",
@@ -7707,7 +7692,6 @@
           "axi_dma_5/m_axi_s2mm_aclk",
           "axi_dma_5/m_axi_mm2s_aclk",
           "axi_dma_5/s_axi_lite_aclk",
-          "ccl_relabel_core_0/aclkrst_clk",
           "ps7_0_axi_periph/M09_ACLK",
           "ps7_0_axi_periph/M10_ACLK",
           "axi_bram_ctrl_0/s_axi_aclk",
@@ -7717,7 +7701,12 @@
           "axi_interconnect_0/S01_ACLK",
           "axi_interconnect_0/S02_ACLK",
           "axi_interconnect_0/S03_ACLK",
-          "axi_interconnect_0/S04_ACLK"
+          "axi_interconnect_0/S04_ACLK",
+          "ccl_relabel_core_0/aclkrst_clk",
+          "ccl_slice_core_0/aclkrst_clk",
+          "ccl_slice_core_1/aclkrst_clk",
+          "ccl_slice_core_2/aclkrst_clk",
+          "ccl_slice_core_3/aclkrst_clk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -7742,15 +7731,10 @@
           "ps7_0_axi_periph/M07_ARESETN",
           "ps7_0_axi_periph/M08_ARESETN",
           "axi_dma_1/axi_resetn",
-          "ccl_slice_core_1/aclkrst_n",
-          "ccl_slice_core_2/aclkrst_n",
-          "ccl_slice_core_0/aclkrst_n",
           "axi_dma_2/axi_resetn",
-          "ccl_slice_core_3/aclkrst_n",
           "axi_dma_4/axi_resetn",
           "axi_dma_3/axi_resetn",
           "axi_dma_5/axi_resetn",
-          "ccl_relabel_core_0/aclkrst_n",
           "ps7_0_axi_periph/M09_ARESETN",
           "ps7_0_axi_periph/M10_ARESETN",
           "axi_bram_ctrl_0/s_axi_aresetn",
@@ -7760,7 +7744,12 @@
           "axi_interconnect_0/S01_ARESETN",
           "axi_interconnect_0/S02_ARESETN",
           "axi_interconnect_0/S03_ARESETN",
-          "axi_interconnect_0/S04_ARESETN"
+          "axi_interconnect_0/S04_ARESETN",
+          "ccl_relabel_core_0/aclkrst_n",
+          "ccl_slice_core_0/aclkrst_n",
+          "ccl_slice_core_1/aclkrst_n",
+          "ccl_slice_core_2/aclkrst_n",
+          "ccl_slice_core_3/aclkrst_n"
         ]
       },
       "xlconcat_0_dout": {
