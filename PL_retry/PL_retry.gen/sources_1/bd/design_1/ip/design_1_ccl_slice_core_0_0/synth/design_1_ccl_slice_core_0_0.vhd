@@ -83,7 +83,6 @@ ENTITY design_1_ccl_slice_core_0_0 IS
     m_axis_tvalid : OUT STD_LOGIC;
     m_axis_tready : IN STD_LOGIC;
     m_axis_tlast : OUT STD_LOGIC;
-    irq_done : OUT STD_LOGIC;
     m_axi_lut_awaddr : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     m_axi_lut_awvalid : OUT STD_LOGIC;
     m_axi_lut_awready : IN STD_LOGIC;
@@ -99,7 +98,8 @@ ENTITY design_1_ccl_slice_core_0_0 IS
     m_axi_lut_arready : IN STD_LOGIC;
     m_axi_lut_rdata : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     m_axi_lut_rvalid : IN STD_LOGIC;
-    m_axi_lut_rready : OUT STD_LOGIC
+    m_axi_lut_rready : OUT STD_LOGIC;
+    irq_done : OUT STD_LOGIC
   );
 END design_1_ccl_slice_core_0_0;
 
@@ -142,7 +142,6 @@ ARCHITECTURE design_1_ccl_slice_core_0_0_arch OF design_1_ccl_slice_core_0_0 IS
       m_axis_tvalid : OUT STD_LOGIC;
       m_axis_tready : IN STD_LOGIC;
       m_axis_tlast : OUT STD_LOGIC;
-      irq_done : OUT STD_LOGIC;
       m_axi_lut_awaddr : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
       m_axi_lut_awvalid : OUT STD_LOGIC;
       m_axi_lut_awready : IN STD_LOGIC;
@@ -158,7 +157,8 @@ ARCHITECTURE design_1_ccl_slice_core_0_0_arch OF design_1_ccl_slice_core_0_0 IS
       m_axi_lut_arready : IN STD_LOGIC;
       m_axi_lut_rdata : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       m_axi_lut_rvalid : IN STD_LOGIC;
-      m_axi_lut_rready : OUT STD_LOGIC
+      m_axi_lut_rready : OUT STD_LOGIC;
+      irq_done : OUT STD_LOGIC
     );
   END COMPONENT ccl_slice_core;
   ATTRIBUTE X_CORE_INFO : STRING;
@@ -171,7 +171,7 @@ ARCHITECTURE design_1_ccl_slice_core_0_0_arch OF design_1_ccl_slice_core_0_0 IS
   ATTRIBUTE IP_DEFINITION_SOURCE OF design_1_ccl_slice_core_0_0_arch: ARCHITECTURE IS "module_ref";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
-  ATTRIBUTE X_INTERFACE_PARAMETER OF aclkrst_clk: SIGNAL IS "XIL_INTERFACENAME aclkrst_clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF aclkrst_clk: SIGNAL IS "XIL_INTERFACENAME aclkrst_clk, FREQ_HZ 1e+08, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF aclkrst_clk: SIGNAL IS "xilinx.com:signal:clock:1.0 aclkrst_clk CLK";
   ATTRIBUTE X_INTERFACE_INFO OF m_axi_lut_araddr: SIGNAL IS "xilinx.com:interface:aximm:1.0 m_axi_lut ARADDR";
   ATTRIBUTE X_INTERFACE_INFO OF m_axi_lut_arready: SIGNAL IS "xilinx.com:interface:aximm:1.0 m_axi_lut ARREADY";
@@ -257,7 +257,6 @@ BEGIN
       m_axis_tvalid => m_axis_tvalid,
       m_axis_tready => m_axis_tready,
       m_axis_tlast => m_axis_tlast,
-      irq_done => irq_done,
       m_axi_lut_awaddr => m_axi_lut_awaddr,
       m_axi_lut_awvalid => m_axi_lut_awvalid,
       m_axi_lut_awready => m_axi_lut_awready,
@@ -273,6 +272,7 @@ BEGIN
       m_axi_lut_arready => m_axi_lut_arready,
       m_axi_lut_rdata => m_axi_lut_rdata,
       m_axi_lut_rvalid => m_axi_lut_rvalid,
-      m_axi_lut_rready => m_axi_lut_rready
+      m_axi_lut_rready => m_axi_lut_rready,
+      irq_done => irq_done
     );
 END design_1_ccl_slice_core_0_0_arch;

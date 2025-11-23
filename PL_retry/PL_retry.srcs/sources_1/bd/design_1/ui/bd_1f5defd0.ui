@@ -3,92 +3,92 @@
    "Color Coded_ExpandedHierarchyInLayout":"",
    "Color Coded_Layout":"# # String gsaved with Nlview 7.7.1 2023-07-26 3bc4126617 VDI=43 GEI=38 GUI=JA:21.0
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 11 -x 3890 -y 1380 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 11 -x 3890 -y 1400 -defaultsOSRD
-preplace port BRAM_PORTA_0 -pg 1 -lvl 11 -x 3890 -y 1690 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 5 -x 1890 -y 1430 -defaultsOSRD
-preplace inst axi_dma_0 -pg 1 -lvl 7 -x 2740 -y 1080 -defaultsOSRD
-preplace inst ps7_0_axi_periph -pg 1 -lvl 6 -x 2320 -y 650 -defaultsOSRD
-preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -x 210 -y 1610 -defaultsOSRD
-preplace inst axi_dma_1 -pg 1 -lvl 3 -x 1040 -y 1140 -defaultsOSRD
-preplace inst axi_dma_2 -pg 1 -lvl 3 -x 1040 -y 130 -defaultsOSRD
-preplace inst axi_dma_3 -pg 1 -lvl 3 -x 1040 -y 850 -defaultsOSRD
-preplace inst axi_dma_4 -pg 1 -lvl 3 -x 1040 -y 370 -defaultsOSRD
-preplace inst ccl_slice_core_0 -pg 1 -lvl 8 -x 3090 -y 1120 -defaultsOSRD
-preplace inst ccl_slice_core_1 -pg 1 -lvl 2 -x 600 -y 1390 -defaultsOSRD
-preplace inst ccl_slice_core_2 -pg 1 -lvl 2 -x 600 -y 1670 -defaultsOSRD
-preplace inst ccl_slice_core_3 -pg 1 -lvl 2 -x 600 -y 870 -defaultsOSRD
-preplace inst smartconnect_0 -pg 1 -lvl 4 -x 1510 -y 530 -defaultsOSRD
-preplace inst xlconstant_0 -pg 1 -lvl 7 -x 2740 -y 1300 -defaultsOSRD
-preplace inst xlconstant_1 -pg 1 -lvl 1 -x 210 -y 1430 -defaultsOSRD
-preplace inst xlconstant_2 -pg 1 -lvl 1 -x 210 -y 1750 -defaultsOSRD
-preplace inst xlconstant_3 -pg 1 -lvl 1 -x 210 -y 910 -defaultsOSRD
-preplace inst ccl_relabel_core_0 -pg 1 -lvl 2 -x 600 -y 1090 -defaultsOSRD
-preplace inst axi_dma_5 -pg 1 -lvl 3 -x 1040 -y 590 -defaultsOSRD
-preplace inst xlconcat_0 -pg 1 -lvl 1 -x 210 -y 1280 -defaultsOSRD
-preplace inst axi_interconnect_0 -pg 1 -lvl 9 -x 3430 -y 1670 -defaultsOSRD
-preplace inst axi_bram_ctrl_0 -pg 1 -lvl 10 -x 3730 -y 1690 -defaultsOSRD
-preplace netloc ccl_slice_core_0_irq_done 1 0 9 20 1370 410J 1290 NJ 1290 1310J 1240 NJ 1240 2140J 1220 NJ 1220 NJ 1220 3230
-preplace netloc ccl_slice_core_1_irq_done 1 0 3 40 1190 NJ 1190 740
-preplace netloc ccl_slice_core_2_irq_done 1 0 3 40 1490 NJ 1490 740
-preplace netloc ccl_slice_core_3_irq_done 1 0 3 30 970 NJ 970 740
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 10 30 1500 390 760 810 1310 1350 1310 1660 1310 2150 1070 2560 1200 2930 1020 3270 1910 3580J
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 6 40 1510 NJ 1510 NJ 1510 NJ 1510 1650J 1560 2120
-preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 9 400 770 830 1300 1240J 1230 NJ 1230 2120 1210 2570 1210 2940 1250 3240 1920 3590J
-preplace netloc xlconcat_0_dout 1 1 1 380 1130n
-preplace netloc xlconstant_0_dout 1 7 1 2950J 1160n
-preplace netloc xlconstant_1_dout 1 1 1 NJ 1430
-preplace netloc xlconstant_2_dout 1 1 1 380J 1710n
-preplace netloc xlconstant_3_dout 1 1 1 NJ 910
-preplace netloc axi_dma_0_M_AXIS_MM2S 1 7 1 2940 1060n
-preplace netloc axi_dma_0_M_AXI_MM2S 1 3 5 1370 310 NJ 310 NJ 310 NJ 310 2910
-preplace netloc axi_dma_0_M_AXI_S2MM 1 3 5 1360 300 NJ 300 NJ 300 NJ 300 2920
-preplace netloc axi_dma_1_M_AXIS_MM2S 1 1 3 460 1280 NJ 1280 1210
-preplace netloc axi_dma_1_M_AXI_MM2S 1 3 1 1290 440n
-preplace netloc axi_dma_1_M_AXI_S2MM 1 3 1 1310 460n
-preplace netloc axi_dma_2_M_AXIS_MM2S 1 1 3 430 980 NJ 980 1230
-preplace netloc axi_dma_2_M_AXI_MM2S 1 3 1 1350 70n
-preplace netloc axi_dma_2_M_AXI_S2MM 1 3 1 1340 90n
-preplace netloc axi_dma_3_M_AXIS_MM2S 1 1 3 460 730 NJ 730 1210
-preplace netloc axi_dma_3_M_AXI_MM2S 1 3 1 1300 520n
-preplace netloc axi_dma_3_M_AXI_S2MM 1 3 1 1320 540n
-preplace netloc axi_dma_4_M_AXI_MM2S 1 3 1 1330 310n
-preplace netloc axi_dma_4_M_AXI_S2MM 1 3 1 1240 330n
-preplace netloc axi_dma_5_M_AXIS_MM2S 1 1 3 460 990 NJ 990 1220
-preplace netloc axi_dma_5_M_AXI_MM2S 1 3 1 1280 530n
-preplace netloc axi_dma_5_M_AXI_S2MM 1 3 1 1270 550n
-preplace netloc axi_interconnect_0_M00_AXI 1 9 1 N 1670
-preplace netloc ccl_relabel_core_0_m_axi_lut 1 2 7 770 1260 NJ 1260 NJ 1260 2170J 1240 NJ 1240 NJ 1240 3250J
-preplace netloc ccl_relabel_core_0_m_axis 1 2 1 770 560n
-preplace netloc ccl_slice_core_0_m_axi_lut 1 8 1 3280 1120n
-preplace netloc ccl_slice_core_0_m_axis 1 6 3 2570 960 NJ 960 3230
-preplace netloc ccl_slice_core_1_m_axi_lut 1 2 7 NJ 1390 1370J 1250 NJ 1250 2160J 1230 NJ 1230 NJ 1230 3260
-preplace netloc ccl_slice_core_1_m_axis 1 2 1 820 1110n
-preplace netloc ccl_slice_core_2_m_axi_lut 1 2 7 850 1540 NJ 1540 NJ 1540 2170J 1530 NJ 1530 NJ 1530 NJ
-preplace netloc ccl_slice_core_2_m_axis 1 2 1 750 100n
-preplace netloc ccl_slice_core_3_m_axi_lut 1 2 7 760 1550 NJ 1550 NJ 1550 NJ 1550 NJ 1550 NJ 1550 NJ
-preplace netloc ccl_slice_core_3_m_axis 1 2 1 780 820n
-preplace netloc processing_system7_0_DDR 1 5 6 NJ 1380 NJ 1380 NJ 1380 NJ 1380 NJ 1380 NJ
-preplace netloc processing_system7_0_FIXED_IO 1 5 6 NJ 1400 NJ 1400 NJ 1400 NJ 1400 NJ 1400 NJ
-preplace netloc processing_system7_0_M_AXI_GP0 1 5 1 2130 390n
-preplace netloc ps7_0_axi_periph_M00_AXI 1 6 1 2560 550n
-preplace netloc ps7_0_axi_periph_M01_AXI 1 2 5 870 1270 NJ 1270 NJ 1270 NJ 1270 2540
-preplace netloc ps7_0_axi_periph_M02_AXI 1 2 5 860 1000 NJ 1000 NJ 1000 NJ 1000 2520
-preplace netloc ps7_0_axi_periph_M03_AXI 1 2 5 870 970 NJ 970 NJ 970 NJ 970 2470
-preplace netloc ps7_0_axi_periph_M04_AXI 1 2 5 850 1010 NJ 1010 NJ 1010 NJ 1010 2500
-preplace netloc ps7_0_axi_periph_M05_AXI 1 6 2 2550 950 2950J
-preplace netloc ps7_0_axi_periph_M06_AXI 1 1 6 440 710 NJ 710 1250J 320 NJ 320 NJ 320 2510
-preplace netloc ps7_0_axi_periph_M07_AXI 1 1 6 420 10 NJ 10 NJ 10 NJ 10 NJ 10 2480
-preplace netloc ps7_0_axi_periph_M08_AXI 1 1 6 430 250 NJ 250 NJ 250 NJ 250 NJ 250 2530
-preplace netloc ps7_0_axi_periph_M09_AXI 1 1 6 450 720 NJ 720 1260J 330 NJ 330 NJ 330 2490
-preplace netloc ps7_0_axi_periph_M10_AXI 1 2 5 840 1020 NJ 1020 NJ 1020 NJ 1020 2480
-preplace netloc smartconnect_0_M00_AXI 1 4 1 1650 530n
-preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 10 1 N 1690
-levelinfo -pg 1 0 210 600 1040 1510 1890 2320 2740 3090 3430 3730 3890
-pagesize -pg 1 -db -bbox -sgen 0 0 4060 1930
+preplace port DDR -pg 1 -lvl 11 -x 3910 -y 1910 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 11 -x 3910 -y 1930 -defaultsOSRD
+preplace port BRAM_PORTA_0 -pg 1 -lvl 11 -x 3910 -y 2010 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 5 -x 1840 -y 1730 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 7 -x 2720 -y 1320 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 6 -x 2310 -y 820 -defaultsOSRD
+preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -x 220 -y 1670 -defaultsOSRD
+preplace inst axi_dma_1 -pg 1 -lvl 3 -x 990 -y 1720 -defaultsOSRD
+preplace inst axi_dma_2 -pg 1 -lvl 3 -x 990 -y 1020 -defaultsOSRD
+preplace inst axi_dma_3 -pg 1 -lvl 3 -x 990 -y 360 -defaultsOSRD
+preplace inst axi_dma_4 -pg 1 -lvl 3 -x 990 -y 120 -defaultsOSRD
+preplace inst ccl_slice_core_0 -pg 1 -lvl 8 -x 3080 -y 1290 -defaultsOSRD
+preplace inst ccl_slice_core_1 -pg 1 -lvl 2 -x 600 -y 1770 -defaultsOSRD
+preplace inst ccl_slice_core_2 -pg 1 -lvl 2 -x 600 -y 1050 -defaultsOSRD
+preplace inst ccl_slice_core_3 -pg 1 -lvl 2 -x 600 -y 790 -defaultsOSRD
+preplace inst smartconnect_0 -pg 1 -lvl 4 -x 1450 -y 1380 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 7 -x 2720 -y 1510 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 1 -x 220 -y 1810 -defaultsOSRD
+preplace inst xlconstant_2 -pg 1 -lvl 1 -x 220 -y 1090 -defaultsOSRD
+preplace inst xlconstant_3 -pg 1 -lvl 1 -x 220 -y 830 -defaultsOSRD
+preplace inst ccl_relabel_core_0 -pg 1 -lvl 2 -x 600 -y 1430 -defaultsOSRD
+preplace inst axi_dma_5 -pg 1 -lvl 3 -x 990 -y 1460 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 1 -x 220 -y 1280 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 9 -x 3450 -y 1680 -defaultsOSRD
+preplace inst axi_bram_ctrl_0 -pg 1 -lvl 10 -x 3750 -y 2010 -defaultsOSRD
+preplace netloc ccl_slice_core_0_irq_done 1 0 9 40 1150 NJ 1150 NJ 1150 1160J 1090 NJ 1090 2140J 1230 2530J 1150 NJ 1150 3230
+preplace netloc ccl_slice_core_1_irq_done 1 0 3 40 1570 NJ 1570 740
+preplace netloc ccl_slice_core_2_irq_done 1 0 3 50 1160 NJ 1160 740
+preplace netloc ccl_slice_core_3_irq_done 1 0 3 50 1370 410J 1310 750
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 10 50 1870 390 890 790 1230 1270 1100 1610 1150 2080 1310 2550 1440 2920 1440 3250 2010 NJ
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 6 40 1880 NJ 1880 NJ 1880 NJ 1880 NJ 1880 2070
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 9 420 910 800 1190 1170J 1080 NJ 1080 2160 1240 2470 1450 2940 1450 3230 2030 NJ
+preplace netloc xlconcat_0_dout 1 1 1 400 1280n
+preplace netloc xlconstant_0_dout 1 7 1 2930J 1330n
+preplace netloc xlconstant_1_dout 1 1 1 NJ 1810
+preplace netloc xlconstant_2_dout 1 1 1 NJ 1090
+preplace netloc xlconstant_3_dout 1 1 1 NJ 830
+preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 10 1 NJ 2010
+preplace netloc axi_dma_0_M_AXIS_MM2S 1 7 1 2910 1250n
+preplace netloc axi_dma_0_M_AXI_MM2S 1 3 5 1300 1110 NJ 1110 2150J 1190 NJ 1190 2890
+preplace netloc axi_dma_0_M_AXI_S2MM 1 3 5 1310 1120 NJ 1120 2100J 1210 2540J 1200 2900
+preplace netloc axi_dma_1_M_AXIS_MM2S 1 1 3 440 1320 NJ 1320 1170
+preplace netloc axi_dma_1_M_AXI_MM2S 1 3 1 1300 1290n
+preplace netloc axi_dma_1_M_AXI_S2MM 1 3 1 1310 1310n
+preplace netloc axi_dma_2_M_AXIS_MM2S 1 1 3 460 900 NJ 900 1160
+preplace netloc axi_dma_2_M_AXI_MM2S 1 3 1 1230 960n
+preplace netloc axi_dma_2_M_AXI_S2MM 1 3 1 1190 980n
+preplace netloc axi_dma_3_M_AXIS_MM2S 1 1 3 390 490 NJ 490 1160
+preplace netloc axi_dma_3_M_AXI_MM2S 1 3 1 1240 300n
+preplace netloc axi_dma_3_M_AXI_S2MM 1 3 1 1200 320n
+preplace netloc axi_dma_4_M_AXI_MM2S 1 3 1 1250 60n
+preplace netloc axi_dma_4_M_AXI_S2MM 1 3 1 1210 80n
+preplace netloc axi_dma_5_M_AXIS_MM2S 1 1 3 460 1330 NJ 1330 1160
+preplace netloc axi_dma_5_M_AXI_MM2S 1 3 1 1190 1400n
+preplace netloc axi_dma_5_M_AXI_S2MM 1 3 1 1180 1420n
+preplace netloc ccl_relabel_core_0_m_axis 1 2 1 780 1410n
+preplace netloc ccl_slice_core_0_m_axi_lut 1 8 1 3270 1290n
+preplace netloc ccl_slice_core_0_m_axis 1 6 3 2550 1160 NJ 1160 3220
+preplace netloc ccl_slice_core_1_m_axi_lut 1 2 7 770J 1220 1290J 1170 NJ 1170 2110J 1160 2510J 1140 NJ 1140 3300
+preplace netloc ccl_slice_core_1_m_axis 1 2 1 780 1690n
+preplace netloc ccl_slice_core_2_m_axi_lut 1 2 7 760 1140 1220J 1150 1600J 1180 2120J 1170 NJ 1170 NJ 1170 3280J
+preplace netloc ccl_slice_core_2_m_axis 1 2 1 760 990n
+preplace netloc ccl_slice_core_3_m_axi_lut 1 2 7 750 530 1170J 460 NJ 460 NJ 460 NJ 460 NJ 460 3290J
+preplace netloc ccl_slice_core_3_m_axis 1 2 1 740 330n
+preplace netloc processing_system7_0_DDR 1 5 6 NJ 1680 NJ 1680 NJ 1680 3240J 1920 3610J 1910 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 5 6 NJ 1700 NJ 1700 NJ 1700 3220J 1930 NJ 1930 NJ
+preplace netloc processing_system7_0_M_AXI_GP0 1 5 1 2070 560n
+preplace netloc ps7_0_axi_periph_M00_AXI 1 6 1 2520 720n
+preplace netloc ps7_0_axi_periph_M01_AXI 1 2 5 810 1200 1280J 1190 1600J 1220 NJ 1220 2500
+preplace netloc ps7_0_axi_periph_M02_AXI 1 2 5 820 520 1180J 470 NJ 470 NJ 470 2460
+preplace netloc ps7_0_axi_periph_M03_AXI 1 2 5 820 480 NJ 480 NJ 480 NJ 480 2490
+preplace netloc ps7_0_axi_periph_M04_AXI 1 2 5 820 240 NJ 240 NJ 240 NJ 240 2510
+preplace netloc ps7_0_axi_periph_M05_AXI 1 6 2 2510 1130 2920J
+preplace netloc ps7_0_axi_periph_M06_AXI 1 1 6 430 1170 NJ 1170 1220J 1160 NJ 1160 2090J 1150 2460
+preplace netloc ps7_0_axi_periph_M07_AXI 1 1 6 450 500 NJ 500 NJ 500 NJ 500 NJ 500 2470
+preplace netloc ps7_0_axi_periph_M08_AXI 1 1 6 460 510 NJ 510 1190J 490 NJ 490 NJ 490 2480
+preplace netloc ps7_0_axi_periph_M09_AXI 1 1 6 450 1180 NJ 1180 NJ 1180 1590J 1200 NJ 1200 2480
+preplace netloc ps7_0_axi_periph_M10_AXI 1 2 5 820 1210 1260J 1140 NJ 1140 NJ 1140 2470
+preplace netloc smartconnect_0_M00_AXI 1 4 1 1590 1380n
+preplace netloc axi_interconnect_0_M00_AXI 1 9 1 3600 1680n
+preplace netloc ccl_relabel_core_0_m_axi_lut 1 2 7 760J 1160 1180J 1130 NJ 1130 2130J 1180 NJ 1180 NJ 1180 3260
+levelinfo -pg 1 0 220 600 990 1450 1840 2310 2720 3080 3450 3750 3910
+pagesize -pg 1 -db -bbox -sgen 0 0 4080 2090
 ",
-   "Color Coded_ScaleFactor":"0.568616",
-   "Color Coded_TopLeft":"565,179",
+   "Color Coded_ScaleFactor":"0.650104",
+   "Color Coded_TopLeft":"1690,1244",
    "Default View_ScaleFactor":"0.601896",
    "Default View_TopLeft":"-131,3",
    "ExpandedHierarchyInLayout":"",

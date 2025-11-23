@@ -2,7 +2,7 @@
 --Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
---Date        : Sat Nov 22 18:39:43 2025
+--Date        : Sun Nov 23 15:00:23 2025
 --Host        : POWERSLAVE running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -5276,7 +5276,6 @@ architecture STRUCTURE of design_1 is
     m_axis_tvalid : out STD_LOGIC;
     m_axis_tready : in STD_LOGIC;
     m_axis_tlast : out STD_LOGIC;
-    irq_done : out STD_LOGIC;
     m_axi_lut_awaddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
     m_axi_lut_awvalid : out STD_LOGIC;
     m_axi_lut_awready : in STD_LOGIC;
@@ -5292,7 +5291,8 @@ architecture STRUCTURE of design_1 is
     m_axi_lut_arready : in STD_LOGIC;
     m_axi_lut_rdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     m_axi_lut_rvalid : in STD_LOGIC;
-    m_axi_lut_rready : out STD_LOGIC
+    m_axi_lut_rready : out STD_LOGIC;
+    irq_done : out STD_LOGIC
   );
   end component design_1_ccl_slice_core_0_0;
   component design_1_ccl_slice_core_1_0 is
@@ -5325,7 +5325,6 @@ architecture STRUCTURE of design_1 is
     m_axis_tvalid : out STD_LOGIC;
     m_axis_tready : in STD_LOGIC;
     m_axis_tlast : out STD_LOGIC;
-    irq_done : out STD_LOGIC;
     m_axi_lut_awaddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
     m_axi_lut_awvalid : out STD_LOGIC;
     m_axi_lut_awready : in STD_LOGIC;
@@ -5341,7 +5340,8 @@ architecture STRUCTURE of design_1 is
     m_axi_lut_arready : in STD_LOGIC;
     m_axi_lut_rdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     m_axi_lut_rvalid : in STD_LOGIC;
-    m_axi_lut_rready : out STD_LOGIC
+    m_axi_lut_rready : out STD_LOGIC;
+    irq_done : out STD_LOGIC
   );
   end component design_1_ccl_slice_core_1_0;
   component design_1_ccl_slice_core_2_0 is
@@ -5374,7 +5374,6 @@ architecture STRUCTURE of design_1 is
     m_axis_tvalid : out STD_LOGIC;
     m_axis_tready : in STD_LOGIC;
     m_axis_tlast : out STD_LOGIC;
-    irq_done : out STD_LOGIC;
     m_axi_lut_awaddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
     m_axi_lut_awvalid : out STD_LOGIC;
     m_axi_lut_awready : in STD_LOGIC;
@@ -5390,7 +5389,8 @@ architecture STRUCTURE of design_1 is
     m_axi_lut_arready : in STD_LOGIC;
     m_axi_lut_rdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     m_axi_lut_rvalid : in STD_LOGIC;
-    m_axi_lut_rready : out STD_LOGIC
+    m_axi_lut_rready : out STD_LOGIC;
+    irq_done : out STD_LOGIC
   );
   end component design_1_ccl_slice_core_2_0;
   component design_1_ccl_slice_core_3_0 is
@@ -5423,7 +5423,6 @@ architecture STRUCTURE of design_1 is
     m_axis_tvalid : out STD_LOGIC;
     m_axis_tready : in STD_LOGIC;
     m_axis_tlast : out STD_LOGIC;
-    irq_done : out STD_LOGIC;
     m_axi_lut_awaddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
     m_axi_lut_awvalid : out STD_LOGIC;
     m_axi_lut_awready : in STD_LOGIC;
@@ -5439,7 +5438,8 @@ architecture STRUCTURE of design_1 is
     m_axi_lut_arready : in STD_LOGIC;
     m_axi_lut_rdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     m_axi_lut_rvalid : in STD_LOGIC;
-    m_axi_lut_rready : out STD_LOGIC
+    m_axi_lut_rready : out STD_LOGIC;
+    irq_done : out STD_LOGIC
   );
   end component design_1_ccl_slice_core_3_0;
   component design_1_smartconnect_0_0 is

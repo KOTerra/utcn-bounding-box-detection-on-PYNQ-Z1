@@ -136,7 +136,7 @@ void design_1_processing_system7_0_0::before_end_of_elaboration()
     M_AXI_GP0_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
     M_AXI_GP0_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
     M_AXI_GP0_transactor_param_props.addLong("DATA_WIDTH", "32");
-    M_AXI_GP0_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    M_AXI_GP0_transactor_param_props.addLong("FREQ_HZ", "1e+08");
     M_AXI_GP0_transactor_param_props.addLong("ID_WIDTH", "12");
     M_AXI_GP0_transactor_param_props.addLong("ADDR_WIDTH", "32");
     M_AXI_GP0_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -242,7 +242,7 @@ void design_1_processing_system7_0_0::before_end_of_elaboration()
     S_AXI_GP0_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
     S_AXI_GP0_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
     S_AXI_GP0_transactor_param_props.addLong("DATA_WIDTH", "32");
-    S_AXI_GP0_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S_AXI_GP0_transactor_param_props.addLong("FREQ_HZ", "1e+08");
     S_AXI_GP0_transactor_param_props.addLong("ID_WIDTH", "6");
     S_AXI_GP0_transactor_param_props.addLong("ADDR_WIDTH", "32");
     S_AXI_GP0_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -349,7 +349,7 @@ void design_1_processing_system7_0_0::before_end_of_elaboration()
     S_AXI_HP0_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
     S_AXI_HP0_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
     S_AXI_HP0_transactor_param_props.addLong("DATA_WIDTH", "32");
-    S_AXI_HP0_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S_AXI_HP0_transactor_param_props.addLong("FREQ_HZ", "1e+08");
     S_AXI_HP0_transactor_param_props.addLong("ID_WIDTH", "6");
     S_AXI_HP0_transactor_param_props.addLong("ADDR_WIDTH", "32");
     S_AXI_HP0_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -528,7 +528,7 @@ void design_1_processing_system7_0_0::before_end_of_elaboration()
     M_AXI_GP0_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
     M_AXI_GP0_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
     M_AXI_GP0_transactor_param_props.addLong("DATA_WIDTH", "32");
-    M_AXI_GP0_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    M_AXI_GP0_transactor_param_props.addLong("FREQ_HZ", "1e+08");
     M_AXI_GP0_transactor_param_props.addLong("ID_WIDTH", "12");
     M_AXI_GP0_transactor_param_props.addLong("ADDR_WIDTH", "32");
     M_AXI_GP0_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -634,7 +634,7 @@ void design_1_processing_system7_0_0::before_end_of_elaboration()
     S_AXI_GP0_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
     S_AXI_GP0_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
     S_AXI_GP0_transactor_param_props.addLong("DATA_WIDTH", "32");
-    S_AXI_GP0_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S_AXI_GP0_transactor_param_props.addLong("FREQ_HZ", "1e+08");
     S_AXI_GP0_transactor_param_props.addLong("ID_WIDTH", "6");
     S_AXI_GP0_transactor_param_props.addLong("ADDR_WIDTH", "32");
     S_AXI_GP0_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -741,7 +741,7 @@ void design_1_processing_system7_0_0::before_end_of_elaboration()
     S_AXI_HP0_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
     S_AXI_HP0_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
     S_AXI_HP0_transactor_param_props.addLong("DATA_WIDTH", "32");
-    S_AXI_HP0_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S_AXI_HP0_transactor_param_props.addLong("FREQ_HZ", "1e+08");
     S_AXI_HP0_transactor_param_props.addLong("ID_WIDTH", "6");
     S_AXI_HP0_transactor_param_props.addLong("ADDR_WIDTH", "32");
     S_AXI_HP0_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -920,7 +920,7 @@ void design_1_processing_system7_0_0::before_end_of_elaboration()
     M_AXI_GP0_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
     M_AXI_GP0_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
     M_AXI_GP0_transactor_param_props.addLong("DATA_WIDTH", "32");
-    M_AXI_GP0_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    M_AXI_GP0_transactor_param_props.addLong("FREQ_HZ", "1e+08");
     M_AXI_GP0_transactor_param_props.addLong("ID_WIDTH", "12");
     M_AXI_GP0_transactor_param_props.addLong("ADDR_WIDTH", "32");
     M_AXI_GP0_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -1026,7 +1026,7 @@ void design_1_processing_system7_0_0::before_end_of_elaboration()
     S_AXI_GP0_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
     S_AXI_GP0_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
     S_AXI_GP0_transactor_param_props.addLong("DATA_WIDTH", "32");
-    S_AXI_GP0_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S_AXI_GP0_transactor_param_props.addLong("FREQ_HZ", "1e+08");
     S_AXI_GP0_transactor_param_props.addLong("ID_WIDTH", "6");
     S_AXI_GP0_transactor_param_props.addLong("ADDR_WIDTH", "32");
     S_AXI_GP0_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -1133,7 +1133,7 @@ void design_1_processing_system7_0_0::before_end_of_elaboration()
     S_AXI_HP0_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
     S_AXI_HP0_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
     S_AXI_HP0_transactor_param_props.addLong("DATA_WIDTH", "32");
-    S_AXI_HP0_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S_AXI_HP0_transactor_param_props.addLong("FREQ_HZ", "1e+08");
     S_AXI_HP0_transactor_param_props.addLong("ID_WIDTH", "6");
     S_AXI_HP0_transactor_param_props.addLong("ADDR_WIDTH", "32");
     S_AXI_HP0_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -1301,7 +1301,7 @@ design_1_processing_system7_0_0::design_1_processing_system7_0_0(const sc_core::
     M_AXI_GP0_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
     M_AXI_GP0_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
     M_AXI_GP0_transactor_param_props.addLong("DATA_WIDTH", "32");
-    M_AXI_GP0_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    M_AXI_GP0_transactor_param_props.addLong("FREQ_HZ", "1e+08");
     M_AXI_GP0_transactor_param_props.addLong("ID_WIDTH", "12");
     M_AXI_GP0_transactor_param_props.addLong("ADDR_WIDTH", "32");
     M_AXI_GP0_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -1388,7 +1388,7 @@ design_1_processing_system7_0_0::design_1_processing_system7_0_0(const sc_core::
     S_AXI_GP0_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
     S_AXI_GP0_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
     S_AXI_GP0_transactor_param_props.addLong("DATA_WIDTH", "32");
-    S_AXI_GP0_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S_AXI_GP0_transactor_param_props.addLong("FREQ_HZ", "1e+08");
     S_AXI_GP0_transactor_param_props.addLong("ID_WIDTH", "6");
     S_AXI_GP0_transactor_param_props.addLong("ADDR_WIDTH", "32");
     S_AXI_GP0_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -1476,7 +1476,7 @@ design_1_processing_system7_0_0::design_1_processing_system7_0_0(const sc_core::
     S_AXI_HP0_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
     S_AXI_HP0_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
     S_AXI_HP0_transactor_param_props.addLong("DATA_WIDTH", "32");
-    S_AXI_HP0_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S_AXI_HP0_transactor_param_props.addLong("FREQ_HZ", "1e+08");
     S_AXI_HP0_transactor_param_props.addLong("ID_WIDTH", "6");
     S_AXI_HP0_transactor_param_props.addLong("ADDR_WIDTH", "32");
     S_AXI_HP0_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -1692,7 +1692,7 @@ design_1_processing_system7_0_0::design_1_processing_system7_0_0(const sc_core::
     M_AXI_GP0_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
     M_AXI_GP0_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
     M_AXI_GP0_transactor_param_props.addLong("DATA_WIDTH", "32");
-    M_AXI_GP0_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    M_AXI_GP0_transactor_param_props.addLong("FREQ_HZ", "1e+08");
     M_AXI_GP0_transactor_param_props.addLong("ID_WIDTH", "12");
     M_AXI_GP0_transactor_param_props.addLong("ADDR_WIDTH", "32");
     M_AXI_GP0_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -1779,7 +1779,7 @@ design_1_processing_system7_0_0::design_1_processing_system7_0_0(const sc_core::
     S_AXI_GP0_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
     S_AXI_GP0_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
     S_AXI_GP0_transactor_param_props.addLong("DATA_WIDTH", "32");
-    S_AXI_GP0_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S_AXI_GP0_transactor_param_props.addLong("FREQ_HZ", "1e+08");
     S_AXI_GP0_transactor_param_props.addLong("ID_WIDTH", "6");
     S_AXI_GP0_transactor_param_props.addLong("ADDR_WIDTH", "32");
     S_AXI_GP0_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -1867,7 +1867,7 @@ design_1_processing_system7_0_0::design_1_processing_system7_0_0(const sc_core::
     S_AXI_HP0_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
     S_AXI_HP0_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
     S_AXI_HP0_transactor_param_props.addLong("DATA_WIDTH", "32");
-    S_AXI_HP0_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S_AXI_HP0_transactor_param_props.addLong("FREQ_HZ", "1e+08");
     S_AXI_HP0_transactor_param_props.addLong("ID_WIDTH", "6");
     S_AXI_HP0_transactor_param_props.addLong("ADDR_WIDTH", "32");
     S_AXI_HP0_transactor_param_props.addLong("AWUSER_WIDTH", "0");
