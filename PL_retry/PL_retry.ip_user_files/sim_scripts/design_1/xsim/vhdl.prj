@@ -9,7 +9,6 @@ vhdl xil_defaultlib  \
 "../../../bd/design_1/ip/design_1_ccl_slice_core_1_0/sim/design_1_ccl_slice_core_1_0.vhd" \
 "../../../bd/design_1/ip/design_1_ccl_slice_core_2_0/sim/design_1_ccl_slice_core_2_0.vhd" \
 "../../../bd/design_1/ip/design_1_ccl_slice_core_3_0/sim/design_1_ccl_slice_core_3_0.vhd" \
-"../../../bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_1/sim/bd_48ac_psr_aclk_0.vhd" \
 "../../../bd/design_1/ip/design_1_ccl_relabel_core_0_0/sim/design_1_ccl_relabel_core_0_0.vhd" \
 "../../../bd/design_1/ip/design_1_axi_dma_5_0/sim/design_1_axi_dma_5_0.vhd" \
 "../../../bd/design_1/ip/design_1_axi_bram_ctrl_0_2/sim/design_1_axi_bram_ctrl_0_2.vhd" \

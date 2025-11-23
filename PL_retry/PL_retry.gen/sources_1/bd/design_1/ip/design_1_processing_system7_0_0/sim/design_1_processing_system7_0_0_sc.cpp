@@ -104,8 +104,8 @@ design_1_processing_system7_0_0_sc::design_1_processing_system7_0_0_sc(const sc_
     model_param_props.addLong("C_USE_S_AXI_GP0", "1");
     model_param_props.addLong("C_USE_S_AXI_GP1", "0");
     model_param_props.addLong("C_USE_S_AXI_HP0", "1");
-    model_param_props.addLong("C_USE_S_AXI_HP1", "0");
-    model_param_props.addLong("C_USE_S_AXI_HP2", "0");
+    model_param_props.addLong("C_USE_S_AXI_HP1", "1");
+    model_param_props.addLong("C_USE_S_AXI_HP2", "1");
     model_param_props.addLong("C_USE_S_AXI_HP3", "0");
     model_param_props.addLong("C_USE_S_AXI_ACP", "0");
     model_param_props.addLong("C_GP0_EN_MODIFIABLE_TXN", "1");
@@ -128,6 +128,10 @@ design_1_processing_system7_0_0_sc::design_1_processing_system7_0_0_sc(const sc_
   S_AXI_GP0_wr_socket = mp_impl->S_AXI_GP0_wr_socket;
   S_AXI_HP0_rd_socket = mp_impl->S_AXI_HP0_rd_socket;
   S_AXI_HP0_wr_socket = mp_impl->S_AXI_HP0_wr_socket;
+  S_AXI_HP1_rd_socket = mp_impl->S_AXI_HP1_rd_socket;
+  S_AXI_HP1_wr_socket = mp_impl->S_AXI_HP1_wr_socket;
+  S_AXI_HP2_rd_socket = mp_impl->S_AXI_HP2_rd_socket;
+  S_AXI_HP2_wr_socket = mp_impl->S_AXI_HP2_wr_socket;
 }
 
 design_1_processing_system7_0_0_sc::~design_1_processing_system7_0_0_sc()

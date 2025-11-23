@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date             : Sun Nov 23 15:15:07 2025
+| Date             : Sun Nov 23 22:48:01 2025
 | Host             : POWERSLAVE running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.524        |
+| Total On-Chip Power (W)  | 1.481        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.385        |
-| Device Static (W)        | 0.139        |
+| Dynamic (W)              | 1.343        |
+| Device Static (W)        | 0.138        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 67.4         |
-| Junction Temperature (C) | 42.6         |
+| Max Ambient (C)          | 67.9         |
+| Junction Temperature (C) | 42.1         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,20 +52,20 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.066 |        3 |       --- |             --- |
-| Slice Logic              |     0.028 |    45870 |       --- |             --- |
-|   LUT as Logic           |     0.024 |    14543 |     53200 |           27.34 |
-|   LUT as Distributed RAM |     0.002 |     1890 |     17400 |           10.86 |
-|   Register               |     0.001 |    20531 |    106400 |           19.30 |
-|   CARRY4                 |     0.001 |      436 |     13300 |            3.28 |
-|   F7/F8 Muxes            |    <0.001 |      551 |     53200 |            1.04 |
-|   LUT as Shift Register  |    <0.001 |      618 |     17400 |            3.55 |
-|   Others                 |     0.000 |     1884 |       --- |             --- |
-| Signals                  |     0.034 |    29896 |       --- |             --- |
+| Clocks                   |     0.051 |        3 |       --- |             --- |
+| Slice Logic              |     0.012 |    35205 |       --- |             --- |
+|   LUT as Logic           |     0.010 |    11892 |     53200 |           22.35 |
+|   CARRY4                 |    <0.001 |      418 |     13300 |            3.14 |
+|   Register               |    <0.001 |    16054 |    106400 |           15.09 |
+|   LUT as Distributed RAM |    <0.001 |      712 |     17400 |            4.09 |
+|   F7/F8 Muxes            |    <0.001 |      480 |     53200 |            0.90 |
+|   LUT as Shift Register  |    <0.001 |      737 |     17400 |            4.24 |
+|   Others                 |     0.000 |     1381 |       --- |             --- |
+| Signals                  |     0.021 |    24768 |       --- |             --- |
 | Block RAM                |     0.001 |     17.5 |       140 |           12.50 |
-| PS7                      |     1.256 |        1 |       --- |             --- |
-| Static Power             |     0.139 |          |           |                 |
-| Total                    |     1.524 |          |           |                 |
+| PS7                      |     1.257 |        1 |       --- |             --- |
+| Static Power             |     0.138 |          |           |                 |
+| Total                    |     1.481 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -75,8 +75,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.143 |       0.129 |      0.014 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.015 |       0.000 |      0.015 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.100 |       0.086 |      0.014 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.014 |       0.000 |      0.014 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -88,7 +88,7 @@ Table of Contents
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccpint   |       1.000 |     0.675 |       0.647 |      0.028 |       NA    | Unspecified | NA         |
+| Vccpint   |       1.000 |     0.676 |       0.648 |      0.028 |       NA    | Unspecified | NA         |
 | Vccpaux   |       1.800 |     0.036 |       0.026 |      0.010 |       NA    | Unspecified | NA         |
 | Vccpll    |       1.800 |     0.017 |       0.014 |      0.003 |       NA    | Unspecified | NA         |
 | Vcco_ddr  |       1.500 |     0.354 |       0.352 |      0.002 |       NA    | Unspecified | NA         |
@@ -148,25 +148,28 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+----------------------------+-----------+
-| Name                       | Power (W) |
-+----------------------------+-----------+
-| top                        |     1.385 |
-|   u_bd                     |     1.385 |
-|     design_1_i             |     1.385 |
-|       axi_dma_0            |     0.006 |
-|       axi_dma_1            |     0.007 |
-|       axi_dma_2            |     0.007 |
-|       axi_dma_3            |     0.006 |
-|       axi_dma_4            |     0.006 |
-|       axi_dma_5            |     0.007 |
-|       ccl_slice_core_0     |     0.004 |
-|       ccl_slice_core_1     |     0.003 |
-|       ccl_slice_core_2     |     0.003 |
-|       ccl_slice_core_3     |     0.004 |
-|       processing_system7_0 |     1.259 |
-|       ps7_0_axi_periph     |     0.006 |
-|       smartconnect_0       |     0.065 |
-+----------------------------+-----------+
++-------------------------------+-----------+
+| Name                          | Power (W) |
++-------------------------------+-----------+
+| top                           |     1.343 |
+|   u_bd                        |     1.342 |
+|     design_1_i                |     1.342 |
+|       axi_dma_0               |     0.007 |
+|       axi_dma_1               |     0.007 |
+|       axi_dma_2               |     0.007 |
+|       axi_dma_3               |     0.006 |
+|       axi_dma_4               |     0.006 |
+|       axi_dma_5               |     0.007 |
+|       axi_interconnect_dma0_1 |     0.003 |
+|       axi_interconnect_dma2_3 |     0.007 |
+|       axi_interconnect_dma4_5 |     0.006 |
+|       ccl_relabel_core_0      |     0.001 |
+|       ccl_slice_core_0        |     0.005 |
+|       ccl_slice_core_1        |     0.004 |
+|       ccl_slice_core_2        |     0.005 |
+|       ccl_slice_core_3        |     0.004 |
+|       processing_system7_0    |     1.261 |
+|       ps7_0_axi_periph        |     0.006 |
++-------------------------------+-----------+
 
 
