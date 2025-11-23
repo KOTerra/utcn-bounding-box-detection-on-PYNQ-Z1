@@ -173,7 +173,6 @@ vcom -work axi_bram_ctrl_v4_1_10  -93  \
 
 vcom -work xil_defaultlib  -93  \
 "../../../bd/design_1/ip/design_1_axi_bram_ctrl_0_2/sim/design_1_axi_bram_ctrl_0_2.vhd" \
-"../../../bd/design_1/sim/design_1.vhd" \
 
 vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../PL_retry.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../PL_retry.gen/sources_1/bd/design_1/ipshared/b28c/hdl" "+incdir+X:/xilinx/Vivado/2024.1/data/xilinx_vip/include" \
 "../../../bd/design_1/ip/design_1_xbar_6/sim/design_1_xbar_6.v" \
@@ -208,6 +207,9 @@ vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../PL_retry.gen/source
 "../../../bd/design_1/ip/design_1_auto_us_6/sim/design_1_auto_us_6.v" \
 "../../../bd/design_1/ip/design_1_auto_us_7/sim/design_1_auto_us_7.v" \
 "../../../bd/design_1/ip/design_1_auto_pc_4/sim/design_1_auto_pc_4.v" \
+
+vcom -work xil_defaultlib  -93  \
+"../../../bd/design_1/sim/design_1.vhd" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

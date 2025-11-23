@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Sun Nov 23 22:38:39 2025
-# Process ID: 23004
+# Start of session at: Sun Nov 23 23:33:05 2025
+# Process ID: 21872
 # Current directory: D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.runs/synth_1/top.vds
@@ -19,10 +19,10 @@
 # Host memory       :34305 MB
 # Swap memory       :2147 MB
 # Total Virtual     :36452 MB
-# Available Virtual :16250 MB
+# Available Virtual :15104 MB
 #-----------------------------------------------------------
 source top.tcl -notrace
-create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 556.848 ; gain = 244.012
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 557.133 ; gain = 242.500
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'X:/xilinx/Vivado/2024.1/data/ip'.
@@ -39,9 +39,9 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 22684
+INFO: [Synth 8-7075] Helper process launched with PID 15580
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1487.285 ; gain = 447.145
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1487.602 ; gain = 447.883
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'top' [D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.srcs/sources_1/new/top.vhd:30]
 INFO: [Synth 8-3491] module 'design_1_wrapper' declared at 'D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:15' bound to instance 'u_bd' of component 'design_1_wrapper' [D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.srcs/sources_1/new/top.vhd:107]
@@ -867,8 +867,8 @@ INFO: [Synth 8-3491] module 'design_1_ccl_relabel_core_0_0' declared at 'd:/FACU
 INFO: [Synth 8-638] synthesizing module 'design_1_ccl_relabel_core_0_0' [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/ip/design_1_ccl_relabel_core_0_0/synth/design_1_ccl_relabel_core_0_0.vhd:106]
 	Parameter G_AXIS_WIDTH bound to: 32 - type: integer 
 INFO: [Synth 8-3491] module 'ccl_relabel_core' declared at 'D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.srcs/sources_1/new/ccl_relabel_core.vhd:5' bound to instance 'U0' of component 'ccl_relabel_core' [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/ip/design_1_ccl_relabel_core_0_0/synth/design_1_ccl_relabel_core_0_0.vhd:221]
-INFO: [Synth 8-638] synthesizing module 'ccl_relabel_core' [D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.srcs/sources_1/new/ccl_relabel_core.vhd:76]
-INFO: [Synth 8-256] done synthesizing module 'ccl_relabel_core' (0#1) [D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.srcs/sources_1/new/ccl_relabel_core.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'ccl_relabel_core' [D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.srcs/sources_1/new/ccl_relabel_core.vhd:67]
+INFO: [Synth 8-256] done synthesizing module 'ccl_relabel_core' (0#1) [D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.srcs/sources_1/new/ccl_relabel_core.vhd:67]
 INFO: [Synth 8-256] done synthesizing module 'design_1_ccl_relabel_core_0_0' (0#1) [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/ip/design_1_ccl_relabel_core_0_0/synth/design_1_ccl_relabel_core_0_0.vhd:106]
 INFO: [Synth 8-3491] module 'design_1_ccl_slice_core_0_0' declared at 'd:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/ip/design_1_ccl_slice_core_0_0/synth/design_1_ccl_slice_core_0_0.vhd:56' bound to instance 'ccl_slice_core_0' of component 'design_1_ccl_slice_core_0_0' [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/synth/design_1.vhd:13400]
 INFO: [Synth 8-638] synthesizing module 'design_1_ccl_slice_core_0_0' [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/ip/design_1_ccl_slice_core_0_0/synth/design_1_ccl_slice_core_0_0.vhd:106]
@@ -877,9 +877,8 @@ INFO: [Synth 8-638] synthesizing module 'design_1_ccl_slice_core_0_0' [d:/FACULT
 	Parameter G_MAX_WIDTH_PIX bound to: 512 - type: integer 
 	Parameter G_MAX_HEIGHT_PIX bound to: 128 - type: integer 
 INFO: [Synth 8-3491] module 'ccl_slice_core' declared at 'D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.srcs/sources_1/new/ccl_slice_core.vhd:5' bound to instance 'U0' of component 'ccl_slice_core' [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/ip/design_1_ccl_slice_core_0_0/synth/design_1_ccl_slice_core_0_0.vhd:224]
-INFO: [Synth 8-638] synthesizing module 'ccl_slice_core' [D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.srcs/sources_1/new/ccl_slice_core.vhd:98]
-INFO: [Synth 8-226] default block is never used [D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.srcs/sources_1/new/ccl_slice_core.vhd:301]
-INFO: [Synth 8-256] done synthesizing module 'ccl_slice_core' (0#1) [D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.srcs/sources_1/new/ccl_slice_core.vhd:98]
+INFO: [Synth 8-638] synthesizing module 'ccl_slice_core' [D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.srcs/sources_1/new/ccl_slice_core.vhd:71]
+INFO: [Synth 8-256] done synthesizing module 'ccl_slice_core' (0#1) [D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.srcs/sources_1/new/ccl_slice_core.vhd:71]
 INFO: [Synth 8-256] done synthesizing module 'design_1_ccl_slice_core_0_0' (0#1) [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/ip/design_1_ccl_slice_core_0_0/synth/design_1_ccl_slice_core_0_0.vhd:106]
 INFO: [Synth 8-3491] module 'design_1_ccl_slice_core_1_0' declared at 'd:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/ip/design_1_ccl_slice_core_1_0/synth/design_1_ccl_slice_core_1_0.vhd:56' bound to instance 'ccl_slice_core_1' of component 'design_1_ccl_slice_core_1_0' [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/synth/design_1.vhd:13448]
 INFO: [Synth 8-638] synthesizing module 'design_1_ccl_slice_core_1_0' [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/ip/design_1_ccl_slice_core_1_0/synth/design_1_ccl_slice_core_1_0.vhd:106]
@@ -1007,8 +1006,8 @@ INFO: [Synth 8-3491] module 'design_1_xlconstant_2_0' declared at 'd:/FACULTATE/
 INFO: [Synth 8-3491] module 'design_1_xlconstant_3_0' declared at 'd:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/ip/design_1_xlconstant_3_0/synth/design_1_xlconstant_3_0.v:53' bound to instance 'xlconstant_3' of component 'design_1_xlconstant_3_0' [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/synth/design_1.vhd:14125]
 INFO: [Synth 8-256] done synthesizing module 'design_1' (0#1) [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/synth/design_1.vhd:10670]
 INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (0#1) [D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:48]
-INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.runs/synth_1/.Xil/Vivado-23004-POWERSLAVE/realtime/blk_mem_gen_0_stub.vhdl:6' bound to instance 'u_bram' of component 'blk_mem_gen_0' [D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.srcs/sources_1/new/top.vhd:143]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.runs/synth_1/.Xil/Vivado-23004-POWERSLAVE/realtime/blk_mem_gen_0_stub.vhdl:18]
+INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.runs/synth_1/.Xil/Vivado-21872-POWERSLAVE/realtime/blk_mem_gen_0_stub.vhdl:6' bound to instance 'u_bram' of component 'blk_mem_gen_0' [D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.srcs/sources_1/new/top.vhd:143]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.runs/synth_1/.Xil/Vivado-21872-POWERSLAVE/realtime/blk_mem_gen_0_stub.vhdl:18]
 INFO: [Synth 8-256] done synthesizing module 'top' (0#1) [D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.srcs/sources_1/new/top.vhd:30]
 WARNING: [Synth 8-6014] Unused sequential element curr_awsize_reg_reg was removed.  [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/ipshared/14fa/hdl/axi_bram_ctrl_v4_1_rfs.vhd:25239]
 WARNING: [Synth 8-6014] Unused sequential element curr_awlen_reg_1_or_2_reg was removed.  [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/ipshared/14fa/hdl/axi_bram_ctrl_v4_1_rfs.vhd:25517]
@@ -1102,7 +1101,6 @@ WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.gen_debug_r_
 WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.active_id_reg was removed.  [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/ipshared/e9d8/hdl/axi_crossbar_v2_1_vl_rfs.v:4142]
 WARNING: [Synth 8-6014] Unused sequential element gen_master_slots[0].gen_mi_write.gen_debug_w.debug_w_beat_cnt_i_reg was removed.  [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/ipshared/e9d8/hdl/axi_crossbar_v2_1_vl_rfs.v:2991]
 WARNING: [Synth 8-6014] Unused sequential element gen_master_slots[1].gen_mi_write.gen_debug_w.debug_w_beat_cnt_i_reg was removed.  [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/ipshared/e9d8/hdl/axi_crossbar_v2_1_vl_rfs.v:2991]
-WARNING: [Synth 8-6014] Unused sequential element parent_label_reg was removed.  [D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.srcs/sources_1/new/ccl_relabel_core.vhd:233]
 WARNING: [Synth 8-6014] Unused sequential element state_r1_reg was removed.  [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3596]
 WARNING: [Synth 8-6014] Unused sequential element s_arlen_r_reg was removed.  [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3597]
 WARNING: [Synth 8-6014] Unused sequential element gen_debug_trans_seq.debug_aw_trans_seq_i_reg was removed.  [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/ipshared/e9d8/hdl/axi_crossbar_v2_1_vl_rfs.v:2051]
@@ -1211,20 +1209,20 @@ WARNING: [Synth 8-7129] Port In102[0] in module xlconcat_v2_1_6_xlconcat is eith
 WARNING: [Synth 8-7129] Port In103[0] in module xlconcat_v2_1_6_xlconcat is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 2000.742 ; gain = 960.602
+Finished RTL Elaboration : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 2000.020 ; gain = 960.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 2000.742 ; gain = 960.602
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 2000.020 ; gain = 960.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 2000.742 ; gain = 960.602
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 2000.020 ; gain = 960.301
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2000.742 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2000.020 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 94 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -1286,26 +1284,26 @@ Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl
 INFO: [Project 1-1714] 27 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 2077.586 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 2136.152 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 90 instances were transformed.
   FDR => FDRE: 85 instances
   MUXCY_L => MUXCY: 4 instances
   SRL16 => SRL16E: 1 instance 
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.443 . Memory (MB): peak = 2078.809 ; gain = 0.809
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.424 . Memory (MB): peak = 2136.152 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'u_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:50 ; elapsed = 00:00:53 . Memory (MB): peak = 2099.012 ; gain = 1058.871
+Finished Constraint Validation : Time (s): cpu = 00:00:56 ; elapsed = 00:01:01 . Memory (MB): peak = 2153.836 ; gain = 1114.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:50 ; elapsed = 00:00:53 . Memory (MB): peak = 2099.012 ; gain = 1058.871
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:56 ; elapsed = 00:01:01 . Memory (MB): peak = 2153.836 ; gain = 1114.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -1398,7 +1396,7 @@ Applied set_property KEEP_HIERARCHY = SOFT for u_bd/design_1_i/axi_dma_3/U0/I_PR
 Applied set_property KEEP_HIERARCHY = SOFT for u_bd/design_1_i/axi_dma_4/U0/I_PRMRY_DATAMOVER/\GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER /\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT /I_XD_FIFO/\NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO /\xpm_fifo_instance.xpm_fifo_sync_inst . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for u_bd/design_1_i/axi_dma_5/U0/I_PRMRY_DATAMOVER/\GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER /\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT /I_XD_FIFO/\NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO /\xpm_fifo_instance.xpm_fifo_sync_inst . (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:52 ; elapsed = 00:00:54 . Memory (MB): peak = 2099.012 ; gain = 1058.871
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:57 ; elapsed = 00:01:02 . Memory (MB): peak = 2153.836 ; gain = 1114.117
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'arb_sm_cs_reg' in module 'sng_port_arb'
 INFO: [Synth 8-802] inferred FSM for state register 'GEN_WDATA_SM_NO_ECC_SNG_REG_WREADY.wr_data_sng_sm_cs_reg' in module 'wr_chnl'
@@ -1419,6 +1417,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_d
 INFO: [Synth 8-802] inferred FSM for state register 'gen_axi.write_cs_reg' in module 'axi_crossbar_v2_1_32_decerr_slave__parameterized0'
 INFO: [Synth 8-802] inferred FSM for state register 'gen_axi.write_cs_reg' in module 'axi_crossbar_v2_1_32_decerr_slave__parameterized1'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ccl_relabel_core'
+INFO: [Synth 8-802] inferred FSM for state register 'apply_state_reg' in module 'ccl_relabel_core'
 INFO: [Synth 8-802] inferred FSM for state register 'proc_state_reg' in module 'ccl_slice_core'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_protocol_converter_v2_1_31_b2s_wr_cmd_fsm'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_protocol_converter_v2_1_31_b2s_rd_cmd_fsm'
@@ -1601,24 +1600,20 @@ INFO: [Synth 8-3354] encoded FSM with state register 'gen_axi.write_cs_reg' usin
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-                    idle |                              000 |                              000
-             wait_slices |                              001 |                              001
-               run_build |                              010 |                              010
-               run_apply |                              011 |                              011
-                    done |                              100 |                              100
-                  iSTATE |                              101 |                              111
-*
+                 ap_idle |                              001 |                               00
+             ap_read_lut |                              010 |                               01
+               ap_output |                              100 |                               10
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ccl_relabel_core'
+INFO: [Synth 8-3354] encoded FSM with state register 'apply_state_reg' using encoding 'one-hot' in module 'ccl_relabel_core'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
                     idle |                               00 |                               00
-                 running |                               01 |                               01
-                flushing |                               10 |                               10
+             wait_slices |                               01 |                               01
+               run_apply |                               10 |                               10
                     done |                               11 |                               11
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'proc_state_reg' using encoding 'sequential' in module 'ccl_slice_core'
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ccl_relabel_core'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -1638,7 +1633,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'axi_protocol_converter_v2_1_31_b2s_rd_cmd_fsm'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:01 ; elapsed = 00:01:04 . Memory (MB): peak = 2099.012 ; gain = 1058.871
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:07 ; elapsed = 00:01:13 . Memory (MB): peak = 2153.836 ; gain = 1114.117
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
@@ -1657,13 +1652,12 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   32 Bit       Adders := 14    
-	   2 Input   19 Bit       Adders := 4     
+	   2 Input   32 Bit       Adders := 11    
 	   2 Input   16 Bit       Adders := 22    
 	   3 Input   14 Bit       Adders := 6     
 	   2 Input   12 Bit       Adders := 8     
-	   2 Input   10 Bit       Adders := 6     
-	   2 Input    9 Bit       Adders := 3     
+	   2 Input   10 Bit       Adders := 5     
+	   2 Input    9 Bit       Adders := 2     
 	   2 Input    8 Bit       Adders := 70    
 	   4 Input    8 Bit       Adders := 48    
 	   2 Input    7 Bit       Adders := 30    
@@ -1700,15 +1694,15 @@ Detailed RTL Component Info :
 	               37 Bit    Registers := 20    
 	               36 Bit    Registers := 20    
 	               35 Bit    Registers := 6     
-	               32 Bit    Registers := 158   
+	               32 Bit    Registers := 149   
 	               30 Bit    Registers := 8     
 	               23 Bit    Registers := 12    
-	               19 Bit    Registers := 4     
-	               16 Bit    Registers := 52    
+	               17 Bit    Registers := 4     
+	               16 Bit    Registers := 54    
 	               14 Bit    Registers := 74    
 	               12 Bit    Registers := 16    
 	               11 Bit    Registers := 1     
-	               10 Bit    Registers := 21    
+	               10 Bit    Registers := 24    
 	                9 Bit    Registers := 20    
 	                8 Bit    Registers := 199   
 	                7 Bit    Registers := 78    
@@ -1716,10 +1710,10 @@ Detailed RTL Component Info :
 	                5 Bit    Registers := 113   
 	                4 Bit    Registers := 446   
 	                3 Bit    Registers := 145   
-	                2 Bit    Registers := 282   
-	                1 Bit    Registers := 3667  
+	                2 Bit    Registers := 277   
+	                1 Bit    Registers := 3680  
 +---RAMs : 
-	               8K Bit	(512 X 16 bit)          RAMs := 5     
+	               8K Bit	(512 X 16 bit)          RAMs := 4     
 	               4K Bit	(128 X 39 bit)          RAMs := 6     
 	               4K Bit	(128 X 38 bit)          RAMs := 6     
 	              144 Bit	(16 X 9 bit)          RAMs := 6     
@@ -1734,57 +1728,53 @@ Detailed RTL Component Info :
 	   2 Input   40 Bit        Muxes := 6     
 	   2 Input   37 Bit        Muxes := 20    
 	   2 Input   36 Bit        Muxes := 20    
-	   2 Input   32 Bit        Muxes := 112   
-	   4 Input   32 Bit        Muxes := 5     
-	   6 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 104   
+	   6 Input   32 Bit        Muxes := 8     
+	   3 Input   32 Bit        Muxes := 2     
 	   8 Input   32 Bit        Muxes := 6     
 	   2 Input   23 Bit        Muxes := 18    
-	   5 Input   16 Bit        Muxes := 4     
-	   2 Input   16 Bit        Muxes := 51    
-	   4 Input   16 Bit        Muxes := 10    
+	   2 Input   17 Bit        Muxes := 4     
+	   2 Input   16 Bit        Muxes := 58    
+	   6 Input   16 Bit        Muxes := 16    
 	   3 Input   16 Bit        Muxes := 6     
 	   2 Input   14 Bit        Muxes := 32    
 	   4 Input   14 Bit        Muxes := 12    
 	   3 Input   14 Bit        Muxes := 6     
-	   2 Input   13 Bit        Muxes := 1     
 	   2 Input   12 Bit        Muxes := 7     
 	   8 Input   12 Bit        Muxes := 6     
 	   2 Input   11 Bit        Muxes := 18    
-	   2 Input   10 Bit        Muxes := 5     
-	   4 Input   10 Bit        Muxes := 4     
-	   6 Input   10 Bit        Muxes := 1     
-	   2 Input    9 Bit        Muxes := 5     
-	   6 Input    9 Bit        Muxes := 1     
-	   2 Input    8 Bit        Muxes := 199   
-	   4 Input    8 Bit        Muxes := 4     
+	   6 Input   10 Bit        Muxes := 4     
+	   2 Input    9 Bit        Muxes := 4     
+	   6 Input    8 Bit        Muxes := 4     
+	   2 Input    8 Bit        Muxes := 195   
 	   8 Input    8 Bit        Muxes := 22    
 	   3 Input    8 Bit        Muxes := 6     
 	   2 Input    7 Bit        Muxes := 66    
 	   7 Input    7 Bit        Muxes := 6     
-	   2 Input    6 Bit        Muxes := 5     
-	   4 Input    6 Bit        Muxes := 4     
+	   2 Input    6 Bit        Muxes := 9     
+	   5 Input    6 Bit        Muxes := 4     
+	   6 Input    6 Bit        Muxes := 4     
 	   2 Input    5 Bit        Muxes := 28    
 	   2 Input    4 Bit        Muxes := 225   
 	   4 Input    4 Bit        Muxes := 48    
 	   3 Input    4 Bit        Muxes := 12    
 	   9 Input    4 Bit        Muxes := 1     
-	   2 Input    3 Bit        Muxes := 163   
-	   3 Input    3 Bit        Muxes := 13    
-	   6 Input    3 Bit        Muxes := 14    
+	   6 Input    3 Bit        Muxes := 16    
+	   2 Input    3 Bit        Muxes := 167   
+	   3 Input    3 Bit        Muxes := 14    
 	   5 Input    3 Bit        Muxes := 19    
 	   8 Input    3 Bit        Muxes := 24    
-	   2 Input    2 Bit        Muxes := 892   
-	   4 Input    2 Bit        Muxes := 145   
+	   2 Input    2 Bit        Muxes := 890   
+	   4 Input    2 Bit        Muxes := 142   
 	   3 Input    2 Bit        Muxes := 21    
-	   6 Input    2 Bit        Muxes := 1     
 	   5 Input    2 Bit        Muxes := 9     
-	   2 Input    1 Bit        Muxes := 1973  
-	   4 Input    1 Bit        Muxes := 169   
+	   2 Input    1 Bit        Muxes := 1974  
+	   6 Input    1 Bit        Muxes := 114   
 	   5 Input    1 Bit        Muxes := 6     
-	   3 Input    1 Bit        Muxes := 114   
+	   3 Input    1 Bit        Muxes := 126   
 	   8 Input    1 Bit        Muxes := 18    
+	   4 Input    1 Bit        Muxes := 105   
 	   7 Input    1 Bit        Muxes := 18    
-	   6 Input    1 Bit        Muxes := 66    
 	   9 Input    1 Bit        Muxes := 19    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -1821,10 +1811,6 @@ INFO: [Synth 8-3936] Found unconnected internal register 'INCLUDE_MM2S_SOF_EOF_G
 INFO: [Synth 8-3936] Found unconnected internal register 'INCLUDE_S2MM_SOF_EOF_GENERATOR.I_S2MM_DMA_MNGR/GEN_S2MM_DMA_CONTROL.GEN_SIMPLE_DMA_MODE.I_S2MM_SMPL_SM/GEN_CMD_BTT_LESS_23.cmnd_data_reg' and it is trimmed from '153' to '75' bits. [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/ipshared/8830/hdl/axi_dma_v7_1_vh_rfs.vhd:12121]
 INFO: [Synth 8-3936] Found unconnected internal register 'INCLUDE_MM2S_SOF_EOF_GENERATOR.I_MM2S_DMA_MNGR/GEN_MM2S_DMA_CONTROL.GEN_SIMPLE_DMA_MODE.I_MM2S_SMPL_SM/GEN_CMD_BTT_LESS_23.cmnd_data_reg' and it is trimmed from '153' to '75' bits. [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/ipshared/8830/hdl/axi_dma_v7_1_vh_rfs.vhd:12121]
 INFO: [Synth 8-3936] Found unconnected internal register 'INCLUDE_S2MM_SOF_EOF_GENERATOR.I_S2MM_DMA_MNGR/GEN_S2MM_DMA_CONTROL.GEN_SIMPLE_DMA_MODE.I_S2MM_SMPL_SM/GEN_CMD_BTT_LESS_23.cmnd_data_reg' and it is trimmed from '153' to '75' bits. [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/ipshared/8830/hdl/axi_dma_v7_1_vh_rfs.vhd:12121]
-WARNING: [Synth 8-6849] Infeasible attribute ram_style = "block" set for RAM "\u_bd/design_1_i /i_0/ccl_slice_core_1/U0/line_prev_reg",trying to implement using LUTRAM
-WARNING: [Synth 8-6849] Infeasible attribute ram_style = "block" set for RAM "\u_bd/design_1_i /i_0/ccl_slice_core_1/U0/line_prev_reg",trying to implement using LUTRAM
-WARNING: [Synth 8-6849] Infeasible attribute ram_style = "block" set for RAM "\u_bd/design_1_i /i_0/ccl_slice_core_3/U0/line_prev_reg",trying to implement using LUTRAM
-WARNING: [Synth 8-6849] Infeasible attribute ram_style = "block" set for RAM "\u_bd/design_1_i /i_0/ccl_slice_core_3/U0/line_prev_reg",trying to implement using LUTRAM
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
@@ -1838,8 +1824,6 @@ INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
-WARNING: [Synth 8-6849] Infeasible attribute ram_style = "block" set for RAM "\u_bd/design_1_i /i_0/ccl_slice_core_2/U0/line_prev_reg",trying to implement using LUTRAM
-WARNING: [Synth 8-6849] Infeasible attribute ram_style = "block" set for RAM "\u_bd/design_1_i /i_0/ccl_slice_core_2/U0/line_prev_reg",trying to implement using LUTRAM
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
@@ -1853,8 +1837,6 @@ INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
-WARNING: [Synth 8-6849] Infeasible attribute ram_style = "block" set for RAM "\u_bd/design_1_i /i_2/ccl_slice_core_0/U0/line_prev_reg",trying to implement using LUTRAM
-WARNING: [Synth 8-6849] Infeasible attribute ram_style = "block" set for RAM "\u_bd/design_1_i /i_2/ccl_slice_core_0/U0/line_prev_reg",trying to implement using LUTRAM
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
@@ -1980,13 +1962,8 @@ INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/REG_HRD_RST_OUT/GENERATE_L
 INFO: [Synth 8-3332] Sequential element (I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC/FSM_onehot_sig_csm_state_reg[3]) is unused and will be removed from module axi_dma__xdcDup__5.
 INFO: [Synth 8-3332] Sequential element (U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/FSM_onehot_GEN_WDATA_SM_NO_ECC_SNG_REG_WREADY.wr_data_sng_sm_cs_reg[1]) is unused and will be removed from module design_1_axi_bram_ctrl_0_2.
 INFO: [Synth 8-3332] Sequential element (U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_RD_CHNL/FSM_sequential_GEN_NO_RD_CMD_OPT.rlast_sm_cs_reg[0]) is unused and will be removed from module design_1_axi_bram_ctrl_0_2.
-INFO: [Synth 8-3332] Sequential element (U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/GEN_ARB.I_SNG_PORT/FSM_sequential_arb_sm_cs_reg[1]) is unused and will be removed from module design_1_axi_bram_ctrl_0_2.
-INFO: [Synth 8-3332] Sequential element (U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/GEN_ARB.I_SNG_PORT/FSM_sequential_arb_sm_cs_reg[0]) is unused and will be removed from module design_1_axi_bram_ctrl_0_2.
-INFO: [Synth 8-3332] Sequential element (U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/FSM_onehot_GEN_WDATA_SM_NO_ECC_SNG_REG_WREADY.wr_data_sng_sm_cs_reg[2]) is unused and will be removed from module design_1_axi_bram_ctrl_0_2.
-INFO: [Synth 8-3332] Sequential element (U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/FSM_onehot_GEN_WDATA_SM_NO_ECC_SNG_REG_WREADY.wr_data_sng_sm_cs_reg[0]) is unused and will be removed from module design_1_axi_bram_ctrl_0_2.
-INFO: [Synth 8-3332] Sequential element (U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_RD_CHNL/FSM_sequential_GEN_NO_RD_CMD_OPT.rlast_sm_cs_reg[2]) is unused and will be removed from module design_1_axi_bram_ctrl_0_2.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:03:13 ; elapsed = 00:03:18 . Memory (MB): peak = 2387.152 ; gain = 1347.012
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:03:19 ; elapsed = 00:03:32 . Memory (MB): peak = 2357.520 ; gain = 1317.801
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
@@ -2022,7 +1999,6 @@ Distributed RAM: Preliminary Mapping Report (see note below)
 |\u_bd/design_1_i /i_0/ccl_slice_core_1                                                                                                                                                                                                                           | U0/line_prev_reg                                                              | Implied        | 512 x 16             | RAM256X1S x 32  | 
 |\u_bd/design_1_i /i_0/ccl_slice_core_3                                                                                                                                                                                                                           | U0/line_prev_reg                                                              | Implied        | 512 x 16             | RAM256X1S x 32  | 
 |\u_bd/design_1_i /i_0/axi_dma_2/U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg                                              | Implied        | 16 x 9               | RAM32M x 2      | 
-|\u_bd/design_1_i /i_0/ccl_relabel_core_0                                                                                                                                                                                                                         | U0/prev_row_reg                                                               | Implied        | 512 x 16             | RAM256X1S x 32  | 
 |\u_bd/design_1_i /i_0/axi_interconnect_dma2_3/\m00_couplers/auto_pc /\inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst                                                                                        | inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg | User Attribute | 32 x 6               | RAM32M x 1      | 
 |\u_bd/design_1_i /i_0/axi_interconnect_dma2_3/\m00_couplers/auto_pc /\inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst                                                                                   | inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg | User Attribute | 32 x 5               | RAM32M x 1      | 
 |\u_bd/design_1_i /i_0/ccl_slice_core_2                                                                                                                                                                                                                           | U0/line_prev_reg                                                              | Implied        | 512 x 16             | RAM256X1S x 32  | 
@@ -2046,13 +2022,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:21 ; elapsed = 00:03:26 . Memory (MB): peak = 2387.152 ; gain = 1347.012
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:27 ; elapsed = 00:03:40 . Memory (MB): peak = 2357.520 ; gain = 1317.801
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:03:30 ; elapsed = 00:03:35 . Memory (MB): peak = 2387.152 ; gain = 1347.012
+Finished Timing Optimization : Time (s): cpu = 00:03:36 ; elapsed = 00:03:50 . Memory (MB): peak = 2357.520 ; gain = 1317.801
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -2084,7 +2060,6 @@ Distributed RAM: Final Mapping Report
 |\u_bd/design_1_i /i_0/ccl_slice_core_1                                                                                                                                                                                                                           | U0/line_prev_reg                                                              | Implied        | 512 x 16             | RAM256X1S x 32  | 
 |\u_bd/design_1_i /i_0/ccl_slice_core_3                                                                                                                                                                                                                           | U0/line_prev_reg                                                              | Implied        | 512 x 16             | RAM256X1S x 32  | 
 |\u_bd/design_1_i /i_0/axi_dma_2/U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg                                              | Implied        | 16 x 9               | RAM32M x 2      | 
-|\u_bd/design_1_i /i_0/ccl_relabel_core_0                                                                                                                                                                                                                         | U0/prev_row_reg                                                               | Implied        | 512 x 16             | RAM256X1S x 32  | 
 |\u_bd/design_1_i /i_0/axi_interconnect_dma2_3/\m00_couplers/auto_pc /\inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst                                                                                        | inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg | User Attribute | 32 x 6               | RAM32M x 1      | 
 |\u_bd/design_1_i /i_0/axi_interconnect_dma2_3/\m00_couplers/auto_pc /\inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst                                                                                   | inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg | User Attribute | 32 x 5               | RAM32M x 1      | 
 |\u_bd/design_1_i /i_0/ccl_slice_core_2                                                                                                                                                                                                                           | U0/line_prev_reg                                                              | Implied        | 512 x 16             | RAM256X1S x 32  | 
@@ -2107,7 +2082,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:03:43 ; elapsed = 00:03:49 . Memory (MB): peak = 2387.152 ; gain = 1347.012
+Finished Technology Mapping : Time (s): cpu = 00:03:51 ; elapsed = 00:04:06 . Memory (MB): peak = 2357.520 ; gain = 1317.801
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -2238,37 +2213,37 @@ WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/
 WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1725]
 INFO: [Common 17-14] Message 'Synth 8-5396' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:03:49 ; elapsed = 00:03:55 . Memory (MB): peak = 2387.152 ; gain = 1347.012
+Finished IO Insertion : Time (s): cpu = 00:03:57 ; elapsed = 00:04:12 . Memory (MB): peak = 2357.520 ; gain = 1317.801
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:03:49 ; elapsed = 00:03:55 . Memory (MB): peak = 2387.152 ; gain = 1347.012
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:57 ; elapsed = 00:04:12 . Memory (MB): peak = 2357.520 ; gain = 1317.801
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:52 ; elapsed = 00:03:59 . Memory (MB): peak = 2387.152 ; gain = 1347.012
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:01 ; elapsed = 00:04:17 . Memory (MB): peak = 2357.520 ; gain = 1317.801
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:03:53 ; elapsed = 00:03:59 . Memory (MB): peak = 2387.152 ; gain = 1347.012
+Finished Renaming Generated Ports : Time (s): cpu = 00:04:01 ; elapsed = 00:04:17 . Memory (MB): peak = 2357.520 ; gain = 1317.801
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:03:53 ; elapsed = 00:03:59 . Memory (MB): peak = 2387.152 ; gain = 1347.012
+Finished Handling Custom Attributes : Time (s): cpu = 00:04:02 ; elapsed = 00:04:18 . Memory (MB): peak = 2357.520 ; gain = 1317.801
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:03:53 ; elapsed = 00:04:00 . Memory (MB): peak = 2387.152 ; gain = 1347.012
+Finished Renaming Generated Nets : Time (s): cpu = 00:04:02 ; elapsed = 00:04:18 . Memory (MB): peak = 2357.520 ; gain = 1317.801
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -2314,53 +2289,54 @@ Report Cell Usage:
 |1     |blk_mem_gen_0_bbox |     1|
 |2     |BIBUF              |   130|
 |3     |BUFG               |     1|
-|4     |CARRY4             |   418|
-|5     |LUT1               |   880|
-|6     |LUT2               |  1860|
-|7     |LUT3               |  3619|
-|8     |LUT4               |  2525|
-|9     |LUT5               |  2454|
-|10    |LUT6               |  3899|
-|11    |PS7                |     1|
-|12    |RAM256X1S          |   160|
-|13    |RAM32M             |    18|
-|14    |RAMB36E1           |    12|
-|15    |SRL16              |     1|
-|16    |SRL16E             |   918|
-|17    |SRLC32E            |   229|
-|18    |FDCE               |   207|
-|19    |FDPE               |    99|
-|20    |FDR                |    52|
-|21    |FDRE               | 15150|
-|22    |FDSE               |   583|
+|4     |CARRY4             |   348|
+|5     |LUT1               |   631|
+|6     |LUT2               |  1906|
+|7     |LUT3               |  3400|
+|8     |LUT4               |  2659|
+|9     |LUT5               |  2711|
+|10    |LUT6               |  3940|
+|11    |MUXF7              |     4|
+|12    |PS7                |     1|
+|13    |RAM256X1S          |   128|
+|14    |RAM32M             |    18|
+|15    |RAMB36E1           |    12|
+|16    |SRL16              |     1|
+|17    |SRL16E             |   918|
+|18    |SRLC32E            |   229|
+|19    |FDCE               |   207|
+|20    |FDPE               |    99|
+|21    |FDR                |    52|
+|22    |FDRE               | 14970|
+|23    |FDSE               |   569|
 +------+-------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:03:54 ; elapsed = 00:04:00 . Memory (MB): peak = 2387.152 ; gain = 1347.012
+Finished Writing Synthesis Report : Time (s): cpu = 00:04:02 ; elapsed = 00:04:18 . Memory (MB): peak = 2357.520 ; gain = 1317.801
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 1741 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:03:10 ; elapsed = 00:03:42 . Memory (MB): peak = 2387.152 ; gain = 1248.742
-Synthesis Optimization Complete : Time (s): cpu = 00:03:54 ; elapsed = 00:04:00 . Memory (MB): peak = 2387.152 ; gain = 1347.012
+Synthesis finished with 0 errors, 0 critical warnings and 1733 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:03:13 ; elapsed = 00:03:56 . Memory (MB): peak = 2357.520 ; gain = 1163.984
+Synthesis Optimization Complete : Time (s): cpu = 00:04:03 ; elapsed = 00:04:18 . Memory (MB): peak = 2357.520 ; gain = 1317.801
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.787 . Memory (MB): peak = 2387.152 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 661 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.772 . Memory (MB): peak = 2357.520 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 563 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 2387.152 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 2357.520 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 231 instances were transformed.
+  A total of 199 instances were transformed.
   FDR => FDRE: 52 instances
-  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 160 instances
+  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 128 instances
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 18 instances
   SRL16 => SRL16E: 1 instance 
 
-Synth Design complete | Checksum: 84366b88
+Synth Design complete | Checksum: 644f2bb
 INFO: [Common 17-83] Releasing license: Synthesis
-892 Infos, 373 Warnings, 0 Critical Warnings and 0 Errors encountered.
+887 Infos, 364 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:04:09 ; elapsed = 00:04:16 . Memory (MB): peak = 2387.152 ; gain = 1777.363
-Write ShapeDB Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.073 . Memory (MB): peak = 2387.152 ; gain = 0.000
+synth_design: Time (s): cpu = 00:04:18 ; elapsed = 00:04:36 . Memory (MB): peak = 2357.520 ; gain = 1748.180
+Write ShapeDB Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.084 . Memory (MB): peak = 2357.520 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.runs/synth_1/top.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2387.152 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 2357.520 ; gain = 0.000
 INFO: [Vivado 12-24828] Executing command : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Nov 23 22:43:17 2025...
+INFO: [Common 17-206] Exiting Vivado at Sun Nov 23 23:38:05 2025...

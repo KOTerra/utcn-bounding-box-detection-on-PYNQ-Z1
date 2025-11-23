@@ -163,7 +163,7 @@ ARCHITECTURE design_1_ccl_slice_core_3_0_arch OF design_1_ccl_slice_core_3_0 IS
   END COMPONENT ccl_slice_core;
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
-  ATTRIBUTE X_INTERFACE_PARAMETER OF aclkrst_clk: SIGNAL IS "XIL_INTERFACENAME aclkrst_clk, FREQ_HZ 1e+08, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF aclkrst_clk: SIGNAL IS "XIL_INTERFACENAME aclkrst_clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF aclkrst_clk: SIGNAL IS "xilinx.com:signal:clock:1.0 aclkrst_clk CLK";
   ATTRIBUTE X_INTERFACE_INFO OF m_axi_lut_araddr: SIGNAL IS "xilinx.com:interface:aximm:1.0 m_axi_lut ARADDR";
   ATTRIBUTE X_INTERFACE_INFO OF m_axi_lut_arready: SIGNAL IS "xilinx.com:interface:aximm:1.0 m_axi_lut ARREADY";
