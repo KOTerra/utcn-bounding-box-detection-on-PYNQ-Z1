@@ -74,8 +74,9 @@ architecture rtl of ccl_slice_core is
     constant AXIL_ALWAYS_READY : boolean := true;
     -- Base address of the Shared BRAM in your Block Design
     constant C_LUT_BASE_ADDR   : unsigned(31 downto 0) := x"C0000000"; 
-    -- Max labels per slice to fit in 8KB BRAM (2048 words total / 4 slices = 512)
-    constant LABELS_PER_SLICE  : integer := 512; 
+    
+    -- 256KB Total / 4 bytes per word / 4 Slices = 16384 words per slice
+    constant LABELS_PER_SLICE  : integer := 16384; 
 
     -- Registers
     signal reg_control   : std_logic_vector(31 downto 0) := (others => '0');
@@ -113,7 +114,6 @@ architecture rtl of ccl_slice_core is
     -- Line Buffer (Distributed RAM for single cycle access)
     type line_buf_t is array (0 to G_MAX_WIDTH_PIX-1) of std_logic_vector(15 downto 0);
     signal line_prev : line_buf_t;
-    -- NOTE: removed "ram_style = block" to ensure single-cycle read latency
 
     -- AXI Master Write State signals
     signal equiv_hi : unsigned(15 downto 0);
@@ -121,11 +121,10 @@ architecture rtl of ccl_slice_core is
 
 begin
 
-    -- AXI-Lite Slave assignments (Unchanged logic, simplified for brevity)
     s_axi_awready <= '1'; s_axi_wready <= '1'; s_axi_bvalid <= '1'; s_axi_bresp <= "00";
     s_axi_arready <= '1'; s_axi_rvalid <= '1'; s_axi_rresp <= "00";
 
-    -- Register Write Process
+    -- Register Write 
     process(aclkrst_clk)
     begin
         if rising_edge(aclkrst_clk) then
@@ -136,7 +135,7 @@ begin
                 if (s_axi_awvalid='1' and s_axi_wvalid='1') then
                     if s_axi_awaddr(5 downto 2) = "0000" then
                         reg_control <= s_axi_wdata;
-                        if s_axi_wdata(0)='1' then reg_status(0) <= '0'; end if; -- Clear done
+                        if s_axi_wdata(0)='1' then reg_status(0) <= '0'; end if; -- Clear 
                     end if;
                 end if;
                 if proc_state = DONE then reg_status(0) <= '1'; end if;
@@ -144,7 +143,7 @@ begin
         end if;
     end process;
 
-    -- Register Read Process
+    -- Register Read 
     process(s_axi_araddr, reg_control, reg_status, reg_width, reg_height, reg_slice_id)
     begin
         case s_axi_araddr(5 downto 2) is
@@ -157,7 +156,6 @@ begin
         end case;
     end process;
 
-    -- Configuration Updates
     process(aclkrst_clk)
     begin
         if rising_edge(aclkrst_clk) then
@@ -170,31 +168,27 @@ begin
         end if;
     end process;
 
-    -- FIX: Compact Global Offset to fit in 8KB BRAM
-    -- Slice 0: 0, Slice 1: 512, Slice 2: 1024, Slice 3: 1536
     global_label_offset <= resize(slice_id_u * to_unsigned(LABELS_PER_SLICE, 16), 32);
 
-    -- AXIS Flow Control
+    -- AXIS control
     s_axis_tready <= s_axis_tready_int;
     in_fire  <= s_axis_tvalid and s_axis_tready_int;
     out_fire <= out_valid_reg and m_axis_tready;
 
-    -- Allow input only when RUNNING and we need bits and output isn't stalling us
     s_axis_tready_int <= '1' when (proc_state = RUNNING) and (unpack_bits_left = 0) and (out_valid_reg = '0') else '0';
 
     m_axis_tvalid <= out_valid_reg;
     m_axis_tdata  <= out_data_reg;
     m_axis_tlast  <= out_last_reg;
 
-    -- Unused AXI Master Read Channels
+    -- Unused 
     m_axi_lut_araddr <= (others => '0');
     m_axi_lut_arvalid <= '0';
     m_axi_lut_rready <= '0';
     
-    -- IRQ
     irq_done <= reg_status(0);
 
-    -- Main FSM
+    --FSM
     process(aclkrst_clk)
         variable cur_bit_idx : integer := 0;
         variable pixel_bit   : std_logic := '0';
@@ -214,7 +208,6 @@ begin
                 m_axi_lut_wvalid <= '0';
                 m_axi_lut_bready <= '0';
             else
-                -- Default clear valid flags for output logic
                 if out_fire = '1' then out_valid_reg <= '0'; end if;
 
                 case proc_state is
@@ -227,18 +220,15 @@ begin
                         end if;
 
                     when RUNNING =>
-                        -- Refill shift register
                         if (unpack_bits_left = 0) and (in_fire = '1') then
                             unpack_shift_reg <= s_axis_tdata;
                             unpack_bits_left <= G_AXIS_IN_WIDTH;
                         end if;
 
-                        -- Process Pixel
                         if (unpack_bits_left > 0) and (out_valid_reg = '0') then
                             cur_bit_idx := unpack_bits_left - 1;
                             pixel_bit   := unpack_shift_reg(cur_bit_idx);
                             
-                            -- Determine Neighbors
                             if pixel_x = 0 then lbl_left := (others => '0'); else lbl_left := last_left_lbl; end if;
                             if pixel_y = 0 then lbl_up := (others => '0'); else lbl_up := unsigned(line_prev(pixel_x)); end if;
 
@@ -246,10 +236,9 @@ begin
 
                             if pixel_bit = '1' then
                                 if (lbl_left = 0) and (lbl_up = 0) then
-                                    -- New Label
                                     local_label_counter <= local_label_counter + 1;
                                     lbl_new := local_label_counter + 1;
-                                    unpack_bits_left <= unpack_bits_left - 1; -- Consume bit
+                                    unpack_bits_left <= unpack_bits_left - 1;
                                 elsif (lbl_left /= 0) and (lbl_up = 0) then
                                     lbl_new := lbl_left;
                                     unpack_bits_left <= unpack_bits_left - 1;
@@ -257,13 +246,10 @@ begin
                                     lbl_new := lbl_up;
                                     unpack_bits_left <= unpack_bits_left - 1;
                                 else
-                                    -- Conflict: Left != 0 AND Up != 0
                                     if lbl_left = lbl_up then
                                         lbl_new := lbl_left;
                                         unpack_bits_left <= unpack_bits_left - 1;
                                     else
-                                        -- REAL CONFLICT: Must record equivalence in BRAM
-                                        -- Determine Min/Max
                                         if lbl_left < lbl_up then
                                             lbl_new := lbl_left;
                                             equiv_lo <= lbl_left; equiv_hi <= lbl_up;
@@ -272,15 +258,10 @@ begin
                                             equiv_lo <= lbl_up; equiv_hi <= lbl_left;
                                         end if;
                                         
-                                        -- Don't consume bit yet, pause to write BRAM
                                         proc_state <= WRITE_EQUIV; 
                                         
-                                        -- Prepare AXI Write
-                                        -- Addr = Base + (GlobalOffset + LocalHi) * 4
                                         addr_calc := C_LUT_BASE_ADDR + (resize((global_label_offset + equiv_hi), 32) sll 2);
                                         m_axi_lut_awaddr <= std_logic_vector(addr_calc);
-                                        
-                                        -- Data = GlobalOffset + LocalLo
                                         m_axi_lut_wdata <= std_logic_vector(global_label_offset + resize(equiv_lo, 32));
                                         
                                         m_axi_lut_wstrb <= "1111";
@@ -290,16 +271,13 @@ begin
                                     end if;
                                 end if;
                             else
-                                -- Background pixel
                                 unpack_bits_left <= unpack_bits_left - 1;
                             end if;
 
-                            -- If we aren't pausing for WRITE_EQUIV, update state
                             if proc_state = RUNNING then 
                                 line_prev(pixel_x) <= std_logic_vector(lbl_new);
                                 last_left_lbl <= lbl_new;
                                 
-                                -- Output Global Label
                                 if lbl_new /= 0 then
                                     gv_lbl := global_label_offset + resize(lbl_new, 32);
                                 else
@@ -308,7 +286,6 @@ begin
                                 out_data_reg <= std_logic_vector(gv_lbl);
                                 out_valid_reg <= '1';
 
-                                -- Coord updates
                                 if pixel_x = width_u - 1 then
                                     pixel_x <= 0;
                                     last_left_lbl <= (others => '0');
@@ -326,24 +303,19 @@ begin
                         end if;
 
                     when WRITE_EQUIV =>
-                        -- Manage AXI Handshake
                         if m_axi_lut_awready = '1' then m_axi_lut_awvalid <= '0'; end if;
                         if m_axi_lut_wready = '1' then m_axi_lut_wvalid <= '0'; end if;
 
                         if m_axi_lut_bvalid = '1' then
-                            -- Write Done, consume the bit and resume
                             m_axi_lut_bready <= '0';
                             unpack_bits_left <= unpack_bits_left - 1;
                             
-                            -- Save result to line buffer
-                            line_prev(pixel_x) <= std_logic_vector(equiv_lo); -- equiv_lo was the winner (lbl_new)
+                            line_prev(pixel_x) <= std_logic_vector(equiv_lo);
                             last_left_lbl <= equiv_lo;
                             
-                            -- Output
                             out_data_reg <= std_logic_vector(global_label_offset + resize(equiv_lo, 32));
                             out_valid_reg <= '1';
                             
-                            -- Coord updates (same as RUNNING)
                             if pixel_x = width_u - 1 then
                                 pixel_x <= 0;
                                 last_left_lbl <= (others => '0');

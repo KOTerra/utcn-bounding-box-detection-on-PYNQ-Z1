@@ -92,7 +92,7 @@ architecture rtl of ccl_relabel_core is
     signal irq_done_reg    : std_logic := '0';
 
 begin
-    -- AXI Lite Assignments
+    -- AXI Lite 
     s_axi_awready <= '1'; s_axi_wready <= '1'; s_axi_bvalid <= '1'; s_axi_bresp <= "00";
     s_axi_arready <= '1'; s_axi_rvalid <= '1'; s_axi_rresp <= "00";
 
@@ -107,7 +107,6 @@ begin
     end process;
     s_axi_rdata <= reg_control when s_axi_araddr(5 downto 2)="0000" else (others=>'0');
 
-    -- Connections
     s_axis_tready <= s_axis_tready_int;
     m_axis_tdata  <= m_axis_tdata_int;
     m_axis_tvalid <= m_axis_tvalid_int;
@@ -115,7 +114,7 @@ begin
     in_fire  <= s_axis_tvalid and s_axis_tready_int;
     out_fire <= m_axis_tvalid_int and m_axis_tready;
 
-    -- Unused Write Channels (Slices do the writing now)
+    -- Unused
     m_axi_lut_awaddr <= (others=>'0'); m_axi_lut_awvalid<='0'; m_axi_lut_wdata<=(others=>'0');
     m_axi_lut_wstrb<=(others=>'0'); m_axi_lut_wvalid<='0'; m_axi_lut_bready<='1';
 
@@ -124,7 +123,7 @@ begin
     m_axi_lut_rready <= lut_rready_reg;
     irq_done <= irq_done_reg;
 
-    -- Main Process
+    -- FSM
     process(aclkrst_clk)
         variable addr_u : unsigned(31 downto 0);
     begin
@@ -136,7 +135,6 @@ begin
                 lut_arvalid_reg <= '0';
                 irq_done_reg <= '0';
             else
-                -- Clear ARVALID
                 if m_axi_lut_arready = '1' then lut_arvalid_reg <= '0'; end if;
 
                 case state is
@@ -146,7 +144,7 @@ begin
                         if reg_control(0) = '1' then state <= WAIT_SLICES; end if;
 
                     when WAIT_SLICES =>
-                        -- The Synchronization: Wait for all 4 slices to finish
+                        --  Wait for all 4 slices to finish
                         if slices_done = "1111" then
                             state <= RUN_APPLY;
                         end if;
@@ -163,7 +161,7 @@ begin
                                     if unsigned(s_axis_tdata) = 0 then
                                         apply_state <= AP_OUTPUT;
                                     else
-                                        -- Read LUT to find parent
+                                        --find parent in LUT
                                         addr_u := C_LUT_BASE_ADDR + (unsigned(s_axis_tdata) sll 2);
                                         lut_araddr_reg <= std_logic_vector(addr_u);
                                         lut_arvalid_reg <= '1';
@@ -176,13 +174,12 @@ begin
                                 s_axis_tready_int <= '0';
                                 if m_axi_lut_rvalid = '1' then
                                     if unsigned(m_axi_lut_rdata) = 0 or unsigned(m_axi_lut_rdata) = current_label then
-                                        -- Found root (or empty entry means root)
                                         lut_rready_reg <= '0';
                                         apply_state <= AP_OUTPUT;
                                     else
-                                        -- Chase pointer: data becomes new address
+                                        -- data <- new address
                                         current_label <= unsigned(m_axi_lut_rdata);
-                                        root_label <= unsigned(m_axi_lut_rdata); -- Update root guess
+                                        root_label <= unsigned(m_axi_lut_rdata); -- update root 
                                         addr_u := C_LUT_BASE_ADDR + (unsigned(m_axi_lut_rdata) sll 2);
                                         lut_araddr_reg <= std_logic_vector(addr_u);
                                         lut_arvalid_reg <= '1';

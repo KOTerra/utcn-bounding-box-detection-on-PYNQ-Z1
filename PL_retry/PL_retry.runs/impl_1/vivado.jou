@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Tue Nov 25 19:56:20 2025
-# Process ID: 10880
+# Start of session at: Wed Nov 26 12:41:49 2025
+# Process ID: 3944
 # Current directory: D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.runs/impl_1
 # Command line: vivado.exe -log top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
 # Log file: D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.runs/impl_1/top.vdi
@@ -19,6 +19,6 @@
 # Host memory       :34305 MB
 # Swap memory       :2147 MB
 # Total Virtual     :36452 MB
-# Available Virtual :21992 MB
+# Available Virtual :23645 MB
 #-----------------------------------------------------------
 source top.tcl -notrace
