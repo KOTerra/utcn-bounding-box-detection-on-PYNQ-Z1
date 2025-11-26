@@ -605,7 +605,7 @@
             "V26": {
                 "VT": "AC",
                 "BA": "0xC0000000",
-                "HA": "0xC0001FFF",
+                "HA": "0xC003FFFF",
                 "BP": "C_S_AXI_BASEADDR",
                 "HP": "C_S_AXI_HIGHADDR",
                 "MA": "m_axi_lut",
@@ -623,7 +623,7 @@
             "V27": {
                 "VT": "AC",
                 "BA": "0xC0000000",
-                "HA": "0xC0001FFF",
+                "HA": "0xC003FFFF",
                 "BP": "C_S_AXI_BASEADDR",
                 "HP": "C_S_AXI_HIGHADDR",
                 "MA": "m_axi_lut",
@@ -641,7 +641,7 @@
             "V28": {
                 "VT": "AC",
                 "BA": "0xC0000000",
-                "HA": "0xC0001FFF",
+                "HA": "0xC003FFFF",
                 "BP": "C_S_AXI_BASEADDR",
                 "HP": "C_S_AXI_HIGHADDR",
                 "MA": "m_axi_lut",
@@ -659,7 +659,7 @@
             "V29": {
                 "VT": "AC",
                 "BA": "0xC0000000",
-                "HA": "0xC0001FFF",
+                "HA": "0xC003FFFF",
                 "BP": "C_S_AXI_BASEADDR",
                 "HP": "C_S_AXI_HIGHADDR",
                 "MA": "m_axi_lut",
@@ -677,7 +677,7 @@
             "V30": {
                 "VT": "AC",
                 "BA": "0xC0000000",
-                "HA": "0xC0001FFF",
+                "HA": "0xC003FFFF",
                 "BP": "C_S_AXI_BASEADDR",
                 "HP": "C_S_AXI_HIGHADDR",
                 "MA": "m_axi_lut",

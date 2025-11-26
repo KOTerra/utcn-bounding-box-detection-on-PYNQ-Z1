@@ -56,8 +56,6 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "blk_mem_gen_0_synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 3
-set_param bd.open.in_stealth_mode 1
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -77,7 +75,7 @@ set_property ip_output_repo d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-b
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+read_ip -quiet D:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
 set_property used_in_implementation false [get_files -all d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc]
 
 OPTRACE "Adding files" END { }

@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "design_1_xbar_8",
-    "cell_name": "axi_interconnect_1/xbar",
+    "cell_name": "axi_interconnect_dma4_5/xbar",
     "component_reference": "xilinx.com:ip:axi_crossbar:2.1",
     "ip_revision": "32",
     "gen_directory": "../../../../../../PL_retry.gen/sources_1/bd/design_1/ip/design_1_xbar_8",
@@ -1354,7 +1354,7 @@
           "parameters": {
             "POLARITY": [ { "value": "ACTIVE_LOW", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
             "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ],
-            "TYPE": [ { "value": "INTERCONNECT", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ]
+            "TYPE": [ { "value": "INTERCONNECT", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ]
           },
           "port_maps": {
             "RST": [ { "physical_name": "aresetn" } ]

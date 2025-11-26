@@ -2,7 +2,7 @@
 --Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
---Date        : Sun Nov 23 23:32:21 2025
+--Date        : Tue Nov 25 11:31:50 2025
 --Host        : POWERSLAVE running 64-bit major release  (build 9200)
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
@@ -14,7 +14,7 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity design_1_wrapper is
   port (
-    BRAM_PORTA_0_addr : out STD_LOGIC_VECTOR ( 12 downto 0 );
+    BRAM_PORTA_0_addr : out STD_LOGIC_VECTOR ( 17 downto 0 );
     BRAM_PORTA_0_clk : out STD_LOGIC;
     BRAM_PORTA_0_din : out STD_LOGIC_VECTOR ( 31 downto 0 );
     BRAM_PORTA_0_dout : in STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -69,7 +69,7 @@ architecture STRUCTURE of design_1_wrapper is
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
-    BRAM_PORTA_0_addr : out STD_LOGIC_VECTOR ( 12 downto 0 );
+    BRAM_PORTA_0_addr : out STD_LOGIC_VECTOR ( 17 downto 0 );
     BRAM_PORTA_0_clk : out STD_LOGIC;
     BRAM_PORTA_0_din : out STD_LOGIC_VECTOR ( 31 downto 0 );
     BRAM_PORTA_0_dout : in STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -81,7 +81,7 @@ architecture STRUCTURE of design_1_wrapper is
 begin
 design_1_i: component design_1
      port map (
-      BRAM_PORTA_0_addr(12 downto 0) => BRAM_PORTA_0_addr(12 downto 0),
+      BRAM_PORTA_0_addr(17 downto 0) => BRAM_PORTA_0_addr(17 downto 0),
       BRAM_PORTA_0_clk => BRAM_PORTA_0_clk,
       BRAM_PORTA_0_din(31 downto 0) => BRAM_PORTA_0_din(31 downto 0),
       BRAM_PORTA_0_dout(31 downto 0) => BRAM_PORTA_0_dout(31 downto 0),

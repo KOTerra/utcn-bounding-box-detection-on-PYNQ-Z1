@@ -34,7 +34,9 @@ architecture RTL of top is
   ---------------------------------------------------------------------------
   component design_1_wrapper is
     port (
-      BRAM_PORTA_0_addr : out STD_LOGIC_VECTOR (12 downto 0);
+      -- FIX 1: Width is 18 bits (256KB Byte Addressing)
+      BRAM_PORTA_0_addr : out STD_LOGIC_VECTOR (17 downto 0);
+      
       BRAM_PORTA_0_clk  : out STD_LOGIC;
       BRAM_PORTA_0_din  : out STD_LOGIC_VECTOR (31 downto 0);
       BRAM_PORTA_0_dout : in  STD_LOGIC_VECTOR (31 downto 0);
@@ -73,7 +75,12 @@ architecture RTL of top is
       clka  : in  STD_LOGIC;
       ena   : in  STD_LOGIC;
       wea   : in  STD_LOGIC_VECTOR(0 downto 0);
-      addra : in  STD_LOGIC_VECTOR(12 downto 0);
+      
+      -- FIX 2: Width is 16 bits (64K Words)
+      -- Even though the wrapper gives us 18 bits, the IP only wants the 
+      -- 16-bit word index.
+      addra : in  STD_LOGIC_VECTOR(15 downto 0);
+      
       dina  : in  STD_LOGIC_VECTOR(31 downto 0);
       douta : out STD_LOGIC_VECTOR(31 downto 0)
     );
@@ -82,12 +89,14 @@ architecture RTL of top is
   ---------------------------------------------------------------------------
   -- Internal signals for BRAM connection between BD and blk_mem_gen_0
   ---------------------------------------------------------------------------
-  signal bram_addr  : STD_LOGIC_VECTOR(12 downto 0);
+  -- FIX 3: Must match the wrapper output (18 bits)
+  signal bram_addr  : STD_LOGIC_VECTOR(17 downto 0);
+  
   signal bram_clk   : STD_LOGIC;
   signal bram_din   : STD_LOGIC_VECTOR(31 downto 0);
   signal bram_dout  : STD_LOGIC_VECTOR(31 downto 0);
   signal bram_en    : STD_LOGIC;
-  signal bram_rst   : STD_LOGIC;  -- currently unused, BD drives it
+  signal bram_rst   : STD_LOGIC; 
   signal bram_we    : STD_LOGIC_VECTOR(3 downto 0);
 
   -- Single-bit WE for blk_mem_gen_0
@@ -106,12 +115,12 @@ begin
   ---------------------------------------------------------------------------
   u_bd : design_1_wrapper
     port map (
-      BRAM_PORTA_0_addr => bram_addr,
+      BRAM_PORTA_0_addr => bram_addr, -- Connects to 18-bit signal
       BRAM_PORTA_0_clk  => bram_clk,
       BRAM_PORTA_0_din  => bram_din,
       BRAM_PORTA_0_dout => bram_dout,
       BRAM_PORTA_0_en   => bram_en,
-      BRAM_PORTA_0_rst  => bram_rst,   -- not used further
+      BRAM_PORTA_0_rst  => bram_rst,
       BRAM_PORTA_0_we   => bram_we,
 
       DDR_addr          => DDR_addr,
@@ -145,7 +154,12 @@ begin
       clka  => bram_clk,
       ena   => bram_en,
       wea   => bram_wea,
-      addra => bram_addr,
+      
+      -- FIX 4: Bit Slicing
+      -- Convert 18-bit Byte Address to 16-bit Word Address
+      -- We drop the bottom 2 bits (byte offset)
+      addra => bram_addr(17 downto 2),
+      
       dina  => bram_din,
       douta => bram_dout
     );

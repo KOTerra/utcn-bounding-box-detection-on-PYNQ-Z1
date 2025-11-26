@@ -68,7 +68,7 @@ typedef bit bit_as_bool;
 module design_1_auto_pc_1 (
   input bit_as_bool aclk,
   input bit_as_bool aresetn,
-  input bit [12 : 0] s_axi_awaddr,
+  input bit [17 : 0] s_axi_awaddr,
   input bit [2 : 0] s_axi_awprot,
   input bit_as_bool s_axi_awvalid,
   output bit_as_bool s_axi_awready,
@@ -79,7 +79,7 @@ module design_1_auto_pc_1 (
   output bit [1 : 0] s_axi_bresp,
   output bit_as_bool s_axi_bvalid,
   input bit_as_bool s_axi_bready,
-  input bit [12 : 0] s_axi_araddr,
+  input bit [17 : 0] s_axi_araddr,
   input bit [2 : 0] s_axi_arprot,
   input bit_as_bool s_axi_arvalid,
   output bit_as_bool s_axi_arready,
@@ -87,7 +87,7 @@ module design_1_auto_pc_1 (
   output bit [1 : 0] s_axi_rresp,
   output bit_as_bool s_axi_rvalid,
   input bit_as_bool s_axi_rready,
-  output bit [12 : 0] m_axi_awaddr,
+  output bit [17 : 0] m_axi_awaddr,
   output bit [7 : 0] m_axi_awlen,
   output bit [2 : 0] m_axi_awsize,
   output bit [1 : 0] m_axi_awburst,
@@ -106,7 +106,7 @@ module design_1_auto_pc_1 (
   input bit [1 : 0] m_axi_bresp,
   input bit_as_bool m_axi_bvalid,
   output bit_as_bool m_axi_bready,
-  output bit [12 : 0] m_axi_araddr,
+  output bit [17 : 0] m_axi_araddr,
   output bit [7 : 0] m_axi_arlen,
   output bit [2 : 0] m_axi_arsize,
   output bit [1 : 0] m_axi_arburst,
@@ -133,7 +133,7 @@ module design_1_auto_pc_1 (aclk,aresetn,s_axi_awaddr,s_axi_awprot,s_axi_awvalid,
 *);
   input bit aclk;
   input bit aresetn;
-  input bit [12 : 0] s_axi_awaddr;
+  input bit [17 : 0] s_axi_awaddr;
   input bit [2 : 0] s_axi_awprot;
   input bit s_axi_awvalid;
   output wire s_axi_awready;
@@ -144,7 +144,7 @@ module design_1_auto_pc_1 (aclk,aresetn,s_axi_awaddr,s_axi_awprot,s_axi_awvalid,
   output wire [1 : 0] s_axi_bresp;
   output wire s_axi_bvalid;
   input bit s_axi_bready;
-  input bit [12 : 0] s_axi_araddr;
+  input bit [17 : 0] s_axi_araddr;
   input bit [2 : 0] s_axi_arprot;
   input bit s_axi_arvalid;
   output wire s_axi_arready;
@@ -152,7 +152,7 @@ module design_1_auto_pc_1 (aclk,aresetn,s_axi_awaddr,s_axi_awprot,s_axi_awvalid,
   output wire [1 : 0] s_axi_rresp;
   output wire s_axi_rvalid;
   input bit s_axi_rready;
-  output wire [12 : 0] m_axi_awaddr;
+  output wire [17 : 0] m_axi_awaddr;
   output wire [7 : 0] m_axi_awlen;
   output wire [2 : 0] m_axi_awsize;
   output wire [1 : 0] m_axi_awburst;
@@ -171,7 +171,7 @@ module design_1_auto_pc_1 (aclk,aresetn,s_axi_awaddr,s_axi_awprot,s_axi_awvalid,
   input bit [1 : 0] m_axi_bresp;
   input bit m_axi_bvalid;
   output wire m_axi_bready;
-  output wire [12 : 0] m_axi_araddr;
+  output wire [17 : 0] m_axi_araddr;
   output wire [7 : 0] m_axi_arlen;
   output wire [2 : 0] m_axi_arsize;
   output wire [1 : 0] m_axi_arburst;

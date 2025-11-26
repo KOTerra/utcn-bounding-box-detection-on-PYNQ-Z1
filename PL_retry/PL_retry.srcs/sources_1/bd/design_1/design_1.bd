@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x63C1EFE1CC3B6B7",
+      "boundary_crc": "0x2D889C192362CCFB",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../PL_retry.gen/sources_1/bd/design_1",
       "name": "design_1",
@@ -287,7 +287,7 @@
             "value_src": "user_prop"
           },
           "MEM_SIZE": {
-            "value": "8192",
+            "value": "262144",
             "value_src": "ip_prop"
           },
           "MEM_WIDTH": {
@@ -306,7 +306,7 @@
           "ADDR": {
             "physical_name": "BRAM_PORTA_0_addr",
             "direction": "O",
-            "left": "12",
+            "left": "17",
             "right": "0"
           },
           "CLK": {
@@ -2161,6 +2161,9 @@
         "parameters": {
           "c_include_sg": {
             "value": "0"
+          },
+          "c_sg_length_width": {
+            "value": "26"
           }
         },
         "interface_ports": {
@@ -3462,6 +3465,9 @@
         "parameters": {
           "c_include_sg": {
             "value": "0"
+          },
+          "c_sg_length_width": {
+            "value": "26"
           }
         },
         "interface_ports": {
@@ -3508,6 +3514,9 @@
         "parameters": {
           "c_include_sg": {
             "value": "0"
+          },
+          "c_sg_length_width": {
+            "value": "26"
           }
         },
         "interface_ports": {
@@ -3554,6 +3563,9 @@
         "parameters": {
           "c_include_sg": {
             "value": "0"
+          },
+          "c_sg_length_width": {
+            "value": "26"
           }
         },
         "interface_ports": {
@@ -3600,6 +3612,9 @@
         "parameters": {
           "c_include_sg": {
             "value": "0"
+          },
+          "c_sg_length_width": {
+            "value": "26"
           }
         },
         "interface_ports": {
@@ -6415,6 +6430,9 @@
         "parameters": {
           "c_include_sg": {
             "value": "0"
+          },
+          "c_sg_length_width": {
+            "value": "26"
           }
         },
         "interface_ports": {
@@ -10032,7 +10050,7 @@
               "SEG_axi_bram_ctrl_0_Mem0": {
                 "address_block": "/axi_bram_ctrl_0/S_AXI/Mem0",
                 "offset": "0xC0000000",
-                "range": "8K"
+                "range": "256K"
               }
             }
           }
@@ -10045,7 +10063,7 @@
               "SEG_axi_bram_ctrl_0_Mem0": {
                 "address_block": "/axi_bram_ctrl_0/S_AXI/Mem0",
                 "offset": "0xC0000000",
-                "range": "8K"
+                "range": "256K"
               }
             }
           }
@@ -10058,7 +10076,7 @@
               "SEG_axi_bram_ctrl_0_Mem0": {
                 "address_block": "/axi_bram_ctrl_0/S_AXI/Mem0",
                 "offset": "0xC0000000",
-                "range": "8K"
+                "range": "256K"
               }
             }
           }
@@ -10071,7 +10089,7 @@
               "SEG_axi_bram_ctrl_0_Mem0": {
                 "address_block": "/axi_bram_ctrl_0/S_AXI/Mem0",
                 "offset": "0xC0000000",
-                "range": "8K"
+                "range": "256K"
               }
             }
           }
@@ -10084,7 +10102,7 @@
               "SEG_axi_bram_ctrl_0_Mem0": {
                 "address_block": "/axi_bram_ctrl_0/S_AXI/Mem0",
                 "offset": "0xC0000000",
-                "range": "8K"
+                "range": "256K"
               }
             }
           }
