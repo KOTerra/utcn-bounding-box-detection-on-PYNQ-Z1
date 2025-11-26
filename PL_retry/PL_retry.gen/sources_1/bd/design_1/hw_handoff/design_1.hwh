@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Nov 26 12:57:40 2025" VIVADOVERSION="2024.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Nov 26 19:38:10 2025" VIVADOVERSION="2024.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="www.digilentinc.com:pynq-z1:part0:1.0" DEVICE="7z020" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -17440,11 +17440,11 @@
             <CONNECTION INSTANCE="axi_interconnect_dma4_5" PORT="S01_ACLK"/>
             <CONNECTION INSTANCE="axi_interconnect_dma4_5" PORT="S02_ACLK"/>
             <CONNECTION INSTANCE="axi_interconnect_dma4_5" PORT="S03_ACLK"/>
-            <CONNECTION INSTANCE="ccl_relabel_core_0" PORT="aclkrst_clk"/>
             <CONNECTION INSTANCE="ccl_slice_core_0" PORT="aclkrst_clk"/>
             <CONNECTION INSTANCE="ccl_slice_core_1" PORT="aclkrst_clk"/>
             <CONNECTION INSTANCE="ccl_slice_core_2" PORT="aclkrst_clk"/>
             <CONNECTION INSTANCE="ccl_slice_core_3" PORT="aclkrst_clk"/>
+            <CONNECTION INSTANCE="ccl_relabel_core_0" PORT="aclkrst_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="FCLK_RESET0_N" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="processing_system7_0_FCLK_RESET0_N">
@@ -20694,11 +20694,11 @@
             <CONNECTION INSTANCE="axi_interconnect_dma4_5" PORT="S01_ARESETN"/>
             <CONNECTION INSTANCE="axi_interconnect_dma4_5" PORT="S02_ARESETN"/>
             <CONNECTION INSTANCE="axi_interconnect_dma4_5" PORT="S03_ARESETN"/>
-            <CONNECTION INSTANCE="ccl_relabel_core_0" PORT="aclkrst_n"/>
             <CONNECTION INSTANCE="ccl_slice_core_0" PORT="aclkrst_n"/>
             <CONNECTION INSTANCE="ccl_slice_core_1" PORT="aclkrst_n"/>
             <CONNECTION INSTANCE="ccl_slice_core_2" PORT="aclkrst_n"/>
             <CONNECTION INSTANCE="ccl_slice_core_3" PORT="aclkrst_n"/>
+            <CONNECTION INSTANCE="ccl_relabel_core_0" PORT="aclkrst_n"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="peripheral_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst"/>
