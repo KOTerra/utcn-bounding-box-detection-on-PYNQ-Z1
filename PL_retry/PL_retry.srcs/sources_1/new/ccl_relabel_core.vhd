@@ -66,7 +66,6 @@ end entity ccl_relabel_core;
 
 architecture rtl of ccl_relabel_core is
     signal reg_control : std_logic_vector(31 downto 0) := (others => '0');
-    constant AXIL_ALWAYS_READY : boolean := true;
     constant C_LUT_BASE_ADDR   : unsigned(31 downto 0) := x"C0000000";
 
     signal s_axis_tready_int : std_logic := '0';
@@ -111,6 +110,7 @@ begin
     m_axis_tdata  <= m_axis_tdata_int;
     m_axis_tvalid <= m_axis_tvalid_int;
     m_axis_tlast  <= m_axis_tlast_int;
+    
     in_fire  <= s_axis_tvalid and s_axis_tready_int;
     out_fire <= m_axis_tvalid_int and m_axis_tready;
 
@@ -134,8 +134,10 @@ begin
                 s_axis_tready_int <= '0';
                 lut_arvalid_reg <= '0';
                 irq_done_reg <= '0';
+                m_axis_tvalid_int <= '0';
             else
                 if m_axi_lut_arready = '1' then lut_arvalid_reg <= '0'; end if;
+                if out_fire = '1' then m_axis_tvalid_int <= '0'; end if;
 
                 case state is
                     when IDLE =>
@@ -144,7 +146,6 @@ begin
                         if reg_control(0) = '1' then state <= WAIT_SLICES; end if;
 
                     when WAIT_SLICES =>
-                        --  Wait for all 4 slices to finish
                         if slices_done = "1111" then
                             state <= RUN_APPLY;
                         end if;
@@ -152,22 +153,26 @@ begin
                     when RUN_APPLY =>
                         case apply_state is
                             when AP_IDLE =>
-                                s_axis_tready_int <= '1';
-                                if in_fire = '1' then
-                                    current_label <= unsigned(s_axis_tdata);
-                                    apply_last_in <= s_axis_tlast;
-                                    root_label    <= unsigned(s_axis_tdata);
-                                    
-                                    if unsigned(s_axis_tdata) = 0 then
-                                        apply_state <= AP_OUTPUT;
-                                    else
-                                        --find parent in LUT
-                                        addr_u := C_LUT_BASE_ADDR + (unsigned(s_axis_tdata) sll 2);
-                                        lut_araddr_reg <= std_logic_vector(addr_u);
-                                        lut_arvalid_reg <= '1';
-                                        lut_rready_reg <= '1';
-                                        apply_state <= AP_READ_LUT;
+                                -- only accept input if we arent currently trying to output something
+                                if m_axis_tvalid_int = '0' then
+                                    s_axis_tready_int <= '1';
+                                    if in_fire = '1' then
+                                        current_label <= unsigned(s_axis_tdata);
+                                        apply_last_in <= s_axis_tlast;
+                                        root_label    <= unsigned(s_axis_tdata);
+                                        
+                                        if unsigned(s_axis_tdata) = 0 then
+                                            apply_state <= AP_OUTPUT;
+                                        else
+                                            addr_u := C_LUT_BASE_ADDR + (unsigned(s_axis_tdata) sll 2);
+                                            lut_araddr_reg <= std_logic_vector(addr_u);
+                                            lut_arvalid_reg <= '1';
+                                            lut_rready_reg <= '1';
+                                            apply_state <= AP_READ_LUT;
+                                        end if;
                                     end if;
+                                else
+                                    s_axis_tready_int <= '0';
                                 end if;
 
                             when AP_READ_LUT =>
@@ -177,9 +182,8 @@ begin
                                         lut_rready_reg <= '0';
                                         apply_state <= AP_OUTPUT;
                                     else
-                                        -- data <- new address
                                         current_label <= unsigned(m_axi_lut_rdata);
-                                        root_label <= unsigned(m_axi_lut_rdata); -- update root 
+                                        root_label <= unsigned(m_axi_lut_rdata);
                                         addr_u := C_LUT_BASE_ADDR + (unsigned(m_axi_lut_rdata) sll 2);
                                         lut_araddr_reg <= std_logic_vector(addr_u);
                                         lut_arvalid_reg <= '1';
@@ -188,10 +192,17 @@ begin
 
                             when AP_OUTPUT =>
                                 s_axis_tready_int <= '0';
-                                if m_axis_tvalid_int = '0' or out_fire = '1' then
+                                
+                                -- prepare Data
+                                if m_axis_tvalid_int = '0' then
                                     m_axis_tdata_int <= std_logic_vector(root_label);
                                     m_axis_tvalid_int <= '1';
                                     m_axis_tlast_int <= apply_last_in;
+                                end if;
+
+                                -- wait for Handshake (out_fire)
+                                if out_fire = '1' then
+                                    -- we can move on. data accepted by DMA
                                     if apply_last_in = '1' then
                                         apply_state <= AP_IDLE;
                                         state <= DONE;
