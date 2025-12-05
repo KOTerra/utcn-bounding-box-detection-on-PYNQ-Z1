@@ -7,58 +7,58 @@ entity ccl_relabel_core is
         G_AXIS_WIDTH : integer := 32
     );
     port (
-        aclkrst_clk  : in  std_logic;
-        aclkrst_n    : in  std_logic;
-        slices_done  : in  std_logic_vector(3 downto 0);
+        aclkrst_clk : in std_logic;
+        aclkrst_n : in std_logic;
+        slices_done : in std_logic_vector(3 downto 0);
 
         -- AXI4-Lite Control
-        s_axi_awaddr  : in  std_logic_vector(31 downto 0);
-        s_axi_awvalid : in  std_logic;
+        s_axi_awaddr : in std_logic_vector(31 downto 0);
+        s_axi_awvalid : in std_logic;
         s_axi_awready : out std_logic;
-        s_axi_wdata   : in  std_logic_vector(31 downto 0);
-        s_axi_wstrb   : in  std_logic_vector(3 downto 0);
-        s_axi_wvalid  : in  std_logic;
-        s_axi_wready  : out std_logic;
-        s_axi_bresp   : out std_logic_vector(1 downto 0);
-        s_axi_bvalid  : out std_logic;
-        s_axi_bready  : in  std_logic;
-        s_axi_araddr  : in  std_logic_vector(31 downto 0);
-        s_axi_arvalid : in  std_logic;
+        s_axi_wdata : in std_logic_vector(31 downto 0);
+        s_axi_wstrb : in std_logic_vector(3 downto 0);
+        s_axi_wvalid : in std_logic;
+        s_axi_wready : out std_logic;
+        s_axi_bresp : out std_logic_vector(1 downto 0);
+        s_axi_bvalid : out std_logic;
+        s_axi_bready : in std_logic;
+        s_axi_araddr : in std_logic_vector(31 downto 0);
+        s_axi_arvalid : in std_logic;
         s_axi_arready : out std_logic;
-        s_axi_rdata   : out std_logic_vector(31 downto 0);
-        s_axi_rresp   : out std_logic_vector(1 downto 0);
-        s_axi_rvalid  : out std_logic;
-        s_axi_rready  : in  std_logic;
+        s_axi_rdata : out std_logic_vector(31 downto 0);
+        s_axi_rresp : out std_logic_vector(1 downto 0);
+        s_axi_rvalid : out std_logic;
+        s_axi_rready : in std_logic;
 
         -- AXIS Stream IN (Labels)
-        s_axis_tdata  : in  std_logic_vector(G_AXIS_WIDTH-1 downto 0);
-        s_axis_tvalid : in  std_logic;
+        s_axis_tdata : in std_logic_vector(G_AXIS_WIDTH - 1 downto 0);
+        s_axis_tvalid : in std_logic;
         s_axis_tready : out std_logic;
-        s_axis_tlast  : in  std_logic;
+        s_axis_tlast : in std_logic;
 
         -- AXIS Stream OUT (Relabeled)
-        m_axis_tdata  : out std_logic_vector(G_AXIS_WIDTH-1 downto 0);
+        m_axis_tdata : out std_logic_vector(G_AXIS_WIDTH - 1 downto 0);
         m_axis_tvalid : out std_logic;
-        m_axis_tready : in  std_logic;
-        m_axis_tlast  : out std_logic;
+        m_axis_tready : in std_logic;
+        m_axis_tlast : out std_logic;
 
         -- AXI4 Master (Shared LUT)
-        m_axi_lut_awaddr  : out std_logic_vector(31 downto 0);
+        m_axi_lut_awaddr : out std_logic_vector(31 downto 0);
         m_axi_lut_awvalid : out std_logic;
-        m_axi_lut_awready : in  std_logic;
-        m_axi_lut_wdata   : out std_logic_vector(31 downto 0);
-        m_axi_lut_wstrb   : out std_logic_vector(3 downto 0);
-        m_axi_lut_wvalid  : out std_logic;
-        m_axi_lut_wready  : in  std_logic;
-        m_axi_lut_bresp   : in  std_logic_vector(1 downto 0);
-        m_axi_lut_bvalid  : in  std_logic;
-        m_axi_lut_bready  : out std_logic;
-        m_axi_lut_araddr  : out std_logic_vector(31 downto 0);
+        m_axi_lut_awready : in std_logic;
+        m_axi_lut_wdata : out std_logic_vector(31 downto 0);
+        m_axi_lut_wstrb : out std_logic_vector(3 downto 0);
+        m_axi_lut_wvalid : out std_logic;
+        m_axi_lut_wready : in std_logic;
+        m_axi_lut_bresp : in std_logic_vector(1 downto 0);
+        m_axi_lut_bvalid : in std_logic;
+        m_axi_lut_bready : out std_logic;
+        m_axi_lut_araddr : out std_logic_vector(31 downto 0);
         m_axi_lut_arvalid : out std_logic;
-        m_axi_lut_arready : in  std_logic;
-        m_axi_lut_rdata   : in  std_logic_vector(31 downto 0);
-        m_axi_lut_rvalid  : in  std_logic;
-        m_axi_lut_rready  : out std_logic;
+        m_axi_lut_arready : in std_logic;
+        m_axi_lut_rdata : in std_logic_vector(31 downto 0);
+        m_axi_lut_rvalid : in std_logic;
+        m_axi_lut_rready : out std_logic;
 
         irq_done : out std_logic
     );
@@ -66,15 +66,15 @@ end entity ccl_relabel_core;
 
 architecture rtl of ccl_relabel_core is
     signal reg_control : std_logic_vector(31 downto 0) := (others => '0');
-    constant C_LUT_BASE_ADDR   : unsigned(31 downto 0) := x"C0000000";
+    constant C_LUT_BASE_ADDR : unsigned(31 downto 0) := x"C0000000";
     -- Total BRAM size to 256KB = 65536 Words
-    constant C_LUT_WORDS       : integer := 65536;
+    constant C_LUT_WORDS : integer := 65536;
 
     signal s_axis_tready_int : std_logic := '0';
     signal m_axis_tvalid_int : std_logic := '0';
-    signal m_axis_tdata_int  : std_logic_vector(G_AXIS_WIDTH-1 downto 0) := (others => '0');
-    signal m_axis_tlast_int  : std_logic := '0';
-    signal in_fire  : std_logic;
+    signal m_axis_tdata_int : std_logic_vector(G_AXIS_WIDTH - 1 downto 0) := (others => '0');
+    signal m_axis_tlast_int : std_logic := '0';
+    signal in_fire : std_logic;
     signal out_fire : std_logic;
 
     -- FSM State
@@ -82,134 +82,142 @@ architecture rtl of ccl_relabel_core is
     signal state : state_t := IDLE;
 
     -- Internal Shadow Registers for AXI Master (to fix Synth 8-10557)
-    signal lut_awaddr_reg  : std_logic_vector(31 downto 0) := (others => '0');
+    signal lut_awaddr_reg : std_logic_vector(31 downto 0) := (others => '0');
     signal lut_awvalid_reg : std_logic := '0';
-    signal lut_wdata_reg   : std_logic_vector(31 downto 0) := (others => '0');
-    signal lut_wstrb_reg   : std_logic_vector(3 downto 0)  := (others => '0');
-    signal lut_wvalid_reg  : std_logic := '0';
-    signal lut_bready_reg  : std_logic := '0';
-    
-    signal lut_araddr_reg  : std_logic_vector(31 downto 0) := (others => '0');
+    signal lut_wdata_reg : std_logic_vector(31 downto 0) := (others => '0');
+    signal lut_wstrb_reg : std_logic_vector(3 downto 0) := (others => '0');
+    signal lut_wvalid_reg : std_logic := '0';
+    signal lut_bready_reg : std_logic := '0';
+
+    signal lut_araddr_reg : std_logic_vector(31 downto 0) := (others => '0');
     signal lut_arvalid_reg : std_logic := '0';
-    signal lut_rready_reg  : std_logic := '0';
-    
+    signal lut_rready_reg : std_logic := '0';
+
     -- Clear logic signals
-    signal clear_ctr       : integer range 0 to C_LUT_WORDS := 0;
+    signal clear_ctr : integer range 0 to C_LUT_WORDS := 0;
 
     type apply_state_t is (AP_IDLE, AP_READ_LUT, AP_OUTPUT);
     signal apply_state : apply_state_t := AP_IDLE;
 
-    signal current_label   : unsigned(31 downto 0) := (others => '0');
-    signal root_label      : unsigned(31 downto 0) := (others => '0');
-    signal apply_last_in   : std_logic := '0';
-    signal irq_done_reg    : std_logic := '0';
+    signal current_label : unsigned(31 downto 0) := (others => '0');
+    signal root_label : unsigned(31 downto 0) := (others => '0');
+    signal apply_last_in : std_logic := '0';
+    signal irq_done_reg : std_logic := '0';
 
 begin
     -- AXI Lite Slave Assignments
-    s_axi_awready <= '1'; s_axi_wready <= '1'; s_axi_bvalid <= '1';
+    s_axi_awready <= '1';
+    s_axi_wready <= '1';
+    s_axi_bvalid <= '1';
     s_axi_bresp <= "00";
-    s_axi_arready <= '1'; s_axi_rvalid <= '1'; s_axi_rresp <= "00";
+    s_axi_arready <= '1';
+    s_axi_rvalid <= '1';
+    s_axi_rresp <= "00";
 
     -- Control Register Process
-    process(aclkrst_clk)
+    process (aclkrst_clk)
     begin
         if rising_edge(aclkrst_clk) then
-            if aclkrst_n = '0' then 
+            if aclkrst_n = '0' then
                 reg_control <= (others => '0');
-            elsif s_axi_awvalid='1' and s_axi_wvalid='1' and s_axi_awaddr(5 downto 2)="0000" then
+            elsif s_axi_awvalid = '1' and s_axi_wvalid = '1' and s_axi_awaddr(5 downto 2) = "0000" then
                 reg_control <= s_axi_wdata;
             end if;
         end if;
     end process;
-    s_axi_rdata <= reg_control when s_axi_araddr(5 downto 2)="0000" else (others=>'0');
+    s_axi_rdata <= reg_control when s_axi_araddr(5 downto 2) = "0000" else
+        (others => '0');
 
     -- AXIS Flow Control
     s_axis_tready <= s_axis_tready_int;
-    m_axis_tdata  <= m_axis_tdata_int;
+    m_axis_tdata <= m_axis_tdata_int;
     m_axis_tvalid <= m_axis_tvalid_int;
-    m_axis_tlast  <= m_axis_tlast_int;
-    
-    in_fire  <= s_axis_tvalid and s_axis_tready_int;
+    m_axis_tlast <= m_axis_tlast_int;
+
+    in_fire <= s_axis_tvalid and s_axis_tready_int;
     out_fire <= m_axis_tvalid_int and m_axis_tready;
 
     -- AXI Master Output Assignments (Driven by internal registers)
-    m_axi_lut_awaddr  <= lut_awaddr_reg;
+    m_axi_lut_awaddr <= lut_awaddr_reg;
     m_axi_lut_awvalid <= lut_awvalid_reg;
-    m_axi_lut_wdata   <= lut_wdata_reg;
-    m_axi_lut_wstrb   <= lut_wstrb_reg;
-    m_axi_lut_wvalid  <= lut_wvalid_reg;
-    m_axi_lut_bready  <= lut_bready_reg;
-    
-    m_axi_lut_araddr  <= lut_araddr_reg;
+    m_axi_lut_wdata <= lut_wdata_reg;
+    m_axi_lut_wstrb <= lut_wstrb_reg;
+    m_axi_lut_wvalid <= lut_wvalid_reg;
+    m_axi_lut_bready <= lut_bready_reg;
+
+    m_axi_lut_araddr <= lut_araddr_reg;
     m_axi_lut_arvalid <= lut_arvalid_reg;
-    m_axi_lut_rready  <= lut_rready_reg;
-    
+    m_axi_lut_rready <= lut_rready_reg;
+
     irq_done <= irq_done_reg;
 
-    -- Main FSM
-    process(aclkrst_clk)
+    -- Main process
+    process (aclkrst_clk)
         variable addr_u : unsigned(31 downto 0);
     begin
         if rising_edge(aclkrst_clk) then
             if aclkrst_n = '0' then
+                --reset
                 state <= IDLE;
                 apply_state <= AP_IDLE;
                 s_axis_tready_int <= '0';
                 irq_done_reg <= '0';
                 m_axis_tvalid_int <= '0';
-                
-                -- Reset Internal AXI Master Registers
-                lut_awaddr_reg  <= (others=>'0');
+
+                lut_awaddr_reg <= (others => '0');
                 lut_awvalid_reg <= '0';
-                lut_wdata_reg   <= (others=>'0');
-                lut_wstrb_reg   <= (others=>'0');
-                lut_wvalid_reg  <= '0';
-                lut_bready_reg  <= '0';
-                
-                lut_araddr_reg  <= (others=>'0');
+                lut_wdata_reg <= (others => '0');
+                lut_wstrb_reg <= (others => '0');
+                lut_wvalid_reg <= '0';
+                lut_bready_reg <= '0';
+
+                lut_araddr_reg <= (others => '0');
                 lut_arvalid_reg <= '0';
-                lut_rready_reg  <= '0';
-                
+                lut_rready_reg <= '0';
+
                 clear_ctr <= 0;
             else
-                -- Clear Handshakes (Write Channel)
-                if m_axi_lut_awready = '1' then lut_awvalid_reg <= '0'; end if;
-                if m_axi_lut_wready = '1'  then lut_wvalid_reg  <= '0'; end if;
-                
-                -- Clear Handshakes (Read Channel)
-                if m_axi_lut_arready = '1' then lut_arvalid_reg <= '0'; end if;
-                
-                -- Clear Handshakes (Stream)
-                if out_fire = '1' then m_axis_tvalid_int <= '0'; end if;
+                if m_axi_lut_awready = '1' then
+                    lut_awvalid_reg <= '0';
+                end if;
+                if m_axi_lut_wready = '1' then
+                    lut_wvalid_reg <= '0';
+                end if;
 
+                if m_axi_lut_arready = '1' then
+                    lut_arvalid_reg <= '0';
+                end if;
+
+                if out_fire = '1' then
+                    m_axis_tvalid_int <= '0';
+                end if;
+
+                -- FSM
                 case state is
                     when IDLE =>
                         irq_done_reg <= '0';
                         m_axis_tvalid_int <= '0';
-                        
-                        -- Check Bit 1 for Hardware Clear Trigger
+
                         if reg_control(1) = '1' then
                             state <= CLEAR_LUT;
                             clear_ctr <= 0;
-                        -- Check Bit 0 for Standard Run
-                        elsif reg_control(0) = '1' then 
-                            state <= WAIT_SLICES; 
+                        elsif reg_control(0) = '1' then
+                            state <= WAIT_SLICES;
                         end if;
 
                     when CLEAR_LUT =>
                         if clear_ctr < C_LUT_WORDS then
-                            -- Use internal registers for check and assignment
                             if lut_awvalid_reg = '0' and lut_wvalid_reg = '0' then
                                 addr_u := C_LUT_BASE_ADDR + to_unsigned(clear_ctr * 4, 32);
                                 lut_awaddr_reg <= std_logic_vector(addr_u);
-                                lut_wdata_reg  <= (others => '0'); 
-                                lut_wstrb_reg  <= "1111";
+                                lut_wdata_reg <= (others => '0');
+                                lut_wstrb_reg <= "1111";
                                 lut_awvalid_reg <= '1';
-                                lut_wvalid_reg  <= '1';
-                                lut_bready_reg  <= '1';
+                                lut_wvalid_reg <= '1';
+                                lut_bready_reg <= '1';
                             end if;
 
-                            -- Wait for Write Response
+                            -- Wait for bvalid write response
                             if m_axi_lut_bvalid = '1' then
                                 lut_bready_reg <= '0';
                                 clear_ctr <= clear_ctr + 1;
@@ -226,6 +234,7 @@ begin
                         end if;
 
                     when RUN_APPLY =>
+                        --  subFSM for applying
                         case apply_state is
                             when AP_IDLE =>
                                 if m_axis_tvalid_int = '0' then
@@ -233,8 +242,8 @@ begin
                                     if in_fire = '1' then
                                         current_label <= unsigned(s_axis_tdata);
                                         apply_last_in <= s_axis_tlast;
-                                        root_label    <= unsigned(s_axis_tdata);
-                                        
+                                        root_label <= unsigned(s_axis_tdata);
+
                                         if unsigned(s_axis_tdata) = 0 then
                                             apply_state <= AP_OUTPUT;
                                         else
@@ -286,8 +295,8 @@ begin
                     when DONE =>
                         m_axis_tvalid_int <= '0';
                         s_axis_tready_int <= '0';
-                        if reg_control(0) = '0' and reg_control(1) = '0' then 
-                            state <= IDLE; 
+                        if reg_control(0) = '0' and reg_control(1) = '0' then
+                            state <= IDLE;
                         end if;
                 end case;
             end if;
