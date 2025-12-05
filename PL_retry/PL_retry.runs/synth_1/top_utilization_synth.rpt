@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Wed Nov 26 19:43:44 2025
+| Date         : Fri Dec  5 12:21:51 2025
 | Host         : POWERSLAVE running 64-bit major release  (build 9200)
 | Command      : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
 | Design       : top
@@ -31,8 +31,8 @@ Table of Contents
 +----------------------------+-------+-------+------------+-----------+-------+
 |          Site Type         |  Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+-------+-------+------------+-----------+-------+
-| Slice LUTs*                | 15217 |     0 |          0 |     53200 | 28.60 |
-|   LUT as Logic             | 13341 |     0 |          0 |     53200 | 25.08 |
+| Slice LUTs*                | 15208 |     0 |          0 |     53200 | 28.59 |
+|   LUT as Logic             | 13332 |     0 |          0 |     53200 | 25.06 |
 |   LUT as Memory            |  1876 |     0 |          0 |     17400 | 10.78 |
 |     LUT as Distributed RAM |   584 |     0 |            |           |       |
 |     LUT as Shift Register  |  1292 |     0 |            |           |       |
@@ -153,13 +153,13 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | Ref Name |  Used |  Functional Category |
 +----------+-------+----------------------+
 | FDRE     | 16204 |         Flop & Latch |
-| LUT6     |  3990 |                  LUT |
-| LUT3     |  3968 |                  LUT |
-| LUT4     |  2899 |                  LUT |
-| LUT5     |  2649 |                  LUT |
-| LUT2     |  2004 |                  LUT |
+| LUT6     |  3975 |                  LUT |
+| LUT3     |  3960 |                  LUT |
+| LUT4     |  2863 |                  LUT |
+| LUT5     |  2688 |                  LUT |
+| LUT2     |  2026 |                  LUT |
 | SRL16E   |  1063 |   Distributed Memory |
-| LUT1     |   633 |                  LUT |
+| LUT1     |   634 |                  LUT |
 | FDSE     |   585 |         Flop & Latch |
 | RAMS64E  |   512 |   Distributed Memory |
 | CARRY4   |   424 |           CarryLogic |
