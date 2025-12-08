@@ -26,6 +26,6 @@
 	</File>
 	<File Type="BIT" Name="top.bit" src_db="temp.hdf">
 	</File>
-	<USEDRESOURCES LUT="14191" FF="17027" BRAM="70" DSP="0"/>
+	<USEDRESOURCES LUT="14187" FF="17068" BRAM="70" DSP="0"/>
 </Project>
 
