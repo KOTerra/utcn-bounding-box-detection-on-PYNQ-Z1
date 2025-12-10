@@ -373,7 +373,7 @@ void design_1_processing_system7_0_0::before_end_of_elaboration()
     xsc::common_cpp::properties S_AXI_HP0_transactor_param_props;
     S_AXI_HP0_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
     S_AXI_HP0_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
-    S_AXI_HP0_transactor_param_props.addLong("DATA_WIDTH", "32");
+    S_AXI_HP0_transactor_param_props.addLong("DATA_WIDTH", "64");
     S_AXI_HP0_transactor_param_props.addLong("FREQ_HZ", "100000000");
     S_AXI_HP0_transactor_param_props.addLong("ID_WIDTH", "6");
     S_AXI_HP0_transactor_param_props.addLong("ADDR_WIDTH", "32");
@@ -404,7 +404,7 @@ void design_1_processing_system7_0_0::before_end_of_elaboration()
     S_AXI_HP0_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     S_AXI_HP0_transactor_param_props.addString("CLK_DOMAIN", "design_1_processing_system7_0_0_FCLK_CLK0");
 
-    mp_S_AXI_HP0_transactor = new xtlm::xaximm_pin2xtlm_t<32,32,6,1,1,1,1,1>("S_AXI_HP0_transactor", S_AXI_HP0_transactor_param_props);
+    mp_S_AXI_HP0_transactor = new xtlm::xaximm_pin2xtlm_t<64,32,6,1,1,1,1,1>("S_AXI_HP0_transactor", S_AXI_HP0_transactor_param_props);
 
     // S_AXI_HP0' transactor ports
 
@@ -1004,7 +1004,7 @@ void design_1_processing_system7_0_0::before_end_of_elaboration()
     xsc::common_cpp::properties S_AXI_HP0_transactor_param_props;
     S_AXI_HP0_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
     S_AXI_HP0_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
-    S_AXI_HP0_transactor_param_props.addLong("DATA_WIDTH", "32");
+    S_AXI_HP0_transactor_param_props.addLong("DATA_WIDTH", "64");
     S_AXI_HP0_transactor_param_props.addLong("FREQ_HZ", "100000000");
     S_AXI_HP0_transactor_param_props.addLong("ID_WIDTH", "6");
     S_AXI_HP0_transactor_param_props.addLong("ADDR_WIDTH", "32");
@@ -1035,7 +1035,7 @@ void design_1_processing_system7_0_0::before_end_of_elaboration()
     S_AXI_HP0_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     S_AXI_HP0_transactor_param_props.addString("CLK_DOMAIN", "design_1_processing_system7_0_0_FCLK_CLK0");
 
-    mp_S_AXI_HP0_transactor = new xtlm::xaximm_pin2xtlm_t<32,32,6,1,1,1,1,1>("S_AXI_HP0_transactor", S_AXI_HP0_transactor_param_props);
+    mp_S_AXI_HP0_transactor = new xtlm::xaximm_pin2xtlm_t<64,32,6,1,1,1,1,1>("S_AXI_HP0_transactor", S_AXI_HP0_transactor_param_props);
 
     // S_AXI_HP0' transactor ports
 
@@ -1635,7 +1635,7 @@ void design_1_processing_system7_0_0::before_end_of_elaboration()
     xsc::common_cpp::properties S_AXI_HP0_transactor_param_props;
     S_AXI_HP0_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
     S_AXI_HP0_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
-    S_AXI_HP0_transactor_param_props.addLong("DATA_WIDTH", "32");
+    S_AXI_HP0_transactor_param_props.addLong("DATA_WIDTH", "64");
     S_AXI_HP0_transactor_param_props.addLong("FREQ_HZ", "100000000");
     S_AXI_HP0_transactor_param_props.addLong("ID_WIDTH", "6");
     S_AXI_HP0_transactor_param_props.addLong("ADDR_WIDTH", "32");
@@ -1666,7 +1666,7 @@ void design_1_processing_system7_0_0::before_end_of_elaboration()
     S_AXI_HP0_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     S_AXI_HP0_transactor_param_props.addString("CLK_DOMAIN", "design_1_processing_system7_0_0_FCLK_CLK0");
 
-    mp_S_AXI_HP0_transactor = new xtlm::xaximm_pin2xtlm_t<32,32,6,1,1,1,1,1>("S_AXI_HP0_transactor", S_AXI_HP0_transactor_param_props);
+    mp_S_AXI_HP0_transactor = new xtlm::xaximm_pin2xtlm_t<64,32,6,1,1,1,1,1>("S_AXI_HP0_transactor", S_AXI_HP0_transactor_param_props);
 
     // S_AXI_HP0' transactor ports
 
@@ -2217,7 +2217,7 @@ design_1_processing_system7_0_0::design_1_processing_system7_0_0(const sc_core::
     xsc::common_cpp::properties S_AXI_HP0_transactor_param_props;
     S_AXI_HP0_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
     S_AXI_HP0_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
-    S_AXI_HP0_transactor_param_props.addLong("DATA_WIDTH", "32");
+    S_AXI_HP0_transactor_param_props.addLong("DATA_WIDTH", "64");
     S_AXI_HP0_transactor_param_props.addLong("FREQ_HZ", "100000000");
     S_AXI_HP0_transactor_param_props.addLong("ID_WIDTH", "6");
     S_AXI_HP0_transactor_param_props.addLong("ADDR_WIDTH", "32");
@@ -2248,7 +2248,7 @@ design_1_processing_system7_0_0::design_1_processing_system7_0_0(const sc_core::
     S_AXI_HP0_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     S_AXI_HP0_transactor_param_props.addString("CLK_DOMAIN", "design_1_processing_system7_0_0_FCLK_CLK0");
 
-    mp_S_AXI_HP0_transactor = new xtlm::xaximm_pin2xtlm_t<32,32,6,1,1,1,1,1>("S_AXI_HP0_transactor", S_AXI_HP0_transactor_param_props);
+    mp_S_AXI_HP0_transactor = new xtlm::xaximm_pin2xtlm_t<64,32,6,1,1,1,1,1>("S_AXI_HP0_transactor", S_AXI_HP0_transactor_param_props);
   mp_S_AXI_HP0_transactor->ARREADY(S_AXI_HP0_ARREADY);
   mp_S_AXI_HP0_transactor->AWREADY(S_AXI_HP0_AWREADY);
   mp_S_AXI_HP0_transactor->BVALID(S_AXI_HP0_BVALID);
@@ -2845,7 +2845,7 @@ design_1_processing_system7_0_0::design_1_processing_system7_0_0(const sc_core::
     xsc::common_cpp::properties S_AXI_HP0_transactor_param_props;
     S_AXI_HP0_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
     S_AXI_HP0_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
-    S_AXI_HP0_transactor_param_props.addLong("DATA_WIDTH", "32");
+    S_AXI_HP0_transactor_param_props.addLong("DATA_WIDTH", "64");
     S_AXI_HP0_transactor_param_props.addLong("FREQ_HZ", "100000000");
     S_AXI_HP0_transactor_param_props.addLong("ID_WIDTH", "6");
     S_AXI_HP0_transactor_param_props.addLong("ADDR_WIDTH", "32");
@@ -2876,7 +2876,7 @@ design_1_processing_system7_0_0::design_1_processing_system7_0_0(const sc_core::
     S_AXI_HP0_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     S_AXI_HP0_transactor_param_props.addString("CLK_DOMAIN", "design_1_processing_system7_0_0_FCLK_CLK0");
 
-    mp_S_AXI_HP0_transactor = new xtlm::xaximm_pin2xtlm_t<32,32,6,1,1,1,1,1>("S_AXI_HP0_transactor", S_AXI_HP0_transactor_param_props);
+    mp_S_AXI_HP0_transactor = new xtlm::xaximm_pin2xtlm_t<64,32,6,1,1,1,1,1>("S_AXI_HP0_transactor", S_AXI_HP0_transactor_param_props);
   mp_S_AXI_HP0_transactor->ARREADY(S_AXI_HP0_ARREADY);
   mp_S_AXI_HP0_transactor->AWREADY(S_AXI_HP0_AWREADY);
   mp_S_AXI_HP0_transactor->BVALID(S_AXI_HP0_BVALID);
