@@ -188,6 +188,7 @@ vlog -work axi_protocol_converter_v2_1_31  -incr -mfcu  "+incdir+../../../../PL_
 vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../PL_retry.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../PL_retry.gen/sources_1/bd/design_1/ipshared/b28c/hdl" "+incdir+X:/xilinx/Vivado/2024.1/data/xilinx_vip/include" \
 "../../../bd/design_1/ip/design_1_auto_pc_0/sim/design_1_auto_pc_0.v" \
 "../../../bd/design_1/ip/design_1_auto_pc_1/sim/design_1_auto_pc_1.v" \
+"../../../bd/design_1/ip/design_1_auto_pc_2/sim/design_1_auto_pc_2.v" \
 
 vlog -work axi_clock_converter_v2_1_30  -incr -mfcu  "+incdir+../../../../PL_retry.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../PL_retry.gen/sources_1/bd/design_1/ipshared/b28c/hdl" "+incdir+X:/xilinx/Vivado/2024.1/data/xilinx_vip/include" \
 "../../../../PL_retry.gen/sources_1/bd/design_1/ipshared/80bf/hdl/axi_clock_converter_v2_1_vl_rfs.v" \
@@ -203,16 +204,11 @@ vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../PL_retry.gen/source
 "../../../bd/design_1/ip/design_1_auto_us_1/sim/design_1_auto_us_1.v" \
 "../../../bd/design_1/ip/design_1_auto_us_2/sim/design_1_auto_us_2.v" \
 "../../../bd/design_1/ip/design_1_auto_us_3/sim/design_1_auto_us_3.v" \
-"../../../bd/design_1/ip/design_1_auto_pc_2/sim/design_1_auto_pc_2.v" \
+"../../../bd/design_1/ip/design_1_auto_pc_3/sim/design_1_auto_pc_3.v" \
 "../../../bd/design_1/ip/design_1_auto_us_4/sim/design_1_auto_us_4.v" \
 "../../../bd/design_1/ip/design_1_auto_us_5/sim/design_1_auto_us_5.v" \
 "../../../bd/design_1/ip/design_1_auto_us_6/sim/design_1_auto_us_6.v" \
 "../../../bd/design_1/ip/design_1_auto_us_7/sim/design_1_auto_us_7.v" \
-"../../../bd/design_1/ip/design_1_auto_pc_3/sim/design_1_auto_pc_3.v" \
-"../../../bd/design_1/ip/design_1_auto_us_8/sim/design_1_auto_us_8.v" \
-"../../../bd/design_1/ip/design_1_auto_us_9/sim/design_1_auto_us_9.v" \
-"../../../bd/design_1/ip/design_1_auto_us_10/sim/design_1_auto_us_10.v" \
-"../../../bd/design_1/ip/design_1_auto_us_11/sim/design_1_auto_us_11.v" \
 "../../../bd/design_1/ip/design_1_auto_pc_4/sim/design_1_auto_pc_4.v" \
 
 vlog -work xil_defaultlib \

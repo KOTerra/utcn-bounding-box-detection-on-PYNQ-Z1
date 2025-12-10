@@ -60,18 +60,10 @@
       "axi_bram_ctrl_0": "",
       "axi_interconnect_dma0_1": {
         "xbar": "",
-        "s00_couplers": {
-          "auto_us": ""
-        },
-        "s01_couplers": {
-          "auto_us": ""
-        },
-        "s02_couplers": {
-          "auto_us": ""
-        },
-        "s03_couplers": {
-          "auto_us": ""
-        },
+        "s00_couplers": {},
+        "s01_couplers": {},
+        "s02_couplers": {},
+        "s03_couplers": {},
         "m00_couplers": {
           "auto_pc": ""
         }
@@ -1610,7 +1602,7 @@
             "value": "6"
           },
           "PCW_S_AXI_HP0_DATA_WIDTH": {
-            "value": "64"
+            "value": "32"
           },
           "PCW_S_AXI_HP0_FREQMHZ": {
             "value": "10"
@@ -7441,57 +7433,11 @@
                 "direction": "I"
               }
             },
-            "components": {
-              "auto_us": {
-                "vlnv": "xilinx.com:ip:axi_dwidth_converter:2.1",
-                "ip_revision": "31",
-                "xci_name": "design_1_auto_us_0",
-                "xci_path": "ip\\design_1_auto_us_0\\design_1_auto_us_0.xci",
-                "inst_hier_path": "axi_interconnect_dma0_1/s00_couplers/auto_us",
-                "parameters": {
-                  "MI_DATA_WIDTH": {
-                    "value": "64"
-                  },
-                  "SI_DATA_WIDTH": {
-                    "value": "32"
-                  }
-                },
-                "interface_ports": {
-                  "S_AXI": {
-                    "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-                    "mode": "Slave",
-                    "bridges": [
-                      "M_AXI"
-                    ]
-                  }
-                }
-              }
-            },
             "interface_nets": {
-              "auto_us_to_s00_couplers": {
-                "interface_ports": [
-                  "M_AXI",
-                  "auto_us/M_AXI"
-                ]
-              },
-              "s00_couplers_to_auto_us": {
+              "s00_couplers_to_s00_couplers": {
                 "interface_ports": [
                   "S_AXI",
-                  "auto_us/S_AXI"
-                ]
-              }
-            },
-            "nets": {
-              "S_ACLK_1": {
-                "ports": [
-                  "S_ACLK",
-                  "auto_us/s_axi_aclk"
-                ]
-              },
-              "S_ARESETN_1": {
-                "ports": [
-                  "S_ARESETN",
-                  "auto_us/s_axi_aresetn"
+                  "M_AXI"
                 ]
               }
             }
@@ -7543,57 +7489,11 @@
                 "direction": "I"
               }
             },
-            "components": {
-              "auto_us": {
-                "vlnv": "xilinx.com:ip:axi_dwidth_converter:2.1",
-                "ip_revision": "31",
-                "xci_name": "design_1_auto_us_1",
-                "xci_path": "ip\\design_1_auto_us_1\\design_1_auto_us_1.xci",
-                "inst_hier_path": "axi_interconnect_dma0_1/s01_couplers/auto_us",
-                "parameters": {
-                  "MI_DATA_WIDTH": {
-                    "value": "64"
-                  },
-                  "SI_DATA_WIDTH": {
-                    "value": "32"
-                  }
-                },
-                "interface_ports": {
-                  "S_AXI": {
-                    "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-                    "mode": "Slave",
-                    "bridges": [
-                      "M_AXI"
-                    ]
-                  }
-                }
-              }
-            },
             "interface_nets": {
-              "auto_us_to_s01_couplers": {
-                "interface_ports": [
-                  "M_AXI",
-                  "auto_us/M_AXI"
-                ]
-              },
-              "s01_couplers_to_auto_us": {
+              "s01_couplers_to_s01_couplers": {
                 "interface_ports": [
                   "S_AXI",
-                  "auto_us/S_AXI"
-                ]
-              }
-            },
-            "nets": {
-              "S_ACLK_1": {
-                "ports": [
-                  "S_ACLK",
-                  "auto_us/s_axi_aclk"
-                ]
-              },
-              "S_ARESETN_1": {
-                "ports": [
-                  "S_ARESETN",
-                  "auto_us/s_axi_aresetn"
+                  "M_AXI"
                 ]
               }
             }
@@ -7645,57 +7545,11 @@
                 "direction": "I"
               }
             },
-            "components": {
-              "auto_us": {
-                "vlnv": "xilinx.com:ip:axi_dwidth_converter:2.1",
-                "ip_revision": "31",
-                "xci_name": "design_1_auto_us_2",
-                "xci_path": "ip\\design_1_auto_us_2\\design_1_auto_us_2.xci",
-                "inst_hier_path": "axi_interconnect_dma0_1/s02_couplers/auto_us",
-                "parameters": {
-                  "MI_DATA_WIDTH": {
-                    "value": "64"
-                  },
-                  "SI_DATA_WIDTH": {
-                    "value": "32"
-                  }
-                },
-                "interface_ports": {
-                  "S_AXI": {
-                    "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-                    "mode": "Slave",
-                    "bridges": [
-                      "M_AXI"
-                    ]
-                  }
-                }
-              }
-            },
             "interface_nets": {
-              "auto_us_to_s02_couplers": {
-                "interface_ports": [
-                  "M_AXI",
-                  "auto_us/M_AXI"
-                ]
-              },
-              "s02_couplers_to_auto_us": {
+              "s02_couplers_to_s02_couplers": {
                 "interface_ports": [
                   "S_AXI",
-                  "auto_us/S_AXI"
-                ]
-              }
-            },
-            "nets": {
-              "S_ACLK_1": {
-                "ports": [
-                  "S_ACLK",
-                  "auto_us/s_axi_aclk"
-                ]
-              },
-              "S_ARESETN_1": {
-                "ports": [
-                  "S_ARESETN",
-                  "auto_us/s_axi_aresetn"
+                  "M_AXI"
                 ]
               }
             }
@@ -7747,57 +7601,11 @@
                 "direction": "I"
               }
             },
-            "components": {
-              "auto_us": {
-                "vlnv": "xilinx.com:ip:axi_dwidth_converter:2.1",
-                "ip_revision": "31",
-                "xci_name": "design_1_auto_us_3",
-                "xci_path": "ip\\design_1_auto_us_3\\design_1_auto_us_3.xci",
-                "inst_hier_path": "axi_interconnect_dma0_1/s03_couplers/auto_us",
-                "parameters": {
-                  "MI_DATA_WIDTH": {
-                    "value": "64"
-                  },
-                  "SI_DATA_WIDTH": {
-                    "value": "32"
-                  }
-                },
-                "interface_ports": {
-                  "S_AXI": {
-                    "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-                    "mode": "Slave",
-                    "bridges": [
-                      "M_AXI"
-                    ]
-                  }
-                }
-              }
-            },
             "interface_nets": {
-              "auto_us_to_s03_couplers": {
-                "interface_ports": [
-                  "M_AXI",
-                  "auto_us/M_AXI"
-                ]
-              },
-              "s03_couplers_to_auto_us": {
+              "s03_couplers_to_s03_couplers": {
                 "interface_ports": [
                   "S_AXI",
-                  "auto_us/S_AXI"
-                ]
-              }
-            },
-            "nets": {
-              "S_ACLK_1": {
-                "ports": [
-                  "S_ACLK",
-                  "auto_us/s_axi_aclk"
-                ]
-              },
-              "S_ARESETN_1": {
-                "ports": [
-                  "S_ARESETN",
-                  "auto_us/s_axi_aresetn"
+                  "M_AXI"
                 ]
               }
             }
@@ -8237,8 +8045,8 @@
               "auto_us": {
                 "vlnv": "xilinx.com:ip:axi_dwidth_converter:2.1",
                 "ip_revision": "31",
-                "xci_name": "design_1_auto_us_4",
-                "xci_path": "ip\\design_1_auto_us_4\\design_1_auto_us_4.xci",
+                "xci_name": "design_1_auto_us_0",
+                "xci_path": "ip\\design_1_auto_us_0\\design_1_auto_us_0.xci",
                 "inst_hier_path": "axi_interconnect_dma2_3/s00_couplers/auto_us",
                 "parameters": {
                   "MI_DATA_WIDTH": {
@@ -8339,8 +8147,8 @@
               "auto_us": {
                 "vlnv": "xilinx.com:ip:axi_dwidth_converter:2.1",
                 "ip_revision": "31",
-                "xci_name": "design_1_auto_us_5",
-                "xci_path": "ip\\design_1_auto_us_5\\design_1_auto_us_5.xci",
+                "xci_name": "design_1_auto_us_1",
+                "xci_path": "ip\\design_1_auto_us_1\\design_1_auto_us_1.xci",
                 "inst_hier_path": "axi_interconnect_dma2_3/s01_couplers/auto_us",
                 "parameters": {
                   "MI_DATA_WIDTH": {
@@ -8441,8 +8249,8 @@
               "auto_us": {
                 "vlnv": "xilinx.com:ip:axi_dwidth_converter:2.1",
                 "ip_revision": "31",
-                "xci_name": "design_1_auto_us_6",
-                "xci_path": "ip\\design_1_auto_us_6\\design_1_auto_us_6.xci",
+                "xci_name": "design_1_auto_us_2",
+                "xci_path": "ip\\design_1_auto_us_2\\design_1_auto_us_2.xci",
                 "inst_hier_path": "axi_interconnect_dma2_3/s02_couplers/auto_us",
                 "parameters": {
                   "MI_DATA_WIDTH": {
@@ -8543,8 +8351,8 @@
               "auto_us": {
                 "vlnv": "xilinx.com:ip:axi_dwidth_converter:2.1",
                 "ip_revision": "31",
-                "xci_name": "design_1_auto_us_7",
-                "xci_path": "ip\\design_1_auto_us_7\\design_1_auto_us_7.xci",
+                "xci_name": "design_1_auto_us_3",
+                "xci_path": "ip\\design_1_auto_us_3\\design_1_auto_us_3.xci",
                 "inst_hier_path": "axi_interconnect_dma2_3/s03_couplers/auto_us",
                 "parameters": {
                   "MI_DATA_WIDTH": {
@@ -9029,8 +8837,8 @@
               "auto_us": {
                 "vlnv": "xilinx.com:ip:axi_dwidth_converter:2.1",
                 "ip_revision": "31",
-                "xci_name": "design_1_auto_us_8",
-                "xci_path": "ip\\design_1_auto_us_8\\design_1_auto_us_8.xci",
+                "xci_name": "design_1_auto_us_4",
+                "xci_path": "ip\\design_1_auto_us_4\\design_1_auto_us_4.xci",
                 "inst_hier_path": "axi_interconnect_dma4_5/s00_couplers/auto_us",
                 "parameters": {
                   "MI_DATA_WIDTH": {
@@ -9131,8 +8939,8 @@
               "auto_us": {
                 "vlnv": "xilinx.com:ip:axi_dwidth_converter:2.1",
                 "ip_revision": "31",
-                "xci_name": "design_1_auto_us_9",
-                "xci_path": "ip\\design_1_auto_us_9\\design_1_auto_us_9.xci",
+                "xci_name": "design_1_auto_us_5",
+                "xci_path": "ip\\design_1_auto_us_5\\design_1_auto_us_5.xci",
                 "inst_hier_path": "axi_interconnect_dma4_5/s01_couplers/auto_us",
                 "parameters": {
                   "MI_DATA_WIDTH": {
@@ -9233,8 +9041,8 @@
               "auto_us": {
                 "vlnv": "xilinx.com:ip:axi_dwidth_converter:2.1",
                 "ip_revision": "31",
-                "xci_name": "design_1_auto_us_10",
-                "xci_path": "ip\\design_1_auto_us_10\\design_1_auto_us_10.xci",
+                "xci_name": "design_1_auto_us_6",
+                "xci_path": "ip\\design_1_auto_us_6\\design_1_auto_us_6.xci",
                 "inst_hier_path": "axi_interconnect_dma4_5/s02_couplers/auto_us",
                 "parameters": {
                   "MI_DATA_WIDTH": {
@@ -9335,8 +9143,8 @@
               "auto_us": {
                 "vlnv": "xilinx.com:ip:axi_dwidth_converter:2.1",
                 "ip_revision": "31",
-                "xci_name": "design_1_auto_us_11",
-                "xci_path": "ip\\design_1_auto_us_11\\design_1_auto_us_11.xci",
+                "xci_name": "design_1_auto_us_7",
+                "xci_path": "ip\\design_1_auto_us_7\\design_1_auto_us_7.xci",
                 "inst_hier_path": "axi_interconnect_dma4_5/s03_couplers/auto_us",
                 "parameters": {
                   "MI_DATA_WIDTH": {

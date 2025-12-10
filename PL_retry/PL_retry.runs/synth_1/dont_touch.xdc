@@ -97,6 +97,9 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_au
 # IP: bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_pc_1 || ORIG_REF_NAME==design_1_auto_pc_1} -quiet] -quiet
 
+# IP: bd/design_1/ip/design_1_auto_pc_2/design_1_auto_pc_2.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_pc_2 || ORIG_REF_NAME==design_1_auto_pc_2} -quiet] -quiet
+
 # IP: bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_us_0 || ORIG_REF_NAME==design_1_auto_us_0} -quiet] -quiet
 
@@ -109,8 +112,8 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_au
 # IP: bd/design_1/ip/design_1_auto_us_3/design_1_auto_us_3.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_us_3 || ORIG_REF_NAME==design_1_auto_us_3} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_auto_pc_2/design_1_auto_pc_2.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_pc_2 || ORIG_REF_NAME==design_1_auto_pc_2} -quiet] -quiet
+# IP: bd/design_1/ip/design_1_auto_pc_3/design_1_auto_pc_3.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_pc_3 || ORIG_REF_NAME==design_1_auto_pc_3} -quiet] -quiet
 
 # IP: bd/design_1/ip/design_1_auto_us_4/design_1_auto_us_4.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_us_4 || ORIG_REF_NAME==design_1_auto_us_4} -quiet] -quiet
@@ -123,21 +126,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_au
 
 # IP: bd/design_1/ip/design_1_auto_us_7/design_1_auto_us_7.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_us_7 || ORIG_REF_NAME==design_1_auto_us_7} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_auto_pc_3/design_1_auto_pc_3.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_pc_3 || ORIG_REF_NAME==design_1_auto_pc_3} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_auto_us_8/design_1_auto_us_8.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_us_8 || ORIG_REF_NAME==design_1_auto_us_8} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_auto_us_9/design_1_auto_us_9.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_us_9 || ORIG_REF_NAME==design_1_auto_us_9} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_auto_us_10/design_1_auto_us_10.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_us_10 || ORIG_REF_NAME==design_1_auto_us_10} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_auto_us_11/design_1_auto_us_11.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_us_11 || ORIG_REF_NAME==design_1_auto_us_11} -quiet] -quiet
 
 # IP: bd/design_1/ip/design_1_auto_pc_4/design_1_auto_pc_4.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_pc_4 || ORIG_REF_NAME==design_1_auto_pc_4} -quiet] -quiet
@@ -191,6 +179,8 @@ set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filte
 
 # XDC: d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_ooc.xdc
 
+# XDC: d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/ip/design_1_auto_pc_2/design_1_auto_pc_2_ooc.xdc
+
 # XDC: d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_clocks.xdc
 set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_auto_us_0 || ORIG_REF_NAME==design_1_auto_us_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
 
@@ -211,7 +201,7 @@ set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filte
 
 # XDC: d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/ip/design_1_auto_us_3/design_1_auto_us_3_ooc.xdc
 
-# XDC: d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/ip/design_1_auto_pc_2/design_1_auto_pc_2_ooc.xdc
+# XDC: d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/ip/design_1_auto_pc_3/design_1_auto_pc_3_ooc.xdc
 
 # XDC: d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/ip/design_1_auto_us_4/design_1_auto_us_4_clocks.xdc
 set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_auto_us_4 || ORIG_REF_NAME==design_1_auto_us_4} -quiet] {/inst } ]/inst ] -quiet] -quiet
@@ -232,28 +222,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filte
 set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_auto_us_7 || ORIG_REF_NAME==design_1_auto_us_7} -quiet] {/inst } ]/inst ] -quiet] -quiet
 
 # XDC: d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/ip/design_1_auto_us_7/design_1_auto_us_7_ooc.xdc
-
-# XDC: d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/ip/design_1_auto_pc_3/design_1_auto_pc_3_ooc.xdc
-
-# XDC: d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/ip/design_1_auto_us_8/design_1_auto_us_8_clocks.xdc
-set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_auto_us_8 || ORIG_REF_NAME==design_1_auto_us_8} -quiet] {/inst } ]/inst ] -quiet] -quiet
-
-# XDC: d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/ip/design_1_auto_us_8/design_1_auto_us_8_ooc.xdc
-
-# XDC: d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/ip/design_1_auto_us_9/design_1_auto_us_9_clocks.xdc
-set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_auto_us_9 || ORIG_REF_NAME==design_1_auto_us_9} -quiet] {/inst } ]/inst ] -quiet] -quiet
-
-# XDC: d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/ip/design_1_auto_us_9/design_1_auto_us_9_ooc.xdc
-
-# XDC: d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/ip/design_1_auto_us_10/design_1_auto_us_10_clocks.xdc
-set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_auto_us_10 || ORIG_REF_NAME==design_1_auto_us_10} -quiet] {/inst } ]/inst ] -quiet] -quiet
-
-# XDC: d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/ip/design_1_auto_us_10/design_1_auto_us_10_ooc.xdc
-
-# XDC: d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/ip/design_1_auto_us_11/design_1_auto_us_11_clocks.xdc
-set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_auto_us_11 || ORIG_REF_NAME==design_1_auto_us_11} -quiet] {/inst } ]/inst ] -quiet] -quiet
-
-# XDC: d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/ip/design_1_auto_us_11/design_1_auto_us_11_ooc.xdc
 
 # XDC: d:/FACULTATE/facultate/anul3/sem1/SSC/proiect/utcn-bounding-box-detection-on-PYNQ-Z1/PL_retry/PL_retry.gen/sources_1/bd/design_1/ip/design_1_auto_pc_4/design_1_auto_pc_4_ooc.xdc
 

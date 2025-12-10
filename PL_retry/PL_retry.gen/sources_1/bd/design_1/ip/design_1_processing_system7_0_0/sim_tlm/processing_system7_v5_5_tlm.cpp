@@ -205,8 +205,8 @@ processing_system7_v5_5_tlm :: processing_system7_v5_5_tlm (sc_core::sc_module_n
         //creating instances of xtlm slave sockets
         S_AXI_GP0_wr_socket = new xtlm::xtlm_aximm_target_socket("S_AXI_GP0_wr_socket", 32);
         S_AXI_GP0_rd_socket =  new xtlm::xtlm_aximm_target_socket("S_AXI_GP0_rd_socket", 32);
-        S_AXI_HP0_wr_socket = new xtlm::xtlm_aximm_target_socket("S_AXI_HP0_wr_socket", 64);
-        S_AXI_HP0_rd_socket = new xtlm::xtlm_aximm_target_socket("S_AXI_HP0_rd_socket", 64);
+        S_AXI_HP0_wr_socket = new xtlm::xtlm_aximm_target_socket("S_AXI_HP0_wr_socket", 32);
+        S_AXI_HP0_rd_socket = new xtlm::xtlm_aximm_target_socket("S_AXI_HP0_rd_socket", 32);
         S_AXI_HP1_wr_socket = new xtlm::xtlm_aximm_target_socket("S_AXI_HP1_wr_socket", 64);
         S_AXI_HP1_rd_socket = new xtlm::xtlm_aximm_target_socket("S_AXI_HP1_rd_socket", 64);
         S_AXI_HP2_wr_socket = new xtlm::xtlm_aximm_target_socket("S_AXI_HP2_wr_socket", 64);
