@@ -2,7 +2,7 @@
 <Project Version="1" Minor="7" DIGEST="">
 	<TOOL_VERSION Version="2024.1"/>
 	<MODE Name="Post-Synthesis"/>
-	<SYSTEMINFO BOARD="www.digilentinc.com:pynq-z1:1.0" PART="xc7z020clg400-1" ARCH="zynq" PACKAGE="clg400" DEVICE="7z020" SPEED="-1" LUT="53200" FF="106400" BRAM="140" DSP="220"/>
+	<SYSTEMINFO BOARD="www.digilentinc.com:pynq-z1:1.0" PART="xc7z020clg400-1" ARCH="zynq" PACKAGE="clg400" DEVICE="7z020" SPEED="-1"/>
 	<PART Name="xc7z020clg400-1">
 		<SSIT IS_SSIT="0"/>
 		<NUM_OF_SLRS Value="1"/>
@@ -26,6 +26,6 @@
 	</File>
 	<File Type="BIT" Name="top.bit" src_db="temp.hdf">
 	</File>
-	<USEDRESOURCES LUT="14187" FF="17068" BRAM="70" DSP="0"/>
+	<USEDRESOURCES/>
 </Project>
 
