@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date             : Wed Dec 10 14:13:42 2025
+| Date             : Wed Dec 10 14:45:39 2025
 | Host             : POWERSLAVE running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -30,11 +30,11 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.487        |
+| Total On-Chip Power (W)  | 1.489        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.345        |
-| Device Static (W)        | 0.142        |
+| Dynamic (W)              | 1.347        |
+| Device Static (W)        | 0.143        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 67.8         |
 | Junction Temperature (C) | 42.2         |
@@ -52,20 +52,20 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.052 |        3 |       --- |             --- |
-| Slice Logic              |     0.012 |    37384 |       --- |             --- |
-|   LUT as Logic           |     0.010 |    12775 |     53200 |           24.01 |
+| Clocks                   |     0.051 |        3 |       --- |             --- |
+| Slice Logic              |     0.012 |    39076 |       --- |             --- |
+|   LUT as Logic           |     0.010 |    13264 |     53200 |           24.93 |
 |   CARRY4                 |     0.001 |      424 |     13300 |            3.19 |
-|   Register               |    <0.001 |    17068 |    106400 |           16.04 |
+|   Register               |    <0.001 |    17913 |    106400 |           16.84 |
 |   LUT as Distributed RAM |    <0.001 |      584 |     17400 |            3.36 |
-|   F7/F8 Muxes            |    <0.001 |      466 |     53200 |            0.88 |
-|   LUT as Shift Register  |    <0.001 |      828 |     17400 |            4.76 |
-|   Others                 |     0.000 |     1522 |       --- |             --- |
-| Signals                  |     0.017 |    26622 |       --- |             --- |
+|   F7/F8 Muxes            |    <0.001 |      469 |     53200 |            0.88 |
+|   LUT as Shift Register  |    <0.001 |      920 |     17400 |            5.29 |
+|   Others                 |     0.000 |     1541 |       --- |             --- |
+| Signals                  |     0.019 |    27821 |       --- |             --- |
 | Block RAM                |     0.007 |       70 |       140 |           50.00 |
 | PS7                      |     1.257 |        1 |       --- |             --- |
-| Static Power             |     0.142 |          |           |                 |
-| Total                    |     1.487 |          |           |                 |
+| Static Power             |     0.143 |          |           |                 |
+| Total                    |     1.489 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -75,7 +75,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.103 |       0.087 |      0.016 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.104 |       0.089 |      0.016 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.014 |       0.000 |      0.014 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -151,25 +151,25 @@ Table of Contents
 +-------------------------------+-----------+
 | Name                          | Power (W) |
 +-------------------------------+-----------+
-| top                           |     1.345 |
-|   u_bd                        |     1.338 |
-|     design_1_i                |     1.338 |
+| top                           |     1.347 |
+|   u_bd                        |     1.339 |
+|     design_1_i                |     1.339 |
 |       axi_bram_ctrl_0         |     0.002 |
 |       axi_dma_0               |     0.007 |
 |       axi_dma_1               |     0.007 |
-|       axi_dma_2               |     0.008 |
+|       axi_dma_2               |     0.007 |
 |       axi_dma_3               |     0.007 |
 |       axi_dma_4               |     0.007 |
 |       axi_dma_5               |     0.007 |
 |       axi_interconnect_0      |     0.001 |
-|       axi_interconnect_dma0_1 |     0.002 |
-|       axi_interconnect_dma2_3 |     0.006 |
-|       axi_interconnect_dma4_5 |     0.006 |
+|       axi_interconnect_dma0_1 |     0.005 |
+|       axi_interconnect_dma2_3 |     0.005 |
+|       axi_interconnect_dma4_5 |     0.005 |
 |       ccl_slice_core_0        |     0.003 |
 |       ccl_slice_core_1        |     0.003 |
-|       ccl_slice_core_2        |     0.002 |
+|       ccl_slice_core_2        |     0.003 |
 |       ccl_slice_core_3        |     0.002 |
-|       processing_system7_0    |     1.260 |
+|       processing_system7_0    |     1.261 |
 |       ps7_0_axi_periph        |     0.006 |
 |   u_bram                      |     0.007 |
 |     U0                        |     0.007 |

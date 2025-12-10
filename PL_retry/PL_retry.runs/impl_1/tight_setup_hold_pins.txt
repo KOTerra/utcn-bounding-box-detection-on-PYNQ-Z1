@@ -1,11 +1,5 @@
 +====================+===================+==============================================================================+
 | Launch Setup Clock | Launch Hold Clock | Pin                                                                          |
 +====================+===================+==============================================================================+
-| clk_fpga_0         | clk_fpga_0        | u_bd/design_1_i/ccl_slice_core_3/U0/line_prev_reg_256_511_2_2/RAMS64E_A/ADR1 |
-| clk_fpga_0         | clk_fpga_0        | u_bd/design_1_i/ccl_slice_core_3/U0/line_prev_reg_256_511_2_2/RAMS64E_B/ADR0 |
-| clk_fpga_0         | clk_fpga_0        | u_bd/design_1_i/ccl_slice_core_3/U0/line_prev_reg_256_511_2_2/RAMS64E_A/ADR0 |
-| clk_fpga_0         | clk_fpga_0        | u_bd/design_1_i/ccl_slice_core_3/U0/line_prev_reg_256_511_2_2/RAMS64E_B/ADR1 |
-| clk_fpga_0         | clk_fpga_0        | u_bd/design_1_i/ccl_slice_core_1/U0/line_prev_reg_0_255_1_1/RAMS64E_A/ADR1   |
-| clk_fpga_0         | clk_fpga_0        | u_bd/design_1_i/ccl_slice_core_1/U0/line_prev_reg_0_255_1_1/RAMS64E_B/ADR1   |
 | clk_fpga_0         | clk_fpga_0        | u_bd/design_1_i/ccl_slice_core_1/U0/line_prev_reg_256_511_1_1/RAMS64E_A/ADR0 |
 +--------------------+-------------------+------------------------------------------------------------------------------+
