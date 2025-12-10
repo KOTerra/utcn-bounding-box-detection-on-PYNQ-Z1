@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "design_1_auto_us_2",
-    "cell_name": "axi_interconnect_dma2_3/s02_couplers/auto_us",
+    "cell_name": "axi_interconnect_dma0_1/s02_couplers/auto_us",
     "component_reference": "xilinx.com:ip:axi_dwidth_converter:2.1",
     "ip_revision": "31",
     "gen_directory": "../../../../../../PL_retry.gen/sources_1/bd/design_1/ip/design_1_auto_us_2",

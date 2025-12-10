@@ -222,7 +222,7 @@ processing_system7_v5_5_tlm(sc_core::sc_module_name name,
     // socket with xilinx_zynq's target socket
     xtlm::xaximm_xtlm2tlm_t<32,32> S_AXI_GP0_xtlm_brdg;
     xtlm::xtlm_aximm_fifo *S_AXI_GP0_buff;
-    xtlm::xaximm_xtlm2tlm_t<32,32> S_AXI_HP0_xtlm_brdg;
+    xtlm::xaximm_xtlm2tlm_t<64,32> S_AXI_HP0_xtlm_brdg;
     xtlm::xtlm_aximm_fifo *S_AXI_HP0_buff;
     xtlm::xaximm_xtlm2tlm_t<64,32> S_AXI_HP1_xtlm_brdg;
     xtlm::xtlm_aximm_fifo *S_AXI_HP1_buff;
